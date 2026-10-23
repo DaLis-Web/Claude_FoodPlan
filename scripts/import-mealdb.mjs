@@ -13,6 +13,7 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const outFile = path.join(root, 'data', 'mealdb-raw.json');
 // TheMealDB nenurodo porcijų – jas nustatome pagal bendrą kalorijų kiekį (~600 kcal porcijai).
 const KCAL_PER_SERVING = 600;
+const STAPLE_MAX = { druska: 15, pipirai: 5, paprika_malta: 15, kario: 15, aliejus: 80, cukrus: 60, soju_padazas: 60 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function getJson(url) {
@@ -45,8 +46,12 @@ function convert(meal) {
     const qty = convertMeasure(measure, INGREDIENTS[id], id);
     ing[id] = (ing[id] || 0) + qty;
   }
+  // Prieskonių ir bazinių atsargų kiekiai TheMealDB dažnai netikslūs – apribojame visam receptui.
+  for (const [id, max] of Object.entries(STAPLE_MAX)) if (ing[id] > max) ing[id] = max;
   const whole = estimateNutrition(ing).kcal;
-  const servings = Math.min(10, Math.max(1, Math.round(whole / KCAL_PER_SERVING)));
+  const grams = Object.entries(ing).reduce((sum, [id, q]) => sum + (INGREDIENTS[id].unit === 'vnt' ? q * 60 : q), 0);
+  // Porcijų skaičius pagal kalorijas (~600 kcal) arba svorį (~450 g) – kuris didesnis.
+  const servings = Math.min(10, Math.max(1, Math.round(whole / KCAL_PER_SERVING), Math.round(grams / 450)));
   for (const id of Object.keys(ing)) ing[id] = Math.round((ing[id] / servings) * 10) / 10;
   const coverage = total ? mapped / total : 0;
   if (mapped < 3 || coverage < 0.8) return { skip: `atitikimas ${Math.round(coverage * 100)} %`, other };

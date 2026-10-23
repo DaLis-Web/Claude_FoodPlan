@@ -15,3 +15,8 @@ test('TheMealDB kiekių perskaičiavimas', () => {
 test('visi susiejimai rodo į egzistuojančius produktus', () => {
   for (const [en, id] of Object.entries(EN_MAP)) assert.ok(INGREDIENTS[id], `${en} → ${id}`);
 });
+
+test('neapibrėžtas kiekis – žiupsnelis', () => {
+  assert.equal(convertMeasure('To taste', INGREDIENTS.druska, 'druska'), 2);
+  assert.equal(convertMeasure('Drizzle', INGREDIENTS.aliejus, 'aliejus'), 10);
+});

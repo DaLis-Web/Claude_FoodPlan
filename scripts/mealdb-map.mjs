@@ -87,6 +87,10 @@ function parseNumber(s) {
 /** Kiekis produkto vienetais (g, ml arba vnt) iš TheMealDB „measure“ teksto. */
 export function convertMeasure(measure, ing, ingId) {
   const raw = String(measure || '').toLowerCase().replace(/,/g, '.').trim();
+  // „Pagal skonį“, „žiupsnelis“, „apšlakstyti“ – nedidelis kiekis.
+  if (!/\d/.test(raw) && /taste|season|pinch|dash|drizzle|sprinkl|garnish|serve|splash|little|some|^$/.test(raw)) {
+    return ing.unit === 'vnt' ? 1 : /drizzle|splash/.test(raw) ? 10 : 2;
+  }
   const n = parseNumber(raw.replace(/^(a|an)\s/, '1 ')) ?? 1;
   const unitM = raw.match(/(?:\d|\s|^)(kg|g|grams?|oz|lbs?|pounds?|ml|l|litres?|liters?|tbsp|tbs|tblsp|tablespoons?|tsp|teaspoons?|cups?|pint|dash|pinch|splash|handful)\b/);
   const unit = unitM?.[1];
