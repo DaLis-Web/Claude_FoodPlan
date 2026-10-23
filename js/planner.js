@@ -43,8 +43,14 @@ export function isVegetarian(recipe) {
   return Object.keys(recipe.ing).every((id) => INGREDIENTS[id]?.cat !== 'mesa');
 }
 
+// Papildomi receptai (importuoti iš TheMealDB, data/extra-recipes.json) – užkraunami programėlės paleidimo metu.
+let EXTRA_RECIPES = [];
+export function setExtraRecipes(list) {
+  EXTRA_RECIPES = Array.isArray(list) ? list : [];
+}
+
 export function allRecipes(state) {
-  return [...RECIPES, ...(state.customRecipes || [])];
+  return [...RECIPES, ...EXTRA_RECIPES, ...(state.customRecipes || [])];
 }
 
 // Gyvos kainos laikomos aktualiomis tiek dienų nuo atnaujinimo.

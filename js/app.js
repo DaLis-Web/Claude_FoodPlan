@@ -5,7 +5,7 @@ import {
   SLOTS, SLOT_LABELS, DAY_NAMES, makeCtx, generatePlan, evaluatePlan, shoppingList, storeTotals,
   alternativesFor, consumeFromPantry, pantryCoverage, recipeServingCost, isVegetarian, emptyPlan,
   mondayOf, addDays, toISO, parseISO, daysBetween, currentPromos, allRecipes, matchWishes, complementSuggestions,
-  extraPrices,
+  extraPrices, setExtraRecipes,
 } from './planner.js';
 
 // ---------- Būsena ----------
@@ -408,6 +408,7 @@ function mealButton(e, d, s, c) {
 
 // Recepto nuotrauka: savo receptui – įkelta nuotrauka, kitiems – surinkta iš atvirų šaltinių.
 function recipeImage(r) {
+  if (r.image && typeof r.image === 'object') return r.image;
   if (r.image) return { url: r.image, thumb: r.image };
   return recipeImages[r.id] || null;
 }
@@ -426,7 +427,7 @@ function recipeHero(r) {
   if (!img) return '';
   return `<figure class="hero">
     <img src="${esc(img.url)}" alt="${esc(r.name)}" loading="lazy" onerror="this.closest('figure').remove()">
-    ${img.credit ? `<figcaption>Nuotrauka: ${img.page ? `<a href="${esc(img.page)}" target="_blank" rel="noopener">${esc(img.credit)}</a>` : esc(img.credit)}${r.image ? '' : ' · gali šiek tiek skirtis nuo recepto'}</figcaption>` : ''}
+    ${img.credit ? `<figcaption>Nuotrauka: ${img.page ? `<a href="${esc(img.page)}" target="_blank" rel="noopener">${esc(img.credit)}</a>` : esc(img.credit)}${r.image || r.source ? '' : ' · gali šiek tiek skirtis nuo recepto'}</figcaption>` : ''}
   </figure>`;
 }
 
@@ -448,7 +449,9 @@ function recipeDetailHtml(r, servings, c) {
     <div class="chips">${tags}<span class="chip">⏱ ${r.time} min</span><span class="chip">${r.kcal} kcal</span><span class="chip">${r.protein || 0} g baltymų</span><span class="chip">~${eur(recipeServingCost(r, c))}/porc.</span></div>
     <h3>Ingredientai (${servings} porc.)</h3>
     <ul class="ing-list">${rows}</ul>
-    ${r.steps?.length ? `<h3>Gaminimas</h3><ol class="steps">${r.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>` : ''}`;
+    ${r.other?.length ? `<p class="small muted">Papildomai prireiks (receptui ${r.servings || 4} porc.): ${r.other.map(esc).join(', ')}</p>` : ''}
+    ${r.steps?.length ? `<h3>Gaminimas</h3><ol class="steps">${r.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>` : ''}
+    ${r.source ? `<p class="small muted">Šaltinis: <a href="${esc(r.source)}" target="_blank" rel="noopener">TheMealDB</a> (išversta ir pritaikyta)</p>` : ''}`;
 }
 
 function openMeal(d, s) {
@@ -907,7 +910,7 @@ function viewBudget() {
 // ----- Receptai -----
 
 function viewRecipes() {
-  const tags = [['all', 'Visi'], ['breakfast', 'Pusryčiai'], ['main', 'Pietūs / vakarienė'], ['veg', '🌱 Vegetariški'], ['fast', '⚡ Greiti'], ['fav', '⭐ Mėgstami'], ['mine', '✍️ Mano']];
+  const tags = [['all', 'Visi'], ['breakfast', 'Pusryčiai'], ['main', 'Pietūs / vakarienė'], ['veg', '🌱 Vegetariški'], ['fast', '⚡ Greiti'], ['world', '🌍 Pasaulio'], ['fav', '⭐ Mėgstami'], ['mine', '✍️ Mano']];
   return `
   <header class="page-head"><h1>Receptai</h1></header>
   <div class="toolbar wrap">
@@ -932,6 +935,7 @@ function renderRecipeGrid() {
       case 'fast': return r.time <= 20;
       case 'fav': return c.favorites.has(r.id);
       case 'mine': return !!r.custom;
+      case 'world': return !!r.source;
       default: return true;
     }
   });
@@ -1865,6 +1869,20 @@ async function loadLivePrices() {
   }
 }
 
+async function loadExtraRecipes() {
+  try {
+    const res = await fetch('data/extra-recipes.json', { cache: 'no-cache' });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (Array.isArray(data?.recipes) && data.recipes.length) {
+      setExtraRecipes(data.recipes);
+      render();
+    }
+  } catch {
+    // be papildomų receptų
+  }
+}
+
 async function loadRecipeImages() {
   try {
     const res = await fetch('data/recipe-images.json', { cache: 'no-cache' });
@@ -1890,6 +1908,7 @@ applyTheme();
 render();
 loadLivePrices();
 loadRecipeImages();
+loadExtraRecipes();
 initCloud();
 
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {

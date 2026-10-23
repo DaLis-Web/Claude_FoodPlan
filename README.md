@@ -23,11 +23,15 @@ ji veikia ir be interneto (pvz. parduotuvėje). Duomenys saugomi tik jūsų įre
   - 📍 Artimiausios Maxima / Rimi / IKI / Norfa / Lidl parduotuvės pagal jūsų vietą (OpenStreetMap) su atstumu,
     krepšelio kaina ir nuoroda į maršrutą.
   - Dalinimasis sąrašu (pvz. per Messenger), „Baigti apsipirkimą“: išlaidos įrašomos, prekės perkeliamos į šaldytuvą.
+- **🧾 Čekių nuskaitymas.** Nufotografuotas čekis atpažįstamas telefone (Tesseract, lietuvių k.) arba įklijuojamas
+  el. čekio tekstas: prekės susiejamos su produktais ir įdedamos į šaldytuvą, išlaidos įrašomos pagal kategorijas,
+  o planą galima sudaryti iš to, ką nusipirkote.
 - **🧊 Šaldytuvas.** Kas yra namie ir iki kada tinka. Planuojant pirmiausia panaudojama tai, ką jau turite
   (ypač tai, kam baigiasi galiojimas), siūloma, ką pagaminti iš turimų produktų.
 - **💶 Biudžetas.** Savaitės biudžetas, išlaidos, 8 savaičių grafikas ir **statistika pagal kategorijas**
   (daržovės, mėsa, pieno produktai, gėrimai…) per savaitę, mėnesį ar visą laiką.
-- **📖 Receptai.** 37 receptai (įskaitant kugelį, cepelinus, žemaičių blynus, balandėlius, šaltibarščius…),
+- **📖 Receptai.** 61 receptas su nuotraukomis ir papildomi pasaulio receptai iš TheMealDB (išversti, su kiekiais
+  ir kainomis) (įskaitant kugelį, cepelinus, žemaičių blynus, balandėlius, šaltibarščius…),
   paieška, mėgstami ⭐, nemėgstami 👎, savi receptai.
 - **⚙️ Nustatymai.** Šviesi arba tamsi tema, vegetariškas režimas, nemėgstami produktai, maksimalus gaminimo laikas
   darbo dienomis, rankinis kainų ir akcijų įvedimas, duomenų eksportas ir importas (perkelti į kitą įrenginį).
@@ -100,6 +104,10 @@ kiekvieno duomenys saugomi jo paties įrenginyje.
 | `js/planner.js` | Planavimo, pirkinių sąrašo, kainų ir norų logika (be DOM, testuojama) |
 | `js/data.js` | Produktai, apytikslės kainos, receptai, parduotuvės |
 | `js/store.js` | Duomenų saugojimas įrenginyje |
-| `scripts/` | Kainų ir akcijų rinkimas |
+| `js/receipt.js`, `js/match.js` | Čekių analizė, produktų atpažinimas |
+| `js/nutrition.js` | Apytikslė maistinė vertė |
+| `scripts/fetch-prices.mjs` | Kainų ir akcijų rinkimas |
+| `scripts/fetch-images.mjs` | Receptų nuotraukos (TheMealDB, Wikimedia Commons) |
+| `scripts/import-mealdb.mjs`, `build-mealdb.mjs` | TheMealDB receptų importas ir vertimų sujungimas |
 | `data/prices.json` | Surinktos kainos |
 | `sw.js`, `manifest.webmanifest` | Veikimas be interneto ir įdiegimas |
