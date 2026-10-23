@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-23T20:17:08.125Z",
+ "updatedAt": "2026-10-23T20:19:29.153Z",
  "images": {
   "avizine_kose": {
    "url": "https://www.themealdb.com/images/media/meals/sng9bm1765320170.jpg",
@@ -294,6 +294,42 @@
    "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/12/Recipes_cottage_cheese_pie_named_misa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
    "credit": "FDominec · CC BY-SA 4.0",
    "page": "https://commons.wikimedia.org/wiki/File:Recipes_cottage_cheese_pie_named_misa.jpg"
+  },
+  "kiausinene": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Stir_Fried_Tomatoes_with_Scrambled_Eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/19/Stir_Fried_Tomatoes_with_Scrambled_Eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "credit": "NNU-10-24100123 · CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Stir_Fried_Tomatoes_with_Scrambled_Eggs.jpg"
+  },
+  "grikiai_pienas": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Cooking_rice_porridge.jpg/960px-Cooking_rice_porridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Cooking_rice_porridge.jpg/960px-Cooking_rice_porridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Tiia Monto · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cooking_rice_porridge.jpg"
+  },
+  "vistiena_ryziai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Stir_fried_rice_vermicelli%2C_chicken_breast%2C_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg/960px-Stir_fried_rice_vermicelli%2C_chicken_breast%2C_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Stir_fried_rice_vermicelli%2C_chicken_breast%2C_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg/960px-Stir_fried_rice_vermicelli%2C_chicken_breast%2C_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "naotakem · CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Stir_fried_rice_vermicelli,_chicken_breast,_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg"
+  },
+  "cezario_salotos": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Caesar_Salad_-_Purezza_2023-11-22.jpg/960px-Caesar_Salad_-_Purezza_2023-11-22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Caesar_Salad_-_Purezza_2023-11-22.jpg/960px-Caesar_Salad_-_Purezza_2023-11-22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Andy Li · CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Caesar_Salad_-_Purezza_2023-11-22.jpg"
+  },
+  "kopustu_sriuba": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Finnish_meat_and_cabbage_soup_at_restaurant_Oiva_in_March_2025.jpg/960px-Finnish_meat_and_cabbage_soup_at_restaurant_Oiva_in_March_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Finnish_meat_and_cabbage_soup_at_restaurant_Oiva_in_March_2025.jpg/960px-Finnish_meat_and_cabbage_soup_at_restaurant_Oiva_in_March_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "JIP · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Finnish_meat_and_cabbage_soup_at_restaurant_Oiva_in_March_2025.jpg"
+  },
+  "bulviu_kose_kiausiniai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Lai_shak%2C_mashed_potato_%26_fried_egg_plant.jpg/960px-Lai_shak%2C_mashed_potato_%26_fried_egg_plant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Lai_shak%2C_mashed_potato_%26_fried_egg_plant.jpg/960px-Lai_shak%2C_mashed_potato_%26_fried_egg_plant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "এম আবু সাঈদ · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lai_shak,_mashed_potato_%26_fried_egg_plant.jpg"
   }
  }
 }
