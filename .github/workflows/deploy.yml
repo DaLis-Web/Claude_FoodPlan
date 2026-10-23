@@ -1,0 +1,62 @@
+name: Įkelti į Hostinger
+
+# Įkelia programėlę į Hostinger per FTP po kiekvieno pakeitimo ir po kainų atnaujinimo.
+# Reikalingi repozitorijos „Secrets“ (Settings → Secrets and variables → Actions):
+#   FTP_SERVER   – pvz. ftp.jusudomenas.lt arba IP (Hostinger hPanel → Files → FTP Accounts)
+#   FTP_USERNAME – FTP vartotojo vardas
+#   FTP_PASSWORD – FTP slaptažodis
+#   FTP_DIR      – (nebūtina) aplankas serveryje, pvz. public_html/ arba public_html/maistas/
+# Kol jų nėra, įkėlimas praleidžiamas.
+
+on:
+  push:
+    branches: [main, 'claude/**']
+  workflow_run:
+    workflows: ['Kainų ir akcijų atnaujinimas']
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Įkeliame tik iš pagrindinės šakos (ji gali būti ir claude/... šaka).
+    if: github.ref_name == github.event.repository.default_branch || github.event_name == 'workflow_run'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Testai
+        run: npm test
+      - name: Paruošti failus
+        run: |
+          mkdir -p site
+          cp -r index.html styles.css sw.js manifest.webmanifest js icons data site/
+          # Naršyklės ir service worker talpykla atnaujinama su kiekvienu įkėlimu.
+          sed -i "s/const VERSION = 'v1';/const VERSION = '${GITHUB_SHA::8}';/" site/sw.js
+      - name: Patikrinti FTP nustatymus
+        id: cfg
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          if [ -z "$FTP_SERVER" ]; then
+            echo "::notice::FTP_SERVER nenustatytas – įkėlimas į Hostinger praleidžiamas."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Įkelti per FTP
+        if: steps.cfg.outputs.ready == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./site/
+          server-dir: ${{ secrets.FTP_DIR || 'public_html/' }}

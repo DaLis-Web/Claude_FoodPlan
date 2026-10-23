@@ -64,13 +64,24 @@ npm start          # http://localhost:8080
 npm test           # logikos ir parserių testai
 ```
 
-### Publikavimas (kad veiktų telefone)
+### Publikavimas Hostinger (kad veiktų telefone ir galėtumėte pasidalinti)
 
-1. GitHub repozitorijoje: **Settings → Pages → Source: GitHub Actions**.
-2. Sujunkite pakeitimus į `main`: `.github/workflows/pages.yml` publikuos svetainę adresu
-   `https://<vartotojas>.github.io/<repo>/`.
-3. Telefone atidarykite adresą ir pasirinkite **„Pridėti prie pradžios ekrano“** (Android – Chrome meniu,
-   iPhone – Safari „Bendrinti“).
+Įkėlimą automatiškai atlieka `.github/workflows/deploy.yml`: po kiekvieno pakeitimo ir kasdienio kainų atnaujinimo
+programėlė įkeliama per FTP. Vieną kartą reikia:
+
+1. **Hostinger hPanel → Files → FTP Accounts**: susikurkite (arba pasižiūrėkite) FTP paskyrą.
+   Jei norite subdomeno (pvz. `maistas.jusudomenas.lt`), pirmiausia sukurkite jį **Domains → Subdomains**
+   ir pasižiūrėkite, į kurį aplanką jis rodo.
+2. **GitHub → repozitorija → Settings → Secrets and variables → Actions → New repository secret**:
+   - `FTP_SERVER`: FTP adresas (pvz. `ftp.jusudomenas.lt` arba IP);
+   - `FTP_USERNAME`, `FTP_PASSWORD`;
+   - `FTP_DIR` (nebūtina): aplankas, pvz. `public_html/` arba `public_html/maistas/`
+     (būtinai su `/` gale).
+3. **GitHub → Actions → „Įkelti į Hostinger“ → Run workflow** (arba tiesiog palaukite kito pakeitimo).
+4. Hostinger įjunkite **SSL** (nemokamas), kad adresas būtų `https://`. Be jo neveiks vieta ir įdiegimas į telefoną.
+
+Telefone atidarykite adresą ir pasirinkite **„Pridėti prie pradžios ekrano“**. Draugams tiesiog nusiųskite nuorodą:
+kiekvieno duomenys saugomi jo paties įrenginyje.
 
 ## Struktūra
 
