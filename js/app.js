@@ -27,7 +27,72 @@ function defaultWeek() {
 }
 
 function save() {
-  if (!saveState(state)) toast('Nepavyko išsaugoti duomenų įrenginyje');
+  state.updatedAt = Date.now();
+  if (!saveState(state) && !cloud.ref) toast('Nepavyko išsaugoti duomenų įrenginyje');
+  scheduleCloudSave();
+}
+
+// ---------- Sinchronizacija per claude.ai paskyrą ----------
+// Kai programėlė atidaryta claude.ai, duomenys saugomi privačiai jūsų paskyroje
+// (data/users/<id>/), todėl tie patys planai matomi telefone ir kompiuteryje.
+// Kitur (pvz. GitHub Pages) window.claude nėra – lieka tik naršyklės saugykla.
+
+const DEVICE = Math.random().toString(36).slice(2, 10);
+const cloud = { ref: null, downloads: null, timer: null, writing: Promise.resolve(), status: 'local' };
+
+function scheduleCloudSave() {
+  if (!cloud.ref) return;
+  clearTimeout(cloud.timer);
+  // Sujungiame greitus pakeitimus į vieną įrašą.
+  cloud.timer = setTimeout(() => {
+    const body = { state: JSON.parse(JSON.stringify(state)), updatedAt: state.updatedAt, device: DEVICE };
+    cloud.writing = cloud.writing
+      .then(() => cloud.ref.set(body))
+      .then(() => (cloud.status = 'synced'))
+      .catch((e) => {
+        cloud.status = 'error';
+        if (e?.code === 'quota_exceeded') toast('Debesies saugykla pilna – ištrinkite senus duomenis');
+      });
+  }, 1200);
+}
+
+async function initCloud() {
+  if (!window.claude?.use) return;
+  try {
+    const [db, user, downloads] = await Promise.all([
+      window.claude.use('db'),
+      window.claude.use('user'),
+      window.claude.use('downloads'),
+    ]);
+    cloud.downloads = downloads;
+    const uid = user ? await user.id() : null;
+    if (!db || !uid) return;
+    const ref = db.doc(`data/users/${uid}/state`);
+    const snap = await ref.get();
+    const remote = snap.exists ? snap.data() : null;
+    cloud.ref = ref;
+    cloud.status = 'synced';
+    if (remote?.state && (remote.updatedAt || 0) > (state.updatedAt || 0)) {
+      state = mergeDefaults(remote.state);
+      saveState(state);
+      applyTheme();
+      render();
+    } else {
+      scheduleCloudSave();
+    }
+    // Pakeitimai iš kito įrenginio atsiranda iškart.
+    ref.onSnapshot((doc) => {
+      const d = doc.exists ? doc.data() : null;
+      if (!d?.state || d.device === DEVICE || (d.updatedAt || 0) <= (state.updatedAt || 0)) return;
+      state = mergeDefaults(JSON.parse(JSON.stringify(d.state)));
+      saveState(state);
+      applyTheme();
+      if (!$('#modal').open) render();
+    });
+    if (route() === 'nustatymai') render();
+  } catch {
+    cloud.status = 'local';
+  }
 }
 
 function ctx() {
@@ -544,8 +609,12 @@ function nearbyHtml(totals) {
           </li>`).join('')}
       </ul>
       <button class="btn small" data-action="find-nearby">🔄 Atnaujinti vietą</button>`
-    : `<button class="btn btn-wrap" data-action="find-nearby">📍 Rasti artimiausias parduotuves</button>`;
-  return `<div class="nearby-box"><h3>Artimiausios parduotuvės</h3>${body}</div>`;
+    : window.claude?.use
+      ? '' // claude.ai puslapyje vietos nustatymas neleidžiamas – lieka žemėlapio nuorodos
+      : `<button class="btn btn-wrap" data-action="find-nearby">📍 Rasti artimiausias parduotuves</button>`;
+  // Google Maps telefone pats naudoja jūsų vietą, todėl paieška „Lidl“ rodo artimiausias.
+  const maps = `<div class="map-links"><span class="small muted">Žemėlapyje:</span>${STORES.map((s) => `<a class="chip" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.name + ' parduotuvė')}">${s.name}${totals.totals[s.id] !== undefined ? ` · ${eur(totals.totals[s.id])}` : ''}</a>`).join('')}</div>`;
+  return `<div class="nearby-box"><h3>Artimiausios parduotuvės</h3>${maps}${body}</div>`;
 }
 
 function haversine(a, b, c, d) {
@@ -569,7 +638,7 @@ async function findNearby() {
   try {
     pos = await new Promise((res, rej) => navigator.geolocation.getCurrentPosition(res, rej, { enableHighAccuracy: false, timeout: 15000, maximumAge: 600000 }));
   } catch {
-    return toast('Nepavyko nustatyti vietos – leiskite naršyklei naudoti vietą');
+    return toast('Vietos nustatyti nepavyko – naudokite „Žemėlapyje“ nuorodas');
   }
   const { latitude: lat, longitude: lon } = pos.coords;
   toast('Ieškoma parduotuvių…');
@@ -958,7 +1027,9 @@ function viewSettings() {
     <label>Tema<select data-change="setting-str" data-key="theme">
       ${[['light', '☀️ Šviesi'], ['dark', '🌙 Tamsi'], ['auto', 'Pagal įrenginio nustatymus']].map(([v, l]) => `<option value="${v}" ${st.theme === v ? 'selected' : ''}>${l}</option>`).join('')}
     </select></label>
-    <p class="small muted">Duomenys saugomi tik šiame įrenginyje. Norėdami perkelti į kitą įrenginį (pvz. iš kompiuterio į telefoną), eksportuokite ir importuokite failą.</p>
+    ${cloud.ref
+      ? '<p class="small sync-ok">☁️ Duomenys sinchronizuojami per jūsų claude.ai paskyrą – tie patys planai matomi telefone ir kompiuteryje.</p>'
+      : '<p class="small muted">Duomenys saugomi tik šiame įrenginyje. Norėdami perkelti į kitą įrenginį (pvz. iš kompiuterio į telefoną), eksportuokite ir importuokite failą.</p>'}
     <div class="toolbar wrap">
       <button class="btn" data-action="export">⬇️ Eksportuoti</button>
       <button class="btn" data-action="export-copy">📋 Kopijuoti duomenis</button>
@@ -1206,7 +1277,16 @@ const actions = {
     save();
     render();
   },
-  export: () => {
+  export: async () => {
+    const filename = `maisto-planas-${today()}.json`;
+    if (cloud.downloads) {
+      try {
+        await cloud.downloads.save({ filename, data: JSON.stringify(state, null, 1) });
+      } catch (e) {
+        if (e?.code !== 'declined') toast('Nepavyko išsaugoti failo');
+      }
+      return;
+    }
     const blob = new Blob([JSON.stringify(state, null, 1)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
@@ -1535,6 +1615,7 @@ pruneOldWeeks();
 applyTheme();
 render();
 loadLivePrices();
+initCloud();
 
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   navigator.serviceWorker.register('sw.js').catch(() => {});

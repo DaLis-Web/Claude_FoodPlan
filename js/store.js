@@ -4,6 +4,7 @@ const KEY = 'maisto-planas-v1';
 export function defaultState() {
   return {
     version: 1,
+    updatedAt: 0,
     settings: {
       people: 2,
       budget: 70,

@@ -619,3 +619,6 @@ dialog::backdrop { background: rgba(20, 30, 25, 0.45); backdrop-filter: blur(3px
   .nav a { font-size: 0.62rem; margin: 5px 1px; }
   .nav a .ico { font-size: 1.1rem; }
 }
+.map-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 6px 0 10px; }
+.map-links a.chip { text-decoration: none; color: var(--text); background: var(--surface-2); }
+.sync-ok { color: var(--primary); font-weight: 600; }
