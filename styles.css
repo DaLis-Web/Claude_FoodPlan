@@ -523,3 +523,99 @@ dialog::backdrop { background: rgba(20, 30, 25, 0.45); backdrop-filter: blur(3px
 }
 .btn-wrap { white-space: normal; text-align: center; }
 .confirm-actions { justify-content: flex-end; }
+
+/* ---------- Kompaktiška santrauka ir dienų juosta (rodoma tik telefone) ---------- */
+.summary-strip, .day-tabs { display: none; }
+.sugg summary { font-weight: 650; margin-top: 12px; list-style-position: inside; }
+
+/* ---------- Telefonas: ramesnis, kompaktiškesnis vaizdas ---------- */
+@media (max-width: 699px) {
+  body { background: var(--bg); font-size: 14.5px; }
+  main { padding-top: 10px; }
+  h1 { font-size: 1.2rem; margin: 0; }
+  h2 { font-size: 1rem; }
+  .page-head { margin-bottom: 10px; }
+  .page-head > .muted { font-size: 0.85rem; }
+  .week-nav { gap: 8px; }
+  .week-nav p { font-size: 0.8rem; margin: 2px 0 0; }
+  .icon-btn { width: 34px; height: 34px; font-size: 1rem; }
+
+  .wide-only { display: none !important; }
+  .plan-cards { display: none; }
+  .cards { gap: 8px; margin-bottom: 10px; }
+  .cards .card { padding: 10px 12px; }
+  .stat .muted:first-child { font-size: 0.7rem; }
+  .big { font-size: 1.15rem; }
+
+  .card { padding: 12px; border-radius: 14px; box-shadow: none; margin-bottom: 10px; }
+  .btn { min-height: 38px; padding: 6px 14px; font-size: 0.92rem; }
+  input, select, textarea { min-height: 38px; padding: 7px 10px; }
+
+  .summary-strip { display: block; margin-bottom: 10px; padding: 0 2px; }
+  .sum-main b { font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+  .sum-main .muted { font-size: 0.85rem; }
+  .sum-meta { font-size: 0.78rem; }
+  .summary-strip .bar { height: 6px; margin: 6px 0; }
+
+  .wishes { background: var(--surface); }
+  .wishes h2 { font-size: 0.95rem; }
+  .wishes .inline-form { margin-top: 6px; }
+  .chips { gap: 6px; margin: 6px 0; }
+  .chip { padding: 4px 10px; font-size: 0.8rem; }
+  .pick-list button { padding: 8px 10px; font-size: 0.9rem; }
+
+  .plan-actions { margin: 4px 0 8px; }
+
+  .day-tabs {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin: 0 0 10px;
+  }
+  .day-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 6px 0 5px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: none;
+    cursor: pointer;
+    color: var(--muted);
+  }
+  .day-tab span { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; }
+  .day-tab b { font-size: 1rem; color: var(--text); font-variant-numeric: tabular-nums; }
+  .day-tab i { width: 5px; height: 5px; border-radius: 50%; background: transparent; }
+  .day-tab i.on { background: var(--primary); }
+  .day-tab.today b { color: var(--primary); }
+  .day-tab.active { background: var(--surface); border-color: var(--border); }
+  .day-tab.active b { color: var(--primary); }
+
+  .days { display: block; }
+  .day { display: none; padding: 0; border: 0; background: none; box-shadow: none; gap: 8px; }
+  .day.active { display: flex; }
+  .day.today { box-shadow: none; }
+  .day > header { padding: 0 2px; }
+  .meal { background: var(--surface); padding: 10px 12px; }
+
+  .store-chips { display: flex; overflow-x: auto; gap: 6px; scroll-snap-type: x proximity; margin: 0 -12px; padding: 2px 12px 4px; scrollbar-width: none; }
+  .store-chips::-webkit-scrollbar { display: none; }
+  .store-chip { flex: none; padding: 7px 12px; scroll-snap-align: start; }
+  .store-chip b { font-size: 0.95rem; }
+  .nearby-box { margin-top: 10px; padding-top: 10px; }
+  .nearby-box h3 { display: none; }
+  .nearby-box .btn { width: 100%; }
+
+  .list-group h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+  .item { padding: 8px 0; }
+
+  .sticky-actions { border-radius: 16px; padding: 6px; box-shadow: var(--shadow); }
+  .sticky-actions .btn { flex: 1; }
+
+  #toast { font-size: 0.82rem; padding: 8px 14px; max-width: 300px; border-radius: 14px; }
+
+  .nav { --nav-h: 58px; }
+  .nav a { font-size: 0.62rem; margin: 5px 1px; }
+  .nav a .ico { font-size: 1.1rem; }
+}

@@ -14,6 +14,8 @@ let live = null; // data/prices.json
 let viewWeek = defaultWeek();
 let modalRender = null;
 let recipeFilter = { q: '', tag: 'all' };
+let selectedDay = null; // telefone rodoma viena diena
+const isWide = () => window.matchMedia('(min-width: 900px)').matches;
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const today = () => toISO(new Date());
@@ -200,13 +202,22 @@ function viewPlan() {
   const promos = currentPromos(c);
   const promoInPlan = ev.items.filter((i) => i.promoStores.length && i.packs > 0);
 
+  const todayIdx = daysBetween(viewWeek, today());
+  const activeDay = selectedDay ?? (todayIdx >= 0 && todayIdx < 7 ? todayIdx : 0);
+  const dayTabs = DAY_NAMES.map((n, d) => {
+    const date = addDays(viewWeek, d);
+    const filled = slots.filter((s) => w.plan.days[d][s]).length;
+    return `<button class="day-tab ${d === activeDay ? 'active' : ''} ${date === today() ? 'today' : ''}" data-action="pick-day" data-d="${d}" aria-pressed="${d === activeDay}">
+      <span>${n.slice(0, 2)}</span><b>${parseISO(date).getDate()}</b><i class="${filled ? 'on' : ''}"></i></button>`;
+  }).join('');
+
   const days = w.plan.days
     .map((day, d) => {
       const date = addDays(viewWeek, d);
       const meals = slots.map((s) => mealButton(day[s], d, s, c)).join('');
       const kcal = slots.reduce((sum, s) => sum + (day[s] && !day[s].skip ? c.recipes[day[s].recipeId]?.kcal || 0 : 0), 0);
       return `
-      <article class="day ${date === today() ? 'today' : ''}">
+      <article class="day ${date === today() ? 'today' : ''} ${d === activeDay ? 'active' : ''}">
         <header><b>${DAY_NAMES[d]}</b><span class="muted">${fmtDate(date)}</span></header>
         ${meals}
         ${kcal ? `<footer class="muted small">~${kcal} kcal žmogui</footer>` : ''}
@@ -216,7 +227,14 @@ function viewPlan() {
 
   return `
   ${weekHeader('Savaitės planas')}
-  <section class="cards">
+  <section class="summary-strip">
+    <div class="sum-main">
+      <b>${eur(totals.totals[best])}</b><span class="muted"> iš ${eur(budget)} · ${storeName(best)}</span>
+    </div>
+    <div class="bar"><span style="width:${pct}%" class="${budget && totals.totals[best] > budget ? 'over' : ''}"></span></div>
+    <div class="sum-meta muted">~${num(ev.kcalPerDay, 0)} kcal · ${num(ev.proteinPerDay, 0)} g baltymų · švaistymas ${eur(ev.waste)}${promos.length ? ` · 🏷️ ${promoInPlan.length}` : ''}</div>
+  </section>
+  <section class="cards plan-cards">
     <div class="card stat">
       <span class="muted">Numatoma kaina</span>
       <b class="big">${eur(totals.totals[best])}</b>
@@ -242,13 +260,14 @@ function viewPlan() {
 
   ${wishesHtml(c)}
 
-  <div class="toolbar">
+  <div class="toolbar plan-actions">
     <button class="btn primary" data-action="generate">✨ ${hasPlan ? 'Perplanuoti' : 'Sudaryti planą'}</button>
     ${hasPlan ? '<button class="btn" data-action="clear-plan">Išvalyti</button>' : ''}
-    <a class="btn" href="#list">🛒 Pirkinių sąrašas</a>
-    ${priceStatusBadge()}
+    <a class="btn wide-only" href="#list">🛒 Pirkinių sąrašas</a>
+    <span class="wide-only">${priceStatusBadge()}</span>
   </div>
-  ${hasPlan ? '<p class="hint">Paspauskite patiekalą, kad pakeistumėte, užrakintumėte ar pažymėtumėte kaip pagamintą. Užrakinti 🔒 patiekalai perplanuojant nesikeičia.</p>' : `<p class="hint">Paspauskite „Sudaryti planą“: programa parinks ${st.people} žm. patiekalus pagal biudžetą, akcijas, tai, ką turite šaldytuve, ir taip, kad produktai būtų sunaudoti iki galo.</p>`}
+  ${hasPlan ? '<p class="hint wide-only">Paspauskite patiekalą, kad pakeistumėte, užrakintumėte ar pažymėtumėte kaip pagamintą. Užrakinti 🔒 patiekalai perplanuojant nesikeičia.</p>' : `<p class="hint">Paspauskite „Sudaryti planą“: programa parinks ${st.people} žm. patiekalus pagal biudžetą, akcijas, tai, ką turite šaldytuve, ir taip, kad produktai būtų sunaudoti iki galo.</p>`}
+  <nav class="day-tabs" aria-label="Savaitės dienos">${dayTabs}</nav>
   <section class="days">${days}</section>`;
 }
 
@@ -264,16 +283,17 @@ function wishesHtml(c) {
       <input name="text" placeholder="pvz.: kugelis, cepelinai, balandėliai" aria-label="Norimi patiekalai" class="grow" autocomplete="off">
       <button class="btn primary">Pridėti</button>
     </form>
-    ${wishes.length ? `<div class="chips">${wishes.map((r) => `<button class="chip wish" data-action="wish-remove" data-id="${r.id}" title="Pašalinti">❤️ ${esc(r.name)} ✕</button>`).join('')}</div>` : '<p class="small muted">Įrašykite patiekalus, kurių norisi – programa juos išdėlios savaitėje, o likusias dienas užpildys tuos pačius produktus naudojančiais patiekalais.</p>'}
+    ${wishes.length ? `<div class="chips">${wishes.map((r) => `<button class="chip wish" data-action="wish-remove" data-id="${r.id}" title="Pašalinti">❤️ ${esc(r.name)} ✕</button>`).join('')}</div>` : '<p class="small muted wide-only">Įrašykite patiekalus, kurių norisi – programa juos išdėlios savaitėje, o likusias dienas užpildys tuos pačius produktus naudojančiais patiekalais.</p>'}
     ${unmatched.length ? `<p class="small">Neradau: ${unmatched.map((t) => `<b>${esc(t)}</b> <button class="link" data-action="wish-create" data-name="${esc(t)}">sukurti receptą</button>`).join(', ')}</p>` : ''}
     ${sugg.length ? `
-      <h3>💡 Prie jūsų norų dar tiktų</h3>
+      <details class="sugg" ${isWide() ? 'open' : ''}>
+      <summary>💡 Prie jūsų norų dar tiktų (${sugg.length})</summary>
       <ul class="pick-list">${sugg.map(({ recipe: r, saving, shared }) => `
         <li><button data-action="wish-add" data-id="${r.id}">
-          <span>${esc(r.name)}<small class="muted"> · panaudos ${shared.slice(0, 3).map((id) => INGREDIENTS[id].name.toLowerCase()).join(', ')}</small></span>
-          <b class="ok-text">taupo ${eur(saving)}</b>
+          <span>${esc(r.name)}<small class="muted wide-only"> · panaudos ${shared.slice(0, 3).map((id) => INGREDIENTS[id].name.toLowerCase()).join(', ')}</small></span>
+          <b class="ok-text">−${eur(saving)}</b>
         </button></li>`).join('')}
-      </ul>` : ''}
+      </ul></details>` : ''}
   </section>`;
 }
 
@@ -434,7 +454,7 @@ function viewList() {
 
   <section class="card">
     <h2>Kur pirkti?</h2>
-    <div class="store-chips">
+    <div class="store-chips" role="list">
       ${totals.ranked.map((s) => `
         <button class="store-chip ${sel === s ? 'active' : ''}" data-action="select-store" data-store="${s}">
           <span>${storeName(s)}${s === totals.cheapest ? ' <em>pigiausia</em>' : ''}</span><b>${eur(totals.totals[s])}</b>
@@ -444,7 +464,7 @@ function viewList() {
           <span>${pair.stores.map(storeName).join(' + ')}</span><b>${eur(pair.total)}</b>
         </button>` : ''}
     </div>
-    ${pair && saving > 0.3 ? `<p class="hint">💡 Apsipirkę dviejose parduotuvėse (${pair.stores.map(storeName).join(' ir ')}) sutaupytumėte ${eur(saving)}.</p>` : ''}
+    ${pair && saving > 0.3 ? `<p class="hint wide-only">💡 Apsipirkę dviejose parduotuvėse (${pair.stores.map(storeName).join(' ir ')}) sutaupytumėte ${eur(saving)}.</p>` : ''}
     ${nearbyHtml(totals)}
   </section>
 
@@ -524,7 +544,7 @@ function nearbyHtml(totals) {
           </li>`).join('')}
       </ul>
       <button class="btn small" data-action="find-nearby">🔄 Atnaujinti vietą</button>`
-    : `<button class="btn btn-wrap" data-action="find-nearby">📍 Rasti artimiausias Maxima, Rimi, IKI, Norfa, Lidl</button>`;
+    : `<button class="btn btn-wrap" data-action="find-nearby">📍 Rasti artimiausias parduotuves</button>`;
   return `<div class="nearby-box"><h3>Artimiausios parduotuvės</h3>${body}</div>`;
 }
 
@@ -980,7 +1000,12 @@ const actions = {
     const name = el.dataset.name;
     openModal('Naujas receptas', () => recipeFormHtml({ name, meals: ['pietus', 'vakariene'], time: 45, kcal: 600, protein: 20, ing: { '': '' }, steps: [] }, true));
   },
+  'pick-day': (el) => {
+    selectedDay = +el.dataset.d;
+    render();
+  },
   week: (el) => {
+    selectedDay = null;
     viewWeek = addDays(viewWeek, 7 * Number(el.dataset.dir));
     render();
   },
@@ -1321,7 +1346,7 @@ const forms = {
     if (matched.length) regenerate();
     save();
     render();
-    if (matched.length) toast(`Įtraukta: ${matched.map((m) => m.recipe.name).join(', ')}`);
+    if (matched.length) toast(matched.length === 1 ? `Įtraukta: ${matched[0].recipe.name}` : `Įtraukta į planą: ${matched.length} patiekalai`);
     else if (unmatched.length) toast('Tokio recepto neradau – galite jį sukurti');
   },
   extra: (f) => {
