@@ -22,7 +22,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function fetchText(url) {
   const res = await fetch(url, {
     headers: {
-      'User-Agent': 'Mozilla/5.0 (compatible; MaistoPlanas/1.0; asmeninis kainų palyginimas)',
+      // Antraštėse leidžiami tik ASCII simboliai.
+      'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0 Safari/537.36',
       'Accept-Language': 'lt-LT,lt;q=0.9',
       Accept: 'text/html,application/xhtml+xml,application/json',
     },

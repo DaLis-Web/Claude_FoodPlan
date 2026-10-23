@@ -70,3 +70,12 @@ test('gyvos kainos naudojamos ir perskaičiuojamos pakuotei', () => {
   const promos = [{ ingId: 'bulves', store: 'lidl', packPrice: 0.79, until: '2026-10-30' }];
   assert.equal(priceInfo('bulves', 'lidl', { live, promos, todayIso: '2026-10-24' }).price, 0.79);
 });
+
+test('užklausų antraštės – tik ASCII', async () => {
+  const fs = await import('node:fs/promises');
+  const src = await fs.readFile(new URL('../scripts/fetch-prices.mjs', import.meta.url), 'utf8');
+  const headers = src.slice(src.indexOf('headers: {'), src.indexOf('signal:'));
+  const values = [...headers.matchAll(/:\s*'([^']*)'/g)].map((m) => m[1]);
+  assert.ok(values.length >= 3);
+  for (const v of values) assert.match(v, /^[\x20-\x7e]*$/, v);
+});
