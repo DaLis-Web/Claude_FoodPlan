@@ -77,3 +77,17 @@ test('Maxima el. čekis iš laiško (Gmail tekstas, kelių eilučių pavadinimai
   }
   assert.ok(!r.items.some((i) => /depozit/i.test(i.name)));
 });
+
+test('Maxima programėlės PDF: istorija prieš čekį ignoruojama', async () => {
+  const fs = await import('node:fs/promises');
+  const r = parseReceipt(await fs.readFile(new URL('./fixtures/maxima-app-pdf.txt', import.meta.url), 'utf8'));
+  assert.equal(r.store, 'maxima');
+  assert.equal(r.date, '2026-10-02');
+  assert.equal(r.total, 23.53);
+  assert.equal(r.discount, 0);
+  const names = r.items.map((i) => i.name);
+  assert.ok(names.some((n) => n.startsWith('Kiaulienos šonkauliai')));
+  assert.ok(!names.some((n) => /Nuolaida|Maximos pinig|Basanavičiaus/.test(n)));
+  assert.equal(r.items.find((i) => i.name.startsWith('Alus')).ingId, 'alus');
+  assert.equal(r.items.length, 7);
+});

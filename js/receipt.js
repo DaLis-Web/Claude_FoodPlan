@@ -87,7 +87,7 @@ export function parseReceipt(text) {
   const head = lines.slice(0, 30).join(' ');
   const store = STORES.find((s) => s.match.test(head))?.id || STORES.find((s) => s.match.test(all))?.id || null;
 
-  const dm = all.match(/(20\d\d)[-./](\d{1,2})[-./](\d{1,2})/);
+  const dm = all.match(/(20\d\d)[-./](\d{1,2})[-./](\d{1,2})\s+\d{1,2}:\d{2}/) || all.match(/(20\d\d)[-./](\d{1,2})[-./](\d{1,2})/);
   const date = dm ? `${dm[1]}-${dm[2].padStart(2, '0')}-${dm[3].padStart(2, '0')}` : null;
 
   let total = null;
@@ -96,6 +96,14 @@ export function parseReceipt(text) {
     if (m && !/pinig/i.test(l)) total = num(m[2]);
   }
 
+  // Jei prieš čekį yra kitas tekstas (pvz. Maxima programėlės „Apsipirkimų istorija“ PDF) –
+  // prekių ieškome tik nuo paskutinės čekio antraštės.
+  let start = 0;
+  lines.forEach((l, i) => {
+    if (/pvm mok[eė]tojo kodas|pvm kodas|kvitas baz[eė]je|^j0\b/i.test(l)) start = i + 1;
+  });
+  const body = lines.slice(start);
+
   const items = [];
   let discount = 0;
   let buffer = []; // pavadinimo pradžia be kainos (pavadinimas tęsiasi kitoje eilutėje)
@@ -103,7 +111,7 @@ export function parseReceipt(text) {
   let skipped = false; // paskutinė eilutė buvo ne prekė (pvz. depozitas) – jos kiekio eilutė ignoruojama
   const last = () => items[items.length - 1];
 
-  for (const l of lines) {
+  for (const l of body) {
     // Po prekių sąrašo – santraukos, PVM, mokėjimas.
     if (/^={4,}|suteiktos naudos|^kvito suma|^be pvm|^tarpin|^i[sš] viso\b/i.test(l)) {
       if (items.length) break;

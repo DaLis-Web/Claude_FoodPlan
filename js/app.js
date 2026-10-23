@@ -759,11 +759,12 @@ function viewPantry() {
       <label class="btn primary">📷 Fotografuoti popierinį čekį<input type="file" accept="image/*" capture="environment" data-change="receipt-photo" hidden></label>
       <button class="btn primary" data-action="receipt-clipboard">📋 Įklijuoti el. čekį</button>
       <button class="btn" data-action="receipt-text">✍️ Įvesti tekstą</button>
-      <label class="btn">📎 Laiško failas (.eml)<input type="file" accept=".eml,.txt,.html,.htm,message/rfc822,text/plain,text/html" data-change="receipt-file" hidden></label>
+      <label class="btn">📎 Įkelti čekio failą (PDF, .eml)<input type="file" accept=".pdf,application/pdf,.eml,.txt,.html,.htm,message/rfc822,text/plain,text/html" data-change="receipt-file" hidden></label>
     </div>
     <details class="small muted"><summary>Kaip greitai įklijuoti el. čekį iš Gmail?</summary>
       <p>Telefone: atidarykite laišką, palaikykite pirštą ant teksto → <b>Pasirinkti viską</b> → <b>Kopijuoti</b>, tada čia spauskite <b>📋 Įklijuoti el. čekį</b>. Viso laiško tvarkyti nereikia – programa pati atrinks prekes.</p>
-      <p>Kompiuteryje: laiške ⋮ → <b>Atsisiųsti laišką</b> ir įkelkite failą per <b>📎 Laiško failas</b>.</p>
+      <p>Maxima programėlėje: Apsipirkimų istorija → <b>Kvitas</b> → atsisiųskite PDF ir įkelkite per <b>📎 Įkelti čekio failą</b>.</p>
+      <p>Kompiuteryje: laiške ⋮ → <b>Atsisiųsti laišką</b> ir įkelkite .eml failą.</p>
     </details>
   </section>
   <section class="card">
@@ -1176,6 +1177,55 @@ async function scanReceipt(file) {
     closeModal();
     toast('Nepavyko atpažinti čekio – galite įklijuoti jo tekstą');
   }
+}
+
+// PDF čekio tekstas (pvz. Maxima programėlės „Kvitas“): tekstas sugrupuojamas į eilutes pagal vietą puslapyje.
+async function pdfToText(file) {
+  toast('Skaitomas PDF…');
+  await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');
+  const pdfjs = window.pdfjsLib;
+  pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  const doc = await pdfjs.getDocument({ data: new Uint8Array(await file.arrayBuffer()) }).promise;
+  const out = [];
+  for (let n = 1; n <= doc.numPages; n++) {
+    const page = await doc.getPage(n);
+    const { items } = await page.getTextContent();
+    const parts = items.filter((it) => it.str).map((it) => ({ x: it.transform[4], y: it.transform[5], w: it.width, s: it.str, f: it.fontName }));
+    // Maxima programėlės PDF: čekis (lygiaplotis šriftas) uždėtas ant „Apsipirkimų istorijos“ – atskiriame pagal šriftą.
+    const anchorFonts = new Set(parts.filter((p) => /pvm|mok[eė]tojo|kvitas|baz[eė]je|^j0$/i.test(p.s)).map((p) => p.f));
+    const receiptFont = [...anchorFonts].find((f) => parts.some((p) => p.f === f && /^\d+,\d{2}$/.test(p.s)));
+    let groups = [parts];
+    if (receiptFont) {
+      const rec = parts.filter((p) => p.f === receiptFont);
+      const minX = Math.min(...rec.map((p) => p.x)) - 2;
+      const maxX = Math.max(...rec.map((p) => p.x + p.w)) + 2;
+      // Lietuviškos raidės čekyje dažnai būna kitu (atsarginiu) šriftu – priskiriame jas čekio eilutėms.
+      const isReceiptChar = (p) => p.f !== receiptFont && p.s.trim().length <= 2 && /[^\x00-\x7f]/.test(p.s) &&
+        p.x >= minX && p.x <= maxX && rec.some((r) => Math.abs(r.y - p.y) < 2.5);
+      groups = [parts.filter((p) => p.f !== receiptFont && !isReceiptChar(p)), parts.filter((p) => p.f === receiptFont || isReceiptChar(p))];
+    }
+    for (const column of groups) {
+      const rows = [];
+      for (const p of column) {
+        let row = rows.find((r) => Math.abs(r.y - p.y) < 2.5);
+        if (!row) rows.push((row = { y: p.y, parts: [] }));
+        row.parts.push(p);
+      }
+      rows.sort((a, b) => b.y - a.y);
+      for (const r of rows) {
+        r.parts.sort((a, b) => a.x - b.x);
+        let line = '';
+        let end = null;
+        for (const p of r.parts) {
+          if (end !== null && p.x - end > 1.5) line += '   ';
+          line += p.s;
+          end = p.x + p.w;
+        }
+        out.push(line);
+      }
+    }
+  }
+  return out.join('\n');
 }
 
 // Laiško failo (.eml) ar HTML tekstas: išrenkama text/plain dalis, dekoduojama quoted-printable / base64.
@@ -1651,8 +1701,13 @@ const changes = {
     const file = el.files[0];
     el.value = '';
     if (!file) return;
-    const text = emailToText(await file.text());
-    openReceiptReview(parseReceipt(text), text);
+    try {
+      const isPdf = file.type === 'application/pdf' || /\.pdf$/i.test(file.name);
+      const text = isPdf ? await pdfToText(file) : emailToText(await file.text());
+      openReceiptReview(parseReceipt(text), text);
+    } catch {
+      toast('Nepavyko perskaityti failo');
+    }
   },
   'receipt-photo': (el) => {
     const file = el.files[0];
