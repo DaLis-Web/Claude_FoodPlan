@@ -41,6 +41,8 @@ async function fromCommons(q) {
     if (!ii || ii.width < 400) continue;
     // Pavadinime turi būti bent vienas paieškos žodis – kitaip tai greičiausiai ne tas patiekalas.
     const t = norm(p.title);
+    // Tik nuotraukos (ne logotipai, plakatai ar piešiniai).
+    if (!/\.(jpe?g|webp)$/.test(t) || /logo|poster|affiche|icon|drawing|illustration/.test(t)) continue;
     if (words.length && !words.some((w) => t.includes(w.slice(0, Math.max(4, w.length - 2))))) continue;
     const meta = ii.extmetadata || {};
     const license = stripHtml(meta.LicenseShortName?.value);
