@@ -9,6 +9,9 @@ const SHELL = [
   'js/data.js',
   'js/planner.js',
   'js/store.js',
+  'js/receipt.js',
+  'js/match.js',
+  'js/search-terms.js',
   'icons/icon.svg',
   'icons/icon-192.png',
 ];

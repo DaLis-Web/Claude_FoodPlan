@@ -1,0 +1,38 @@
+name: Receptų nuotraukos
+
+on:
+  push:
+    paths: ['js/data.js', 'scripts/image-queries.mjs', 'scripts/fetch-images.mjs']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: images
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Surinkti nuotraukas
+        run: node scripts/fetch-images.mjs
+      - name: Įrašyti pakeitimus
+        run: |
+          if git diff --quiet -- data/recipe-images.json && ! git ls-files --others --exclude-standard | grep -q recipe-images; then
+            echo "Pakeitimų nėra."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/recipe-images.json
+          git commit -m "Atnaujintos receptų nuotraukos"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

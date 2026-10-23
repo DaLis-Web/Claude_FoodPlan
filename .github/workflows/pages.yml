@@ -5,7 +5,7 @@ on:
   push:
     branches: [main, 'claude/**']
   workflow_run:
-    workflows: ['Kainų ir akcijų atnaujinimas']
+    workflows: ['Kainų ir akcijų atnaujinimas', 'Receptų nuotraukos']
     types: [completed]
   workflow_dispatch:
 

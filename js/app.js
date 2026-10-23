@@ -1,5 +1,6 @@
 import { STORES, CATEGORIES, INGREDIENTS, EXTRA_CATS } from './data.js';
 import { loadState, saveState, defaultState, mergeDefaults, uid } from './store.js';
+import { parseReceipt } from './receipt.js';
 import {
   SLOTS, SLOT_LABELS, DAY_NAMES, makeCtx, generatePlan, evaluatePlan, shoppingList, storeTotals,
   alternativesFor, consumeFromPantry, pantryCoverage, recipeServingCost, isVegetarian, emptyPlan,
@@ -11,6 +12,7 @@ import {
 
 let state = loadState();
 let live = null; // data/prices.json
+let recipeImages = {}; // data/recipe-images.json
 let viewWeek = defaultWeek();
 let modalRender = null;
 let recipeFilter = { q: '', tag: 'all' };
@@ -45,7 +47,10 @@ function scheduleCloudSave() {
   clearTimeout(cloud.timer);
   // Sujungiame greitus pakeitimus į vieną įrašą.
   cloud.timer = setTimeout(() => {
-    const body = { state: JSON.parse(JSON.stringify(state)), updatedAt: state.updatedAt, device: DEVICE };
+    const copy = JSON.parse(JSON.stringify(state));
+    // Debesies dokumento riba 256 KB – per didelės savų receptų nuotraukos lieka tik šiame įrenginyje.
+    if (JSON.stringify(copy).length > 200000) copy.customRecipes = copy.customRecipes.map((r) => ({ ...r, image: null }));
+    const body = { state: copy, updatedAt: state.updatedAt, device: DEVICE };
     cloud.writing = cloud.writing
       .then(() => cloud.ref.set(body))
       .then(() => (cloud.status = 'synced'))
@@ -391,9 +396,38 @@ function mealButton(e, d, s, c) {
   return `
   <button class="meal ${e.cooked ? 'cooked' : ''} ${e.leftover ? 'leftover' : ''}" data-action="meal" data-d="${d}" data-s="${s}">
     <span class="slot">${SLOT_LABELS[s]} ${flags ? `<span class="flags">${flags}</span>` : ''}</span>
-    <span class="title">${esc(r.name)}</span>
-    <span class="meta">${e.leftover ? 'pašildyti' : `⏱ ${r.time} min`} · ${r.kcal} kcal</span>
+    <span class="meal-row">
+      <span class="meal-text">
+        <span class="title">${esc(r.name)}</span>
+        <span class="meta">${e.leftover ? 'pašildyti' : `⏱ ${r.time} min`} · ${r.kcal} kcal</span>
+      </span>
+      ${recipeImage(r) ? recipeThumb(r, 'meal-thumb') : ''}
+    </span>
   </button>`;
+}
+
+// Recepto nuotrauka: savo receptui – įkelta nuotrauka, kitiems – surinkta iš atvirų šaltinių.
+function recipeImage(r) {
+  if (r.image) return { url: r.image, thumb: r.image };
+  return recipeImages[r.id] || null;
+}
+
+const MEAL_EMOJI = (r) => (r.meals.includes('pusryciai') ? '🥣' : r.soup ? '🍲' : isVegetarian(r) ? '🥗' : '🍽️');
+
+function recipeThumb(r, cls = 'thumb') {
+  const img = recipeImage(r);
+  return img
+    ? `<img class="${cls}" src="${esc(img.thumb || img.url)}" alt="" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'${cls} ph',textContent:'${MEAL_EMOJI(r)}'}))">`
+    : `<span class="${cls} ph" aria-hidden="true">${MEAL_EMOJI(r)}</span>`;
+}
+
+function recipeHero(r) {
+  const img = recipeImage(r);
+  if (!img) return '';
+  return `<figure class="hero">
+    <img src="${esc(img.url)}" alt="${esc(r.name)}" loading="lazy" onerror="this.closest('figure').remove()">
+    ${img.credit ? `<figcaption>Nuotrauka: ${img.page ? `<a href="${esc(img.page)}" target="_blank" rel="noopener">${esc(img.credit)}</a>` : esc(img.credit)}${r.image ? '' : ' · gali šiek tiek skirtis nuo recepto'}</figcaption>` : ''}
+  </figure>`;
 }
 
 function recipeDetailHtml(r, servings, c) {
@@ -410,6 +444,7 @@ function recipeDetailHtml(r, servings, c) {
     r.custom ? '✍️ Mano' : '',
   ].filter(Boolean).map((t) => `<span class="chip">${t}</span>`).join('');
   return `
+    ${recipeHero(r)}
     <div class="chips">${tags}<span class="chip">⏱ ${r.time} min</span><span class="chip">${r.kcal} kcal</span><span class="chip">${r.protein || 0} g baltymų</span><span class="chip">~${eur(recipeServingCost(r, c))}/porc.</span></div>
     <h3>Ingredientai (${servings} porc.)</h3>
     <ul class="ing-list">${rows}</ul>
@@ -542,7 +577,6 @@ function viewList() {
         </button>` : ''}
     </div>
     ${pair && saving > 0.3 ? `<p class="hint wide-only">💡 Apsipirkę dviejose parduotuvėse (${pair.stores.map(storeName).join(' ir ')}) sutaupytumėte ${eur(saving)}.</p>` : ''}
-    ${nearbyHtml(totals)}
   </section>
 
   ${buy.length ? Object.keys(CATEGORIES).filter((k) => groups[k]).map((k) => `
@@ -586,6 +620,11 @@ function viewList() {
     </details>
   </section>
 
+  <details class="card nearby-card">
+    <summary>📍 Parduotuvės šalia ir žemėlapis</summary>
+    ${nearbyHtml(totals)}
+  </details>
+
   ${staples.length ? `
   <details class="card">
     <summary>Bazinės atsargos – patikrinkite, ar turite (${staples.length})</summary>
@@ -626,7 +665,7 @@ function nearbyHtml(totals) {
       : `<button class="btn btn-wrap" data-action="find-nearby">📍 Rasti artimiausias parduotuves</button>`;
   // Google Maps telefone pats naudoja jūsų vietą, todėl paieška „Lidl“ rodo artimiausias.
   const maps = `<div class="map-links"><span class="small muted">Žemėlapyje:</span>${STORES.map((s) => `<a class="chip" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.name + ' parduotuvė')}">${s.name}${totals.totals[s.id] !== undefined ? ` · ${eur(totals.totals[s.id])}` : ''}</a>`).join('')}</div>`;
-  return `<div class="nearby-box"><h3>Artimiausios parduotuvės</h3>${maps}${body}</div>`;
+  return `<div class="nearby-box">${maps}${body}</div>`;
 }
 
 function haversine(a, b, c, d) {
@@ -708,6 +747,14 @@ function viewPantry() {
   const first = Object.values(INGREDIENTS)[0];
   return `
   <header class="page-head"><h1>Šaldytuvas ir spintelės</h1><p class="muted">Kas jau yra namie. Planuojant šie produktai panaudojami pirmiausia (ypač tie, kurių galiojimas baigiasi), o pirkinių sąraše jų nebesiūloma pirkti.</p></header>
+  <section class="card receipt-card">
+    <h2>🧾 Turite čekį?</h2>
+    <p class="small muted">Nufotografuokite čekį – produktai atsidurs šaldytuve, išlaidos – biudžete, o planą bus galima sudaryti iš to, ką nusipirkote.</p>
+    <div class="toolbar wrap">
+      <label class="btn primary">📷 Fotografuoti ar įkelti čekį<input type="file" accept="image/*" capture="environment" data-change="receipt-photo" hidden></label>
+      <button class="btn" data-action="receipt-text">📋 Įklijuoti čekio tekstą</button>
+    </div>
+  </section>
   <section class="card">
     <h2>Pridėti produktą</h2>
     <form class="grid-form" data-form="pantry">
@@ -891,6 +938,7 @@ function renderRecipeGrid() {
   grid.innerHTML = list.map((r) => `
     <article class="recipe-card ${c.disliked.has(r.id) ? 'disliked' : ''}">
       <button class="recipe-open" data-action="recipe" data-id="${r.id}">
+        ${recipeThumb(r, 'card-img')}
         <b>${esc(r.name)}</b>
         <small class="muted">⏱ ${r.time} min · ${r.kcal} kcal · ~${eur(recipeServingCost(r, c))}/porc.</small>
         <small>${isVegetarian(r) ? '🌱 ' : ''}${r.soup ? '🍲 ' : ''}${r.custom ? '✍️ ' : ''}${r.meals.map((m) => SLOT_LABELS[m]).join(', ')}</small>
@@ -944,6 +992,8 @@ function recipeFormHtml(r, asWish = false) {
         <button type="button" class="btn small" data-action="add-ing-row">+ Ingredientas</button>
       </fieldset>
       <label>Gaminimo žingsniai (kiekvienas naujoje eilutėje)<textarea name="steps" rows="4">${esc((r?.steps || []).join('\n'))}</textarea></label>
+      <label>Nuotrauka (nebūtina)<input type="file" name="photo" accept="image/*"></label>
+      ${r?.image ? `<img class="form-photo" src="${r.image}" alt="Dabartinė nuotrauka">` : ''}
       <button class="btn primary">Išsaugoti</button>
     </form>`;
 }
@@ -1051,10 +1101,123 @@ function viewSettings() {
   </section>`;
 }
 
+// ---------- Čekiai ----------
+
+let receiptDraft = null;
+
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${src}"]`)) return resolve();
+    const el = document.createElement('script');
+    el.src = src;
+    el.onload = resolve;
+    el.onerror = () => reject(new Error('script'));
+    document.head.appendChild(el);
+  });
+}
+
+// Nuotrauka sumažinama ir paverčiama pilka – atpažinimas greitesnis ir tikslesnis.
+async function prepareReceiptImage(file) {
+  const url = URL.createObjectURL(file);
+  try {
+    const img = await new Promise((res, rej) => {
+      const i = new Image();
+      i.onload = () => res(i);
+      i.onerror = rej;
+      i.src = url;
+    });
+    const k = Math.min(1, 2000 / Math.max(img.width, img.height));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.round(img.width * k);
+    canvas.height = Math.round(img.height * k);
+    const ctx2 = canvas.getContext('2d');
+    ctx2.filter = 'grayscale(1) contrast(1.35)';
+    ctx2.drawImage(img, 0, 0, canvas.width, canvas.height);
+    return await new Promise((res) => canvas.toBlob(res, 'image/png'));
+  } finally {
+    URL.revokeObjectURL(url);
+  }
+}
+
+async function scanReceipt(file) {
+  let progress = 0;
+  openModal('Skaitomas čekis', () => `
+    <p>Atpažįstamas tekstas… ${progress}%</p>
+    <div class="bar"><span style="width:${progress}%"></span></div>
+    <p class="small muted">Pirmą kartą atsisiunčiami kalbos duomenys (~10 MB), vėliau – greičiau.</p>`);
+  try {
+    await loadScript('https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js');
+    const image = await prepareReceiptImage(file);
+    const worker = await window.Tesseract.createWorker(['lit', 'eng'], 1, {
+      logger: (m) => {
+        if (m.status === 'recognizing text') {
+          progress = Math.round(m.progress * 100);
+          refreshModal();
+        }
+      },
+    });
+    const { data } = await worker.recognize(image);
+    await worker.terminate();
+    openReceiptReview(parseReceipt(data.text), data.text);
+  } catch {
+    closeModal();
+    toast('Nepavyko atpažinti čekio – galite įklijuoti jo tekstą');
+  }
+}
+
+function openReceiptReview(parsed, rawText = '') {
+  receiptDraft = { ...parsed, date: parsed.date || today(), raw: rawText, items: parsed.items.map((i) => ({ ...i, include: !!i.ingId })) };
+  openModal('Čekio peržiūra', () => {
+    const d = receiptDraft;
+    const known = d.items.filter((i) => i.include && i.ingId).length;
+    return `
+      <form data-form="receipt-save">
+        <div class="grid-form">
+          <label>Parduotuvė<select name="store">${STORES.map((s) => `<option value="${s.id}" ${s.id === d.store ? 'selected' : ''}>${s.name}</option>`).join('')}<option value="kita" ${!d.store ? 'selected' : ''}>Kita</option></select></label>
+          <label>Data<input type="date" name="date" value="${d.date}"></label>
+          <label>Sumokėta €<input type="number" name="total" step="0.01" min="0" value="${d.total ?? ''}"></label>
+        </div>
+        ${d.items.length ? `
+        <p class="small muted">Pažymėtos prekės bus įdėtos į šaldytuvą. Patikrinkite, ar teisingai atpažinta – jei ne, pasirinkite produktą.</p>
+        <ul class="receipt-items">
+          ${d.items.map((it, i) => `
+            <li class="${it.include ? '' : 'off'}">
+              <input type="checkbox" data-change="receipt-row" data-i="${i}" data-f="include" ${it.include ? 'checked' : ''} aria-label="Įtraukti">
+              <div class="ri-main">
+                <small class="muted">${esc(it.name)}</small>
+                <select data-change="receipt-row" data-i="${i}" data-f="ingId" aria-label="Produktas">
+                  <option value="">— kita prekė (tik išlaidose) —</option>${ingredientOptions(it.ingId || '')}
+                </select>
+              </div>
+              <label class="ri-qty">${it.ingId ? INGREDIENTS[it.ingId].unit : ''}<input type="number" min="0" step="any" value="${it.qty || ''}" data-change="receipt-row" data-i="${i}" data-f="qty" aria-label="Kiekis" ${it.ingId ? '' : 'disabled'}></label>
+              <b class="ri-price">${eur(it.price)}</b>
+            </li>`).join('')}
+        </ul>` : '<p>Prekių eilučių nepavyko atpažinti. Galite įrašyti bent sumą – ji atsiras biudžete.</p>'}
+        ${d.raw ? `<details><summary class="small">Atpažintas tekstas</summary><pre class="raw">${esc(d.raw)}</pre></details>` : ''}
+        <div class="toolbar"><button class="btn primary">✔️ Įrašyti (${known} į šaldytuvą)</button></div>
+      </form>`;
+  });
+}
+
 // ---------- Veiksmai ----------
 
 const actions = {
   'close-modal': closeModal,
+  'receipt-text': () =>
+    openModal('Čekio tekstas', () => `
+      <form data-form="receipt-text">
+        <p class="small muted">Įklijuokite el. čekio tekstą (pvz. iš parduotuvės programėlės ar el. laiško).</p>
+        <textarea name="text" rows="10" required placeholder="PIENAS 2,5% 1L   0,99&#10;BULVĖS 2KG   1,49&#10;IŠ VISO   2,48"></textarea>
+        <div class="toolbar"><button class="btn primary">Toliau</button></div>
+      </form>`),
+  'receipt-plan': () => {
+    closeModal();
+    viewWeek = defaultWeek();
+    regenerate();
+    location.hash = '#plan';
+    render();
+    toast('Planas sudarytas pagal tai, ką turite ✨');
+  },
   'confirm-yes': () => {
     const fn = pendingConfirm;
     pendingConfirm = null;
@@ -1409,6 +1572,24 @@ const changes = {
     save();
     render();
   },
+  'receipt-photo': (el) => {
+    const file = el.files[0];
+    el.value = '';
+    if (file) scanReceipt(file);
+  },
+  'receipt-row': (el) => {
+    const it = receiptDraft?.items[+el.dataset.i];
+    if (!it) return;
+    const f = el.dataset.f;
+    if (f === 'include') it.include = el.checked;
+    if (f === 'qty') it.qty = parseFloat(el.value) || 0;
+    if (f === 'ingId') {
+      it.ingId = el.value || null;
+      it.include = !!it.ingId;
+      it.qty = it.ingId ? INGREDIENTS[it.ingId].pack * (it.count || 1) : 0;
+    }
+    refreshModal();
+  },
   import: async (el) => {
     const file = el.files[0];
     if (!file) return;
@@ -1428,7 +1609,66 @@ const changes = {
 
 const normalizeName = (t) => String(t).trim().toLowerCase();
 
+// Sumažina nuotrauką (kad tilptų į saugyklą): ilgiausia kraštinė iki `max` px, JPEG.
+function compressImage(file, max = 640, quality = 0.72) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      const k = Math.min(1, max / Math.max(img.width, img.height));
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(img.width * k);
+      canvas.height = Math.round(img.height * k);
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+      URL.revokeObjectURL(url);
+      resolve(canvas.toDataURL('image/jpeg', quality));
+    };
+    img.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error('image'));
+    };
+    img.src = url;
+  });
+}
+
 const forms = {
+  'receipt-text': (f) => openReceiptReview(parseReceipt(f.text.value), f.text.value),
+  'receipt-save': (f) => {
+    const d = receiptDraft;
+    if (!d) return;
+    const date = f.date.value || today();
+    const total = parseFloat(f.total.value) || 0;
+    let added = 0;
+    for (const it of d.items) {
+      if (!it.include || !it.ingId || !(it.qty > 0)) continue;
+      const ing = INGREDIENTS[it.ingId];
+      if (EXTRA_CATS.includes(ing.cat)) continue; // gėrimai ir užkandžiai – tik išlaidose
+      state.pantry.push({ id: uid(), ingId: it.ingId, qty: it.qty, expiry: addDays(date, Math.min(ing.shelf, 365)) });
+      added++;
+    }
+    if (total > 0) {
+      // Išlaidų kategorijos pagal čekio eilutes (proporcingai sumokėtai sumai).
+      const raw = {};
+      for (const it of d.items) {
+        const cat = it.ingId ? INGREDIENTS[it.ingId].cat : 'kita';
+        raw[cat] = (raw[cat] || 0) + it.price;
+      }
+      const sum = Object.values(raw).reduce((a, b) => a + b, 0);
+      const cats = sum > 0 ? Object.fromEntries(Object.entries(raw).map(([k, v]) => [k, Math.round((v / sum) * total * 100) / 100])) : null;
+      state.expenses.push({ id: uid(), date, amount: total, store: f.store.value, cats, note: 'čekis' });
+    }
+    receiptDraft = null;
+    save();
+    closeModal();
+    render();
+    openModal('Čekis įrašytas', () => `
+      <p>✅ ${added ? `Į šaldytuvą įdėta produktų: <b>${added}</b>.` : 'Produktų į šaldytuvą neįdėta.'} ${total > 0 ? `Išlaidos ${eur(total)} įrašytos į biudžetą.` : ''}</p>
+      ${added ? '<p>Sudaryti šios savaitės planą, kad pirmiausia būtų panaudota tai, ką nusipirkote?</p>' : ''}
+      <div class="toolbar">
+        ${added ? '<button class="btn primary" data-action="receipt-plan">✨ Sudaryti planą</button>' : ''}
+        <button class="btn" data-action="close-modal">Gerai</button>
+      </div>`);
+  },
   wishes: (f) => {
     const text = f.text.value;
     const w = week();
@@ -1514,7 +1754,7 @@ const forms = {
     toast(`Įtraukta: ${DAY_NAMES[d]}`);
     render();
   },
-  recipe: (f) => {
+  recipe: async (f) => {
     const meals = [...f.querySelectorAll('[name="meals"]:checked')].map((x) => x.value);
     if (!meals.length) return toast('Pasirinkite bent vieną valgymą');
     const ing = {};
@@ -1536,7 +1776,15 @@ const forms = {
       protein: +f.protein.value || 0,
       ing,
       steps: f.steps.value.split('\n').map((s) => s.trim()).filter(Boolean),
+      image: state.customRecipes.find((x) => x.id === id)?.image || null,
     };
+    if (f.photo.files[0]) {
+      try {
+        r.image = await compressImage(f.photo.files[0], 560, 0.68);
+      } catch {
+        toast('Nuotraukos nepavyko apdoroti');
+      }
+    }
     state.customRecipes = [...state.customRecipes.filter((x) => x.id !== id), r];
     if (f.dataset.wish) {
       const w = week();
@@ -1617,6 +1865,20 @@ async function loadLivePrices() {
   }
 }
 
+async function loadRecipeImages() {
+  try {
+    const res = await fetch('data/recipe-images.json', { cache: 'no-cache' });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data?.images && Object.keys(data.images).length) {
+      recipeImages = data.images;
+      render();
+    }
+  } catch {
+    // be nuotraukų
+  }
+}
+
 // Seni tušti savaičių įrašai užima vietą – išvalome senesnius nei 12 savaičių.
 function pruneOldWeeks() {
   const cutoff = addDays(mondayOf(new Date()), -84);
@@ -1627,6 +1889,7 @@ pruneOldWeeks();
 applyTheme();
 render();
 loadLivePrices();
+loadRecipeImages();
 initCloud();
 
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {

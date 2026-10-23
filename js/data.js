@@ -66,6 +66,9 @@ const RAW_INGREDIENTS = [
   ['suris', 'Fermentinis sūris', 'pienas', 'g', 250, 2.99, 21],
   ['sviestas', 'Sviestas', 'pienas', 'g', 200, 2.69, 30],
   ['grietinele', 'Grietinėlė', 'pienas', 'ml', 200, 1.29, 10],
+  ['mocarela', 'Mocarela', 'pienas', 'g', 125, 1.19, 14],
+  ['parmezanas', 'Kietasis sūris (parmezanas)', 'pienas', 'g', 100, 2.49, 60],
+  ['feta', 'Fetos sūris', 'pienas', 'g', 200, 1.99, 30],
 
   ['avizos', 'Avižiniai dribsniai', 'kruopos', 'g', 500, 0.99, 180],
   ['grikiai', 'Grikiai', 'kruopos', 'g', 800, 1.49, 365],
@@ -73,15 +76,21 @@ const RAW_INGREDIENTS = [
   ['makaronai', 'Makaronai', 'kruopos', 'g', 500, 0.99, 365],
   ['miltai', 'Kvietiniai miltai', 'kruopos', 'g', 1000, 0.79, 365, true],
   ['krakmolas', 'Bulvių krakmolas', 'kruopos', 'g', 400, 1.19, 365],
+  ['lazanijos_lakstai', 'Lazanijos lakštai', 'kruopos', 'g', 500, 1.79, 365],
+  ['zirniai_skaldyti', 'Skaldyti žirniai', 'kruopos', 'g', 500, 0.99, 365],
   ['lesiai', 'Raudonieji lęšiai', 'kruopos', 'g', 500, 1.79, 365],
 
   ['duona', 'Ruginė duona', 'duona', 'g', 800, 1.59, 5],
   ['batonas', 'Batonas', 'duona', 'g', 500, 1.09, 4],
   ['tortilijos', 'Tortilijos', 'duona', 'vnt', 6, 1.79, 14],
+  ['mesainiu_bandeles', 'Mėsainių bandelės', 'duona', 'vnt', 4, 1.59, 5],
+  ['picos_tesla', 'Picos tešla', 'duona', 'g', 400, 1.69, 7],
 
   ['pomidorai_konserv', 'Konservuoti pomidorai', 'konservai', 'g', 400, 0.89, 365],
   ['pupeles', 'Konservuotos raudonosios pupelės', 'konservai', 'g', 400, 0.79, 365],
   ['avinzirniai', 'Konservuoti avinžirniai', 'konservai', 'g', 400, 0.89, 365],
+  ['pomidoru_padazas', 'Pomidorų padažas (pasata)', 'konservai', 'g', 500, 1.29, 365],
+  ['kukuruzai', 'Konservuoti kukurūzai', 'konservai', 'g', 340, 0.99, 365],
   ['tunas', 'Tunas savose sultyse', 'konservai', 'g', 160, 1.69, 365],
   ['medus', 'Medus', 'konservai', 'g', 250, 3.49, 365],
   ['soju_padazas', 'Sojų padažas', 'konservai', 'ml', 150, 1.49, 365, true],
@@ -90,6 +99,7 @@ const RAW_INGREDIENTS = [
   ['zirneliai', 'Žalieji žirneliai (šaldyti)', 'saldyti', 'g', 400, 1.29, 180],
   ['darzoviu_misinys', 'Daržovių mišinys (šaldytas)', 'saldyti', 'g', 400, 1.49, 180],
   ['uogos', 'Uogų mišinys (šaldytas)', 'saldyti', 'g', 300, 2.29, 180],
+  ['spinatai', 'Špinatai (šaldyti)', 'saldyti', 'g', 400, 1.49, 180],
 
   ['aliejus', 'Saulėgrąžų aliejus', 'bazine', 'ml', 1000, 2.19, 365, true],
   ['druska', 'Druska', 'bazine', 'g', 1000, 0.39, 999, true],
@@ -332,6 +342,130 @@ export const RECIPES = [
     ing: { vistienos_file: 150, kiausiniai: 0.3, svogunai: 20, batonas: 15, aliejus: 15, grikiai: 70, agurkai: 80, druska: 1 },
     steps: ['Vištieną smulkiai sukapokite, sumaišykite su kiaušiniu, svogūnu, mirkytu batonu.', 'Kepkite kotletus po 5 min. iš abiejų pusių.', 'Patiekite su grikiais ir agurkais.'],
   },
+  // --- Daugiau pusryčių ---
+  {
+    id: 'bananu_blyneliai', name: 'Bananiniai avižų blyneliai', meals: P, time: 15, kcal: 420, protein: 14,
+    ing: { bananai: 100, kiausiniai: 1, avizos: 40, pienas: 50, aliejus: 5, medus: 10 },
+    steps: ['Sutrinkite bananą, įmuškite kiaušinį, supilkite pieną ir dribsnius.', 'Kepkite mažus blynelius po 2 min. iš abiejų pusių.', 'Patiekite su medumi.'],
+  },
+  {
+    id: 'skrebuciai', name: 'Prancūziški skrebučiai su uogomis', meals: P, time: 15, kcal: 460, protein: 16,
+    ing: { batonas: 80, kiausiniai: 1, pienas: 60, sviestas: 10, uogos: 60, cukrus: 5 },
+    steps: ['Išplakite kiaušinį su pienu ir cukrumi.', 'Pamirkykite batono riekes ir apkepkite svieste.', 'Patiekite su uogomis.'],
+  },
+  {
+    id: 'varskes_sumustiniai', name: 'Sumuštiniai su varške, agurku ir krapais', meals: P, time: 5, kcal: 360, protein: 22,
+    ing: { duona: 80, varske: 80, agurkai: 50, zalumynai: 2, druska: 0.5 },
+    steps: ['Varškę sumaišykite su smulkintais krapais ir druska.', 'Užtepkite ant duonos, uždėkite agurko griežinėlių.'],
+  },
+  {
+    id: 'angliski_pusryciai', name: 'Kiaušiniai su šonine ir pupelėmis', meals: P, time: 20, kcal: 620, protein: 30,
+    ing: { kiausiniai: 2, sonine: 40, pupeles: 80, duona: 60, pomidorai: 60 },
+    steps: ['Apkepkite šoninę, tame pačiame keptuve iškepkite kiaušinius.', 'Pašildykite pupeles, apkepkite pomidorų puseles.', 'Patiekite su skrudinta duona.'],
+  },
+
+  // --- Daugiau pietų / vakarienių ---
+  {
+    id: 'lazanija', name: 'Lazanija su mėsos padažu', meals: M, time: 75, kcal: 720, protein: 38,
+    ing: { lazanijos_lakstai: 70, malta_mesa: 120, pomidoru_padazas: 120, svogunai: 30, morkos: 30, pienas: 120, sviestas: 10, miltai: 10, mocarela: 40, druska: 1 },
+    steps: ['Apkepinkite svogūną, morką ir faršą, supilkite pomidorų padažą, troškinkite 15 min.', 'Išvirkite baltąjį padažą: ištirpintame svieste pakepinkite miltus, supilkite pieną ir maišykite, kol sutirštės.', 'Formoje sluoksniuokite lakštus, mėsos ir baltąjį padažą, viršų pabarstykite mocarela.', 'Kepkite 180 °C orkaitėje 40 min.'],
+  },
+  {
+    id: 'karbonara', name: 'Spagečiai karbonara', meals: M, time: 20, kcal: 690, protein: 28,
+    ing: { makaronai: 100, sonine: 50, kiausiniai: 1, parmezanas: 20, pipirai: 0.5, druska: 1 },
+    steps: ['Išvirkite spagečius, pasilikite puodelį virimo vandens.', 'Apkepkite šoninę.', 'Kiaušinį išplakite su tarkuotu sūriu ir pipirais.', 'Nukėlę nuo ugnies sumaišykite karštus makaronus, šoninę ir kiaušinių masę, įpilkite šiek tiek vandens.'],
+  },
+  {
+    id: 'pica', name: 'Naminė pica su kumpiu ir grybais', meals: M, time: 35, kcal: 750, protein: 32,
+    ing: { picos_tesla: 130, pomidoru_padazas: 50, mocarela: 60, kumpis: 40, grybai: 50 },
+    steps: ['Iškočiokite tešlą, patepkite pomidorų padažu.', 'Sudėkite kumpį, grybus ir mocarelą.', 'Kepkite 220 °C orkaitėje 12–15 min.'],
+  },
+  {
+    id: 'cezario_salotos', name: 'Cezario salotos su vištiena', meals: M, time: 25, kcal: 520, protein: 38,
+    ing: { vistienos_file: 130, salotos: 60, parmezanas: 15, batonas: 40, jogurtas: 30, cesnakai: 2, citrinos: 0.25, aliejus: 10 },
+    steps: ['Apkepkite vištieną ir supjaustykite juostelėmis.', 'Batoną supjaustykite kubeliais ir paskrudinkite.', 'Jogurtą sumaišykite su česnaku ir citrinos sultimis.', 'Sumaišykite salotas su padažu, vištiena, skrebučiais ir sūriu.'],
+  },
+  {
+    id: 'graikiskos_salotos', name: 'Graikiškos salotos su duona', meals: M, time: 15, kcal: 420, protein: 14,
+    ing: { pomidorai: 120, agurkai: 100, paprikos: 60, svogunai: 20, feta: 50, aliejus: 10, duona: 50 },
+    steps: ['Supjaustykite daržoves stambiais gabalėliais.', 'Sudėkite fetos kubelius, apšlakstykite aliejumi.', 'Patiekite su duona.'],
+  },
+  {
+    id: 'mesainiai', name: 'Naminiai mėsainiai', meals: M, time: 30, kcal: 780, protein: 36,
+    ing: { mesainiu_bandeles: 1, malta_mesa: 130, suris: 20, pomidorai: 50, salotos: 20, agurkai: 30, svogunai: 15, druska: 1 },
+    steps: ['Iš faršo suformuokite paplotėlius, pasūdykite.', 'Kepkite po 4 min. iš abiejų pusių, ant viršaus uždėkite sūrio.', 'Bandeles paskrudinkite ir sudėkite mėsainį su daržovėmis.'],
+  },
+  {
+    id: 'zirniu_sriuba', name: 'Žirnių sriuba su rūkyta šonine', meals: M, time: 70, kcal: 450, protein: 22, soup: true,
+    ing: { zirniai_skaldyti: 80, sonine: 40, bulves: 100, morkos: 40, svogunai: 30, duona: 40, druska: 1 },
+    steps: ['Žirnius nuplaukite ir virkite 40 min.', 'Apkepinkite šoninę su svogūnu.', 'Sudėkite bulves, morkas ir šoninę, virkite dar 20 min.'],
+  },
+  {
+    id: 'grybu_sriuba', name: 'Pievagrybių kreminė sriuba', meals: M, time: 30, kcal: 330, protein: 9, soup: true,
+    ing: { grybai: 150, bulves: 100, svogunai: 30, grietinele: 50, sviestas: 10, duona: 40, druska: 1 },
+    steps: ['Apkepinkite svogūną ir grybus svieste.', 'Sudėkite bulves, užpilkite vandeniu ir virkite 15 min.', 'Sutrinkite, įpilkite grietinėlės ir pašildykite.'],
+  },
+  {
+    id: 'kopustu_sriuba', name: 'Šviežių kopūstų sriuba', meals: M, time: 45, kcal: 260, protein: 8, soup: true,
+    ing: { kopustai: 150, bulves: 100, morkos: 40, svogunai: 30, pomidorai_konserv: 60, grietine: 20, druska: 1 },
+    steps: ['Apkepinkite svogūną ir morką.', 'Virkite bulves 10 min., sudėkite kopūstus ir pomidorus.', 'Virkite dar 15 min., patiekite su grietine.'],
+  },
+  {
+    id: 'pomidoru_sriuba', name: 'Pomidorų sriuba su grietinėle', meals: M, time: 25, kcal: 300, protein: 8, soup: true,
+    ing: { pomidorai_konserv: 250, svogunai: 30, grietinele: 40, cesnakai: 3, duona: 50, druska: 1 },
+    steps: ['Apkepinkite svogūną ir česnaką.', 'Supilkite pomidorus ir virkite 15 min.', 'Sutrinkite, įpilkite grietinėlės, patiekite su duona.'],
+  },
+  {
+    id: 'vistienos_karis', name: 'Vištienos karis su ryžiais', meals: M, time: 35, kcal: 640, protein: 40,
+    ing: { vistienos_file: 140, grietinele: 50, svogunai: 40, kario: 3, ryziai: 70, pomidorai_konserv: 60, aliejus: 10 },
+    steps: ['Išvirkite ryžius.', 'Apkepkite vištieną su svogūnu ir kario prieskoniais.', 'Supilkite pomidorus ir grietinėlę, troškinkite 15 min.'],
+  },
+  {
+    id: 'kiaulienos_kepsniai', name: 'Kiaulienos kepsniai su bulvėmis ir kopūstų salotomis', meals: M, time: 40, kcal: 720, protein: 40,
+    ing: { kiauliena: 160, bulves: 250, kopustai: 100, morkos: 30, aliejus: 20, miltai: 10, kiausiniai: 0.3, druska: 2 },
+    steps: ['Mėsą išmuškite, apvoliokite kiaušinyje ir miltuose.', 'Kepkite po 4 min. iš abiejų pusių.', 'Išvirkite bulves; kopūstą ir morką sutarkuokite salotoms.'],
+  },
+  {
+    id: 'zuvies_troskinys', name: 'Žuvies troškinys pomidorų padaže su ryžiais', meals: M, time: 35, kcal: 520, protein: 36,
+    ing: { menke: 160, pomidoru_padazas: 100, svogunai: 30, paprikos: 60, ryziai: 70, aliejus: 10, druska: 1 },
+    steps: ['Išvirkite ryžius.', 'Apkepinkite svogūną ir papriką, supilkite padažą.', 'Sudėkite žuvies gabalėlius ir troškinkite 10 min.'],
+  },
+  {
+    id: 'kepti_ryziai', name: 'Kepti ryžiai su kiaušiniu ir daržovėmis', meals: M, time: 20, kcal: 520, protein: 16,
+    ing: { ryziai: 80, kiausiniai: 1, darzoviu_misinys: 150, soju_padazas: 15, aliejus: 10 },
+    steps: ['Išvirkite ir atvėsinkite ryžius (geriausia – vakarykščius).', 'Apkepkite daržoves, įmuškite kiaušinį ir išmaišykite.', 'Sudėkite ryžius, įpilkite sojų padažo ir kepkite 3 min.'],
+  },
+  {
+    id: 'grybu_rizotas', name: 'Grybų rizotas', meals: M, time: 40, kcal: 600, protein: 15,
+    ing: { ryziai: 90, grybai: 120, svogunai: 30, sviestas: 15, parmezanas: 20, grietinele: 30, druska: 1 },
+    steps: ['Apkepinkite svogūną ir grybus svieste.', 'Suberkite ryžius, po truputį pilkite karštą vandenį ar sultinį ir maišykite 20 min.', 'Įmaišykite grietinėlę ir tarkuotą sūrį.'],
+  },
+  {
+    id: 'buritas', name: 'Tortilijos su faršu, pupelėmis ir kukurūzais', meals: M, time: 25, kcal: 690, protein: 34,
+    ing: { tortilijos: 2, malta_mesa: 100, pupeles: 60, kukuruzai: 40, pomidorai: 50, suris: 20, paprika_malta: 1 },
+    steps: ['Apkepkite faršą su paprika.', 'Sudėkite pupeles ir kukurūzus, pašildykite.', 'Suvyniokite į tortilijas su pomidorais ir sūriu.'],
+  },
+  {
+    id: 'makaronai_tunas', name: 'Makaronai su tunu pomidorų padaže', meals: M, time: 20, kcal: 600, protein: 32,
+    ing: { makaronai: 100, tunas: 80, pomidoru_padazas: 100, svogunai: 20, cesnakai: 3, aliejus: 5 },
+    steps: ['Išvirkite makaronus.', 'Apkepinkite svogūną ir česnaką, supilkite padažą ir sudėkite tuną.', 'Sumaišykite su makaronais.'],
+  },
+  {
+    id: 'spinatu_makaronai', name: 'Makaronai su špinatais ir grietinėle', meals: M, time: 20, kcal: 620, protein: 20,
+    ing: { makaronai: 100, spinatai: 100, grietinele: 60, cesnakai: 3, parmezanas: 15 },
+    steps: ['Išvirkite makaronus.', 'Pakaitinkite špinatus su česnaku, įpilkite grietinėlės.', 'Sumaišykite su makaronais ir sūriu.'],
+  },
+  {
+    id: 'vistiena_orkaiteje', name: 'Orkaitėje kepta vištienos krūtinėlė su daržovėmis', meals: M, time: 40, kcal: 520, protein: 44,
+    ing: { vistienos_file: 160, cukinija: 120, paprikos: 80, svogunai: 30, aliejus: 15, druska: 1, paprika_malta: 1 },
+    steps: ['Daržoves supjaustykite, sumaišykite su aliejumi ir prieskoniais.', 'Ant viršaus dėkite vištieną.', 'Kepkite 200 °C orkaitėje 30 min.'],
+  },
+  {
+    id: 'bulviu_kose_kiausiniai', name: 'Bulvių košė su keptu kiaušiniu ir agurkais', meals: M, time: 25, kcal: 480, protein: 18,
+    ing: { bulves: 300, pienas: 60, sviestas: 15, kiausiniai: 1, agurkai: 80, druska: 1 },
+    steps: ['Išvirkite bulves ir sutrinkite su pienu ir sviestu.', 'Iškepkite kiaušinį.', 'Patiekite su agurkais.'],
+  },
+
   {
     id: 'varskes_apkepas', name: 'Varškės apkepas su obuoliais', meals: M, time: 50, kcal: 480, protein: 30,
     ing: { varske: 150, kiausiniai: 1, cukrus: 15, avizos: 20, obuoliai: 100, grietine: 30 },
