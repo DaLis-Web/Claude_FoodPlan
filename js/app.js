@@ -51,6 +51,8 @@ function scheduleCloudSave() {
       .then(() => (cloud.status = 'synced'))
       .catch((e) => {
         cloud.status = 'error';
+        // Rašyti neleidžiama – toliau saugome tik naršyklėje.
+        if (e?.code === 'invalid_argument' || e?.code === 'not_granted') cloud.ref = null;
         if (e?.code === 'quota_exceeded') toast('Debesies saugykla pilna – ištrinkite senus duomenis');
       });
   }, 1200);
@@ -67,6 +69,9 @@ async function initCloud() {
     cloud.downloads = downloads;
     const uid = user ? await user.id() : null;
     if (!db || !uid) return;
+    // Draugai, kuriems puslapis pasidalintas tik peržiūrai, į saugyklą rašyti negali –
+    // jiems duomenys lieka jų pačių naršyklėje.
+    if ((await user.can?.('data.write')) === false) return;
     const ref = db.doc(`data/users/${uid}/state`);
     const snap = await ref.get();
     const remote = snap.exists ? snap.data() : null;
