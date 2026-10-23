@@ -9,7 +9,7 @@ export const SEARCH_TERMS = {
   burokeliai: { q: 'burokėliai', must: ['burokėl'], not: ['marin', 'salot', 'sult', 'virti'] },
   pomidorai: { q: 'pomidorai', must: ['pomidor'], not: ['konserv', 'padaž', 'pasta', 'sult', 'džiovint', 'tyr', 'trint', 'kečup', 'nulupt', 'smulkint', 'lečas', 'lečo', 'savo sultyse'] },
   agurkai: { q: 'agurkai', must: ['agurk'], not: ['marin', 'rauginti', 'konserv', 'salot'] },
-  paprikos: { q: 'paprikos', must: ['paprik'], not: ['malt', 'trašk', 'padaž', 'marin', 'pasta', 'čips', 'lečas', 'lečo', 'konserv', 'kepint', 'kimšt'] },
+  paprikos: { q: 'paprikos', must: ['paprik'], not: ['malt', 'trašk', 'padaž', 'marin', 'pasta', 'čips', 'lečas', 'lečo', 'konserv', 'kepint', 'kimšt', 'alyvuog', 'įdaryt', 'paprikomis', 'paprikų skon'] },
   brokoliai: { q: 'brokoliai', must: ['brokol'], not: ['šaldyt', 'sriub'] },
   cukinija: { q: 'cukinijos', must: ['cukinij'], not: ['ikr', 'marin'] },
   grybai: { q: 'pievagrybiai', must: ['pievagryb'], not: ['marin', 'konserv', 'sriub', 'padaž', 'šaldyt'] },
@@ -36,12 +36,12 @@ export const SEARCH_TERMS = {
   kiausiniai: { q: 'kiaušiniai', must: ['kiauši'], not: ['šokolad', 'virti', 'putpel', 'saldain', 'makaron'] },
   varske: { q: 'varškė 9%', must: ['varškė'], not: ['sūrel', 'desert', 'apkep', 'užtepė', 'glaist', 'ledai', 'varškėči'] },
   grietine: { q: 'grietinė 30%', must: ['grietinė'], not: ['padaž', 'ledai', 'grietinėlė', 'traškuč', 'skonio'] },
-  jogurtas: { q: 'natūralus jogurtas', must: ['jogurt'], not: ['gėrim', 'braš', 'vyšn', 'vanil', 'mang', 'šokolad', 'uog', 'persik'] },
+  jogurtas: { q: 'natūralus jogurtas', must: ['jogurt'], not: ['gėrim', 'braš', 'vyšn', 'vanil', 'mang', 'šokolad', 'uog', 'persik', 'geriam'] },
   suris: { q: 'fermentinis sūris', must: ['sūris'], not: ['lydyt', 'tepam', 'varšk', 'sūreli', 'trašk', 'mocarel', 'feta', 'ožk', 'avių', 'pelėsin', 'grietinėlės sūris'] },
   sviestas: { q: 'sviestas 82%', must: ['sviestas'], not: ['žolel', 'česnak', 'kakav', 'riešut', 'margarin', 'tepin', 'mišin', 'su sviestu', 'sausain'] },
   grietinele: { q: 'grietinėlė', must: ['grietinėl'], not: ['plakta', 'aerozol', 'kavai', 'augal', 'ledai'] },
 
-  avizos: { q: 'avižiniai dribsniai', must: ['aviž'], not: ['batonėl', 'sausainiai', 'gėrim', 'pienas', 'košė su'] },
+  avizos: { q: 'avižiniai dribsniai', must: ['aviž'], all: ['dribsn'], not: ['batonėl', 'sausainiai', 'gėrim', 'pienas', 'košė su', 'duon'] },
   grikiai: { q: 'grikiai', must: ['grik'], not: ['dribsn', 'miltai', 'traškuč', 'žali', 'virti'] },
   ryziai: { q: 'ryžiai', must: ['ryži'], not: ['traškuč', 'dribsn', 'pienas', 'gėrim', 'miltai', 'sušiams', 'paplot'] },
   makaronai: { q: 'makaronai', must: ['makaron', 'spageti', 'penne', 'spiral'], not: ['greitai', 'sriub', 'kiniški', 'padaž', 'ryžių'] },
@@ -52,8 +52,8 @@ export const SEARCH_TERMS = {
   batonas: { q: 'batonas', must: ['baton'], not: ['šokolad', 'batonėl', 'varšk', 'proteino'] },
   tortilijos: { q: 'tortilijos', must: ['tortilij'], not: ['traškuč', 'čips'] },
 
-  pomidorai_konserv: { q: 'konservuoti pomidorai', must: ['pomidor'], not: ['padaž', 'kečup', 'sult', 'džiovint', 'pasta'] },
-  pupeles: { q: 'raudonosios pupelės', all: ['pupel', 'raudon'], not: ['šparag', 'žali', 'šaldyt', 'kavos'] },
+  pomidorai_konserv: { q: 'konservuoti pomidorai', must: ['konserv', 'nulupt', 'smulkint', 'trint', 'savo sultyse', 'pjaustyt'], all: ['pomidor'], not: ['padaž', 'kečup', 'sult', 'džiovint', 'pasta'] },
+  pupeles: { q: 'raudonosios pupelės', all: ['pupel', 'raudon'], not: ['šparag', 'žali', 'šaldyt', 'kavos', 'sriub', 'šiupinin', 'charčio'] },
   avinzirniai: { q: 'avinžirniai', must: ['avinžirn'], not: ['humus', 'traškuč', 'miltai', 'užkand'] },
   tunas: { q: 'tunas savose sultyse', must: ['tun'], not: ['aliej', 'salot', 'pašteta', 'pomidor'] },
   medus: { q: 'medus', must: ['medus'], not: ['sausain', 'pyrag', 'saldain', 'garstyč'] },
@@ -61,7 +61,7 @@ export const SEARCH_TERMS = {
 
   menke: { q: 'menkės filė', must: ['menk'], not: ['rūkyt', 'kepen', 'lazdel', 'konserv', 'sūdyt', 'kotlet', 'salot'] },
   zirneliai: { q: 'žalieji žirneliai šaldyti', must: ['žirnel'], not: ['konserv', 'traškuč', 'sriub'] },
-  darzoviu_misinys: { q: 'šaldytas daržovių mišinys', must: ['daržov'], not: ['sriub', 'sult', 'traškuč', 'padaž'] },
+  darzoviu_misinys: { q: 'šaldytas daržovių mišinys', must: ['daržovių mišin', 'šaldyt'], all: ['daržov'], not: ['sriub', 'sult', 'traškuč', 'padaž', 'košė'] },
   uogos: { q: 'šaldytos uogos', must: ['uog', 'braš', 'aviet', 'mėlyn', 'serbent'], all: ['šald'], not: ['vynuog', 'jogurt', 'sult', 'arbat', 'gėrim', 'ledai', 'uogien', 'sausain', 'pyrag', 'varšk'] },
 
   aliejus: { q: 'saulėgrąžų aliejus', must: ['aliejus'], not: ['alyvuog', 'rapsų', 'kokos', 'tunas', 'žuv', 'purškiam', 'silk', 'šprot', 'aliejuje'] },
@@ -69,7 +69,7 @@ export const SEARCH_TERMS = {
   cukrus: { q: 'cukrus', must: ['cukrus'], not: ['vanil', 'pudra', 'rudasis', 'nendrių', 'be cukraus'] },
   pipirai: { q: 'malti juodieji pipirai', must: ['pipir'], not: ['dešr', 'sūris', 'sumuštin'] },
   paprika_malta: { q: 'malta paprika', must: ['paprik'], all: ['malt'], not: ['trašk', 'marin', 'čips'] },
-  kario: { q: 'kario prieskoniai', must: ['kari'], not: ['padaž', 'pasta', 'sriub', 'makaron'] },
+  kario: { q: 'kario prieskoniai', must: ['kario', 'karis', 'curry'], not: ['padaž', 'pasta', 'sriub', 'makaron', 'riešut'] },
 
   // Gėrimai ir kita (kaina už vienetą; parenkama pigiausia tinkama prekė).
   alus: { q: 'alus 0,5 l', must: ['alus'], not: ['nealkohol', 'be alkoholio', '0,0', 'dėžė', 'pak', 'x '], re: /0[,.]5\s?l|500\s?ml/ },
@@ -83,7 +83,7 @@ export const SEARCH_TERMS = {
   kava: { q: 'malta kava 500 g', must: ['kava'], not: ['tirpi', 'pupel', 'kapsul', 'gėrim', 'saldain'], re: /500\s?g|0[,.]5\s?kg/ },
   arbata: { q: 'juodoji arbata pakeliais', must: ['arbat'], not: ['šalta', 'gėrim', 'ledinė'] },
   traskuciai: { q: 'bulvių traškučiai', must: ['traškuč'], not: ['kukurūz', 'ryžių', 'duonos'] },
-  sokoladas: { q: 'pieninis šokoladas 100 g', must: ['šokolad'], not: ['saldain', 'batonėl', 'gėrim', 'pienas', 'sausain', 'kremas'], re: /(80|90|100)\s?g/ },
+  sokoladas: { q: 'pieninis šokoladas 100 g', must: ['šokolad'], not: ['saldain', 'batonėl', 'gėrim', 'pienas', 'sausain', 'kremas', 'užkand', 'padeng', 'glaist', 'dribsn'], re: /(80|90|100)\s?g/ },
   sausainiai: { q: 'sausainiai', must: ['sausain'], not: ['šunims', 'kat'] },
   riesutai: { q: 'riešutai 200 g', must: ['riešut'], not: ['sviest', 'šokolad', 'kremas', 'pienas', 'gėrim'], re: /(150|200|250)\s?g/ },
   ledai: { q: 'ledai 1 l', must: ['ledai'], not: ['pagaliuk', 'ledinė', 'kūgel'], re: /(^|[^,.\d])1\s?l\b|1000\s?ml|900\s?ml|0[,.]9\s?l|500\s?g/ },

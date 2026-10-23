@@ -884,16 +884,6 @@
     "validUntil": "2026-10-28",
     "url": "https://www.norfa.lt/akcijos/"
    },
-   "jogurtas": {
-    "title": "Geriamasis jogurtas GAR2 (3 rūšių), 2,5% rieb., 1 kg",
-    "price": 1.19,
-    "unitPrice": 1.19,
-    "unit": "kg",
-    "oldPrice": 1.59,
-    "promo": true,
-    "validUntil": "2026-10-28",
-    "url": "https://www.norfa.lt/akcijos/"
-   },
    "suris": {
     "title": "Sūris TILSIT GERMANTO 45% r.s.m., 1 kg",
     "price": 5.99,
@@ -920,16 +910,6 @@
     "unitPrice": 2.2,
     "unit": "l",
     "oldPrice": 1.39,
-    "promo": true,
-    "validUntil": "2026-10-28",
-    "url": "https://www.norfa.lt/akcijos/"
-   },
-   "avizos": {
-    "title": "DUONČIAUS AVIŽŲ duona, 500 g",
-    "price": 0.87,
-    "unitPrice": 1.74,
-    "unit": "kg",
-    "oldPrice": 1.59,
     "promo": true,
     "validUntil": "2026-10-28",
     "url": "https://www.norfa.lt/akcijos/"
@@ -970,56 +950,6 @@
     "unitPrice": 0.98,
     "unit": "kg",
     "oldPrice": 0.89,
-    "promo": true,
-    "validUntil": "2026-10-28",
-    "url": "https://www.norfa.lt/akcijos/"
-   },
-   "pomidorai_konserv": {
-    "title": "Avietiniai pomidorai, 1 kg",
-    "price": 1.89,
-    "unitPrice": 1.89,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": true,
-    "validUntil": "2026-10-25",
-    "url": "https://www.norfa.lt/akcijos/"
-   },
-   "pupeles": {
-    "title": "Konservuota ISPANIŠKA, CHARČIO, šiupininė arba raudonųjų pupelių sriuba RIVONA, 480 g",
-    "price": 1.39,
-    "unitPrice": 2.9,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": true,
-    "validUntil": "2026-10-28",
-    "url": "https://www.norfa.lt/akcijos/"
-   },
-   "kario": {
-    "title": "Fasuoti karijų riešutai GAR2, 100 g/pak.",
-    "price": 1.85,
-    "unitPrice": 18.5,
-    "unit": "kg",
-    "oldPrice": 2.49,
-    "promo": true,
-    "validUntil": "2026-10-28",
-    "url": "https://www.norfa.lt/akcijos/"
-   },
-   "alus": {
-    "title": "Natūralus mineralinis vanduo BIRUTĖ, 0,5 l",
-    "price": 0.38,
-    "unitPrice": 0.76,
-    "unit": "l",
-    "oldPrice": 0.59,
-    "promo": true,
-    "validUntil": "2026-10-28",
-    "url": "https://www.norfa.lt/akcijos/"
-   },
-   "alus_nealk": {
-    "title": "Natūralus mineralinis vanduo BIRUTĖ, 2 rūšių, 1,5 l",
-    "price": 0.57,
-    "unitPrice": 0.38,
-    "unit": "l",
-    "oldPrice": 0.85,
     "promo": true,
     "validUntil": "2026-10-28",
     "url": "https://www.norfa.lt/akcijos/"
@@ -1074,16 +1004,6 @@
     "validUntil": "2026-10-28",
     "url": "https://www.norfa.lt/akcijos/"
    },
-   "sokoladas": {
-    "title": "Kukurūzinis užkandis padengtas pieniniu šokoladu SMASH!, 100 g",
-    "price": 1.86,
-    "unitPrice": 18.6,
-    "unit": "kg",
-    "oldPrice": 2.49,
-    "promo": true,
-    "validUntil": "2026-10-28",
-    "url": "https://www.norfa.lt/akcijos/"
-   },
    "sausainiai": {
     "title": "Sausainiai PYKŠT POKŠT, TAPU TAPU, PINOKIS, 180 g",
     "price": 0.52,
@@ -1104,120 +1024,6 @@
     "validUntil": "2026-10-28",
     "url": "https://www.norfa.lt/akcijos/"
    }
-  },
-  "lidl": {
-   "svogunai": {
-    "title": "Lietuviški geltonieji svogūnai",
-    "price": 0.35,
-    "unitPrice": null,
-    "unit": null,
-    "oldPrice": 0.45,
-    "promo": true,
-    "validUntil": null,
-    "url": "/p/lietuviski-geltonieji-svogunai/p11029564"
-   },
-   "malta_mesa": {
-    "title": "Malta kava",
-    "price": 5.99,
-    "unitPrice": 11.98,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "/p/malta-kava/p11450867"
-   },
-   "kiausiniai": {
-    "title": "Kiaušiniai",
-    "price": 1.79,
-    "unitPrice": 0.18,
-    "unit": "vnt",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "/p/kiausiniai/p11474570"
-   },
-   "suris": {
-    "title": "Ožkų sūris",
-    "price": 1.89,
-    "unitPrice": 12.6,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": true,
-    "validUntil": null,
-    "url": "/p/ozku-suris/p10040627"
-   },
-   "menke": {
-    "title": "Menkė",
-    "price": 6.99,
-    "unitPrice": null,
-    "unit": null,
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "/p/menke/p11313271"
-   }
-  },
-  "iki": {
-   "paprikos": {
-    "title": "Žaliosios alyvuogės įdarytos paprikomis IBELUS, 280 g",
-    "price": 4.607142857142857,
-    "unitPrice": 4.607142857142857,
-    "unit": "kg",
-    "oldPrice": 6.75,
-    "promo": true,
-    "validUntil": null,
-    "url": null
-   },
-   "malta_mesa": {
-    "title": "Kiaulienos faršas riebumas ne didesnis kaip 35%, atšaldyta",
-    "price": 3.59,
-    "unitPrice": 3.59,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": null
-   },
-   "desreles": {
-    "title": "Virtos GIMINIŲ dešrelės, a. r., 860 g",
-    "price": 4.174418604651163,
-    "unitPrice": 4.174418604651163,
-    "unit": "kg",
-    "oldPrice": 5.8,
-    "promo": true,
-    "validUntil": null,
-    "url": null
-   },
-   "darzoviu_misinys": {
-    "title": "Daržovių ir kalakutienos košė (nuo 6 mėn.) MARMALUZI, 190 g",
-    "price": 6.473684210526316,
-    "unitPrice": 6.473684210526316,
-    "unit": "kg",
-    "oldPrice": 9.95,
-    "promo": true,
-    "validUntil": null,
-    "url": null
-   },
-   "alus": {
-    "title": "Gazuotas natūralus mineralinis vanduo BIRUTĖ, 500 ml",
-    "price": 1.18,
-    "unitPrice": 1.18,
-    "unit": "l",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": null
-   },
-   "alus_nealk": {
-    "title": "Negazuotas natūralus mineralinis vanduo TICHĖ, 1 l",
-    "price": 0.89,
-    "unitPrice": 0.89,
-    "unit": "l",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": null
-   }
   }
  },
  "sources": {
@@ -1230,19 +1036,7 @@
   "norfa": {
    "name": "Norfa akcijos",
    "updatedAt": "2026-10-23T19:44:26.959Z",
-   "found": 33,
-   "errors": 0
-  },
-  "lidl": {
-   "name": "Lidl",
-   "updatedAt": "2026-10-23T19:37:43.601Z",
-   "found": 5,
-   "errors": 0
-  },
-  "iki": {
-   "name": "IKI (LastMile)",
-   "updatedAt": "2026-10-23T19:44:26.959Z",
-   "found": 6,
+   "found": 25,
    "errors": 0
   }
  }

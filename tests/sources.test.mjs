@@ -151,3 +151,15 @@ test('kiekis iš pavadinimo ir naujos taisyklės', async () => {
   assert.equal(matches('Saldžiosios bulvės, 1 kg', T.bulves), false);
   assert.equal(matches('Grietinės ir grybų skonio bulvių traškučiai', T.grietine), false);
 });
+
+test('žodžio pradžia: „alus“ ≠ „natūralus“, „kario“ ≠ „karijų“', async () => {
+  const { matches, withUnitPrice } = await import('../scripts/sources.mjs');
+  const T = SEARCH_TERMS;
+  assert.equal(matches('Natūralus mineralinis vanduo BIRUTĖ, 0,5 l', T.alus), false);
+  assert.equal(matches('Alus ŠVYTURYS EKSTRA, 5,2 %, 0,5 l', T.alus), true);
+  assert.equal(matches('Fasuoti karijų riešutai GAR2, 100 g/pak.', T.kario), false);
+  assert.equal(matches('Daržovių ir kalakutienos košė (nuo 6 mėn.) MARMALUZI, 190 g', T.darzoviu_misinys), false);
+  assert.equal(matches('Avietiniai pomidorai, 1 kg', T.pomidorai_konserv), false);
+  assert.equal(matches('Žaliosios alyvuogės įdarytos paprikomis IBELUS, 280 g', T.paprikos), false);
+  assert.equal(withUnitPrice({ title: 'Arbata GAMTOS GURKŠNIS, 1,5 g x 20 vnt./pak.', price: 0.79 }).unitPrice, 26.33);
+});
