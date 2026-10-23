@@ -7,11 +7,12 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { INGREDIENTS } from '../js/data.js';
 import { estimateNutrition } from '../js/nutrition.js';
-import { EN_MAP, IGNORE, STAPLE_MAP, convertMeasure } from './mealdb-map.mjs';
+import { EN_MAP, IGNORE, MINOR, STAPLE_MAP, convertMeasure } from './mealdb-map.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const outFile = path.join(root, 'data', 'mealdb-raw.json');
-const SERVINGS = 4; // TheMealDB nenurodo porcijų – laikome, kad receptas 4 asmenims
+// TheMealDB nenurodo porcijų – jas nustatome pagal bendrą kalorijų kiekį (~600 kcal porcijai).
+const KCAL_PER_SERVING = 600;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function getJson(url) {
@@ -34,15 +35,19 @@ function convert(meal) {
     if (!name) continue;
     const id = EN_MAP[name];
     if (IGNORE.has(name) && !STAPLE_MAP[name]) continue;
-    if (!IGNORE.has(name)) total++;
+    const minor = !id && MINOR.test(name);
+    if (!IGNORE.has(name) && !minor) total++;
     if (!id) {
       other.push(`${measure} ${name}`.trim());
       continue;
     }
     if (!IGNORE.has(name)) mapped++;
-    const qty = convertMeasure(measure, INGREDIENTS[id], id) / SERVINGS;
-    ing[id] = Math.round(((ing[id] || 0) + qty) * 10) / 10;
+    const qty = convertMeasure(measure, INGREDIENTS[id], id);
+    ing[id] = (ing[id] || 0) + qty;
   }
+  const whole = estimateNutrition(ing).kcal;
+  const servings = Math.min(10, Math.max(1, Math.round(whole / KCAL_PER_SERVING)));
+  for (const id of Object.keys(ing)) ing[id] = Math.round((ing[id] / servings) * 10) / 10;
   const coverage = total ? mapped / total : 0;
   if (mapped < 3 || coverage < 0.8) return { skip: `atitikimas ${Math.round(coverage * 100)} %`, other };
   const { kcal, protein } = estimateNutrition(ing);
@@ -59,6 +64,7 @@ function convert(meal) {
       ing,
       other,
       coverage: Math.round(coverage * 100),
+      servings,
       steps_en: String(meal.strInstructions || '').split(/\r?\n+/).map((s) => s.replace(/^step\s*\d+\s*/i, '').trim()).filter((s) => s.length > 3),
       image: meal.strMealThumb,
       source: `https://www.themealdb.com/meal/${meal.idMeal}`,

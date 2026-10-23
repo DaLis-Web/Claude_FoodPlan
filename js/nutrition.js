@@ -16,6 +16,7 @@ export const NUTRITION = {
   pomidorai_konserv: [25, 1.2], pupeles: [100, 7], avinzirniai: [120, 7], tunas: [110, 25], medus: [304, 0.3],
   soju_padazas: [60, 8], pomidoru_padazas: [35, 1.5], kukuruzai: [80, 2.5],
   menke: [80, 18], zirneliai: [80, 5], darzoviu_misinys: [50, 2.5], uogos: [45, 1], spinatai: [23, 2.9],
+  jautiena: [200, 20], majonezas: [680, 1], garstycios: [100, 6], sparagines_pupeles: [31, 1.8],
   aliejus: [880, 0], druska: [0, 0], cukrus: [400, 0], pipirai: [250, 10], paprika_malta: [280, 14], kario: [325, 14],
 };
 

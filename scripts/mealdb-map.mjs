@@ -8,6 +8,9 @@ export const IGNORE = new Set([
   'extra virgin olive oil', 'cooking spray',
 ]);
 
+// Prieskoniai ir smulkūs priedai: neskaičiuojami į atitikimą, bet parodomi recepte kaip „Papildomai prireiks“.
+export const MINOR = /(nutmeg|cumin|coriander|cinnamon|oregano|thyme|basil|rosemary|sage|mint|savoury|tarragon|chilli|chili|cayenne|garam masala|turmeric|ginger|cardamom|clove(?!s? garlic)|allspice|mixed herbs|herbes|italian seasoning|seasoning|garlic powder|onion powder|baking powder|bicarbonate|baking soda|yeast|vinegar|worcestershire|tabasco|sriracha|hot sauce|wine|beer|celery|capers|olives|vanilla|stock|bouillon|gravy|lime|zest|sesame|parsley flakes|black pudding|horseradish)/;
+
 // Kai kuriuos IGNORE ingredientus vis tiek įtraukiame į bazines atsargas (kad būtų sąraše „patikrinkite namuose“).
 export const STAPLE_MAP = {
   salt: 'druska', 'sea salt': 'druska', 'black pepper': 'pipirai', pepper: 'pipirai', 'ground black pepper': 'pipirai',
@@ -18,10 +21,15 @@ export const EN_MAP = {
   'chicken breast': 'vistienos_file', 'chicken breasts': 'vistienos_file', chicken: 'vistienos_file', 'chicken fillets': 'vistienos_file',
   'chicken thighs': 'vistienos_slauneles', 'chicken legs': 'vistienos_slauneles', 'chicken thigh': 'vistienos_slauneles', 'chicken drumsticks': 'vistienos_slauneles',
   'minced beef': 'malta_mesa', 'beef mince': 'malta_mesa', 'ground beef': 'malta_mesa', 'minced pork': 'malta_mesa', 'pork mince': 'malta_mesa', mince: 'malta_mesa', 'lean minced beef': 'malta_mesa',
+  beef: 'jautiena', 'beef brisket': 'jautiena', 'stewing beef': 'jautiena', 'beef cutlet': 'jautiena', 'braising steak': 'jautiena', 'beef fillet': 'jautiena',
+  'sirloin steak': 'jautiena', 'rump steak': 'jautiena', 'beef shin': 'jautiena', 'chuck steak': 'jautiena',
+  mayonnaise: 'majonezas', mustard: 'garstycios', 'dijon mustard': 'garstycios', 'english mustard': 'garstycios', 'wholegrain mustard': 'garstycios',
+  'green beans': 'sparagines_pupeles', 'ground pork': 'malta_mesa', 'ground lamb': 'malta_mesa', 'russet potato': 'bulves', 'russet potatoes': 'bulves',
+  'red potatoes': 'bulves', fettuccine: 'makaronai', 'egg yolk': 'kiausiniai', 'smoked ham': 'kumpis', 'cheddar': 'suris',
   pork: 'kiauliena', 'pork shoulder': 'kiauliena', 'pork chops': 'kiauliena', 'pork loin': 'kiauliena', 'pork belly': 'sonine',
   bacon: 'sonine', 'smoked bacon': 'sonine', pancetta: 'sonine', lardons: 'sonine', 'streaky bacon': 'sonine', 'bacon rashers': 'sonine',
   sausages: 'desreles', sausage: 'desreles', frankfurters: 'desreles', ham: 'kumpis', 'cooked ham': 'kumpis',
-  salmon: 'lasisa', 'salmon fillets': 'lasisa', 'salmon fillet': 'lasisa', cod: 'menke', 'cod fillets': 'menke', 'white fish': 'menke', 'white fish fillets': 'menke', haddock: 'menke',
+  salmon: 'lasisa', 'beef steak': 'jautiena', 'salmon fillets': 'lasisa', 'salmon fillet': 'lasisa', cod: 'menke', 'cod fillets': 'menke', 'white fish': 'menke', 'white fish fillets': 'menke', haddock: 'menke',
   tuna: 'tunas', 'tinned tuna': 'tunas', 'canned tuna': 'tunas', herring: 'silke',
   potatoes: 'bulves', potato: 'bulves', 'new potatoes': 'bulves', 'floury potatoes': 'bulves', 'baby new potatoes': 'bulves', 'maris piper potatoes': 'bulves',
   carrots: 'morkos', carrot: 'morkos', onion: 'svogunai', onions: 'svogunai', 'red onion': 'svogunai', 'red onions': 'svogunai', 'white onion': 'svogunai', shallots: 'svogunai', 'spring onions': 'zalumynai',
@@ -60,7 +68,7 @@ export const EN_MAP = {
 // Apytikslis vieneto svoris gramais (kai nurodyta „2 onions“, „1 large carrot“ ir pan.).
 const PIECE_G = {
   svogunai: 150, morkos: 80, bulves: 180, pomidorai: 120, paprikos: 150, cukinija: 250, agurkai: 250, obuoliai: 150, bananai: 120,
-  vistienos_file: 170, vistienos_slauneles: 130, lasisa: 140, menke: 150, cesnakai: 5, brokoliai: 350, kopustai: 1200, burokeliai: 150,
+  vistienos_file: 170, jautiena: 200, vistienos_slauneles: 130, lasisa: 140, menke: 150, cesnakai: 5, brokoliai: 350, kopustai: 1200, burokeliai: 150,
   salotos: 150, grybai: 20, desreles: 60, sonine: 25, kiauliena: 180, zalumynai: 10, mocarela: 125, batonas: 30, duona: 35,
 };
 

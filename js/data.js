@@ -50,6 +50,7 @@ const RAW_INGREDIENTS = [
   ['vistienos_slauneles', 'Vištienos šlaunelės', 'mesa', 'g', 1000, 4.49, 3],
   ['malta_mesa', 'Malta kiauliena-jautiena', 'mesa', 'g', 500, 3.49, 2],
   ['kiauliena', 'Kiaulienos sprandinė', 'mesa', 'g', 1000, 6.49, 3],
+  ['jautiena', 'Jautiena troškiniui', 'mesa', 'g', 500, 6.49, 3],
   ['desreles', 'Dešrelės', 'mesa', 'g', 400, 2.49, 10],
   ['kumpis', 'Virtas kumpis', 'mesa', 'g', 150, 1.79, 7],
   ['lasisa', 'Lašišos filė', 'mesa', 'g', 250, 4.99, 2],
@@ -94,12 +95,15 @@ const RAW_INGREDIENTS = [
   ['tunas', 'Tunas savose sultyse', 'konservai', 'g', 160, 1.69, 365],
   ['medus', 'Medus', 'konservai', 'g', 250, 3.49, 365],
   ['soju_padazas', 'Sojų padažas', 'konservai', 'ml', 150, 1.49, 365, true],
+  ['majonezas', 'Majonezas', 'konservai', 'g', 400, 1.79, 60],
+  ['garstycios', 'Garstyčios', 'konservai', 'g', 200, 0.99, 180],
 
   ['menke', 'Menkės filė (šaldyta)', 'saldyti', 'g', 400, 3.99, 90],
   ['zirneliai', 'Žalieji žirneliai (šaldyti)', 'saldyti', 'g', 400, 1.29, 180],
   ['darzoviu_misinys', 'Daržovių mišinys (šaldytas)', 'saldyti', 'g', 400, 1.49, 180],
   ['uogos', 'Uogų mišinys (šaldytas)', 'saldyti', 'g', 300, 2.29, 180],
   ['spinatai', 'Špinatai (šaldyti)', 'saldyti', 'g', 400, 1.49, 180],
+  ['sparagines_pupeles', 'Šparaginės pupelės (šaldytos)', 'saldyti', 'g', 400, 1.49, 180],
 
   ['aliejus', 'Saulėgrąžų aliejus', 'bazine', 'ml', 1000, 2.19, 365, true],
   ['druska', 'Druska', 'bazine', 'g', 1000, 0.39, 999, true],

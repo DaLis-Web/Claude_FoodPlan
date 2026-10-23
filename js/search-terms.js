@@ -39,6 +39,10 @@ export const SEARCH_TERMS = {
   pomidoru_padazas: { q: 'pomidorų pasata', must: ['pasata', 'pomidorų padaž', 'trinti pomidorai'], not: ['kečup', 'bolonij', 'čili', 'aštr'] },
   kukuruzai: { q: 'konservuoti kukurūzai', must: ['kukurūz'], not: ['traškuč', 'dribsn', 'miltai', 'aliej', 'krabų', 'spragės', 'kruop'] },
   spinatai: { q: 'šaldyti špinatai', must: ['špinat'], not: ['makaron', 'padaž', 'blyn'] },
+  jautiena: { q: 'jautiena troškiniui', must: ['jautien'], not: ['malta', 'faršas', 'konserv', 'vytint', 'rūkyt', 'sultin', 'dešr', 'pašteta'] },
+  majonezas: { q: 'majonezas', must: ['majonez'], not: ['padaž su', 'salot'] },
+  garstycios: { q: 'garstyčios', must: ['garstyč'], not: ['sėkl', 'milt', 'padaž su'] },
+  sparagines_pupeles: { q: 'šaldytos šparaginės pupelės', must: ['šparagin'], not: ['konserv', 'marin'] },
   lasisa: { q: 'lašišos filė', must: ['lašiš'], not: ['rūkyt', 'sūdyt', 'konserv', 'užtepė', 'pašteta', 'šaldyt', 'sriub', 'kotlet', 'salot', 'padaž'] },
 
   pienas: { q: 'pienas 2,5%', must: ['pienas'], not: ['kondens', 'sausas', 'kokos', 'avižų', 'migdol', 'sojų', 'šokolad', 'kakav', 'laktoz', 'ožkos'] },
