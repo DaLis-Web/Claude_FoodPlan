@@ -55,3 +55,25 @@ test('trumpiniai be nosinių', () => {
   assert.equal(matchReceiptLine('VISTIENOS KRUTINELES FILE'), 'vistienos_file');
   assert.equal(matchReceiptLine('KATEMS EDALAS LASISA'), null);
 });
+
+test('Maxima el. čekis iš laiško (Gmail tekstas, kelių eilučių pavadinimai, svoriai, nuolaidos)', async () => {
+  const fs = await import('node:fs/promises');
+  const r = parseReceipt(await fs.readFile(new URL('./fixtures/maxima-email.txt', import.meta.url), 'utf8'));
+  assert.equal(r.store, 'maxima');
+  assert.equal(r.date, '2026-10-23');
+  assert.equal(r.total, 157.5);
+  const by = Object.fromEntries(r.items.filter((i) => i.ingId).map((i) => [i.ingId, i]));
+  assert.equal(by.svogunai.qty, 374); // „0,48 X 0,374 kg“
+  assert.equal(by.bulves.qty, 2544);
+  assert.equal(by.bulves.price, 2.52); // 2,93 − 0,41 nuolaida
+  assert.equal(by.varske.qty, 800); // 2 pak. po 400 g
+  assert.equal(by.alus.count, 2); // depozito „8 vnt.“ nepriskiriama alui
+  assert.equal(by.mocarela.name.includes('MOZZARELLA'), true);
+  assert.ok(by.koldunai && by.duona && by.tunas && by.morkos && by.vistienos_file && by.lazanijos_lakstai);
+  assert.ok(by.vistienos_file.qty > 500 && by.vistienos_file.qty < 900); // įvertinta iš kainos
+  // ne maistas – neatpažįstama
+  for (const n of ['LED lemputė', 'Šunų ėdalas', 'pirkinių maišas']) {
+    assert.equal(r.items.find((i) => i.name.includes(n))?.ingId ?? null, null, n);
+  }
+  assert.ok(!r.items.some((i) => /depozit/i.test(i.name)));
+});

@@ -116,9 +116,9 @@ function week(key = viewWeek) {
   return w;
 }
 
-function regenerate() {
+function regenerate({ pantryFirst = false } = {}) {
   const w = week();
-  w.plan = generatePlan(ctx(), { existing: w.plan, weekStart: viewWeek, todayIso: today(), wishes: w.wishes });
+  w.plan = generatePlan(ctx(), { existing: w.plan, weekStart: viewWeek, todayIso: today(), wishes: w.wishes, pantryFirst });
   save();
 }
 
@@ -342,6 +342,7 @@ function viewPlan() {
 
   <div class="toolbar plan-actions">
     <button class="btn primary" data-action="generate">✨ ${hasPlan ? 'Perplanuoti' : 'Sudaryti planą'}</button>
+    ${state.pantry.length ? '<button class="btn" data-action="generate-pantry" title="Pirmiausia panaudoti tai, kas yra šaldytuve">🧊 Iš to, ką turiu</button>' : ''}
     ${hasPlan ? '<button class="btn" data-action="clear-plan">Išvalyti</button>' : ''}
     <a class="btn wide-only" href="#list">🛒 Pirkinių sąrašas</a>
     <span class="wide-only">${priceStatusBadge()}</span>
@@ -388,6 +389,7 @@ function mealButton(e, d, s, c) {
   if (!r) return '';
   const flags = [
     e.wish ? '❤️' : '',
+    !e.leftover && !e.cooked && state.pantry.length && pantryCoverage(r, c, (e.servings || 1) + (e.extra || 0), today()) >= 0.7 ? '🧊' : '',
     e.locked ? '🔒' : '',
     e.leftover ? '♻️ likučiai' : '',
     e.extra ? '×2 (likučiams)' : '',
@@ -754,9 +756,15 @@ function viewPantry() {
     <h2>🧾 Turite čekį?</h2>
     <p class="small muted">Nufotografuokite čekį – produktai atsidurs šaldytuve, išlaidos – biudžete, o planą bus galima sudaryti iš to, ką nusipirkote.</p>
     <div class="toolbar wrap">
-      <label class="btn primary">📷 Fotografuoti ar įkelti čekį<input type="file" accept="image/*" capture="environment" data-change="receipt-photo" hidden></label>
-      <button class="btn" data-action="receipt-text">📋 Įklijuoti čekio tekstą</button>
+      <label class="btn primary">📷 Fotografuoti popierinį čekį<input type="file" accept="image/*" capture="environment" data-change="receipt-photo" hidden></label>
+      <button class="btn primary" data-action="receipt-clipboard">📋 Įklijuoti el. čekį</button>
+      <button class="btn" data-action="receipt-text">✍️ Įvesti tekstą</button>
+      <label class="btn">📎 Laiško failas (.eml)<input type="file" accept=".eml,.txt,.html,.htm,message/rfc822,text/plain,text/html" data-change="receipt-file" hidden></label>
     </div>
+    <details class="small muted"><summary>Kaip greitai įklijuoti el. čekį iš Gmail?</summary>
+      <p>Telefone: atidarykite laišką, palaikykite pirštą ant teksto → <b>Pasirinkti viską</b> → <b>Kopijuoti</b>, tada čia spauskite <b>📋 Įklijuoti el. čekį</b>. Viso laiško tvarkyti nereikia – programa pati atrinks prekes.</p>
+      <p>Kompiuteryje: laiške ⋮ → <b>Atsisiųsti laišką</b> ir įkelkite failą per <b>📎 Laiško failas</b>.</p>
+    </details>
   </section>
   <section class="card">
     <h2>Pridėti produktą</h2>
@@ -769,7 +777,8 @@ function viewPantry() {
   </section>
   ${suggestions.length ? `
   <section class="card">
-    <h2>🍳 Ką pagaminti iš to, ką turite?</h2>
+    <div class="card-head"><h2>🍳 Ką pagaminti iš to, ką turite?</h2>
+      <button class="btn primary small" data-action="receipt-plan">✨ Savaitės planas iš to, ką turiu</button></div>
     <ul class="pick-list">${suggestions.map(({ r, cov }) => `
       <li><button data-action="recipe" data-id="${r.id}"><span>${esc(r.name)}</span><b>${Math.round(cov * 100)} % turite</b></button></li>`).join('')}
     </ul>
@@ -1169,6 +1178,52 @@ async function scanReceipt(file) {
   }
 }
 
+// Laiško failo (.eml) ar HTML tekstas: išrenkama text/plain dalis, dekoduojama quoted-printable / base64.
+function emailToText(raw) {
+  const decodeQP = (s) => {
+    const bytes = [];
+    const t = s.replace(/=\r?\n/g, '');
+    for (let i = 0; i < t.length; i++) {
+      if (t[i] === '=' && /^[0-9A-F]{2}$/i.test(t.slice(i + 1, i + 3))) {
+        bytes.push(parseInt(t.slice(i + 1, i + 3), 16));
+        i += 2;
+      } else {
+        const code = t.charCodeAt(i);
+        if (code < 128) bytes.push(code);
+        else bytes.push(...new TextEncoder().encode(t[i]));
+      }
+    }
+    return new TextDecoder().decode(new Uint8Array(bytes));
+  };
+  const decodeB64 = (s) => {
+    try {
+      return new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s+/g, '')), (c) => c.charCodeAt(0)));
+    } catch {
+      return s;
+    }
+  };
+  const htmlToText = (h) => {
+    const doc = new DOMParser().parseFromString(h.replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|div|tr|li)>/gi, '\n'), 'text/html');
+    return doc.body.textContent || '';
+  };
+  if (!/^(content-type|mime-version|received|from|return-path|delivered-to):/im.test(raw.slice(0, 4000))) {
+    return /<html|<body|<div/i.test(raw) ? htmlToText(raw) : raw;
+  }
+  // MIME dalys: pirmenybė text/plain, kitaip text/html.
+  const boundaries = [...raw.matchAll(/boundary="?([^";\r\n]+)"?/gi)].map((m) => m[1]);
+  const parts = boundaries.length
+    ? raw.split(new RegExp(`\\r?\\n--(?:${boundaries.map((b) => b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?:--)?\\r?\\n`))
+    : [raw];
+  const pick = (type) => parts.find((p) => new RegExp(`content-type:\\s*${type}`, 'i').test(p.slice(0, 600)));
+  const part = pick('text/plain') || pick('text/html') || raw;
+  const split = part.search(/\r?\n\r?\n/);
+  const headers = split > 0 ? part.slice(0, split) : '';
+  let body = split > 0 ? part.slice(split).trim() : part;
+  if (/content-transfer-encoding:\s*quoted-printable/i.test(headers)) body = decodeQP(body);
+  else if (/content-transfer-encoding:\s*base64/i.test(headers)) body = decodeB64(body);
+  return /content-type:\s*text\/html/i.test(headers) ? htmlToText(body) : body;
+}
+
 function openReceiptReview(parsed, rawText = '') {
   receiptDraft = { ...parsed, date: parsed.date || today(), raw: rawText, items: parsed.items.map((i) => ({ ...i, include: !!i.ingId })) };
   openModal('Čekio peržiūra', () => {
@@ -1207,6 +1262,16 @@ function openReceiptReview(parsed, rawText = '') {
 
 const actions = {
   'close-modal': closeModal,
+  'receipt-clipboard': async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      if (!text || text.trim().length < 20) throw new Error('empty');
+      openReceiptReview(parseReceipt(text), text);
+    } catch {
+      toast('Nepavyko perskaityti iškarpinės – įklijuokite tekstą ranka');
+      actions['receipt-text']();
+    }
+  },
   'receipt-text': () =>
     openModal('Čekio tekstas', () => `
       <form data-form="receipt-text">
@@ -1217,7 +1282,7 @@ const actions = {
   'receipt-plan': () => {
     closeModal();
     viewWeek = defaultWeek();
-    regenerate();
+    regenerate({ pantryFirst: true });
     location.hash = '#plan';
     render();
     toast('Planas sudarytas pagal tai, ką turite ✨');
@@ -1258,6 +1323,12 @@ const actions = {
     selectedDay = null;
     viewWeek = addDays(viewWeek, 7 * Number(el.dataset.dir));
     render();
+  },
+  'generate-pantry': () => {
+    regenerate({ pantryFirst: true });
+    render();
+    const ev = evaluatePlan(week().plan, ctx(), { todayIso: today() });
+    toast(`Planas iš to, ką turite: panaudota ${eur(ev.fromPantry)} produktų, dar reikia nupirkti už ${eur(ev.cost)}`);
   },
   generate: () => {
     const btn = $('[data-action="generate"]');
@@ -1575,6 +1646,13 @@ const changes = {
     else p.qty = v;
     save();
     render();
+  },
+  'receipt-file': async (el) => {
+    const file = el.files[0];
+    el.value = '';
+    if (!file) return;
+    const text = emailToText(await file.text());
+    openReceiptReview(parseReceipt(text), text);
   },
   'receipt-photo': (el) => {
     const file = el.files[0];

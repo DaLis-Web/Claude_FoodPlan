@@ -273,7 +273,7 @@ export function storeTotals(items, ctx, extras = []) {
 
 // ---------- Plano įvertinimas ----------
 
-export function evaluatePlan(plan, ctx, { weekStart, todayIso } = {}) {
+export function evaluatePlan(plan, ctx, { weekStart, todayIso, pantryFirst = false } = {}) {
   const items = shoppingList(plan, ctx, { todayIso });
   let cost = 0;
   let waste = 0;
@@ -339,10 +339,21 @@ export function evaluatePlan(plan, ctx, { weekStart, todayIso } = {}) {
     }
   });
 
-  // Kol telpame į biudžetą, kaina svarbi mažiau nei įvairovė ir mityba.
-  const score = cost * 0.6 + overBudget * 3 + waste * 1.5 + variety * people * 0.6 - nutrition - rescued * 1.5;
+  // Sunaudoti šaldytuvo produktai (vertė eurais).
+  let fromPantry = 0;
+  const stockAll = pantryStock(ctx.pantry, todayIso);
+  const needsAll = needsOf(plan, ctx);
+  for (const [id, qty] of Object.entries(stockAll)) {
+    const ing = INGREDIENTS[id];
+    if (!ing || (ing.staple && ctx.settings.assumeStaples)) continue;
+    const used = Math.min(qty, needsAll[id] || 0);
+    if (used > 0) fromPantry += (used / ing.pack) * ctx.minPrice[id];
+  }
 
-  return { cost, waste, rescued, variety, score, items, kcalPerDay: kcal / 7, proteinPerDay: protein / 7, meals: cookedMeals };
+  // Kol telpame į biudžetą, kaina svarbi mažiau nei įvairovė ir mityba.
+  const score = cost * (pantryFirst ? 1.4 : 0.6) + overBudget * 3 + waste * 1.5 + variety * people * 0.6 - nutrition - rescued * 1.5 - fromPantry * (pantryFirst ? 1.5 : 0.4);
+
+  return { cost, waste, rescued, fromPantry, variety, score, items, kcalPerDay: kcal / 7, proteinPerDay: protein / 7, meals: cookedMeals };
 }
 
 // ---------- Generavimas ----------
@@ -388,6 +399,19 @@ export function marginalCost(recipe, servings, needs, stock, ctx) {
   return delta;
 }
 
+// Kiek (eurais) šaldytuve esančių produktų recepte būtų sunaudota – dar nepanaudotų kitų patiekalų.
+export function pantryUseValue(recipe, servings, needs, stock, ctx) {
+  let value = 0;
+  for (const [id, qty] of Object.entries(recipe.ing)) {
+    const ing = INGREDIENTS[id];
+    if (!ing || (ing.staple && ctx.settings.assumeStaples)) continue;
+    const free = Math.max(0, (stock[id] || 0) - (needs[id] || 0));
+    const used = Math.min(free, qty * servings);
+    if (used > 0) value += (used / ing.pack) * ctx.minPrice[id];
+  }
+  return value;
+}
+
 function addNeeds(needs, recipe, servings) {
   for (const [id, qty] of Object.entries(recipe.ing)) needs[id] = (needs[id] || 0) + qty * servings;
 }
@@ -419,8 +443,10 @@ function track(usage, recipe, d) {
   if (mp) usage[`main:${mp}`] = { count: (usage[`main:${mp}`]?.count || 0) + 1, last: d };
 }
 
-function slotScore(recipe, d, servings, plan, needs, stock, expiring, ctx, usage) {
-  let score = marginalCost(recipe, servings, needs, stock, ctx) * 0.6;
+function slotScore(recipe, d, servings, plan, needs, stock, expiring, ctx, usage, pantryFirst = false) {
+  // „Iš to, ką turiu“: naujų pirkinių kaina sveria daugiau, o šaldytuvo produktų panaudojimas – skatinamas.
+  let score = marginalCost(recipe, servings, needs, stock, ctx) * (pantryFirst ? 1.4 : 0.6);
+  score -= pantryUseValue(recipe, servings, needs, stock, ctx) * (pantryFirst ? 2 : 0.5);
   const people = Math.max(1, ctx.settings.people || 1);
   const isMain = !recipe.meals.includes('pusryciai');
   const u = usage[recipe.id];
@@ -444,7 +470,7 @@ function slotScore(recipe, d, servings, plan, needs, stock, expiring, ctx, usage
  * įtraukia norimus (`wishes` – receptų id).
  * Vykdo kelis atsitiktinius „godžius“ bandymus ir grąžina geriausią pagal kainą, švaistymą ir įvairovę.
  */
-export function generatePlan(ctx, { existing, weekStart, todayIso, wishes = [], runs = 120, seed = Date.now() } = {}) {
+export function generatePlan(ctx, { existing, weekStart, todayIso, wishes = [], runs = 120, seed = Date.now(), pantryFirst = false } = {}) {
   const rng = mulberry32(seed);
   const st = ctx.settings;
   const people = Math.max(1, st.people || 1);
@@ -514,7 +540,7 @@ export function generatePlan(ctx, { existing, weekStart, todayIso, wishes = [], 
         let pick = null;
         let pickScore = Infinity;
         for (const r of cands) {
-          let sc = slotScore(r, d, people, plan, needs, stock, expiring, ctx, usage);
+          let sc = slotScore(r, d, people, plan, needs, stock, expiring, ctx, usage, pantryFirst);
           sc += noise * (rng() * 4 - 1) * people;
           if (sc < pickScore) {
             pickScore = sc;
@@ -527,7 +553,7 @@ export function generatePlan(ctx, { existing, weekStart, todayIso, wishes = [], 
       }
     }
 
-    const ev = evaluatePlan(plan, ctx, { weekStart, todayIso });
+    const ev = evaluatePlan(plan, ctx, { weekStart, todayIso, pantryFirst });
     if (!best || ev.score < best.ev.score) best = { plan, ev };
   }
   return best.plan;

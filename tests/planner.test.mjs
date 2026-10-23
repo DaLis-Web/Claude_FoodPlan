@@ -151,3 +151,21 @@ test('įvairovė: tas pats pagrindinis baltymas ne daugiau kaip ~3 kartus per sa
   assert.ok(Math.max(...Object.values(counts)) <= 4, JSON.stringify(counts));
   setExtraRecipes([]);
 });
+
+test('„iš to, ką turiu“: planas naudoja šaldytuvo produktus ir perka mažiau', () => {
+  // Panašu į vartotojo Maxima čekį: lazanijos lakštai, mocarela, pomidorai, koldūnai, varškė, vištiena, bulvės...
+  const pantry = Object.entries({
+    lazanijos_lakstai: 500, mocarela: 125, pomidorai_konserv: 800, koldunai: 1000, varske: 800, vistienos_file: 700,
+    bulves: 2500, svogunai: 374, morkos: 374, cukinija: 372, grietine: 400, pienas: 1000, kiausiniai: 10, suris: 250,
+    duona: 800, tunas: 320, agurkai: 500,
+  }).map(([ingId, qty], i) => ({ id: String(i), ingId, qty, expiry: '2026-11-15' }));
+  const { ctx } = ctxWith({ pantry });
+  const normal = generatePlan(ctx, { weekStart: WEEK, todayIso: WEEK, seed: 21, runs: 40 });
+  const fromHome = generatePlan(ctx, { weekStart: WEEK, todayIso: WEEK, seed: 21, runs: 40, pantryFirst: true });
+  const evN = evaluatePlan(normal, ctx, { todayIso: WEEK });
+  const evH = evaluatePlan(fromHome, ctx, { todayIso: WEEK });
+  assert.ok(evH.fromPantry >= evN.fromPantry, `${evH.fromPantry} < ${evN.fromPantry}`);
+  assert.ok(evH.cost <= evN.cost + 1e-9, `${evH.cost} > ${evN.cost}`);
+  const ids = fromHome.days.flatMap((d) => Object.values(d).map((e) => e.recipeId));
+  assert.ok(ids.includes('koldunai') || ids.includes('lazanija') || ids.includes('varskeciai'), ids.join(','));
+});
