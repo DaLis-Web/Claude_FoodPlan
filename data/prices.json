@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-23T19:20:42.174Z",
+ "updatedAt": "2026-10-23T19:27:54.713Z",
  "stores": {
   "rimi": {
    "bulves": {
@@ -132,6 +132,16 @@
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/salotos-ir-ju-misiniai/zaliosios-lapines-salotos-rimi-1vnt/p/815948"
    },
+   "zalumynai": {
+    "title": "Krapai RIMI, 50g",
+    "price": 0.85,
+    "unitPrice": 17,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/prieskonines-darzoves-ir-zoleles/krapai-rimi-50g/p/817298"
+   },
    "obuoliai": {
     "title": "Obuoliai Champion, 1 kl., 1 kg",
     "price": 0.49,
@@ -151,6 +161,16 @@
     "promo": false,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/vaisiai-ir-uogos/bananai/bananai-cavendish-20-cm-1kg/p/270939"
+   },
+   "citrinos": {
+    "title": "Citrinos Eureka, 1kl, C2-3, 1 kg",
+    "price": 0.9,
+    "unitPrice": 1.99,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/vaisiai-ir-uogos/citrinos/citrinos-eureka-1kl-c2-3-1-kg/p/969226"
    },
    "vistienos_file": {
     "title": "Viščiukų krūtinėlių filė RIMI, 500 g",
@@ -757,8 +777,8 @@
  "sources": {
   "rimi": {
    "name": "Rimi e-parduotuvė",
-   "updatedAt": "2026-10-23T19:20:42.174Z",
-   "found": 75,
+   "updatedAt": "2026-10-23T19:27:54.713Z",
+   "found": 77,
    "errors": 0
   }
  }
