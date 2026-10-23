@@ -14,10 +14,10 @@ export const SEARCH_TERMS = {
   cukinija: { q: 'cukinijos', must: ['cukinij'], not: ['ikr', 'marin'] },
   grybai: { q: 'pievagrybiai', must: ['pievagryb'], not: ['marin', 'konserv', 'sriub', 'padaž', 'šaldyt'] },
   salotos: { q: 'lapinės salotos', must: ['lapinės', 'gūžinės', 'salotų mišin', 'romos salot', 'ledkalnio', 'lollo', 'rukol', 'salotos lapai'], not: ['bulv', 'mišrain', 'krab', 'silk', 'padaž', 'su '] },
-  zalumynai: { q: 'krapai', must: ['krapai', 'krapų', 'petražolės', 'petražolių'], not: ['bulv', 'agurk', 'sėkl', 'džiovint', 'padaž', 'sūri', 'sviest'] },
+  zalumynai: { q: 'krapai', must: ['krapai', 'krapų', 'petražolės', 'petražolių'], not: ['bulv', 'agurk', 'sėkl', 'džiovint', 'padaž', 'sūri', 'sviest', 'traškuč', 'su krap', 'sk.', 'skonio'] },
   obuoliai: { q: 'obuoliai', must: ['obuol'], not: ['sult', 'tyr', 'džiovint', 'trašk', 'pyrag', 'acto', 'gėrim'] },
   bananai: { q: 'bananai', must: ['banan'], not: ['džiovint', 'trašk', 'jogurt', 'gėrim', 'tyr'] },
-  citrinos: { q: 'citrinos', must: ['citrin'], not: ['sult', 'rūgšt', 'gėrim', 'arbat', 'pyrag', 'žaliosios', 'laim'] },
+  citrinos: { q: 'citrinos', must: ['citrinos'], not: ['sult', 'rūgšt', 'gėrim', 'arbat', 'pyrag', 'žaliosios', 'laim', 'vanduo', 'sk.', 'skonio', 'limonad'] },
 
   vistienos_file: { q: 'vištienos krūtinėlės filė', must: ['krūtinėl'], not: ['rūkyt', 'kept', 'virt', 'dešr', 'kumpis', 'mėsainiai', 'marinuot', 'šaldyt'] },
   vistienos_slauneles: { q: 'vištienos šlaunelės', must: ['šlaunel'], not: ['rūkyt', 'kept', 'kalakut', 'šaldyt', 'marinuot'] },

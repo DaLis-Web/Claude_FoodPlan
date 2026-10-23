@@ -245,6 +245,11 @@ function weekHeader(subtitle) {
   </header>`;
 }
 
+// Parduotuvės, kurių kainos surinktos automatiškai ir dar šviežios.
+function liveStoreIds() {
+  return new Set(Object.entries(live?.sources || {}).filter(([, v]) => daysBetween(v.updatedAt.slice(0, 10), today()) <= 8).map(([k]) => k));
+}
+
 function priceStatusBadge() {
   const srcs = live?.sources ? Object.entries(live.sources) : [];
   if (!srcs.length) return '<span class="badge">Kainos apytikslės</span>';
@@ -466,6 +471,7 @@ function viewList() {
   const { c, w, ev, totals } = planSummary();
   const sel = selectedStore(c, totals);
   const pair = totals.bestPair;
+  const liveIds = liveStoreIds();
   const priceAt = (it) => (sel === 'pair' ? it.prices[pair.assign[it.ingId]] : it.prices[sel]) || 0;
   const storeOf = (it) => (sel === 'pair' ? pair.assign[it.ingId] : sel);
 
@@ -522,7 +528,8 @@ function viewList() {
     <div class="store-chips" role="list">
       ${totals.ranked.map((s) => `
         <button class="store-chip ${sel === s ? 'active' : ''}" data-action="select-store" data-store="${s}">
-          <span>${storeName(s)}${s === totals.cheapest ? ' <em>pigiausia</em>' : ''}</span><b>${eur(totals.totals[s])}</b>
+          <span>${storeName(s)}${s === totals.cheapest ? ' <em>pigiausia</em>' : ''}</span><b>${liveIds.size && !liveIds.has(s) ? '~' : ''}${eur(totals.totals[s])}</b>
+          ${liveIds.size ? `<small class="${liveIds.has(s) ? 'ok-text' : 'muted'}">${liveIds.has(s) ? 'tikros kainos' : 'apytiksliai'}</small>` : ''}
         </button>`).join('')}
       ${pair && saving > 0.3 ? `
         <button class="store-chip ${sel === 'pair' ? 'active' : ''}" data-action="select-store" data-store="pair">

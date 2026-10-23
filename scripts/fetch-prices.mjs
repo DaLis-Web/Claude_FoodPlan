@@ -52,7 +52,15 @@ function diagnose(storeId, html) {
   const hints = ['b_productList', 'data-gtm-eec-product', '__NEXT_DATA__', 'ld+json', 'gridbox', 'application/json'].filter((h) => html.includes(h));
   console.warn(`${storeId}: produktų neatpažinta (${html.length} B, title="${title.trim().slice(0, 80)}", žymės: ${hints.join(', ') || 'nėra'})`);
   for (const line of describeJson(html)) console.warn(`${storeId}: JSON ${line}`);
-  console.warn(`${storeId}: pradžia: ${html.replace(/\s+/g, ' ').slice(0, 300)}`);
+  // Fragmentai aplink galimus produktų duomenis – pagal juos pritaikomas parseris.
+  const flat = html.replace(/\s+/g, ' ');
+  for (const marker of ['gridbox', '"price"', 'price', 'kaina', '€']) {
+    const i = flat.indexOf(marker, 2000);
+    if (i >= 0) {
+      console.warn(`${storeId}: ties „${marker}“: ${flat.slice(Math.max(0, i - 250), i + 450)}`);
+      break;
+    }
+  }
 }
 
 async function readPrevious() {
