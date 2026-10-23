@@ -64,7 +64,15 @@ npm start          # http://localhost:8080
 npm test           # logikos ir parserių testai
 ```
 
-### Publikavimas Hostinger (kad veiktų telefone ir galėtumėte pasidalinti)
+### Publikavimas GitHub Pages (paprasčiausia)
+
+1. **Settings → General → Danger Zone → Change visibility → Public.**
+2. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+
+Programėlė bus `https://dalis-web.github.io/Claude_FoodPlan/` ir atsinaujins po kiekvieno pakeitimo bei
+kasdienio kainų rinkimo (`.github/workflows/pages.yml`).
+
+### Publikavimas Hostinger (savas domenas)
 
 Įkėlimą automatiškai atlieka `.github/workflows/deploy.yml`: po kiekvieno pakeitimo ir kasdienio kainų atnaujinimo
 programėlė įkeliama per FTP. Vieną kartą reikia:
