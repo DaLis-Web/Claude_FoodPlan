@@ -7,7 +7,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { INGREDIENTS } from '../js/data.js';
 import { SEARCH_TERMS } from './search-terms.mjs';
-import { SOURCES, pickBest } from './sources.mjs';
+import { SOURCES, pickBest, describeJson } from './sources.mjs';
+import { livePackPrice } from '../js/planner.js';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const outFile = path.join(root, 'data', 'prices.json');
@@ -24,13 +25,34 @@ async function fetchText(url) {
     headers: {
       // Antraštėse leidžiami tik ASCII simboliai.
       'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0 Safari/537.36',
-      'Accept-Language': 'lt-LT,lt;q=0.9',
-      Accept: 'text/html,application/xhtml+xml,application/json',
+      'Accept-Language': 'lt-LT,lt;q=0.9,en;q=0.8',
+      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,application/json;q=0.8,*/*;q=0.7',
+      'Sec-Fetch-Dest': 'document',
+      'Sec-Fetch-Mode': 'navigate',
+      'Sec-Fetch-Site': 'none',
+      'Upgrade-Insecure-Requests': '1',
     },
     signal: AbortSignal.timeout(12000),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.text();
+}
+
+// Atmetame aiškiai netinkamus atitikmenis: pakuotės kaina neturėtų skirtis nuo įprastos daugiau nei 3 kartus.
+function sane(id) {
+  const ing = INGREDIENTS[id];
+  return (p) => {
+    const pack = livePackPrice(ing, p);
+    return pack > 0 && pack >= ing.base / 3 && pack <= ing.base * 3;
+  };
+}
+
+function diagnose(storeId, html) {
+  const title = (html.match(/<title[^>]*>([^<]*)/i) || [])[1] || '';
+  const hints = ['b_productList', 'data-gtm-eec-product', '__NEXT_DATA__', 'ld+json', 'gridbox', 'application/json'].filter((h) => html.includes(h));
+  console.warn(`${storeId}: produktų neatpažinta (${html.length} B, title="${title.trim().slice(0, 80)}", žymės: ${hints.join(', ') || 'nėra'})`);
+  for (const line of describeJson(html)) console.warn(`${storeId}: JSON ${line}`);
+  console.warn(`${storeId}: pradžia: ${html.replace(/\s+/g, ' ').slice(0, 300)}`);
 }
 
 async function readPrevious() {
@@ -56,9 +78,11 @@ async function main() {
     if (src.mode === 'catalog') {
       // Vienas puslapis (pvz. akcijų leidinys) – atrenkame visus atpažintus produktus.
       try {
-        const products = src.parse(await fetchText(src.url()));
+        const html = await fetchText(src.url());
+        const products = src.parse(html);
+        if (!products.length) diagnose(storeId, html);
         for (const id of ids) {
-          const best = pickBest(products, SEARCH_TERMS[id], INGREDIENTS[id]);
+          const best = pickBest(products, SEARCH_TERMS[id], INGREDIENTS[id], sane(id));
           if (best) rows[id] = { ...best, promo: true };
         }
         console.log(`${storeId}: ${products.length} produktų puslapyje, atpažinta ${Object.keys(rows).length}`);
@@ -78,14 +102,10 @@ async function main() {
           const html = await fetchText(src.url(term.q));
           const products = src.parse(html);
           if (!products.length && !rows.__diag) {
-            // Diagnostika: ką grąžino svetainė, kai produktų neatpažinome.
-            rows.__diag = true;
-            const title = (html.match(/<title[^>]*>([^<]*)/i) || [])[1] || '';
-            const hints = ['b_productList', 'data-gtm-eec-product', '__NEXT_DATA__', 'ld+json', 'gridbox', 'application/json'].filter((h) => html.includes(h));
-            console.warn(`${storeId}: produktų neatpažinta (${html.length} B, title="${title.trim().slice(0, 80)}", žymės: ${hints.join(', ') || 'nėra'})`);
-            console.warn(`${storeId}: pradžia: ${html.replace(/\s+/g, ' ').slice(0, 400)}`);
+            rows.__diag = true; // diagnostiką rodome tik kartą
+            diagnose(storeId, html);
           }
-          const best = pickBest(products, term, INGREDIENTS[id]);
+          const best = pickBest(products, term, INGREDIENTS[id], sane(id));
           if (best) rows[id] = best;
           console.log(`${storeId} ${id}: ${best ? `${best.price} € ${best.promo ? '(akcija) ' : ''}– ${best.title}` : 'nerasta'}`);
         } catch (e) {

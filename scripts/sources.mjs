@@ -26,7 +26,7 @@ export const SOURCES = {
   lidl: {
     name: 'Lidl',
     mode: 'search',
-    url: (q) => `https://www.lidl.lt/q/api/search?q=${encodeURIComponent(q)}&locale=lt_LT&assortment=LT&version=v2.0.0`,
+    url: (q) => `https://www.lidl.lt/q/search?q=${encodeURIComponent(q)}`,
     parse: parseGeneric,
   },
   norfa: {
@@ -193,10 +193,17 @@ export function parseJsonLd(html) {
   return out;
 }
 
-function matches(title, term) {
+// Gyvūnų ėdalas ir panašūs dažnai patenka į paiešką („lašiša katėms“) – atmetame visada.
+const GLOBAL_NOT = ['katėms', 'kačių', 'kač.', 'šunims', 'šunų', 'ėd.', 'ėdalas', 'gyvūn', 'kūdikių', 'vaikų košė'];
+
+// `must` – bent vienas fragmentas; `all` – visi fragmentai; `not` – nė vieno; `re` – pavadinimas atitinka (pvz. tūris).
+export function matches(title, term) {
   const t = String(title || '').toLowerCase();
+  if (GLOBAL_NOT.some((w) => t.includes(w))) return false;
   if (term.must && !term.must.some((w) => t.includes(w))) return false;
+  if (term.all && !term.all.every((w) => t.includes(w))) return false;
   if (term.not && term.not.some((w) => t.includes(w))) return false;
+  if (term.re && !term.re.test(t)) return false;
   return true;
 }
 
@@ -204,9 +211,9 @@ function matches(title, term) {
  * Iš paieškos rezultatų išrenka pigiausią tinkamą produktą (pagal vieneto kainą, jei ji žinoma).
  * `ing` – produktas iš js/data.js (reikia vieneto ir pakuotės dydžio palyginimui).
  */
-export function pickBest(products, term, ing) {
+export function pickBest(products, term, ing, accept = () => true) {
   const wantUnit = ing.unit === 'g' ? 'kg' : ing.unit === 'ml' ? 'l' : 'vnt';
-  const ok = products.filter((p) => matches(p.title, term));
+  const ok = products.filter((p) => matches(p.title, term) && accept(p));
   if (!ok.length) return null;
   const withUnit = ok.filter((p) => p.unit === wantUnit && p.unitPrice > 0);
   const pool = withUnit.length ? withUnit : ok;
@@ -239,8 +246,18 @@ function priceFrom(v) {
   return n && n > 0 && n < 500 ? n : null;
 }
 
+// Pavadinimas gali būti vertimų objektas ({ lt: "...", en: "..." }).
+function textFrom(v) {
+  if (typeof v === 'string') return v;
+  if (v && typeof v === 'object' && !Array.isArray(v)) {
+    const t = v.lt ?? v.lt_LT ?? v.LT ?? v.en ?? Object.values(v).find((x) => typeof x === 'string');
+    return typeof t === 'string' ? t : undefined;
+  }
+  return undefined;
+}
+
 function productFrom(o) {
-  const title = pick(o, NAME_KEYS);
+  const title = textFrom(pick(o, NAME_KEYS));
   if (typeof title !== 'string' || title.length < 3 || title.length > 200) return null;
   let priceSrc = pick(o, PRICE_KEYS);
   let ctx = o;
@@ -351,5 +368,30 @@ export function parseHtmlCards(html) {
     const old = oldM ? num(oldM[1]) : null;
     out.push({ title, price, unitPrice: null, unit: null, oldPrice: old && old > price ? old : null, promo: true, validUntil: null, url: null });
   }
+  return out;
+}
+
+/** Diagnostikai: JSON keliai, kuriuose yra kainos ar pavadinimo raktai (padeda pritaikyti parserį naujai svetainei). */
+export function describeJson(text, max = 12) {
+  const out = [];
+  const seen = new Set();
+  const visit = (node, path, depth) => {
+    if (!node || typeof node !== 'object' || depth > 30 || out.length >= max) return;
+    if (Array.isArray(node)) {
+      if (node.length) visit(node[0], `${path}[0]`, depth + 1);
+      return;
+    }
+    const keys = Object.keys(node);
+    if (keys.some((k) => /price|prc|kaina|cost/i.test(k))) {
+      const shape = path.replace(/\[\d+\]/g, '[]');
+      if (!seen.has(shape)) {
+        seen.add(shape);
+        const sample = JSON.stringify(Object.fromEntries(keys.slice(0, 14).map((k) => [k, typeof node[k] === 'object' ? (Array.isArray(node[k]) ? '[…]' : '{…}') : node[k]])));
+        out.push(`${shape}: ${sample.slice(0, 300)}`);
+      }
+    }
+    for (const k of keys) visit(node[k], `${path}.${k}`, depth + 1);
+  };
+  jsonBlocks(text).forEach((b, i) => visit(b, `#${i}`, 0));
   return out;
 }

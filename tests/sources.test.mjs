@@ -79,3 +79,30 @@ test('užklausų antraštės – tik ASCII', async () => {
   assert.ok(values.length >= 3);
   for (const v of values) assert.match(v, /^[\x20-\x7e]*$/, v);
 });
+
+test('atitikmenys: atmetamas ėdalas, netinkamos pakuotės ir panašūs produktai', async () => {
+  const { matches } = await import('../scripts/sources.mjs');
+  const T = SEARCH_TERMS;
+  assert.equal(matches('Šlapias ėd. katėms One Sterilcat lašiša 4x85g', T.lasisa), false);
+  assert.equal(matches('Šviežia lašišos filė, 1 kg', T.lasisa), true);
+  assert.equal(matches('Liet.fas.bulvės salotoms 45+, kg', T.salotos), false);
+  assert.equal(matches('Virtos bulvės su krapais RTE, 430g', T.zalumynai), false);
+  assert.equal(matches('Krapai, 50 g', T.zalumynai), true);
+  assert.equal(matches('Mėlyn. vynuogės MOLDOVA, 1kl., 1kg', T.uogos), false);
+  assert.equal(matches('Šaldytos braškės RIMI, 400 g', T.uogos), true);
+  assert.equal(matches('Valg. ledai su mišk. uog. įd. RIMI, 120ml/72g', T.ledai), false);
+  assert.equal(matches('Vaniliniai ledai RIMI, 1 l', T.ledai), true);
+  assert.equal(matches('Rieb. tepinys su sviestu VILNIUS, 50 %, 400 g', T.sviestas), false);
+  assert.equal(matches('Nulupti pomidorai RIMI SMART, 800 g', T.pomidorai), false);
+  assert.equal(matches('Rūgštynių sriuba su rūkyta šonine KKF, 480 g', T.sonine), false);
+});
+
+test('atmetami kainos požiūriu neįtikėtini atitikmenys', () => {
+  const ing = INGREDIENTS.lasisa; // 250 g ~5 €
+  const products = [
+    { title: 'Lašišos filė', price: 0.5, unitPrice: 2, unit: 'kg' }, // per pigu – greičiausiai ne tas produktas
+    { title: 'Lašišos filė', price: 4.5, unitPrice: 18, unit: 'kg' },
+  ];
+  const accept = (p) => { const pack = livePackPrice(ing, p); return pack >= ing.base / 3 && pack <= ing.base * 3; };
+  assert.equal(pickBest(products, SEARCH_TERMS.lasisa, ing, accept).unitPrice, 18);
+});
