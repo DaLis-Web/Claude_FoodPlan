@@ -1,0 +1,21 @@
+{
+  "name": "Maisto planas",
+  "short_name": "Maisto planas",
+  "description": "Savaitės maisto planavimas, biudžetas, akcijos ir pirkinių sąrašas",
+  "lang": "lt",
+  "start_url": "./#plan",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f2",
+  "theme_color": "#2f855a",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Pirkinių sąrašas", "url": "./#list" },
+    { "name": "Šaldytuvas", "url": "./#pantry" }
+  ]
+}

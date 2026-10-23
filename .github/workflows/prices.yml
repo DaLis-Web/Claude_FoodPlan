@@ -1,0 +1,36 @@
+name: Kainų ir akcijų atnaujinimas
+
+on:
+  schedule:
+    - cron: '23 4 * * *' # kasdien ~7:23 Lietuvos laiku
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prices
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Surinkti kainas
+        run: node scripts/fetch-prices.mjs
+      - name: Įrašyti pakeitimus
+        run: |
+          if git diff --quiet -- data/prices.json; then
+            echo "Kainos nepasikeitė."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json
+          git commit -m "Atnaujintos kainos ir akcijos $(date -u +%F)"
+          git push

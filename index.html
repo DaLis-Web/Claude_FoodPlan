@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Maisto planas</title>
+  <meta name="description" content="Savaitės maisto planavimas, biudžetas ir pirkinių sąrašas">
+  <meta name="theme-color" content="#2f855a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Maisto planas">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <nav class="nav" aria-label="Pagrindinis meniu">
+      <div class="brand"><img src="icons/icon.svg" alt="" width="28" height="28"> <span>Maisto planas</span></div>
+      <a href="#plan" data-route="plan"><span class="ico">📅</span><span>Planas</span></a>
+      <a href="#list" data-route="list"><span class="ico">🛒</span><span>Pirkiniai</span></a>
+      <a href="#pantry" data-route="pantry"><span class="ico">🧊</span><span>Šaldytuvas</span></a>
+      <a href="#budget" data-route="budget"><span class="ico">💶</span><span>Biudžetas</span></a>
+      <a href="#recipes" data-route="recipes"><span class="ico">📖</span><span>Receptai</span></a>
+      <a href="#settings" data-route="settings"><span class="ico">⚙️</span><span>Nustatymai</span></a>
+    </nav>
+    <main id="view" tabindex="-1"></main>
+  </div>
+
+  <dialog id="modal">
+    <div class="modal-head">
+      <h2 id="modal-title"></h2>
+      <button class="icon-btn" data-action="close-modal" aria-label="Uždaryti">✕</button>
+    </div>
+    <div id="modal-body"></div>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
