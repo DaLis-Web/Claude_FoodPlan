@@ -134,3 +134,20 @@ test('LastMile (IKI): tik IKI tinklo prekės, vieneto kaina ir akcija', async ()
   assert.equal(items[0].oldPrice, 1.19);
   assert.deepEqual(parseLastmile.lastChains, ['PROMO-CashandCarry', 'IKI']);
 });
+
+test('kiekis iš pavadinimo ir naujos taisyklės', async () => {
+  const { withUnitPrice, matches } = await import('../scripts/sources.mjs');
+  assert.deepEqual(
+    (({ unitPrice, unit }) => ({ unitPrice, unit }))(withUnitPrice({ title: 'PIEMENĖLIO pienas, 3,5% rieb., 0,5 l', price: 0.65 })),
+    { unitPrice: 1.3, unit: 'l' },
+  );
+  assert.equal(withUnitPrice({ title: 'Virtos dešrelės, 600 g', price: 1.24 }).unitPrice, 2.07);
+  assert.equal(withUnitPrice({ title: 'Kiaušiniai, 10 vnt.', price: 1.99 }).unit, 'vnt');
+  const T = SEARCH_TERMS;
+  assert.equal(matches('Malta kava PAULIG CLASSIC, 500 g', T.malta_mesa), false);
+  assert.equal(matches('Kiaulienos ir jautienos faršas, 500 g', T.malta_mesa), true);
+  assert.equal(matches('Konservuoti žalieji žirneliai su morkomis BONDUELLE', T.aliejus), false);
+  assert.equal(matches('Atlant. silkių filė su česnaku NORVELITA, 200 g', T.cesnakai), false);
+  assert.equal(matches('Saldžiosios bulvės, 1 kg', T.bulves), false);
+  assert.equal(matches('Grietinės ir grybų skonio bulvių traškučiai', T.grietine), false);
+});

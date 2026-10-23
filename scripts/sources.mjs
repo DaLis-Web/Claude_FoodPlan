@@ -195,7 +195,28 @@ export function parseJsonLd(html) {
 }
 
 // Gyvūnų ėdalas ir panašūs dažnai patenka į paiešką („lašiša katėms“) – atmetame visada.
-const GLOBAL_NOT = ['katėms', 'kačių', 'kač.', 'šunims', 'šunų', 'ėd.', 'ėdalas', 'gyvūn', 'kūdikių', 'vaikų košė'];
+const GLOBAL_NOT = ['katėms', 'kačių', 'kač.', 'šunims', 'šunų', 'ėd.', 'ėdalas', 'gyvūn', 'kūdikių', 'vaikų košė', 'skonio'];
+
+/**
+ * Jei parduotuvė nenurodo vieneto kainos, ją apskaičiuojame iš pavadinime nurodyto kiekio
+ * („PIEMENĖLIO pienas, 0,5 l“ → 1,30 €/l). Kiekiai kaip „4x85g“ dauginami.
+ */
+export function withUnitPrice(p) {
+  if (p.unitPrice > 0 || !(p.price > 0)) return p;
+  const t = String(p.title || '').toLowerCase().replace(/,/g, '.');
+  const all = [...t.matchAll(/(?:(\d+)\s*[x×]\s*)?(\d+(?:\.\d+)?)\s*(kg|g|ml|l)\b/g)];
+  const m = all[all.length - 1];
+  if (m) {
+    const mult = m[1] ? Number(m[1]) : 1;
+    let qty = Number(m[2]) * mult;
+    const u = m[3];
+    if (u === 'g' || u === 'ml') qty /= 1000;
+    if (qty > 0) return { ...p, unitPrice: Math.round((p.price / qty) * 100) / 100, unit: u === 'g' || u === 'kg' ? 'kg' : 'l' };
+  }
+  const pcs = t.match(/(\d+)\s*vnt/);
+  if (pcs && Number(pcs[1]) > 0) return { ...p, unitPrice: Math.round((p.price / Number(pcs[1])) * 1000) / 1000, unit: 'vnt' };
+  return p;
+}
 
 // `must` – bent vienas fragmentas; `all` – visi fragmentai; `not` – nė vieno; `re` – pavadinimas atitinka (pvz. tūris).
 export function matches(title, term) {
@@ -214,7 +235,7 @@ export function matches(title, term) {
  */
 export function pickBest(products, term, ing, accept = () => true) {
   const wantUnit = ing.unit === 'g' ? 'kg' : ing.unit === 'ml' ? 'l' : 'vnt';
-  const ok = products.filter((p) => matches(p.title, term) && accept(p));
+  const ok = products.map(withUnitPrice).filter((p) => matches(p.title, term) && accept(p));
   if (!ok.length) return null;
   const withUnit = ok.filter((p) => p.unit === wantUnit && p.unitPrice > 0);
   const pool = withUnit.length ? withUnit : ok;
