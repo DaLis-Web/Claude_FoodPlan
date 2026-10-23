@@ -1,1 +1,335 @@
-{ "updatedAt": null, "images": {} }
+{
+ "updatedAt": "2026-10-23T20:17:08.125Z",
+ "images": {
+  "avizine_kose": {
+   "url": "https://www.themealdb.com/images/media/meals/sng9bm1765320170.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/sng9bm1765320170.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/53363"
+  },
+  "kiausinene": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Breakfast_with_fried_egg%2C_seared_Spam_and_cherry_tomatoes%2C_steamed_broccoli_%E7%9B%AE%E7%8E%89%E7%84%BC%E3%81%8D%E3%80%81%E7%84%BC%E3%81%8D%E3%82%B9%E3%83%91%E3%83%A0%E3%81%A8%E3%83%88%E3%83%9E%E3%83%88%E3%80%81%E8%92%B8%E3%81%97%E3%83%96%E3%83%AD%E3%83%83%E3%82%B3%E3%83%AA%E3%83%BC%E3%81%AE%E6%9C%9D%E9%A3%9F.jpg/960px-Breakfast_with_fried_egg%2C_seared_Spam_and_cherry_tomatoes%2C_steamed_broccoli_%E7%9B%AE%E7%8E%89%E7%84%BC%E3%81%8D%E3%80%81%E7%84%BC%E3%81%8D%E3%82%B9%E3%83%91%E3%83%A0%E3%81%A8%E3%83%88%E3%83%9E%E3%83%88%E3%80%81%E8%92%B8%E3%81%97%E3%83%96%E3%83%AD%E3%83%83%E3%82%B3%E3%83%AA%E3%83%BC%E3%81%AE%E6%9C%9D%E9%A3%9F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Breakfast_with_fried_egg%2C_seared_Spam_and_cherry_tomatoes%2C_steamed_broccoli_%E7%9B%AE%E7%8E%89%E7%84%BC%E3%81%8D%E3%80%81%E7%84%BC%E3%81%8D%E3%82%B9%E3%83%91%E3%83%A0%E3%81%A8%E3%83%88%E3%83%9E%E3%83%88%E3%80%81%E8%92%B8%E3%81%97%E3%83%96%E3%83%AD%E3%83%83%E3%82%B3%E3%83%AA%E3%83%BC%E3%81%AE%E6%9C%9D%E9%A3%9F.jpg/960px-Breakfast_with_fried_egg%2C_seared_Spam_and_cherry_tomatoes%2C_steamed_broccoli_%E7%9B%AE%E7%8E%89%E7%84%BC%E3%81%8D%E3%80%81%E7%84%BC%E3%81%8D%E3%82%B9%E3%83%91%E3%83%A0%E3%81%A8%E3%83%88%E3%83%9E%E3%83%88%E3%80%81%E8%92%B8%E3%81%97%E3%83%96%E3%83%AD%E3%83%83%E3%82%B3%E3%83%AA%E3%83%BC%E3%81%AE%E6%9C%9D%E9%A3%9F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "naotakem · CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Breakfast_with_fried_egg,_seared_Spam_and_cherry_tomatoes,_steamed_broccoli_%E7%9B%AE%E7%8E%89%E7%84%BC%E3%81%8D%E3%80%81%E7%84%BC%E3%81%8D%E3%82%B9%E3%83%91%E3%83%A0%E3%81%A8%E3%83%88%E3%83%9E%E3%83%88%E3%80%81%E8%92%B8%E3%81%97%E3%83%96%E3%83%AD%E3%83%83%E3%82%B3%E3%83%AA%E3%83%BC%E3%81%AE%E6%9C%9D%E9%A3%9F.jpg"
+  },
+  "varskeciai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Syrniki6.jpg/960px-Syrniki6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Syrniki6.jpg/960px-Syrniki6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Tatyana Morozyuk, color processing by Off-shell · CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Syrniki6.jpg"
+  },
+  "jogurtas_uogos": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Berry_Parfait%2C_Chick-fil%E2%80%90A%2C_Northern_Blvd.jpg/960px-Berry_Parfait%2C_Chick-fil%E2%80%90A%2C_Northern_Blvd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Berry_Parfait%2C_Chick-fil%E2%80%90A%2C_Northern_Blvd.jpg/960px-Berry_Parfait%2C_Chick-fil%E2%80%90A%2C_Northern_Blvd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Elyaqim Mosheh Adam אליקים משה אדם · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Berry_Parfait,_Chick-fil%E2%80%90A,_Northern_Blvd.jpg"
+  },
+  "sumustiniai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Ham_%26_cheese_toasted_sandwich_-_Potatoast_2026-05-02.jpg/960px-Ham_%26_cheese_toasted_sandwich_-_Potatoast_2026-05-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Ham_%26_cheese_toasted_sandwich_-_Potatoast_2026-05-02.jpg/960px-Ham_%26_cheese_toasted_sandwich_-_Potatoast_2026-05-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Andy Li · CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ham_%26_cheese_toasted_sandwich_-_Potatoast_2026-05-02.jpg"
+  },
+  "omletas": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Bell_Pepper_Omelette_kolkata_West_Bengal_02.jpg/960px-Bell_Pepper_Omelette_kolkata_West_Bengal_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Bell_Pepper_Omelette_kolkata_West_Bengal_02.jpg/960px-Bell_Pepper_Omelette_kolkata_West_Bengal_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Sgsamrat2021 · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bell_Pepper_Omelette_kolkata_West_Bengal_02.jpg"
+  },
+  "blynai": {
+   "url": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52854"
+  },
+  "kokteilis": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Banana_Smoothie.jpg/960px-Banana_Smoothie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Banana_Smoothie.jpg/960px-Banana_Smoothie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Ourlibrary · CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Banana_Smoothie.jpg"
+  },
+  "grikiai_pienas": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Cooking_rice_porridge.jpg/960px-Cooking_rice_porridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Cooking_rice_porridge.jpg/960px-Cooking_rice_porridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Tiia Monto · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cooking_rice_porridge.jpg"
+  },
+  "bulviniai_blynai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Potato_Pancakes_with_Sour_Cream.jpg/960px-Potato_Pancakes_with_Sour_Cream.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Potato_Pancakes_with_Sour_Cream.jpg/960px-Potato_Pancakes_with_Sour_Cream.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "HeatherMarieKosur · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Potato_Pancakes_with_Sour_Cream.jpg"
+  },
+  "vistiena_ryziai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Stir_fried_rice_vermicelli%2C_chicken_breast%2C_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg/960px-Stir_fried_rice_vermicelli%2C_chicken_breast%2C_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Stir_fried_rice_vermicelli%2C_chicken_breast%2C_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg/960px-Stir_fried_rice_vermicelli%2C_chicken_breast%2C_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "naotakem · CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Stir_fried_rice_vermicelli,_chicken_breast,_and_vegetables_%E9%B6%8F%E8%83%B8%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg"
+  },
+  "bolonese": {
+   "url": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52770"
+  },
+  "barsciai": {
+   "url": "https://www.themealdb.com/images/media/meals/zadvgb1699012544.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/zadvgb1699012544.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/53078"
+  },
+  "lesiu_sriuba": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Bowl_of_lentil_soup_with_green_and_red_lentils.jpg/960px-Bowl_of_lentil_soup_with_green_and_red_lentils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Bowl_of_lentil_soup_with_green_and_red_lentils.jpg/960px-Bowl_of_lentil_soup_with_green_and_red_lentils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Whoisjohngalt · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bowl_of_lentil_soup_with_green_and_red_lentils.jpg"
+  },
+  "kiaulienos_troskinys": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Rago%C3%BBt_de_Porc_%28Pork_Stew%29.jpg/960px-Rago%C3%BBt_de_Porc_%28Pork_Stew%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Rago%C3%BBt_de_Porc_%28Pork_Stew%29.jpg/960px-Rago%C3%BBt_de_Porc_%28Pork_Stew%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Hoyabird8 / Hoyabird8 at English Wikipedia · CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rago%C3%BBt_de_Porc_(Pork_Stew).jpg"
+  },
+  "slauneles_orkaiteje": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Curry_roasted_cauliflower_and_haricots_verts%2C_roasted_garlic_celeriac_puree%2C_beef_bourguignon%2C_and_chicken_thigh_with_sweet_potato_and_apple_-_Boston%2C_MA.jpg/960px-Curry_roasted_cauliflower_and_haricots_verts%2C_roasted_garlic_celeriac_puree%2C_beef_bourguignon%2C_and_chicken_thigh_with_sweet_potato_and_apple_-_Boston%2C_MA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Curry_roasted_cauliflower_and_haricots_verts%2C_roasted_garlic_celeriac_puree%2C_beef_bourguignon%2C_and_chicken_thigh_with_sweet_potato_and_apple_-_Boston%2C_MA.jpg/960px-Curry_roasted_cauliflower_and_haricots_verts%2C_roasted_garlic_celeriac_puree%2C_beef_bourguignon%2C_and_chicken_thigh_with_sweet_potato_and_apple_-_Boston%2C_MA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Daderot · CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Curry_roasted_cauliflower_and_haricots_verts,_roasted_garlic_celeriac_puree,_beef_bourguignon,_and_chicken_thigh_with_sweet_potato_and_apple_-_Boston,_MA.jpg"
+  },
+  "grikiai_grybai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Kundumy%2C_apparently_a_19th_century_dish_revived_by_V.V._Pokhlebkin._Stuffed_with_buckwheat_and_mushroom%2C_in_mushroom_soup_-_2.jpg/960px-Kundumy%2C_apparently_a_19th_century_dish_revived_by_V.V._Pokhlebkin._Stuffed_with_buckwheat_and_mushroom%2C_in_mushroom_soup_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Kundumy%2C_apparently_a_19th_century_dish_revived_by_V.V._Pokhlebkin._Stuffed_with_buckwheat_and_mushroom%2C_in_mushroom_soup_-_2.jpg/960px-Kundumy%2C_apparently_a_19th_century_dish_revived_by_V.V._Pokhlebkin._Stuffed_with_buckwheat_and_mushroom%2C_in_mushroom_soup_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Karamanskaya · CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kundumy,_apparently_a_19th_century_dish_revived_by_V.V._Pokhlebkin._Stuffed_with_buckwheat_and_mushroom,_in_mushroom_soup_-_2.jpg"
+  },
+  "kopustai_desreles": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Bigos_in_Krak%C3%B3w_%28Rynek_G%C5%82%C3%B3wny%29.jpg/960px-Bigos_in_Krak%C3%B3w_%28Rynek_G%C5%82%C3%B3wny%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Bigos_in_Krak%C3%B3w_%28Rynek_G%C5%82%C3%B3wny%29.jpg/960px-Bigos_in_Krak%C3%B3w_%28Rynek_G%C5%82%C3%B3wny%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Alberto Racatumba from Spain / España · CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bigos_in_Krak%C3%B3w_(Rynek_G%C5%82%C3%B3wny).jpg"
+  },
+  "avinzirniu_karis": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Lamb_Biryani_with_Okra_and_Chickpea_curries_-_Copper_Chimney_Jom_Makan_%28489731432%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Lamb_Biryani_with_Okra_and_Chickpea_curries_-_Copper_Chimney_Jom_Makan_%28489731432%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "credit": "Alpha from Melbourne, Australia · CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lamb_Biryani_with_Okra_and_Chickpea_curries_-_Copper_Chimney_Jom_Makan_(489731432).jpg"
+  },
+  "tortilijos": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Chicken_roll_with_vegetables_%26_goat_cheese_%285742199145%29.jpg/960px-Chicken_roll_with_vegetables_%26_goat_cheese_%285742199145%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Chicken_roll_with_vegetables_%26_goat_cheese_%285742199145%29.jpg/960px-Chicken_roll_with_vegetables_%26_goat_cheese_%285742199145%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Luca Nebuloni from Milan, Italy · CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Chicken_roll_with_vegetables_%26_goat_cheese_(5742199145).jpg"
+  },
+  "vistienos_sriuba": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Chicken_Noodle_Soup_US.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/86/Chicken_Noodle_Soup_US.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "credit": "Nichijyou123 · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Chicken_Noodle_Soup_US.jpg"
+  },
+  "maltinukai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/2023_Kotlety_mielone.jpg/960px-2023_Kotlety_mielone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/2023_Kotlety_mielone.jpg/960px-2023_Kotlety_mielone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Jacek Halicki · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2023_Kotlety_mielone.jpg"
+  },
+  "cukinijos_makaronai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Zucchini_oil_pasta.jpg/960px-Zucchini_oil_pasta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Zucchini_oil_pasta.jpg/960px-Zucchini_oil_pasta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "chomjong · CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Zucchini_oil_pasta.jpg"
+  },
+  "tuno_salotos": {
+   "url": "https://www.themealdb.com/images/media/meals/yypwwq1511304979.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/yypwwq1511304979.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52852"
+  },
+  "cili": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Bowl_of_chili.jpg/960px-Bowl_of_chili.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Bowl_of_chili.jpg/960px-Bowl_of_chili.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Carstor · CC BY-SA 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Bowl_of_chili.jpg"
+  },
+  "plovas": {
+   "url": "https://www.themealdb.com/images/media/meals/kos9av1699014767.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/kos9av1699014767.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/53083"
+  },
+  "kugelis": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Kugelis_2012.jpg/960px-Kugelis_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Kugelis_2012.jpg/960px-Kugelis_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Eden, Janine and Jim · CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kugelis_2012.jpg"
+  },
+  "cepelinai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Cepelinai_2%2C_Vilnius%2C_Lithuania_-_Diliff.jpg/960px-Cepelinai_2%2C_Vilnius%2C_Lithuania_-_Diliff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Cepelinai_2%2C_Vilnius%2C_Lithuania_-_Diliff.jpg/960px-Cepelinai_2%2C_Vilnius%2C_Lithuania_-_Diliff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Diliff · CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cepelinai_2,_Vilnius,_Lithuania_-_Diliff.jpg"
+  },
+  "zemaiciu_blynai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/%C5%BDemai%C4%8Di%C5%B3_blynai.jpg/960px-%C5%BDemai%C4%8Di%C5%B3_blynai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/%C5%BDemai%C4%8Di%C5%B3_blynai.jpg/960px-%C5%BDemai%C4%8Di%C5%B3_blynai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Sirex at Lithuanian Wikibooks · CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%C5%BDemai%C4%8Di%C5%B3_blynai.jpg"
+  },
+  "balandeliai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Pre-cooked_Go%C5%82%C4%85bki_in_a_pot.jpg/960px-Pre-cooked_Go%C5%82%C4%85bki_in_a_pot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Pre-cooked_Go%C5%82%C4%85bki_in_a_pot.jpg/960px-Pre-cooked_Go%C5%82%C4%85bki_in_a_pot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Kgbo · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Pre-cooked_Go%C5%82%C4%85bki_in_a_pot.jpg"
+  },
+  "koldunai": {
+   "url": "https://www.themealdb.com/images/media/meals/ckbx1h1764123606.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/ckbx1h1764123606.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/53296"
+  },
+  "silke_bulves": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Herring_with_sour_cream_and_onion_and_fried_potato.jpg/960px-Herring_with_sour_cream_and_onion_and_fried_potato.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Herring_with_sour_cream_and_onion_and_fried_potato.jpg/960px-Herring_with_sour_cream_and_onion_and_fried_potato.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Jessica from Hove, United Kingdom · CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Herring_with_sour_cream_and_onion_and_fried_potato.jpg"
+  },
+  "bananu_blyneliai": {
+   "url": "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52855"
+  },
+  "skrebuciai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/French_toast_with_berries%2C_banana%2C_maple_syrup%2C_and_sausage_-_London%2C_UK.jpg/960px-French_toast_with_berries%2C_banana%2C_maple_syrup%2C_and_sausage_-_London%2C_UK.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/French_toast_with_berries%2C_banana%2C_maple_syrup%2C_and_sausage_-_London%2C_UK.jpg/960px-French_toast_with_berries%2C_banana%2C_maple_syrup%2C_and_sausage_-_London%2C_UK.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Daderot · CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:French_toast_with_berries,_banana,_maple_syrup,_and_sausage_-_London,_UK.jpg"
+  },
+  "angliski_pusryciai": {
+   "url": "https://www.themealdb.com/images/media/meals/sqrtwu1511721265.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/sqrtwu1511721265.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52896"
+  },
+  "lazanija": {
+   "url": "https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52844"
+  },
+  "karbonara": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Spaghetti_alla_Carbonara_%28Madrid%29.JPG/960px-Spaghetti_alla_Carbonara_%28Madrid%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Spaghetti_alla_Carbonara_%28Madrid%29.JPG/960px-Spaghetti_alla_Carbonara_%28Madrid%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Tamorlan · CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Spaghetti_alla_Carbonara_(Madrid).JPG"
+  },
+  "pica": {
+   "url": "https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/53014"
+  },
+  "cezario_salotos": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Chicken_fettuccine_alfredo.JPG/960px-Chicken_fettuccine_alfredo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Chicken_fettuccine_alfredo.JPG/960px-Chicken_fettuccine_alfredo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Dllu · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Chicken_fettuccine_alfredo.JPG"
+  },
+  "graikiskos_salotos": {
+   "url": "https://www.themealdb.com/images/media/meals/k29viq1585565980.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/k29viq1585565980.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/53011"
+  },
+  "mesainiai": {
+   "url": "https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/53013"
+  },
+  "zirniu_sriuba": {
+   "url": "https://www.themealdb.com/images/media/meals/xxtsvx1511814083.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/xxtsvx1511814083.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52925"
+  },
+  "grybu_sriuba": {
+   "url": "https://www.themealdb.com/images/media/meals/1ngcbf1628770793.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/1ngcbf1628770793.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/53059"
+  },
+  "kopustu_sriuba": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Logo_La_Soupe_aux_choux_%28titre_sur_l%27affiche%29.png/960px-Logo_La_Soupe_aux_choux_%28titre_sur_l%27affiche%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Logo_La_Soupe_aux_choux_%28titre_sur_l%27affiche%29.png/960px-Logo_La_Soupe_aux_choux_%28titre_sur_l%27affiche%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "René Ferracci(+ Groupir ! pour le détourage) · Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Logo_La_Soupe_aux_choux_(titre_sur_l%27affiche).png"
+  },
+  "pomidoru_sriuba": {
+   "url": "https://www.themealdb.com/images/media/meals/stpuws1511191310.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/stpuws1511191310.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52841"
+  },
+  "vistienos_karis": {
+   "url": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52795"
+  },
+  "kiaulienos_kepsniai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Schnitzel_with_baked_potatoes_and_salad.jpg/960px-Schnitzel_with_baked_potatoes_and_salad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Schnitzel_with_baked_potatoes_and_salad.jpg/960px-Schnitzel_with_baked_potatoes_and_salad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Maor X · CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Schnitzel_with_baked_potatoes_and_salad.jpg"
+  },
+  "zuvies_troskinys": {
+   "url": "https://www.themealdb.com/images/media/meals/vptqpw1511798500.jpg",
+   "thumb": "https://www.themealdb.com/images/media/meals/vptqpw1511798500.jpg/medium",
+   "credit": "TheMealDB",
+   "page": "https://www.themealdb.com/meal/52918"
+  },
+  "kepti_ryziai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Fried_rice_with_chicken_and_egg.jpg/960px-Fried_rice_with_chicken_and_egg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Fried_rice_with_chicken_and_egg.jpg/960px-Fried_rice_with_chicken_and_egg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "daSupremo · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Fried_rice_with_chicken_and_egg.jpg"
+  },
+  "grybu_rizotas": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Mushroom_Risotto_%284789415965%29.jpg/960px-Mushroom_Risotto_%284789415965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Mushroom_Risotto_%284789415965%29.jpg/960px-Mushroom_Risotto_%284789415965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Katrin Gilger · CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mushroom_Risotto_(4789415965).jpg"
+  },
+  "buritas": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Burrito.JPG/960px-Burrito.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Burrito.JPG/960px-Burrito.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "samuelfernandezrivera · CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Burrito.JPG"
+  },
+  "makaronai_tunas": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Pasta_with_tomato_sauce%2C_capers_and_tuna_%2850540741211%29.jpg/960px-Pasta_with_tomato_sauce%2C_capers_and_tuna_%2850540741211%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Pasta_with_tomato_sauce%2C_capers_and_tuna_%2850540741211%29.jpg/960px-Pasta_with_tomato_sauce%2C_capers_and_tuna_%2850540741211%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Julien Seguinot from Lille, France · CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Pasta_with_tomato_sauce,_capers_and_tuna_(50540741211).jpg"
+  },
+  "spinatu_makaronai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Liat_Portal_for_Foodie_Disorder_-_Spaghetti_with_Spinach_and_Cream_Sauce.jpg/960px-Liat_Portal_for_Foodie_Disorder_-_Spaghetti_with_Spinach_and_Cream_Sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Liat_Portal_for_Foodie_Disorder_-_Spaghetti_with_Spinach_and_Cream_Sauce.jpg/960px-Liat_Portal_for_Foodie_Disorder_-_Spaghetti_with_Spinach_and_Cream_Sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "HaJunkiyada · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Spaghetti_with_Spinach_and_Cream_Sauce.jpg"
+  },
+  "bulviu_kose_kiausiniai": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Lai_shak%2C_mashed_potato_%26_fried_egg_plant.jpg/960px-Lai_shak%2C_mashed_potato_%26_fried_egg_plant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Lai_shak%2C_mashed_potato_%26_fried_egg_plant.jpg/960px-Lai_shak%2C_mashed_potato_%26_fried_egg_plant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "এম আবু সাঈদ · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lai_shak,_mashed_potato_%26_fried_egg_plant.jpg"
+  },
+  "varskes_apkepas": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Recipes_cottage_cheese_pie_named_misa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/12/Recipes_cottage_cheese_pie_named_misa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "credit": "FDominec · CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Recipes_cottage_cheese_pie_named_misa.jpg"
+  }
+ }
+}
