@@ -52,7 +52,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
+  :root:not([data-theme='light']) {
     color-scheme: dark;
     --bg: #121614;
     --bg-accent: radial-gradient(1000px 400px at 100% -10%, #18301f 0%, transparent 60%);
@@ -522,3 +522,4 @@ dialog::backdrop { background: rgba(20, 30, 25, 0.45); backdrop-filter: blur(3px
   .item-main b { font-size: 0.92rem; }
 }
 .btn-wrap { white-space: normal; text-align: center; }
+.confirm-actions { justify-content: flex-end; }

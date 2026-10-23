@@ -93,6 +93,18 @@ function closeModal() {
   $('#modal').close();
 }
 
+// Patvirtinimo langas programėlės viduje (naršyklės patvirtinimo langai kai kur neveikia ir telefone atrodo prastai).
+let pendingConfirm = null;
+function askConfirm(title, message, yesLabel, onYes) {
+  pendingConfirm = onYes;
+  openModal(title, () => `
+    <p>${esc(message)}</p>
+    <div class="toolbar confirm-actions">
+      <button class="btn" data-action="close-modal">Atšaukti</button>
+      <button class="btn danger" data-action="confirm-yes">${esc(yesLabel)}</button>
+    </div>`);
+}
+
 function refreshModal() {
   if (modalRender && $('#modal').open) $('#modal-body').innerHTML = modalRender();
 }
@@ -135,7 +147,7 @@ function planSummary() {
 
 // ---------- Vaizdai ----------
 
-const views = { plan: viewPlan, list: viewList, pantry: viewPantry, budget: viewBudget, recipes: viewRecipes, settings: viewSettings };
+const views = { plan: viewPlan, list: viewList, pantry: viewPantry, budget: viewBudget, recipes: viewRecipes, nustatymai: viewSettings };
 
 function route() {
   const r = location.hash.replace('#', '') || 'plan';
@@ -929,6 +941,7 @@ function viewSettings() {
     <p class="small muted">Duomenys saugomi tik šiame įrenginyje. Norėdami perkelti į kitą įrenginį (pvz. iš kompiuterio į telefoną), eksportuokite ir importuokite failą.</p>
     <div class="toolbar wrap">
       <button class="btn" data-action="export">⬇️ Eksportuoti</button>
+      <button class="btn" data-action="export-copy">📋 Kopijuoti duomenis</button>
       <label class="btn">⬆️ Importuoti<input type="file" accept="application/json" data-change="import" hidden></label>
       <button class="btn danger" data-action="reset">Ištrinti viską</button>
     </div>
@@ -939,6 +952,12 @@ function viewSettings() {
 
 const actions = {
   'close-modal': closeModal,
+  'confirm-yes': () => {
+    const fn = pendingConfirm;
+    pendingConfirm = null;
+    closeModal();
+    if (fn) fn();
+  },
   'wish-remove': (el) => {
     const w = week();
     w.wishes = w.wishes.filter((id) => id !== el.dataset.id);
@@ -974,14 +993,14 @@ const actions = {
       toast('Planas sudarytas ✨');
     }, 20);
   },
-  'clear-plan': () => {
-    if (!confirm('Išvalyti visą savaitės planą (išskyrus pagamintus patiekalus)?')) return;
-    const w = week();
-    w.plan.days = w.plan.days.map((day) => Object.fromEntries(Object.entries(day).filter(([, e]) => e.cooked)));
-    syncLeftovers(w.plan);
-    save();
-    render();
-  },
+  'clear-plan': () =>
+    askConfirm('Išvalyti planą?', 'Bus pašalinti visi šios savaitės patiekalai, išskyrus jau pagamintus.', 'Išvalyti', () => {
+      const w = week();
+      w.plan.days = w.plan.days.map((day) => Object.fromEntries(Object.entries(day).filter(([, e]) => e.cooked)));
+      syncLeftovers(w.plan);
+      save();
+      render();
+    }),
   meal: (el) => openMeal(+el.dataset.d, el.dataset.s),
   alts: (el) => openAlternatives(+el.dataset.d, el.dataset.s),
   'set-recipe': (el) => {
@@ -1143,11 +1162,12 @@ const actions = {
     openModal('Redaguoti receptą', () => recipeFormHtml(r));
   },
   'delete-recipe': (el) => {
-    if (!confirm('Ištrinti receptą?')) return;
-    state.customRecipes = state.customRecipes.filter((x) => x.id !== el.dataset.id);
-    save();
-    closeModal();
-    render();
+    const id = el.dataset.id;
+    askConfirm('Ištrinti receptą?', 'Receptas bus ištrintas visam laikui.', 'Ištrinti', () => {
+      state.customRecipes = state.customRecipes.filter((x) => x.id !== id);
+      save();
+      render();
+    });
   },
   'add-ing-row': () => $('[data-ing-rows]').insertAdjacentHTML('beforeend', ingRowHtml()),
   'remove-ing-row': (el) => el.closest('.ing-row').remove(),
@@ -1169,12 +1189,21 @@ const actions = {
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   },
-  reset: () => {
-    if (!confirm('Ištrinti visus duomenis šiame įrenginyje?')) return;
-    state = defaultState();
-    save();
-    render();
+  'export-copy': async () => {
+    try {
+      await navigator.clipboard.writeText(JSON.stringify(state));
+      toast('Duomenys nukopijuoti – įklijuokite į failą .json');
+    } catch {
+      toast('Nepavyko nukopijuoti – naudokite „Eksportuoti“');
+    }
   },
+  reset: () =>
+    askConfirm('Ištrinti visus duomenis?', 'Bus ištrinti planai, šaldytuvo turinys, išlaidos ir savi receptai šiame įrenginyje.', 'Ištrinti viską', () => {
+      state = defaultState();
+      save();
+      applyTheme();
+      render();
+    }),
 };
 
 function toggleIn(key, id) {
