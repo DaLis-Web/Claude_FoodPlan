@@ -16,12 +16,14 @@ jobs:
         with:
           node-version: 22
       - name: Importuoti
-        run: node scripts/import-mealdb.mjs
+        run: |
+          node scripts/import-mealdb.mjs
+          node scripts/build-mealdb.mjs
       - name: Įrašyti
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/mealdb-raw.json
+          git add data/mealdb-raw.json data/extra-recipes.json
           git diff --cached --quiet && exit 0
           git commit -m "TheMealDB receptų importas"
           git pull --rebase origin "$GITHUB_REF_NAME"

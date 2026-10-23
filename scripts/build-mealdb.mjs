@@ -4,6 +4,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { estimateNutrition } from '../js/nutrition.js';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const read = async (f) => JSON.parse(await fs.readFile(path.join(root, 'data', f), 'utf8'));
@@ -14,15 +15,17 @@ const recipes = [];
 for (const r of raw) {
   const t = lt[r.id];
   if (!t) continue;
+  const ing = { ...r.ing, ...(t.ing || {}) }; // rankiniai kiekių pataisymai iš vertimų failo
+  const { kcal, protein } = t.ing ? estimateNutrition(ing) : r;
   recipes.push({
     id: r.id,
     name: t.name,
     meals: t.meals || r.meals,
     time: t.time,
-    kcal: r.kcal,
-    protein: r.protein,
+    kcal,
+    protein,
     servings: r.servings,
-    ing: r.ing,
+    ing,
     other: t.other ?? r.other,
     steps: t.steps,
     image: { url: r.image, thumb: `${r.image}/medium`, credit: 'TheMealDB', page: r.source },

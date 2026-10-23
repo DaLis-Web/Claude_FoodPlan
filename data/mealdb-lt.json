@@ -3,242 +3,557 @@
   "name": "Jautienos stroganovas su grybais",
   "time": 35,
   "other": [],
-  "steps": ["Aliejuje ant vidutinės ugnies ~15 min. kepinkite svogūną, kol suminkštės, tada sudėkite česnaką ir sviestą.", "Suberkite grybus ir kepkite 5 min., pagardinkite ir perkelkite į lėkštę.", "Jautienos juosteles apvoliokite pasūdytuose miltuose ir greitai apkepkite 3–4 min.", "Grąžinkite svogūnus ir grybus, supilkite grietinę, išmaišytą su garstyčiomis ir trupučiu vandens, troškinkite 5 min.", "Pabarstykite petražolėmis, patiekite su makaronais, ryžiais ar bulvių koše."]
+  "steps": [
+   "Aliejuje ant vidutinės ugnies ~15 min. kepinkite svogūną, kol suminkštės, tada sudėkite česnaką ir sviestą.",
+   "Suberkite grybus ir kepkite 5 min., pagardinkite ir perkelkite į lėkštę.",
+   "Jautienos juosteles apvoliokite pasūdytuose miltuose ir greitai apkepkite 3–4 min.",
+   "Grąžinkite svogūnus ir grybus, supilkite grietinę, išmaišytą su garstyčiomis ir trupučiu vandens, troškinkite 5 min.",
+   "Pabarstykite petražolėmis, patiekite su makaronais, ryžiais ar bulvių koše."
+  ]
  },
  "mdb_53281": {
   "name": "Alžyrietiški kotletukai pomidorų padaže (kefta)",
   "time": 35,
-  "other": ["žiupsnelis ras el hanout ar kitų rytietiškų prieskonių (nebūtina)"],
-  "steps": ["Faršą sumaišykite su puse česnako ir šaukštu smulkinto svogūno.", "Suformuokite pailgus kotletukus ir apkepkite iki traškumo, ~10 min.", "Toje pačioje keptuvėje pakepinkite likusį svogūną 5 min., įmeskite likusį česnaką.", "Sudėkite pjaustytus pomidorus, petražoles, įpilkite truputį vandens ir troškinkite 5 min.", "Užpilkite padažu kotletukus ir patiekite."]
+  "other": [
+   "žiupsnelis ras el hanout ar kitų rytietiškų prieskonių (nebūtina)"
+  ],
+  "steps": [
+   "Faršą sumaišykite su puse česnako ir šaukštu smulkinto svogūno.",
+   "Suformuokite pailgus kotletukus ir apkepkite iki traškumo, ~10 min.",
+   "Toje pačioje keptuvėje pakepinkite likusį svogūną 5 min., įmeskite likusį česnaką.",
+   "Sudėkite pjaustytus pomidorus, petražoles, įpilkite truputį vandens ir troškinkite 5 min.",
+   "Užpilkite padažu kotletukus ir patiekite."
+  ]
  },
  "mdb_52812": {
   "name": "Troškinta jautiena su bulvėmis ir morkomis",
   "time": 210,
-  "other": ["šakelė čiobrelių ir rozmarino (nebūtina)"],
-  "steps": ["Jautieną pasūdykite ir palaikykite 30 min. kambario temperatūroje.", "Storadugniame puode apkepkite mėsą iš visų pusių, sudėkite svogūnus ir česnaką.", "Įpilkite stiklinę vandens, uždenkite ir troškinkite orkaitėje 150 °C apie 3 val., kol mėsa suminkštės.", "Paskutinę valandą sudėkite bulves ir morkas.", "Mėsą supjaustykite skersai skaidulų, patiekite su daržovėmis ir troškinimo sultimis."]
+  "other": [
+   "šakelė čiobrelių ir rozmarino (nebūtina)"
+  ],
+  "steps": [
+   "Jautieną pasūdykite ir palaikykite 30 min. kambario temperatūroje.",
+   "Storadugniame puode apkepkite mėsą iš visų pusių, sudėkite svogūnus ir česnaką.",
+   "Įpilkite stiklinę vandens, uždenkite ir troškinkite orkaitėje 150 °C apie 3 val., kol mėsa suminkštės.",
+   "Paskutinę valandą sudėkite bulves ir morkas.",
+   "Mėsą supjaustykite skersai skaidulų, patiekite su daržovėmis ir troškinimo sultimis."
+  ]
  },
  "mdb_53488": {
   "name": "Troškinti kopūstai su faršu ir daržovėmis",
   "time": 45,
-  "other": ["žiupsnelis kmynų", "šaukštelis obuolių acto ar citrinos sulčių"],
-  "steps": ["Įkaitinkite aliejų ir apkepkite faršą 3–4 min., šaukštu jį trupindami.", "Sudėkite svogūną, morkas, papriką, česnaką, pomidorų padažą ir prieskonius, kepkite 2–3 min.", "Suberkite pjaustytą kopūstą, įpilkite acto ir puodelį vandens, išmaišykite.", "Uždenkite ir troškinkite ant silpnos ugnies 30 min., retkarčiais pamaišydami.", "Pabarstykite petražolėmis."]
+  "other": [
+   "žiupsnelis kmynų",
+   "šaukštelis obuolių acto ar citrinos sulčių"
+  ],
+  "steps": [
+   "Įkaitinkite aliejų ir apkepkite faršą 3–4 min., šaukštu jį trupindami.",
+   "Sudėkite svogūną, morkas, papriką, česnaką, pomidorų padažą ir prieskonius, kepkite 2–3 min.",
+   "Suberkite pjaustytą kopūstą, įpilkite acto ir puodelį vandens, išmaišykite.",
+   "Uždenkite ir troškinkite ant silpnos ugnies 30 min., retkarčiais pamaišydami.",
+   "Pabarstykite petražolėmis."
+  ]
  },
  "mdb_53055": {
   "name": "Balkaniški čevapčičiai",
   "time": 40,
-  "other": ["¾ a. š. kepimo miltelių"],
-  "steps": ["Faršą sumaišykite su labai smulkiai pjaustytu svogūnu, tarkuotu česnaku, petražolėmis, paprika, džiūvėsėliais, druska ir pipirais.", "Gerai išminkykite, uždenkite ir palaikykite šaldytuve 1–2 val.", "Suformuokite piršto storio, 7–10 cm ilgio dešrelės formos kotletukus.", "Kepkite grilio keptuvėje ar ant grilio 12–14 min., kelis kartus apversdami.", "Patiekite su svogūnais, duona ir daržovėmis."]
+  "other": [
+   "¾ a. š. kepimo miltelių"
+  ],
+  "steps": [
+   "Faršą sumaišykite su labai smulkiai pjaustytu svogūnu, tarkuotu česnaku, petražolėmis, paprika, džiūvėsėliais, druska ir pipirais.",
+   "Gerai išminkykite, uždenkite ir palaikykite šaldytuve 1–2 val.",
+   "Suformuokite piršto storio, 7–10 cm ilgio dešrelės formos kotletukus.",
+   "Kepkite grilio keptuvėje ar ant grilio 12–14 min., kelis kartus apversdami.",
+   "Patiekite su svogūnais, duona ir daržovėmis."
+  ]
  },
  "mdb_52818": {
   "name": "Makaronai su vištiena, paprika ir sūriu",
   "time": 35,
-  "other": ["pakelis meksikietiškų prieskonių (fajita)"],
-  "steps": ["Aliejuje pakepinkite svogūną, papriką ir česnaką.", "Sudėkite vištienos gabalėlius ir prieskonius, apkepkite.", "Supilkite grietinėlę, puodelį vandens ir suberkite makaronus.", "Virkite ant silpnos ugnies ~20 min., kol makaronai suminkštės.", "Įmaišykite tarkuotą sūrį, pabarstykite petražolėmis."]
+  "other": [
+   "pakelis meksikietiškų prieskonių (fajita)"
+  ],
+  "steps": [
+   "Aliejuje pakepinkite svogūną, papriką ir česnaką.",
+   "Sudėkite vištienos gabalėlius ir prieskonius, apkepkite.",
+   "Supilkite grietinėlę, puodelį vandens ir suberkite makaronus.",
+   "Virkite ant silpnos ugnies ~20 min., kol makaronai suminkštės.",
+   "Įmaišykite tarkuotą sūrį, pabarstykite petražolėmis."
+  ]
  },
  "mdb_52920": {
   "name": "Vištiena „Marengo“ pomidorų padaže",
   "time": 50,
-  "other": ["100 g juodųjų alyvuogių (nebūtina)"],
-  "steps": ["Aliejuje pakepinkite grybus, kol suminkštės.", "Sudėkite vištienos šlauneles ir trumpai apkepkite iš abiejų pusių.", "Supilkite pomidorų padažą, sudėkite alyvuoges, pagardinkite pipirais.", "Uždenkite ir troškinkite 40 min., kol vištiena suminkštės.", "Pabarstykite petražolėmis, patiekite su makaronais ar bulvių koše."]
+  "other": [
+   "100 g juodųjų alyvuogių (nebūtina)"
+  ],
+  "steps": [
+   "Aliejuje pakepinkite grybus, kol suminkštės.",
+   "Sudėkite vištienos šlauneles ir trumpai apkepkite iš abiejų pusių.",
+   "Supilkite pomidorų padažą, sudėkite alyvuoges, pagardinkite pipirais.",
+   "Uždenkite ir troškinkite 40 min., kol vištiena suminkštės.",
+   "Pabarstykite petražolėmis, patiekite su makaronais ar bulvių koše."
+  ]
  },
  "mdb_53549": {
   "name": "Vištienos salotos su grybais ir šonine",
   "time": 35,
-  "other": ["šaukštas obuolių acto"],
-  "steps": ["Vištieną išvirkite pasūdytame vandenyje (~15 min.), atvėsinkite ir suplėšykite šakute.", "Majonezą sumaišykite su grietine, garstyčiomis ir actu, sudėkite smulkintą svogūną ir vištieną.", "Apkepkite šoninę iki traškumo, tame pačiame keptuve – grybus (~5 min.).", "Ant vištienos salotų sudėkite šoninę, grybus ir petražoles.", "Patiekite ant duonos riekės."]
+  "other": [
+   "šaukštas obuolių acto"
+  ],
+  "steps": [
+   "Vištieną išvirkite pasūdytame vandenyje (~15 min.), atvėsinkite ir suplėšykite šakute.",
+   "Majonezą sumaišykite su grietine, garstyčiomis ir actu, sudėkite smulkintą svogūną ir vištieną.",
+   "Apkepkite šoninę iki traškumo, tame pačiame keptuve – grybus (~5 min.).",
+   "Ant vištienos salotų sudėkite šoninę, grybus ir petražoles.",
+   "Patiekite ant duonos riekės."
+  ]
  },
  "mdb_53372": {
   "name": "Kiniškas pomidorų ir kiaušinių troškinys su ryžiais",
   "time": 25,
-  "other": ["šaukštelis sezamų aliejaus (nebūtina)", "sultinio kubelis"],
-  "steps": ["Išvirkite ryžius.", "Pomidorus supjaustykite skiltelėmis.", "Šaltoje keptuvėje su aliejumi lėtai kepkite išplaktus kiaušinius, maišydami, kol beveik sustings; išimkite.", "Pakepinkite pomidorus su cukrumi, druska ir trupučiu sultinio, kol suminkštės.", "Sudėkite kiaušinius, išmaišykite, pabarstykite svogūnų laiškais ir patiekite su ryžiais."]
+  "other": [
+   "šaukštelis sezamų aliejaus (nebūtina)",
+   "sultinio kubelis"
+  ],
+  "steps": [
+   "Išvirkite ryžius.",
+   "Pomidorus supjaustykite skiltelėmis.",
+   "Šaltoje keptuvėje su aliejumi lėtai kepkite išplaktus kiaušinius, maišydami, kol beveik sustings; išimkite.",
+   "Pakepinkite pomidorus su cukrumi, druska ir trupučiu sultinio, kol suminkštės.",
+   "Sudėkite kiaušinius, išmaišykite, pabarstykite svogūnų laiškais ir patiekite su ryžiais."
+  ]
  },
  "mdb_53530": {
   "name": "Vištiena grietinėlės ir garstyčių padaže",
   "time": 60,
   "other": [],
-  "steps": ["Vištieną nusausinkite, pagardinkite druska, pipirais ir paprika.", "Apkepkite aliejuje iš visų pusių ~10 min. ir išimkite.", "Toje pačioje keptuvėje 2 min. pakepinkite svogūną ir česnaką.", "Įpilkite puodelį vandens ar sultinio, garstyčias, medų ir grietinėlę, sudėkite vištieną.", "Uždenkite ir troškinkite ~45 min., patiekite su ryžiais ir petražolėmis."]
+  "steps": [
+   "Vištieną nusausinkite, pagardinkite druska, pipirais ir paprika.",
+   "Apkepkite aliejuje iš visų pusių ~10 min. ir išimkite.",
+   "Toje pačioje keptuvėje 2 min. pakepinkite svogūną ir česnaką.",
+   "Įpilkite puodelį vandens ar sultinio, garstyčias, medų ir grietinėlę, sudėkite vištieną.",
+   "Uždenkite ir troškinkite ~45 min., patiekite su ryžiais ir petražolėmis."
+  ]
  },
  "mdb_53486": {
   "name": "Pupelių sriuba su paprikomis",
   "time": 60,
-  "other": ["džiovintų mėtų, čiobrelių ar pipirnės (nebūtina)"],
-  "steps": ["Jei naudojate sausas pupeles – išmirkykite per naktį; konservuotas tiesiog nuplaukite.", "Puode pakepinkite smulkintą svogūną ir morkas 2 min.", "Sudėkite pupeles, paprikas, pomidorų padažą, prieskonius ir užpilkite vandeniu.", "Užvirinkite ir virkite ant silpnos ugnies, kol daržovės suminkštės (konservuotoms pupelėms ~30 min.).", "Pagardinkite, pabarstykite petražolėmis."]
+  "other": [
+   "džiovintų mėtų, čiobrelių ar pipirnės (nebūtina)"
+  ],
+  "steps": [
+   "Jei naudojate sausas pupeles – išmirkykite per naktį; konservuotas tiesiog nuplaukite.",
+   "Puode pakepinkite smulkintą svogūną ir morkas 2 min.",
+   "Sudėkite pupeles, paprikas, pomidorų padažą, prieskonius ir užpilkite vandeniu.",
+   "Užvirinkite ir virkite ant silpnos ugnies, kol daržovės suminkštės (konservuotoms pupelėms ~30 min.).",
+   "Pagardinkite, pabarstykite petražolėmis."
+  ]
  },
  "mdb_53064": {
   "name": "Makaronai „Alfredo“",
   "time": 20,
   "other": [],
-  "steps": ["Išvirkite makaronus pasūdytame vandenyje.", "Keptuvėje kaitinkite grietinėlę su sviestu, kol sviestas ištirps ir grietinėlė pradės burbuliuoti.", "Įmaišykite tarkuotą parmezaną, pagardinkite pipirais ir leiskite padažui šiek tiek sutirštėti.", "Sudėkite makaronus, išmaišykite ir pabarstykite petražolėmis."]
+  "steps": [
+   "Išvirkite makaronus pasūdytame vandenyje.",
+   "Keptuvėje kaitinkite grietinėlę su sviestu, kol sviestas ištirps ir grietinėlė pradės burbuliuoti.",
+   "Įmaišykite tarkuotą parmezaną, pagardinkite pipirais ir leiskite padažui šiek tiek sutirštėti.",
+   "Sudėkite makaronus, išmaišykite ir pabarstykite petražolėmis."
+  ]
  },
  "mdb_53079": {
   "name": "Rusiška žuvienė (ucha)",
   "time": 40,
-  "other": ["3 stiklinės žuvies sultinio (galima vanduo)", "sauja soros kruopų (nebūtina)"],
-  "steps": ["Puode aliejuje pakepinkite svogūną, kol pradės auksuoti, sudėkite morkas ir kepkite 4 min.", "Įpilkite sultinio ar vandens, sudėkite bulves, lauro lapą, pipirų, pasūdykite.", "Virkite uždengę ~20 min., kol bulvės suminkštės.", "Sudėkite žuvies gabalėlius ir virkite vos kelias minutes, kol žuvis taps nepermatoma.", "Pabarstykite krapais."]
+  "other": [
+   "3 stiklinės žuvies sultinio (galima vanduo)",
+   "sauja soros kruopų (nebūtina)"
+  ],
+  "steps": [
+   "Puode aliejuje pakepinkite svogūną, kol pradės auksuoti, sudėkite morkas ir kepkite 4 min.",
+   "Įpilkite sultinio ar vandens, sudėkite bulves, lauro lapą, pipirų, pasūdykite.",
+   "Virkite uždengę ~20 min., kol bulvės suminkštės.",
+   "Sudėkite žuvies gabalėlius ir virkite vos kelias minutes, kol žuvis taps nepermatoma.",
+   "Pabarstykite krapais."
+  ]
  },
  "mdb_52996": {
   "name": "Vištiena su karamelizuotais svogūnais, keptomis morkomis ir bulvių koše",
   "time": 45,
-  "other": ["sultinio kubelis"],
-  "steps": ["Morkas supjaustykite, apšlakstykite aliejumi ir kepkite 220 °C orkaitėje 15–20 min.", "Išvirkite bulves ir sutrinkite su sviestu ir grietine.", "Svogūną kepinkite 8–10 min., įberkite cukraus, įpilkite truputį sultinio ir troškinkite, kol taps uogienės konsistencijos.", "Vištieną apkepkite, uždėkite svogūnų ir mocarelos, pakepkite orkaitėje, kol sūris išsilydys.", "Patiekite su morkomis ir koše."]
+  "other": [
+   "sultinio kubelis"
+  ],
+  "steps": [
+   "Morkas supjaustykite, apšlakstykite aliejumi ir kepkite 220 °C orkaitėje 15–20 min.",
+   "Išvirkite bulves ir sutrinkite su sviestu ir grietine.",
+   "Svogūną kepinkite 8–10 min., įberkite cukraus, įpilkite truputį sultinio ir troškinkite, kol taps uogienės konsistencijos.",
+   "Vištieną apkepkite, uždėkite svogūnų ir mocarelos, pakepkite orkaitėje, kol sūris išsilydys.",
+   "Patiekite su morkomis ir koše."
+  ]
  },
  "mdb_53553": {
   "name": "Daniški kotletai (frikadelės)",
   "time": 40,
   "other": [],
-  "steps": ["Smulkiai supjaustykite svogūną ir česnaką.", "Į faršą įmaišykite druską, miltus ir dribsnius, tada svogūną, česnaką, kiaušinį ir pieną.", "Gerai išmaišykite ir palaikykite šaldytuve bent 30 min.", "Šaukštu formuokite kotletus ir kepkite svieste iš abiejų pusių, kol apskrus ir iškeps.", "Patiekite su bulvėmis ar bulvių salotomis."]
+  "steps": [
+   "Smulkiai supjaustykite svogūną ir česnaką.",
+   "Į faršą įmaišykite druską, miltus ir dribsnius, tada svogūną, česnaką, kiaušinį ir pieną.",
+   "Gerai išmaišykite ir palaikykite šaldytuve bent 30 min.",
+   "Šaukštu formuokite kotletus ir kepkite svieste iš abiejų pusių, kol apskrus ir iškeps.",
+   "Patiekite su bulvėmis ar bulvių salotomis."
+  ]
  },
  "mdb_52993": {
   "name": "Medaus glaistyta vištiena su keptais brokoliais ir bulvėmis",
   "time": 40,
-  "other": ["balzamiko actas"],
-  "steps": ["Bulves supjaustykite skiltelėmis, apšlakstykite aliejumi ir kepkite 220 °C orkaitėje 5 min.", "Sudėkite brokolius, sumaišytus su česnakiniu aliejumi, ir kepkite dar 15–20 min.", "Vištieną apkepkite keptuvėje iš abiejų pusių, kol iškeps.", "Įpilkite medaus, šlakelį balzamiko ir sviesto, apvoliokite vištieną padaže.", "Patiekite su daržovėmis."]
+  "other": [
+   "balzamiko actas"
+  ],
+  "steps": [
+   "Bulves supjaustykite skiltelėmis, apšlakstykite aliejumi ir kepkite 220 °C orkaitėje 5 min.",
+   "Sudėkite brokolius, sumaišytus su česnakiniu aliejumi, ir kepkite dar 15–20 min.",
+   "Vištieną apkepkite keptuvėje iš abiejų pusių, kol iškeps.",
+   "Įpilkite medaus, šlakelį balzamiko ir sviesto, apvoliokite vištieną padaže.",
+   "Patiekite su daržovėmis."
+  ]
  },
  "mdb_52820": {
   "name": "Japoniška vištiena „Katsu“ su kario padažu",
   "time": 45,
-  "other": ["šaukštelis garam masala"],
-  "steps": ["Aliejuje pakepinkite svogūną ir česnaką, sudėkite morkas ir troškinkite 10 min.", "Įberkite miltų ir kario, po minutės palaipsniui įpilkite vandens ar sultinio, sudėkite medų ir sojų padažą.", "Virkite 20 min., kol padažas sutirštės, perkoškite.", "Vištienos krūtinėles apvoliokite miltuose, kiaušinyje ir džiūvėsėliuose, kepkite aliejuje iki auksinės spalvos.", "Supjaustykite juostelėmis ir patiekite su ryžiais ir padažu."]
+  "other": [
+   "šaukštelis garam masala"
+  ],
+  "steps": [
+   "Aliejuje pakepinkite svogūną ir česnaką, sudėkite morkas ir troškinkite 10 min.",
+   "Įberkite miltų ir kario, po minutės palaipsniui įpilkite vandens ar sultinio, sudėkite medų ir sojų padažą.",
+   "Virkite 20 min., kol padažas sutirštės, perkoškite.",
+   "Vištienos krūtinėles apvoliokite miltuose, kiaušinyje ir džiūvėsėliuose, kepkite aliejuje iki auksinės spalvos.",
+   "Supjaustykite juostelėmis ir patiekite su ryžiais ir padažu."
+  ]
  },
  "mdb_52868": {
   "name": "Raudonųjų pupelių karis su ryžiais",
   "time": 35,
-  "other": ["gabalėlis imbiero", "kalendros", "šaukštelis kmynų", "2 a. š. garam masala"],
-  "steps": ["Išvirkite ryžius.", "Aliejuje lėtai pakepinkite svogūną, kol suminkštės.", "Sudėkite česnaką, imbierą ir prieskonius, kepkite 2–3 min.", "Supilkite pomidorus ir pupeles su skysčiu, užvirinkite ir troškinkite 15 min., kol sutirštės.", "Patiekite su ryžiais ir kalendra."]
+  "other": [
+   "gabalėlis imbiero",
+   "kalendros",
+   "šaukštelis kmynų",
+   "2 a. š. garam masala"
+  ],
+  "steps": [
+   "Išvirkite ryžius.",
+   "Aliejuje lėtai pakepinkite svogūną, kol suminkštės.",
+   "Sudėkite česnaką, imbierą ir prieskonius, kepkite 2–3 min.",
+   "Supilkite pomidorus ir pupeles su skysčiu, užvirinkite ir troškinkite 15 min., kol sutirštės.",
+   "Patiekite su ryžiais ir kalendra."
+  ],
+  "ing": {
+   "ryziai": 75
+  }
  },
  "mdb_53467": {
   "name": "Belgiškos bulvių salotos su šparaginėmis pupelėmis ir šonine",
   "time": 35,
-  "other": ["2 šaukštai baltojo vyno acto"],
-  "steps": ["Neluptas bulves supjaustykite ir išvirkite pasūdytame vandenyje.", "Tame pačiame vandenyje apvirkite pupeles, kad liktų traškios, ir perplaukite šaltu vandeniu.", "Apkepkite šoninę.", "Aliejų sumaišykite su actu ir garstyčiomis.", "Sumaišykite bulves, pupeles, šoninę, svogūną, petražoles ir padažą, pagardinkite."]
+  "other": [
+   "2 šaukštai baltojo vyno acto"
+  ],
+  "steps": [
+   "Neluptas bulves supjaustykite ir išvirkite pasūdytame vandenyje.",
+   "Tame pačiame vandenyje apvirkite pupeles, kad liktų traškios, ir perplaukite šaltu vandeniu.",
+   "Apkepkite šoninę.",
+   "Aliejų sumaišykite su actu ir garstyčiomis.",
+   "Sumaišykite bulves, pupeles, šoninę, svogūną, petražoles ir padažą, pagardinkite."
+  ]
  },
  "mdb_53135": {
   "name": "Argentinietiški jautienos kepsneliai (milanesa)",
   "time": 30,
   "other": [],
-  "steps": ["Jautienos griežinėlius išmuškite plonai ir pasūdykite, papipirinkite.", "Pamerkite į išplaktą kiaušinį, tada apvoliokite džiūvėsėliuose su petražolėmis ir česnaku.", "Kepkite aliejuje 3–4 min. iš kiekvienos pusės, kol apskrus.", "Patiekite su citrinos skiltelėmis ir salotomis."]
+  "steps": [
+   "Jautienos griežinėlius išmuškite plonai ir pasūdykite, papipirinkite.",
+   "Pamerkite į išplaktą kiaušinį, tada apvoliokite džiūvėsėliuose su petražolėmis ir česnaku.",
+   "Kepkite aliejuje 3–4 min. iš kiekvienos pusės, kol apskrus.",
+   "Patiekite su citrinos skiltelėmis ir salotomis."
+  ]
  },
  "mdb_53047": {
   "name": "Marokietiška morkų sriuba",
   "time": 40,
-  "other": ["šaukštelis kmynų", "½ a. š. kalendros sėklų", "¼ a. š. garam masala"],
-  "steps": ["Morkas, svogūną ir česnaką sumaišykite su prieskoniais, druska ir aliejumi.", "Kepkite 180 °C orkaitėje 10–12 min., kol morkos suminkštės.", "Sutrinkite su trupučiu vandens iki vientisos masės.", "Perkelkite į puodą, įpilkite 2 stiklines vandens, užvirinkite ir pagardinkite.", "Nukėlę įspauskite citrinos sulčių."]
- },
- "mdb_53039": {
-  "name": "Aštri „piri piri“ vištiena su kopūstų salotomis",
-  "time": 100,
-  "other": ["aitriųjų paprikų", "šaukštelis imbiero", "džiovinto raudonėlio"],
-  "steps": ["Sutrinkite marinato ingredientus ir ištrinkite vištieną; palikite 1 val.", "Kepkite 190 °C orkaitėje apie 1 val. 20 min.", "Leiskite pailsėti 20 min., uždengę folija.", "Tuo metu sumaišykite kopūstų ir morkų salotas su padažu.", "Patiekite vištieną su salotomis."]
+  "other": [
+   "šaukštelis kmynų",
+   "½ a. š. kalendros sėklų",
+   "¼ a. š. garam masala"
+  ],
+  "steps": [
+   "Morkas, svogūną ir česnaką sumaišykite su prieskoniais, druska ir aliejumi.",
+   "Kepkite 180 °C orkaitėje 10–12 min., kol morkos suminkštės.",
+   "Sutrinkite su trupučiu vandens iki vientisos masės.",
+   "Perkelkite į puodą, įpilkite 2 stiklines vandens, užvirinkite ir pagardinkite.",
+   "Nukėlę įspauskite citrinos sulčių."
+  ]
  },
  "mdb_52780": {
   "name": "Bulvių apkepas su vištiena",
   "time": 40,
-  "other": ["100 ml sultinio"],
-  "steps": ["Bulves plonai supjaustykite ir apvirkite 5–8 min., kad liktų tvirtos.", "Kepimo indą su svogūnais, aliejumi ir sultiniu kaitinkite, kol svogūnai suminkštės.", "Ant svogūnų sudėkite bulves, pagardinkite ir užpilkite grietine.", "Sudėkite vištienos gabalėlius, pabarstykite sūriu ir kepkite orkaitėje, kol paruduos.", "Patiekite su žaliomis salotomis."]
+  "other": [
+   "100 ml sultinio"
+  ],
+  "steps": [
+   "Bulves plonai supjaustykite ir apvirkite 5–8 min., kad liktų tvirtos.",
+   "Kepimo indą su svogūnais, aliejumi ir sultiniu kaitinkite, kol svogūnai suminkštės.",
+   "Ant svogūnų sudėkite bulves, pagardinkite ir užpilkite grietine.",
+   "Sudėkite vištienos gabalėlius, pabarstykite sūriu ir kepkite orkaitėje, kol paruduos.",
+   "Patiekite su žaliomis salotomis."
+  ]
  },
  "mdb_53489": {
   "name": "Bulvių musaka su faršu",
   "time": 75,
-  "other": ["džiovintų mėtų, pipirnės, muskato (nebūtina)"],
-  "steps": ["Įkaitinkite orkaitę iki 180 °C, bulves supjaustykite griežinėliais.", "Apkepkite faršą 6–7 min., sudėkite svogūną, česnaką, morkas, pomidorų padažą ir prieskonius.", "Kepimo inde sumaišykite bulves su mėsa, užpilkite vandeniu, kad vos apsemtų.", "Kepkite 40–50 min., kol bulvės suminkštės.", "Užpilkite padažu iš kiaušinių, pieno ir miltų ir kepkite dar 10–15 min., kol paruduos."]
+  "other": [
+   "džiovintų mėtų, pipirnės, muskato (nebūtina)"
+  ],
+  "steps": [
+   "Įkaitinkite orkaitę iki 180 °C, bulves supjaustykite griežinėliais.",
+   "Apkepkite faršą 6–7 min., sudėkite svogūną, česnaką, morkas, pomidorų padažą ir prieskonius.",
+   "Kepimo inde sumaišykite bulves su mėsa, užpilkite vandeniu, kad vos apsemtų.",
+   "Kepkite 40–50 min., kol bulvės suminkštės.",
+   "Užpilkite padažu iš kiaušinių, pieno ir miltų ir kepkite dar 10–15 min., kol paruduos."
+  ]
  },
  "mdb_53081": {
   "name": "Balta mišrainė (Olivjė)",
   "time": 40,
-  "other": ["marinuoti agurkai", "šaukštas acto"],
-  "steps": ["Bulves ir morkas supjaustykite kubeliais ir išvirkite pasūdytame vandenyje (~15 min.), atvėsinkite.", "Supjaustykite dešrą, marinuotus agurkus ir kietai virtus kiaušinius kubeliais.", "Sumaišykite su žirneliais ir smulkintais svogūnų laiškais.", "Įmaišykite majonezą ir krapus, pagardinkite druska ir pipirais.", "Prieš patiekdami palaikykite šaldytuve bent valandą."]
+  "other": [
+   "marinuoti agurkai",
+   "šaukštas acto"
+  ],
+  "steps": [
+   "Bulves ir morkas supjaustykite kubeliais ir išvirkite pasūdytame vandenyje (~15 min.), atvėsinkite.",
+   "Supjaustykite dešrą, marinuotus agurkus ir kietai virtus kiaušinius kubeliais.",
+   "Sumaišykite su žirneliais ir smulkintais svogūnų laiškais.",
+   "Įmaišykite majonezą ir krapus, pagardinkite druska ir pipirais.",
+   "Prieš patiekdami palaikykite šaldytuve bent valandą."
+  ]
  },
  "mdb_52963": {
   "name": "Šakšuka (kiaušiniai pomidorų padaže)",
   "time": 25,
-  "meals": ["pusryciai", "pietus", "vakariene"],
-  "other": ["aitrioji paprika", "kalendra"],
-  "steps": ["Keptuvėje su dangčiu 5 min. pakepinkite svogūną, česnaką ir aitriąją papriką.", "Sudėkite pomidorus ir žiupsnelį cukraus, troškinkite 8–10 min., kol sutirštės.", "Šaukštu padarykite 4 duobutes ir į kiekvieną įmuškite kiaušinį.", "Uždenkite ir kepkite ant silpnos ugnies 6–8 min.", "Pabarstykite žalumynais, patiekite su duona."]
+  "meals": [
+   "pusryciai",
+   "pietus",
+   "vakariene"
+  ],
+  "other": [
+   "aitrioji paprika",
+   "kalendra"
+  ],
+  "steps": [
+   "Keptuvėje su dangčiu 5 min. pakepinkite svogūną, česnaką ir aitriąją papriką.",
+   "Sudėkite pomidorus ir žiupsnelį cukraus, troškinkite 8–10 min., kol sutirštės.",
+   "Šaukštu padarykite 4 duobutes ir į kiekvieną įmuškite kiaušinį.",
+   "Uždenkite ir kepkite ant silpnos ugnies 6–8 min.",
+   "Pabarstykite žalumynais, patiekite su duona."
+  ]
  },
  "mdb_53491": {
   "name": "Bulgariškos salotos (šopska)",
   "time": 15,
   "other": [],
-  "steps": ["Supjaustykite pomidorus, agurkus, paprikas ir svogūną.", "Pabarstykite druska ir palaikykite 5 min.", "Apšlakstykite aliejumi.", "Ant viršaus sutarkuokite fetos ir pabarstykite petražolėmis."]
+  "steps": [
+   "Supjaustykite pomidorus, agurkus, paprikas ir svogūną.",
+   "Pabarstykite druska ir palaikykite 5 min.",
+   "Apšlakstykite aliejumi.",
+   "Ant viršaus sutarkuokite fetos ir pabarstykite petražolėmis."
+  ]
  },
  "mdb_53164": {
   "name": "Ispaniška vištiena orkaitėje",
   "time": 55,
   "other": [],
-  "steps": ["Įkaitinkite orkaitę iki 190 °C.", "Visus ingredientus sudėkite į didelį kepimo indą, išmaišykite rankomis ir pagardinkite.", "Kepkite 45 min., po 20 min. pamaišykite svogūnus.", "Patiekite su ryžiais."]
+  "steps": [
+   "Įkaitinkite orkaitę iki 190 °C.",
+   "Visus ingredientus sudėkite į didelį kepimo indą, išmaišykite rankomis ir pagardinkite.",
+   "Kepkite 45 min., po 20 min. pamaišykite svogūnus.",
+   "Patiekite su ryžiais."
+  ]
  },
  "mdb_52771": {
   "name": "Aštrūs makaronai „Arrabbiata“",
   "time": 25,
-  "other": ["½ a. š. aitriųjų paprikų dribsnių", "itališkų žolelių", "baziliko lapelių"],
-  "steps": ["Išvirkite makaronus pasūdytame vandenyje.", "Įkaitintame aliejuje 1–2 min. pakepinkite česnaką.", "Sudėkite pomidorus, aitriąsias paprikas ir žoleles, pavirkite 5 min.", "Nukėlę įdėkite baziliko, sumaišykite su makaronais.", "Pabarstykite tarkuotu sūriu."]
+  "other": [
+   "½ a. š. aitriųjų paprikų dribsnių",
+   "itališkų žolelių",
+   "baziliko lapelių"
+  ],
+  "steps": [
+   "Išvirkite makaronus pasūdytame vandenyje.",
+   "Įkaitintame aliejuje 1–2 min. pakepinkite česnaką.",
+   "Sudėkite pomidorus, aitriąsias paprikas ir žoleles, pavirkite 5 min.",
+   "Nukėlę įdėkite baziliko, sumaišykite su makaronais.",
+   "Pabarstykite tarkuotu sūriu."
+  ],
+  "ing": {
+   "pomidorai_konserv": 130,
+   "parmezanas": 10
+  }
  },
  "mdb_53110": {
   "name": "Lipnios vištienos šlaunelės sojų ir medaus glaiste",
   "time": 75,
   "other": [],
-  "steps": ["Kiekvieną šlaunelę įpjaukite 3 kartus.", "Sumaišykite sojų padažą, medų, aliejų, pomidorų padažą ir garstyčias.", "Apvoliokite vištieną ir marinuokite 30 min. (arba per naktį šaldytuve).", "Kepkite 200 °C orkaitėje 35 min., retkarčiais apversdami.", "Patiekite su ryžiais ir daržovėmis."]
+  "steps": [
+   "Kiekvieną šlaunelę įpjaukite 3 kartus.",
+   "Sumaišykite sojų padažą, medų, aliejų, pomidorų padažą ir garstyčias.",
+   "Apvoliokite vištieną ir marinuokite 30 min. (arba per naktį šaldytuve).",
+   "Kepkite 200 °C orkaitėje 35 min., retkarčiais apversdami.",
+   "Patiekite su ryžiais ir daržovėmis."
+  ]
  },
  "mdb_52806": {
   "name": "Indiška „tandoori“ vištiena",
   "time": 90,
-  "other": ["gabalėlis imbiero", "garam masala, kmynai, aitriųjų paprikų milteliai"],
-  "steps": ["Citrinos sultis sumaišykite su paprika ir raudonaisiais svogūnais, įpjautas šlauneles pavoliokite ir palikite 10 min.", "Jogurtą sumaišykite su česnaku, imbieru ir prieskoniais, užpilkite ant vištienos.", "Marinuokite šaldytuve bent 1 val.", "Kepkite po griliu ant grotelių po 8 min. iš kiekvienos pusės, kol apskrus.", "Patiekite su ryžiais ir salotomis."]
+  "other": [
+   "gabalėlis imbiero",
+   "garam masala, kmynai, aitriųjų paprikų milteliai"
+  ],
+  "steps": [
+   "Citrinos sultis sumaišykite su paprika ir raudonaisiais svogūnais, įpjautas šlauneles pavoliokite ir palikite 10 min.",
+   "Jogurtą sumaišykite su česnaku, imbieru ir prieskoniais, užpilkite ant vištienos.",
+   "Marinuokite šaldytuve bent 1 val.",
+   "Kepkite po griliu ant grotelių po 8 min. iš kiekvienos pusės, kol apskrus.",
+   "Patiekite su ryžiais ir salotomis."
+  ]
  },
  "mdb_52822": {
   "name": "Dešrelės tešloje („Rupūžė duobėje“)",
   "time": 45,
-  "other": ["šaukštas tarkuotų krienų"],
-  "steps": ["Įkaitinkite orkaitę iki 200 °C, apkepkite dešreles keptuvėje.", "Kepimo inde įkaitinkite aliejų orkaitėje 5 min.", "Sumaišykite miltus, kiaušinius ir krienus, palaipsniui įplakite pieną.", "Sudėkite dešreles į karštą indą ir užpilkite tešla, viršų papuoškite pomidorais.", "Kepkite 30 min., kol tešla išsipūs ir paruduos."]
+  "other": [
+   "šaukštas tarkuotų krienų"
+  ],
+  "steps": [
+   "Įkaitinkite orkaitę iki 200 °C, apkepkite dešreles keptuvėje.",
+   "Kepimo inde įkaitinkite aliejų orkaitėje 5 min.",
+   "Sumaišykite miltus, kiaušinius ir krienus, palaipsniui įplakite pieną.",
+   "Sudėkite dešreles į karštą indą ir užpilkite tešla, viršų papuoškite pomidorais.",
+   "Kepkite 30 min., kol tešla išsipūs ir paruduos."
+  ]
  },
  "mdb_53057": {
   "name": "Kroatiškas jautienos guliašas",
   "time": 120,
-  "other": ["200 ml raudonojo vyno (nebūtina)", "lauro lapai"],
-  "steps": ["Jautieną supjaustykite 3 cm gabaliukais ir marinuokite garstyčiose su prieskoniais 1 val.", "Apkepkite mėsą iš visų pusių ir išimkite.", "Tame pačiame puode 15 min. troškinkite smulkintus svogūnus ir tarkuotas morkas.", "Sudėkite mėsą, česnaką, lauro lapus, papriką, įpilkite vandens (ir vyno).", "Troškinkite uždengę 1–1,5 val., kol mėsa suminkštės; patiekite su bulvėmis ar makaronais."]
+  "other": [
+   "200 ml raudonojo vyno (nebūtina)",
+   "lauro lapai"
+  ],
+  "steps": [
+   "Jautieną supjaustykite 3 cm gabaliukais ir marinuokite garstyčiose su prieskoniais 1 val.",
+   "Apkepkite mėsą iš visų pusių ir išimkite.",
+   "Tame pačiame puode 15 min. troškinkite smulkintus svogūnus ir tarkuotas morkas.",
+   "Sudėkite mėsą, česnaką, lauro lapus, papriką, įpilkite vandens (ir vyno).",
+   "Troškinkite uždengę 1–1,5 val., kol mėsa suminkštės; patiekite su bulvėmis ar makaronais."
+  ]
  },
  "mdb_53416": {
   "name": "Katalonų bulvių ir kopūstų paplotėliai su šonine (trinxat)",
   "time": 50,
   "other": [],
-  "steps": ["Pasūdytame vandenyje išvirkite kopūstą ir bulves (30–40 min.), gerai nusunkite.", "Apkepkite šoninę, riebalus pasilikite.", "Bulves ir kopūstą sugrūskite, įmaišykite česnaką, pagardinkite.", "Suformuokite paplotėlius su šonine ir kepkite šoninės riebaluose iki auksinės spalvos.", "Pabarstykite petražolėmis."]
+  "steps": [
+   "Pasūdytame vandenyje išvirkite kopūstą ir bulves (30–40 min.), gerai nusunkite.",
+   "Apkepkite šoninę, riebalus pasilikite.",
+   "Bulves ir kopūstą sugrūskite, įmaišykite česnaką, pagardinkite.",
+   "Suformuokite paplotėlius su šonine ir kepkite šoninės riebaluose iki auksinės spalvos.",
+   "Pabarstykite petražolėmis."
+  ]
  },
  "mdb_53188": {
   "name": "Slovakiški kotletai (fašírky)",
   "time": 40,
-  "other": ["šaukštelis mairūno"],
-  "steps": ["Duonos riekes išmirkykite piene, nuspauskite ir sutrupinkite.", "Sumaišykite faršą, smulkintą svogūną, česnaką, duoną, kiaušinį ir prieskonius.", "Suformuokite delno dydžio kotletus.", "Apvoliokite miltuose, kiaušinyje ir džiūvėsėliuose.", "Kepkite aliejuje po 4–5 min. iš abiejų pusių; patiekite su bulvių koše."]
+  "other": [
+   "šaukštelis mairūno"
+  ],
+  "steps": [
+   "Duonos riekes išmirkykite piene, nuspauskite ir sutrupinkite.",
+   "Sumaišykite faršą, smulkintą svogūną, česnaką, duoną, kiaušinį ir prieskonius.",
+   "Suformuokite delno dydžio kotletus.",
+   "Apvoliokite miltuose, kiaušinyje ir džiūvėsėliuose.",
+   "Kepkite aliejuje po 4–5 min. iš abiejų pusių; patiekite su bulvių koše."
+  ]
  },
  "mdb_52846": {
   "name": "Vištienos ir grybų troškinys su bulvėmis orkaitėje",
   "time": 60,
-  "other": ["žiupsnelis muskato ir garstyčių miltelių", "sultinio kubelis"],
-  "steps": ["Įkaitinkite orkaitę iki 200 °C.", "Svieste 5 min. pakepinkite svogūną, sudėkite grybus.", "Įmaišykite miltus, po 2 min. palaipsniui įpilkite 500 ml vandens su sultinio kubeliu – gausite padažą.", "Sudėkite vištieną į kepimo indą, užpilkite padažu, viršų padenkite plonais bulvių griežinėliais.", "Kepkite ~40 min., kol bulvės paruduos."]
+  "other": [
+   "žiupsnelis muskato ir garstyčių miltelių",
+   "sultinio kubelis"
+  ],
+  "steps": [
+   "Įkaitinkite orkaitę iki 200 °C.",
+   "Svieste 5 min. pakepinkite svogūną, sudėkite grybus.",
+   "Įmaišykite miltus, po 2 min. palaipsniui įpilkite 500 ml vandens su sultinio kubeliu – gausite padažą.",
+   "Sudėkite vištieną į kepimo indą, užpilkite padažu, viršų padenkite plonais bulvių griežinėliais.",
+   "Kepkite ~40 min., kol bulvės paruduos."
+  ]
  },
  "mdb_52872": {
   "name": "Ispaniškas bulvių omletas (tortilja)",
   "time": 50,
-  "meals": ["pusryciai", "pietus", "vakariene"],
-  "other": ["pomidorai patiekimui"],
-  "steps": ["Ant silpnos ugnies aliejuje su sviestu ~15 min. lėtai kepinkite svogūną.", "Sudėkite plonais griežinėliais pjaustytas bulves, uždenkite ir kepkite 15–20 min.", "Įspauskite česnaką ir užpilkite išplaktais kiaušiniais.", "Uždengę kepkite ~20 min., kol kraštai paruduos.", "Apverskite ant lėkštės ir pakepkite kitą pusę; patiekite šiltą ar šaltą."]
+  "meals": [
+   "pusryciai",
+   "pietus",
+   "vakariene"
+  ],
+  "other": [
+   "pomidorai patiekimui"
+  ],
+  "steps": [
+   "Ant silpnos ugnies aliejuje su sviestu ~15 min. lėtai kepinkite svogūną.",
+   "Sudėkite plonais griežinėliais pjaustytas bulves, uždenkite ir kepkite 15–20 min.",
+   "Įspauskite česnaką ir užpilkite išplaktais kiaušiniais.",
+   "Uždengę kepkite ~20 min., kol kraštai paruduos.",
+   "Apverskite ant lėkštės ir pakepkite kitą pusę; patiekite šiltą ar šaltą."
+  ]
  },
  "mdb_53125": {
   "name": "Daniški jautienos kotletai su karamelizuotais svogūnais",
   "time": 35,
-  "other": ["žiupsnelis muskato"],
-  "steps": ["Pusę svogūno sutarkuokite, likusį supjaustykite ir lėtai kepinkite svieste, kol karamelizuosis.", "Faršą sumaišykite su tarkuotu svogūnu, druska, pipirais, krakmolu ir trupučiu vandens.", "Suformuokite 6 kotletus.", "Apkepkite svieste ant stiprios ugnies, tada dar 2–3 min. ant silpnos.", "Patiekite su svogūnais, bulvėmis ir žirneliais."]
+  "other": [
+   "žiupsnelis muskato"
+  ],
+  "steps": [
+   "Pusę svogūno sutarkuokite, likusį supjaustykite ir lėtai kepinkite svieste, kol karamelizuosis.",
+   "Faršą sumaišykite su tarkuotu svogūnu, druska, pipirais, krakmolu ir trupučiu vandens.",
+   "Suformuokite 6 kotletus.",
+   "Apkepkite svieste ant stiprios ugnies, tada dar 2–3 min. ant silpnos.",
+   "Patiekite su svogūnais, bulvėmis ir žirneliais."
+  ]
  },
  "mdb_52831": {
   "name": "Japoniška traški vištiena (karaage)",
   "time": 90,
-  "other": ["šaukštas tarkuoto imbiero", "šaukštas sakės (galima praleisti)"],
-  "steps": ["Sumaišykite imbierą, česnaką, sojų padažą ir cukrų.", "Sudėkite vištienos gabalėlius ir marinuokite šaldytuve bent 1 val.", "Puode įkaitinkite aliejų (~180 °C).", "Vištieną apvoliokite krakmole ir kepkite porcijomis, kol apskrus.", "Nusausinkite ant popierinio rankšluosčio; patiekite su ryžiais ir citrina."]
+  "other": [
+   "šaukštas tarkuoto imbiero",
+   "šaukštas sakės (galima praleisti)"
+  ],
+  "steps": [
+   "Sumaišykite imbierą, česnaką, sojų padažą ir cukrų.",
+   "Sudėkite vištienos gabalėlius ir marinuokite šaldytuve bent 1 val.",
+   "Puode įkaitinkite aliejų (~180 °C).",
+   "Vištieną apvoliokite krakmole ir kepkite porcijomis, kol apskrus.",
+   "Nusausinkite ant popierinio rankšluosčio; patiekite su ryžiais ir citrina."
+  ]
  },
  "mdb_53172": {
   "name": "Ispaniškos keptos bulvės su pomidorų padažu (patatas bravas)",
   "time": 60,
-  "other": ["žiupsnelis aitriųjų paprikų miltelių"],
-  "steps": ["Aliejuje 5 min. pakepinkite svogūną.", "Sudėkite česnaką, pomidorus, pomidorų padažą, papriką, cukrų ir druską; troškinkite 10 min.", "Bulves supjaustykite kubeliais, apšlakstykite aliejumi.", "Kepkite 200 °C orkaitėje 40–50 min., kol apskrus.", "Užpilkite padažu ir pabarstykite petražolėmis."]
+  "other": [
+   "žiupsnelis aitriųjų paprikų miltelių"
+  ],
+  "steps": [
+   "Aliejuje 5 min. pakepinkite svogūną.",
+   "Sudėkite česnaką, pomidorus, pomidorų padažą, papriką, cukrų ir druską; troškinkite 10 min.",
+   "Bulves supjaustykite kubeliais, apšlakstykite aliejumi.",
+   "Kepkite 200 °C orkaitėje 40–50 min., kol apskrus.",
+   "Užpilkite padažu ir pabarstykite petražolėmis."
+  ]
  }
 }

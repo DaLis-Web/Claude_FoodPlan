@@ -1,0 +1,1527 @@
+{
+ "recipes": [
+  {
+   "id": "mdb_53281",
+   "name": "Alžyrietiški kotletukai pomidorų padaže (kefta)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 35,
+   "kcal": 680,
+   "protein": 42,
+   "servings": 2,
+   "ing": {
+    "malta_mesa": 227,
+    "cesnakai": 10,
+    "svogunai": 96,
+    "druska": 1,
+    "pipirai": 1,
+    "pomidorai": 180,
+    "zalumynai": 2
+   },
+   "other": [
+    "žiupsnelis ras el hanout ar kitų rytietiškų prieskonių (nebūtina)"
+   ],
+   "steps": [
+    "Faršą sumaišykite su puse česnako ir šaukštu smulkinto svogūno.",
+    "Suformuokite pailgus kotletukus ir apkepkite iki traškumo, ~10 min.",
+    "Toje pačioje keptuvėje pakepinkite likusį svogūną 5 min., įmeskite likusį česnaką.",
+    "Sudėkite pjaustytus pomidorus, petražoles, įpilkite truputį vandens ir troškinkite 5 min.",
+    "Užpilkite padažu kotletukus ir patiekite."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/8rfd4q1764112993.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/8rfd4q1764112993.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53281"
+   },
+   "source": "https://www.themealdb.com/meal/53281"
+  },
+  {
+   "id": "mdb_52812",
+   "name": "Troškinta jautiena su bulvėmis ir morkomis",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 210,
+   "kcal": 570,
+   "protein": 48,
+   "servings": 8,
+   "ing": {
+    "jautiena": 227,
+    "druska": 0.3,
+    "svogunai": 56.3,
+    "cesnakai": 3.1,
+    "morkos": 39,
+    "garstycios": 1.5,
+    "bulves": 90
+   },
+   "other": [
+    "šakelė čiobrelių ir rozmarino (nebūtina)"
+   ],
+   "steps": [
+    "Jautieną pasūdykite ir palaikykite 30 min. kambario temperatūroje.",
+    "Storadugniame puode apkepkite mėsą iš visų pusių, sudėkite svogūnus ir česnaką.",
+    "Įpilkite stiklinę vandens, uždenkite ir troškinkite orkaitėje 150 °C apie 3 val., kol mėsa suminkštės.",
+    "Paskutinę valandą sudėkite bulves ir morkas.",
+    "Mėsą supjaustykite skersai skaidulų, patiekite su daržovėmis ir troškinimo sultimis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/ursuup1487348423.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/ursuup1487348423.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52812"
+   },
+   "source": "https://www.themealdb.com/meal/52812"
+  },
+  {
+   "id": "mdb_52834",
+   "name": "Jautienos stroganovas su grybais",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 35,
+   "kcal": 610,
+   "protein": 29,
+   "servings": 4,
+   "ing": {
+    "aliejus": 20,
+    "svogunai": 37.5,
+    "cesnakai": 1.3,
+    "sviestas": 3,
+    "grybai": 62.5,
+    "jautiena": 125,
+    "miltai": 3,
+    "grietine": 37.5,
+    "garstycios": 3,
+    "zalumynai": 2.5
+   },
+   "other": [],
+   "steps": [
+    "Aliejuje ant vidutinės ugnies ~15 min. kepinkite svogūną, kol suminkštės, tada sudėkite česnaką ir sviestą.",
+    "Suberkite grybus ir kepkite 5 min., pagardinkite ir perkelkite į lėkštę.",
+    "Jautienos juosteles apvoliokite pasūdytuose miltuose ir greitai apkepkite 3–4 min.",
+    "Grąžinkite svogūnus ir grybus, supilkite grietinę, išmaišytą su garstyčiomis ir trupučiu vandens, troškinkite 5 min.",
+    "Pabarstykite petražolėmis, patiekite su makaronais, ryžiais ar bulvių koše."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52834"
+   },
+   "source": "https://www.themealdb.com/meal/52834"
+  },
+  {
+   "id": "mdb_53488",
+   "name": "Troškinti kopūstai su faršu ir daržovėmis",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 45,
+   "kcal": 390,
+   "protein": 20,
+   "servings": 5,
+   "ing": {
+    "aliejus": 6,
+    "malta_mesa": 90.8,
+    "svogunai": 21,
+    "morkos": 32,
+    "paprikos": 30,
+    "pomidoru_padazas": 2.4,
+    "cesnakai": 2,
+    "druska": 2.4,
+    "pipirai": 1,
+    "paprika_malta": 0.8,
+    "kopustai": 240,
+    "zalumynai": 4.8
+   },
+   "other": [
+    "žiupsnelis kmynų",
+    "šaukštelis obuolių acto ar citrinos sulčių"
+   ],
+   "steps": [
+    "Įkaitinkite aliejų ir apkepkite faršą 3–4 min., šaukštu jį trupindami.",
+    "Sudėkite svogūną, morkas, papriką, česnaką, pomidorų padažą ir prieskonius, kepkite 2–3 min.",
+    "Suberkite pjaustytą kopūstą, įpilkite acto ir puodelį vandens, išmaišykite.",
+    "Uždenkite ir troškinkite ant silpnos ugnies 30 min., retkarčiais pamaišydami.",
+    "Pabarstykite petražolėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/brmxra1782681940.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/brmxra1782681940.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53488"
+   },
+   "source": "https://www.themealdb.com/meal/53488"
+  },
+  {
+   "id": "mdb_53055",
+   "name": "Balkaniški čevapčičiai",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 40,
+   "kcal": 540,
+   "protein": 34,
+   "servings": 4,
+   "ing": {
+    "malta_mesa": 187.5,
+    "svogunai": 37.5,
+    "cesnakai": 5,
+    "zalumynai": 9,
+    "paprika_malta": 3,
+    "batonas": 6,
+    "druska": 1,
+    "pipirai": 1
+   },
+   "other": [
+    "¾ a. š. kepimo miltelių"
+   ],
+   "steps": [
+    "Faršą sumaišykite su labai smulkiai pjaustytu svogūnu, tarkuotu česnaku, petražolėmis, paprika, džiūvėsėliais, druska ir pipirais.",
+    "Gerai išminkykite, uždenkite ir palaikykite šaldytuve 1–2 val.",
+    "Suformuokite piršto storio, 7–10 cm ilgio dešrelės formos kotletukus.",
+    "Kepkite grilio keptuvėje ar ant grilio 12–14 min., kelis kartus apversdami.",
+    "Patiekite su svogūnais, duona ir daržovėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53055"
+   },
+   "source": "https://www.themealdb.com/meal/53055"
+  },
+  {
+   "id": "mdb_52818",
+   "name": "Makaronai su vištiena, paprika ir sūriu",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 35,
+   "kcal": 570,
+   "protein": 34,
+   "servings": 7,
+   "ing": {
+    "makaronai": 71.4,
+    "grietinele": 34.3,
+    "druska": 0.6,
+    "vistienos_file": 72.9,
+    "aliejus": 4.3,
+    "svogunai": 15,
+    "paprikos": 42.9,
+    "cesnakai": 1.4,
+    "suris": 27.4,
+    "zalumynai": 0.3
+   },
+   "other": [
+    "pakelis meksikietiškų prieskonių (fajita)"
+   ],
+   "steps": [
+    "Aliejuje pakepinkite svogūną, papriką ir česnaką.",
+    "Sudėkite vištienos gabalėlius ir prieskonius, apkepkite.",
+    "Supilkite grietinėlę, puodelį vandens ir suberkite makaronus.",
+    "Virkite ant silpnos ugnies ~20 min., kol makaronai suminkštės.",
+    "Įmaišykite tarkuotą sūrį, pabarstykite petražolėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/qrqywr1503066605.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/qrqywr1503066605.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52818"
+   },
+   "source": "https://www.themealdb.com/meal/52818"
+  },
+  {
+   "id": "mdb_52920",
+   "name": "Vištiena „Marengo“ pomidorų padaže",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 50,
+   "kcal": 440,
+   "protein": 37,
+   "servings": 3,
+   "ing": {
+    "aliejus": 5,
+    "grybai": 100,
+    "vistienos_slauneles": 173.3,
+    "pomidoru_padazas": 166.7,
+    "zalumynai": 3.3
+   },
+   "other": [
+    "100 g juodųjų alyvuogių (nebūtina)"
+   ],
+   "steps": [
+    "Aliejuje pakepinkite grybus, kol suminkštės.",
+    "Sudėkite vištienos šlauneles ir trumpai apkepkite iš abiejų pusių.",
+    "Supilkite pomidorų padažą, sudėkite alyvuoges, pagardinkite pipirais.",
+    "Uždenkite ir troškinkite 40 min., kol vištiena suminkštės.",
+    "Pabarstykite petražolėmis, patiekite su makaronais ar bulvių koše."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/qpxvuq1511798906.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/qpxvuq1511798906.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52920"
+   },
+   "source": "https://www.themealdb.com/meal/52920"
+  },
+  {
+   "id": "mdb_53549",
+   "name": "Vištienos salotos su grybais ir šonine",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 35,
+   "kcal": 640,
+   "protein": 48,
+   "servings": 2,
+   "ing": {
+    "vistienos_file": 150,
+    "svogunai": 75,
+    "majonezas": 18,
+    "grietine": 24,
+    "garstycios": 6,
+    "sonine": 50,
+    "grybai": 125,
+    "zalumynai": 5,
+    "druska": 1,
+    "pipirai": 1
+   },
+   "other": [
+    "šaukštas obuolių acto"
+   ],
+   "steps": [
+    "Vištieną išvirkite pasūdytame vandenyje (~15 min.), atvėsinkite ir suplėšykite šakute.",
+    "Majonezą sumaišykite su grietine, garstyčiomis ir actu, sudėkite smulkintą svogūną ir vištieną.",
+    "Apkepkite šoninę iki traškumo, tame pačiame keptuve – grybus (~5 min.).",
+    "Ant vištienos salotų sudėkite šoninę, grybus ir petražoles.",
+    "Patiekite ant duonos riekės."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/t5rgav1784659936.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/t5rgav1784659936.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53549"
+   },
+   "source": "https://www.themealdb.com/meal/53549"
+  },
+  {
+   "id": "mdb_53372",
+   "name": "Kiniškas pomidorų ir kiaušinių troškinys su ryžiais",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 25,
+   "kcal": 660,
+   "protein": 21,
+   "servings": 3,
+   "ing": {
+    "pomidorai": 151.3,
+    "aliejus": 5,
+    "kiausiniai": 1.7,
+    "cukrus": 2.7,
+    "pipirai": 1.3,
+    "druska": 1.3,
+    "zalumynai": 3.3,
+    "ryziai": 128
+   },
+   "other": [
+    "šaukštelis sezamų aliejaus (nebūtina)",
+    "sultinio kubelis"
+   ],
+   "steps": [
+    "Išvirkite ryžius.",
+    "Pomidorus supjaustykite skiltelėmis.",
+    "Šaltoje keptuvėje su aliejumi lėtai kepkite išplaktus kiaušinius, maišydami, kol beveik sustings; išimkite.",
+    "Pakepinkite pomidorus su cukrumi, druska ir trupučiu sultinio, kol suminkštės.",
+    "Sudėkite kiaušinius, išmaišykite, pabarstykite svogūnų laiškais ir patiekite su ryžiais."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/rwvw8q1765660071.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/rwvw8q1765660071.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53372"
+   },
+   "source": "https://www.themealdb.com/meal/53372"
+  },
+  {
+   "id": "mdb_53530",
+   "name": "Vištiena grietinėlės ir garstyčių padaže",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 60,
+   "kcal": 610,
+   "protein": 40,
+   "servings": 5,
+   "ing": {
+    "vistienos_slauneles": 208,
+    "paprika_malta": 0.8,
+    "druska": 0.8,
+    "pipirai": 0.8,
+    "aliejus": 12,
+    "cesnakai": 3,
+    "svogunai": 38.4,
+    "garstycios": 4.8,
+    "grietinele": 48,
+    "medus": 2.4,
+    "zalumynai": 0.4
+   },
+   "other": [],
+   "steps": [
+    "Vištieną nusausinkite, pagardinkite druska, pipirais ir paprika.",
+    "Apkepkite aliejuje iš visų pusių ~10 min. ir išimkite.",
+    "Toje pačioje keptuvėje 2 min. pakepinkite svogūną ir česnaką.",
+    "Įpilkite puodelį vandens ar sultinio, garstyčias, medų ir grietinėlę, sudėkite vištieną.",
+    "Uždenkite ir troškinkite ~45 min., patiekite su ryžiais ir petražolėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/4htbtm1783803558.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/4htbtm1783803558.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53530"
+   },
+   "source": "https://www.themealdb.com/meal/53530"
+  },
+  {
+   "id": "mdb_53486",
+   "name": "Pupelių sriuba su paprikomis",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 60,
+   "kcal": 360,
+   "protein": 14,
+   "servings": 3,
+   "ing": {
+    "pupeles": 151.3,
+    "svogunai": 100,
+    "aliejus": 10,
+    "paprikos": 100,
+    "pomidoru_padazas": 64,
+    "morkos": 53.3,
+    "pipirai": 1.3,
+    "druska": 1.3,
+    "zalumynai": 0.7
+   },
+   "other": [
+    "džiovintų mėtų, čiobrelių ar pipirnės (nebūtina)"
+   ],
+   "steps": [
+    "Jei naudojate sausas pupeles – išmirkykite per naktį; konservuotas tiesiog nuplaukite.",
+    "Puode pakepinkite smulkintą svogūną ir morkas 2 min.",
+    "Sudėkite pupeles, paprikas, pomidorų padažą, prieskonius ir užpilkite vandeniu.",
+    "Užvirinkite ir virkite ant silpnos ugnies, kol daržovės suminkštės (konservuotoms pupelėms ~30 min.).",
+    "Pagardinkite, pabarstykite petražolėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/p5nzbk1782680889.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/p5nzbk1782680889.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53486"
+   },
+   "source": "https://www.themealdb.com/meal/53486"
+  },
+  {
+   "id": "mdb_53064",
+   "name": "Makaronai „Alfredo“",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 20,
+   "kcal": 620,
+   "protein": 19,
+   "servings": 7,
+   "ing": {
+    "makaronai": 64.9,
+    "grietinele": 34.3,
+    "sviestas": 27.4,
+    "parmezanas": 27.4,
+    "zalumynai": 3.4,
+    "pipirai": 0.3
+   },
+   "other": [],
+   "steps": [
+    "Išvirkite makaronus pasūdytame vandenyje.",
+    "Keptuvėje kaitinkite grietinėlę su sviestu, kol sviestas ištirps ir grietinėlė pradės burbuliuoti.",
+    "Įmaišykite tarkuotą parmezaną, pagardinkite pipirais ir leiskite padažui šiek tiek sutirštėti.",
+    "Sudėkite makaronus, išmaišykite ir pabarstykite petražolėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/0jv5gx1661040802.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/0jv5gx1661040802.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53064"
+   },
+   "source": "https://www.themealdb.com/meal/53064"
+  },
+  {
+   "id": "mdb_53079",
+   "name": "Rusiška žuvienė (ucha)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 40,
+   "kcal": 510,
+   "protein": 26,
+   "servings": 3,
+   "ing": {
+    "aliejus": 10,
+    "svogunai": 50,
+    "morkos": 53.3,
+    "bulves": 312,
+    "menke": 50,
+    "lasisa": 46.7
+   },
+   "other": [
+    "3 stiklinės žuvies sultinio (galima vanduo)",
+    "sauja soros kruopų (nebūtina)"
+   ],
+   "steps": [
+    "Puode aliejuje pakepinkite svogūną, kol pradės auksuoti, sudėkite morkas ir kepkite 4 min.",
+    "Įpilkite sultinio ar vandens, sudėkite bulves, lauro lapą, pipirų, pasūdykite.",
+    "Virkite uždengę ~20 min., kol bulvės suminkštės.",
+    "Sudėkite žuvies gabalėlius ir virkite vos kelias minutes, kol žuvis taps nepermatoma.",
+    "Pabarstykite krapais."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/7n8su21699013057.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/7n8su21699013057.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53079"
+   },
+   "source": "https://www.themealdb.com/meal/53079"
+  },
+  {
+   "id": "mdb_52996",
+   "name": "Vištiena su karamelizuotais svogūnais, keptomis morkomis ir bulvių koše",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 45,
+   "kcal": 400,
+   "protein": 27,
+   "servings": 6,
+   "ing": {
+    "vistienos_file": 56.7,
+    "morkos": 160,
+    "bulves": 150,
+    "svogunai": 25,
+    "mocarela": 48,
+    "grietine": 4,
+    "sviestas": 0.3,
+    "cukrus": 0.3,
+    "aliejus": 0.3,
+    "druska": 0.3,
+    "pipirai": 0.3
+   },
+   "other": [
+    "sultinio kubelis"
+   ],
+   "steps": [
+    "Morkas supjaustykite, apšlakstykite aliejumi ir kepkite 220 °C orkaitėje 15–20 min.",
+    "Išvirkite bulves ir sutrinkite su sviestu ir grietine.",
+    "Svogūną kepinkite 8–10 min., įberkite cukraus, įpilkite truputį sultinio ir troškinkite, kol taps uogienės konsistencijos.",
+    "Vištieną apkepkite, uždėkite svogūnų ir mocarelos, pakepkite orkaitėje, kol sūris išsilydys.",
+    "Patiekite su morkomis ir koše."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/b5ft861583188991.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/b5ft861583188991.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52996"
+   },
+   "source": "https://www.themealdb.com/meal/52996"
+  },
+  {
+   "id": "mdb_53553",
+   "name": "Daniški kotletai (frikadelės)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 40,
+   "kcal": 620,
+   "protein": 35,
+   "servings": 3,
+   "ing": {
+    "svogunai": 65,
+    "cesnakai": 1.7,
+    "malta_mesa": 166.7,
+    "miltai": 4,
+    "avizos": 4,
+    "pienas": 80,
+    "kiausiniai": 0.3,
+    "druska": 4,
+    "pipirai": 1.3,
+    "sviestas": 8
+   },
+   "other": [],
+   "steps": [
+    "Smulkiai supjaustykite svogūną ir česnaką.",
+    "Į faršą įmaišykite druską, miltus ir dribsnius, tada svogūną, česnaką, kiaušinį ir pieną.",
+    "Gerai išmaišykite ir palaikykite šaldytuve bent 30 min.",
+    "Šaukštu formuokite kotletus ir kepkite svieste iš abiejų pusių, kol apskrus ir iškeps.",
+    "Patiekite su bulvėmis ar bulvių salotomis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/bnhfa71784662834.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/bnhfa71784662834.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53553"
+   },
+   "source": "https://www.themealdb.com/meal/53553"
+  },
+  {
+   "id": "mdb_52993",
+   "name": "Medaus glaistyta vištiena su keptais brokoliais ir bulvėmis",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 40,
+   "kcal": 400,
+   "protein": 27,
+   "servings": 4,
+   "ing": {
+    "bulves": 225,
+    "brokoliai": 87.5,
+    "cesnakai": 2.5,
+    "vistienos_file": 85,
+    "medus": 0.5,
+    "sviestas": 3,
+    "aliejus": 7.5
+   },
+   "other": [
+    "balzamiko actas"
+   ],
+   "steps": [
+    "Bulves supjaustykite skiltelėmis, apšlakstykite aliejumi ir kepkite 220 °C orkaitėje 5 min.",
+    "Sudėkite brokolius, sumaišytus su česnakiniu aliejumi, ir kepkite dar 15–20 min.",
+    "Vištieną apkepkite keptuvėje iš abiejų pusių, kol iškeps.",
+    "Įpilkite medaus, šlakelį balzamiko ir sviesto, apvoliokite vištieną padaže.",
+    "Patiekite su daržovėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/kvbotn1581012881.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/kvbotn1581012881.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52993"
+   },
+   "source": "https://www.themealdb.com/meal/52993"
+  },
+  {
+   "id": "mdb_52820",
+   "name": "Japoniška vištiena „Katsu“ su kario padažu",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 45,
+   "kcal": 590,
+   "protein": 47,
+   "servings": 4,
+   "ing": {
+    "vistienos_file": 170,
+    "miltai": 12,
+    "kiausiniai": 0.3,
+    "batonas": 25,
+    "aliejus": 20,
+    "svogunai": 75,
+    "cesnakai": 6.3,
+    "morkos": 40,
+    "kario": 3.8,
+    "medus": 2,
+    "soju_padazas": 5
+   },
+   "other": [
+    "šaukštelis garam masala"
+   ],
+   "steps": [
+    "Aliejuje pakepinkite svogūną ir česnaką, sudėkite morkas ir troškinkite 10 min.",
+    "Įberkite miltų ir kario, po minutės palaipsniui įpilkite vandens ar sultinio, sudėkite medų ir sojų padažą.",
+    "Virkite 20 min., kol padažas sutirštės, perkoškite.",
+    "Vištienos krūtinėles apvoliokite miltuose, kiaušinyje ir džiūvėsėliuose, kepkite aliejuje iki auksinės spalvos.",
+    "Supjaustykite juostelėmis ir patiekite su ryžiais ir padažu."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/vwrpps1503068729.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/vwrpps1503068729.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52820"
+   },
+   "source": "https://www.themealdb.com/meal/52820"
+  },
+  {
+   "id": "mdb_52868",
+   "name": "Raudonųjų pupelių karis su ryžiais",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 35,
+   "kcal": 910,
+   "protein": 23,
+   "servings": 2,
+   "ing": {
+    "aliejus": 40,
+    "svogunai": 75,
+    "cesnakai": 5,
+    "paprika_malta": 2,
+    "pomidorai_konserv": 200,
+    "pupeles": 200,
+    "ryziai": 75
+   },
+   "other": [
+    "gabalėlis imbiero",
+    "kalendros",
+    "šaukštelis kmynų",
+    "2 a. š. garam masala"
+   ],
+   "steps": [
+    "Išvirkite ryžius.",
+    "Aliejuje lėtai pakepinkite svogūną, kol suminkštės.",
+    "Sudėkite česnaką, imbierą ir prieskonius, kepkite 2–3 min.",
+    "Supilkite pomidorus ir pupeles su skysčiu, užvirinkite ir troškinkite 15 min., kol sutirštės.",
+    "Patiekite su ryžiais ir kalendra."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/sywrsu1511463066.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/sywrsu1511463066.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52868"
+   },
+   "source": "https://www.themealdb.com/meal/52868"
+  },
+  {
+   "id": "mdb_53467",
+   "name": "Belgiškos bulvių salotos su šparaginėmis pupelėmis ir šonine",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 35,
+   "kcal": 700,
+   "protein": 21,
+   "servings": 2,
+   "ing": {
+    "bulves": 175,
+    "sparagines_pupeles": 100,
+    "kiausiniai": 1,
+    "sonine": 62.5,
+    "svogunai": 12,
+    "aliejus": 22.5,
+    "garstycios": 2,
+    "zalumynai": 12,
+    "pipirai": 1,
+    "druska": 1
+   },
+   "other": [
+    "2 šaukštai baltojo vyno acto"
+   ],
+   "steps": [
+    "Neluptas bulves supjaustykite ir išvirkite pasūdytame vandenyje.",
+    "Tame pačiame vandenyje apvirkite pupeles, kad liktų traškios, ir perplaukite šaltu vandeniu.",
+    "Apkepkite šoninę.",
+    "Aliejų sumaišykite su actu ir garstyčiomis.",
+    "Sumaišykite bulves, pupeles, šoninę, svogūną, petražoles ir padažą, pagardinkite."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/ji3mho1782499823.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/ji3mho1782499823.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53467"
+   },
+   "source": "https://www.themealdb.com/meal/53467"
+  },
+  {
+   "id": "mdb_53135",
+   "name": "Argentinietiški jautienos kepsneliai (milanesa)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 30,
+   "kcal": 580,
+   "protein": 48,
+   "servings": 4,
+   "ing": {
+    "jautiena": 200,
+    "kiausiniai": 0.5,
+    "batonas": 50,
+    "zalumynai": 6,
+    "cesnakai": 2.5,
+    "druska": 0.5,
+    "pipirai": 0.5
+   },
+   "other": [],
+   "steps": [
+    "Jautienos griežinėlius išmuškite plonai ir pasūdykite, papipirinkite.",
+    "Pamerkite į išplaktą kiaušinį, tada apvoliokite džiūvėsėliuose su petražolėmis ir česnaku.",
+    "Kepkite aliejuje 3–4 min. iš kiekvienos pusės, kol apskrus.",
+    "Patiekite su citrinos skiltelėmis ir salotomis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/wdfa171763065079.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/wdfa171763065079.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53135"
+   },
+   "source": "https://www.themealdb.com/meal/53135"
+  },
+  {
+   "id": "mdb_53047",
+   "name": "Marokietiška morkų sriuba",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 40,
+   "kcal": 220,
+   "protein": 4,
+   "servings": 2,
+   "ing": {
+    "morkos": 240,
+    "svogunai": 75,
+    "cesnakai": 10,
+    "aliejus": 7.5,
+    "citrinos": 0.5
+   },
+   "other": [
+    "šaukštelis kmynų",
+    "½ a. š. kalendros sėklų",
+    "¼ a. š. garam masala"
+   ],
+   "steps": [
+    "Morkas, svogūną ir česnaką sumaišykite su prieskoniais, druska ir aliejumi.",
+    "Kepkite 180 °C orkaitėje 10–12 min., kol morkos suminkštės.",
+    "Sutrinkite su trupučiu vandens iki vientisos masės.",
+    "Perkelkite į puodą, įpilkite 2 stiklines vandens, užvirinkite ir pagardinkite.",
+    "Nukėlę įspauskite citrinos sulčių."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/jcr46d1614763831.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/jcr46d1614763831.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53047"
+   },
+   "source": "https://www.themealdb.com/meal/53047"
+  },
+  {
+   "id": "mdb_52780",
+   "name": "Bulvių apkepas su vištiena",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 40,
+   "kcal": 620,
+   "protein": 47,
+   "servings": 5,
+   "ing": {
+    "bulves": 160,
+    "svogunai": 90,
+    "aliejus": 6,
+    "grietine": 20,
+    "parmezanas": 20,
+    "vistienos_file": 136,
+    "sonine": 20,
+    "spinatai": 20,
+    "zirneliai": 20
+   },
+   "other": [
+    "100 ml sultinio"
+   ],
+   "steps": [
+    "Bulves plonai supjaustykite ir apvirkite 5–8 min., kad liktų tvirtos.",
+    "Kepimo indą su svogūnais, aliejumi ir sultiniu kaitinkite, kol svogūnai suminkštės.",
+    "Ant svogūnų sudėkite bulves, pagardinkite ir užpilkite grietine.",
+    "Sudėkite vištienos gabalėlius, pabarstykite sūriu ir kepkite orkaitėje, kol paruduos.",
+    "Patiekite su žaliomis salotomis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/qwrtut1468418027.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/qwrtut1468418027.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52780"
+   },
+   "source": "https://www.themealdb.com/meal/52780"
+  },
+  {
+   "id": "mdb_53489",
+   "name": "Bulvių musaka su faršu",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 75,
+   "kcal": 630,
+   "protein": 26,
+   "servings": 7,
+   "ing": {
+    "aliejus": 2.1,
+    "malta_mesa": 64.9,
+    "svogunai": 27.4,
+    "cesnakai": 0.7,
+    "pomidoru_padazas": 30.9,
+    "druska": 1.1,
+    "pipirai": 0.6,
+    "bulves": 129.7,
+    "morkos": 27.4,
+    "pienas": 68.6,
+    "sviestas": 10.3,
+    "miltai": 27.4,
+    "kiausiniai": 0.4,
+    "feta": 27.4
+   },
+   "other": [
+    "džiovintų mėtų, pipirnės, muskato (nebūtina)"
+   ],
+   "steps": [
+    "Įkaitinkite orkaitę iki 180 °C, bulves supjaustykite griežinėliais.",
+    "Apkepkite faršą 6–7 min., sudėkite svogūną, česnaką, morkas, pomidorų padažą ir prieskonius.",
+    "Kepimo inde sumaišykite bulves su mėsa, užpilkite vandeniu, kad vos apsemtų.",
+    "Kepkite 40–50 min., kol bulvės suminkštės.",
+    "Užpilkite padažu iš kiaušinių, pieno ir miltų ir kepkite dar 10–15 min., kol paruduos."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/08ez421782683409.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/08ez421782683409.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53489"
+   },
+   "source": "https://www.themealdb.com/meal/53489"
+  },
+  {
+   "id": "mdb_53081",
+   "name": "Balta mišrainė (Olivjė)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 40,
+   "kcal": 630,
+   "protein": 16,
+   "servings": 5,
+   "ing": {
+    "bulves": 144,
+    "morkos": 48,
+    "druska": 2.4,
+    "kiausiniai": 0.8,
+    "desreles": 39.2,
+    "zalumynai": 22.4,
+    "zirneliai": 20,
+    "svogunai": 120,
+    "majonezas": 38.4
+   },
+   "other": [
+    "marinuoti agurkai",
+    "šaukštas acto"
+   ],
+   "steps": [
+    "Bulves ir morkas supjaustykite kubeliais ir išvirkite pasūdytame vandenyje (~15 min.), atvėsinkite.",
+    "Supjaustykite dešrą, marinuotus agurkus ir kietai virtus kiaušinius kubeliais.",
+    "Sumaišykite su žirneliais ir smulkintais svogūnų laiškais.",
+    "Įmaišykite majonezą ir krapus, pagardinkite druska ir pipirais.",
+    "Prieš patiekdami palaikykite šaldytuve bent valandą."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/ebvuir1699013665.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/ebvuir1699013665.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53081"
+   },
+   "source": "https://www.themealdb.com/meal/53081"
+  },
+  {
+   "id": "mdb_52963",
+   "name": "Šakšuka (kiaušiniai pomidorų padaže)",
+   "meals": [
+    "pusryciai",
+    "pietus",
+    "vakariene"
+   ],
+   "time": 25,
+   "kcal": 330,
+   "protein": 16,
+   "servings": 3,
+   "ing": {
+    "aliejus": 5,
+    "svogunai": 100,
+    "cesnakai": 1.7,
+    "pomidorai": 266.7,
+    "cukrus": 4,
+    "kiausiniai": 1.3,
+    "feta": 33.3
+   },
+   "other": [
+    "aitrioji paprika",
+    "kalendra"
+   ],
+   "steps": [
+    "Keptuvėje su dangčiu 5 min. pakepinkite svogūną, česnaką ir aitriąją papriką.",
+    "Sudėkite pomidorus ir žiupsnelį cukraus, troškinkite 8–10 min., kol sutirštės.",
+    "Šaukštu padarykite 4 duobutes ir į kiekvieną įmuškite kiaušinį.",
+    "Uždenkite ir kepkite ant silpnos ugnies 6–8 min.",
+    "Pabarstykite žalumynais, patiekite su duona."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/g373701551450225.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/g373701551450225.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52963"
+   },
+   "source": "https://www.themealdb.com/meal/52963"
+  },
+  {
+   "id": "mdb_53491",
+   "name": "Bulgariškos salotos (šopska)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 15,
+   "kcal": 490,
+   "protein": 13,
+   "servings": 3,
+   "ing": {
+    "agurkai": 83.3,
+    "pomidorai": 192,
+    "svogunai": 50,
+    "paprikos": 50,
+    "druska": 1.3,
+    "aliejus": 26.7,
+    "feta": 64,
+    "zalumynai": 8
+   },
+   "other": [],
+   "steps": [
+    "Supjaustykite pomidorus, agurkus, paprikas ir svogūną.",
+    "Pabarstykite druska ir palaikykite 5 min.",
+    "Apšlakstykite aliejumi.",
+    "Ant viršaus sutarkuokite fetos ir pabarstykite petražolėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/bqx8mc1782684286.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/bqx8mc1782684286.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53491"
+   },
+   "source": "https://www.themealdb.com/meal/53491"
+  },
+  {
+   "id": "mdb_53164",
+   "name": "Ispaniška vištiena orkaitėje",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 55,
+   "kcal": 560,
+   "protein": 49,
+   "servings": 4,
+   "ing": {
+    "vistienos_slauneles": 260,
+    "svogunai": 112.5,
+    "paprika_malta": 2,
+    "citrinos": 0.3,
+    "zalumynai": 6,
+    "aliejus": 3.8
+   },
+   "other": [],
+   "steps": [
+    "Įkaitinkite orkaitę iki 190 °C.",
+    "Visus ingredientus sudėkite į didelį kepimo indą, išmaišykite rankomis ir pagardinkite.",
+    "Kepkite 45 min., po 20 min. pamaišykite svogūnus.",
+    "Patiekite su ryžiais."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/pqulvm1763282839.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/pqulvm1763282839.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53164"
+   },
+   "source": "https://www.themealdb.com/meal/53164"
+  },
+  {
+   "id": "mdb_52771",
+   "name": "Aštrūs makaronai „Arrabbiata“",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 25,
+   "kcal": 660,
+   "protein": 19,
+   "servings": 4,
+   "ing": {
+    "makaronai": 113.5,
+    "aliejus": 20,
+    "cesnakai": 3.8,
+    "pomidorai_konserv": 130,
+    "parmezanas": 10
+   },
+   "other": [
+    "½ a. š. aitriųjų paprikų dribsnių",
+    "itališkų žolelių",
+    "baziliko lapelių"
+   ],
+   "steps": [
+    "Išvirkite makaronus pasūdytame vandenyje.",
+    "Įkaitintame aliejuje 1–2 min. pakepinkite česnaką.",
+    "Sudėkite pomidorus, aitriąsias paprikas ir žoleles, pavirkite 5 min.",
+    "Nukėlę įdėkite baziliko, sumaišykite su makaronais.",
+    "Pabarstykite tarkuotu sūriu."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52771"
+   },
+   "source": "https://www.themealdb.com/meal/52771"
+  },
+  {
+   "id": "mdb_53110",
+   "name": "Lipnios vištienos šlaunelės sojų ir medaus glaiste",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 75,
+   "kcal": 690,
+   "protein": 63,
+   "servings": 3,
+   "ing": {
+    "vistienos_slauneles": 346.7,
+    "soju_padazas": 10,
+    "medus": 4,
+    "aliejus": 5,
+    "pomidoru_padazas": 1.3,
+    "garstycios": 4
+   },
+   "other": [],
+   "steps": [
+    "Kiekvieną šlaunelę įpjaukite 3 kartus.",
+    "Sumaišykite sojų padažą, medų, aliejų, pomidorų padažą ir garstyčias.",
+    "Apvoliokite vištieną ir marinuokite 30 min. (arba per naktį šaldytuve).",
+    "Kepkite 200 °C orkaitėje 35 min., retkarčiais apversdami.",
+    "Patiekite su ryžiais ir daržovėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/cj56fs1762340001.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/cj56fs1762340001.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53110"
+   },
+   "source": "https://www.themealdb.com/meal/53110"
+  },
+  {
+   "id": "mdb_52806",
+   "name": "Indiška „tandoori“ vištiena",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 90,
+   "kcal": 600,
+   "protein": 49,
+   "servings": 8,
+   "ing": {
+    "citrinos": 0.3,
+    "paprika_malta": 1.9,
+    "svogunai": 37.5,
+    "vistienos_slauneles": 260,
+    "aliejus": 10,
+    "jogurtas": 30,
+    "cesnakai": 2.5
+   },
+   "other": [
+    "gabalėlis imbiero",
+    "garam masala, kmynai, aitriųjų paprikų milteliai"
+   ],
+   "steps": [
+    "Citrinos sultis sumaišykite su paprika ir raudonaisiais svogūnais, įpjautas šlauneles pavoliokite ir palikite 10 min.",
+    "Jogurtą sumaišykite su česnaku, imbieru ir prieskoniais, užpilkite ant vištienos.",
+    "Marinuokite šaldytuve bent 1 val.",
+    "Kepkite po griliu ant grotelių po 8 min. iš kiekvienos pusės, kol apskrus.",
+    "Patiekite su ryžiais ir salotomis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/qptpvt1487339892.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/qptpvt1487339892.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52806"
+   },
+   "source": "https://www.themealdb.com/meal/52806"
+  },
+  {
+   "id": "mdb_52822",
+   "name": "Dešrelės tešloje („Rupūžė duobėje“)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 45,
+   "kcal": 590,
+   "protein": 22,
+   "servings": 4,
+   "ing": {
+    "desreles": 120,
+    "aliejus": 11.3,
+    "miltai": 25,
+    "kiausiniai": 0.5,
+    "pienas": 56.3,
+    "pomidorai": 50
+   },
+   "other": [
+    "šaukštas tarkuotų krienų"
+   ],
+   "steps": [
+    "Įkaitinkite orkaitę iki 200 °C, apkepkite dešreles keptuvėje.",
+    "Kepimo inde įkaitinkite aliejų orkaitėje 5 min.",
+    "Sumaišykite miltus, kiaušinius ir krienus, palaipsniui įplakite pieną.",
+    "Sudėkite dešreles į karštą indą ir užpilkite tešla, viršų papuoškite pomidorais.",
+    "Kepkite 30 min., kol tešla išsipūs ir paruduos."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/ytuvwr1503070420.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/ytuvwr1503070420.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52822"
+   },
+   "source": "https://www.themealdb.com/meal/52822"
+  },
+  {
+   "id": "mdb_53057",
+   "name": "Kroatiškas jautienos guliašas",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 120,
+   "kcal": 510,
+   "protein": 36,
+   "servings": 3,
+   "ing": {
+    "jautiena": 166.7,
+    "svogunai": 100,
+    "morkos": 53.3,
+    "cesnakai": 3.3,
+    "garstycios": 12,
+    "druska": 4,
+    "pipirai": 1.3,
+    "paprika_malta": 1.3,
+    "aliejus": 10
+   },
+   "other": [
+    "200 ml raudonojo vyno (nebūtina)",
+    "lauro lapai"
+   ],
+   "steps": [
+    "Jautieną supjaustykite 3 cm gabaliukais ir marinuokite garstyčiose su prieskoniais 1 val.",
+    "Apkepkite mėsą iš visų pusių ir išimkite.",
+    "Tame pačiame puode 15 min. troškinkite smulkintus svogūnus ir tarkuotas morkas.",
+    "Sudėkite mėsą, česnaką, lauro lapus, papriką, įpilkite vandens (ir vyno).",
+    "Troškinkite uždengę 1–1,5 val., kol mėsa suminkštės; patiekite su bulvėmis ar makaronais."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/n1hcou1628770088.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/n1hcou1628770088.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53057"
+   },
+   "source": "https://www.themealdb.com/meal/53057"
+  },
+  {
+   "id": "mdb_53416",
+   "name": "Katalonų bulvių ir kopūstų paplotėliai su šonine (trinxat)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 50,
+   "kcal": 250,
+   "protein": 10,
+   "servings": 4,
+   "ing": {
+    "kopustai": 300,
+    "bulves": 90,
+    "sonine": 25,
+    "cesnakai": 2.5,
+    "zalumynai": 3,
+    "druska": 0.5,
+    "pipirai": 0.5
+   },
+   "other": [],
+   "steps": [
+    "Pasūdytame vandenyje išvirkite kopūstą ir bulves (30–40 min.), gerai nusunkite.",
+    "Apkepkite šoninę, riebalus pasilikite.",
+    "Bulves ir kopūstą sugrūskite, įmaišykite česnaką, pagardinkite.",
+    "Suformuokite paplotėlius su šonine ir kepkite šoninės riebaluose iki auksinės spalvos.",
+    "Pabarstykite petražolėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/khpso71779732715.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/khpso71779732715.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53416"
+   },
+   "source": "https://www.themealdb.com/meal/53416"
+  },
+  {
+   "id": "mdb_53188",
+   "name": "Slovakiški kotletai (fašírky)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 40,
+   "kcal": 610,
+   "protein": 24,
+   "servings": 6,
+   "ing": {
+    "malta_mesa": 83.3,
+    "svogunai": 25,
+    "cesnakai": 1.7,
+    "duona": 11.7,
+    "pienas": 16.7,
+    "kiausiniai": 0.3,
+    "druska": 0.7,
+    "pipirai": 0.7,
+    "garstycios": 0.7,
+    "zalumynai": 2,
+    "miltai": 32,
+    "batonas": 32,
+    "aliejus": 13.3
+   },
+   "other": [
+    "šaukštelis mairūno"
+   ],
+   "steps": [
+    "Duonos riekes išmirkykite piene, nuspauskite ir sutrupinkite.",
+    "Sumaišykite faršą, smulkintą svogūną, česnaką, duoną, kiaušinį ir prieskonius.",
+    "Suformuokite delno dydžio kotletus.",
+    "Apvoliokite miltuose, kiaušinyje ir džiūvėsėliuose.",
+    "Kepkite aliejuje po 4–5 min. iš abiejų pusių; patiekite su bulvių koše."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/gtpvwp1763363947.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/gtpvwp1763363947.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53188"
+   },
+   "source": "https://www.themealdb.com/meal/53188"
+  },
+  {
+   "id": "mdb_52846",
+   "name": "Vištienos ir grybų troškinys su bulvėmis orkaitėje",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 60,
+   "kcal": 540,
+   "protein": 20,
+   "servings": 4,
+   "ing": {
+    "sviestas": 37.5,
+    "svogunai": 37.5,
+    "grybai": 25,
+    "miltai": 10,
+    "vistienos_file": 62.5,
+    "kukuruzai": 50,
+    "bulves": 117
+   },
+   "other": [
+    "žiupsnelis muskato ir garstyčių miltelių",
+    "sultinio kubelis"
+   ],
+   "steps": [
+    "Įkaitinkite orkaitę iki 200 °C.",
+    "Svieste 5 min. pakepinkite svogūną, sudėkite grybus.",
+    "Įmaišykite miltus, po 2 min. palaipsniui įpilkite 500 ml vandens su sultinio kubeliu – gausite padažą.",
+    "Sudėkite vištieną į kepimo indą, užpilkite padažu, viršų padenkite plonais bulvių griežinėliais.",
+    "Kepkite ~40 min., kol bulvės paruduos."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52846"
+   },
+   "source": "https://www.themealdb.com/meal/52846"
+  },
+  {
+   "id": "mdb_53172",
+   "name": "Ispaniškos keptos bulvės su pomidorų padažu (patatas bravas)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 60,
+   "kcal": 720,
+   "protein": 11,
+   "servings": 2,
+   "ing": {
+    "aliejus": 37.5,
+    "svogunai": 52.5,
+    "cesnakai": 5,
+    "pomidoru_padazas": 6,
+    "paprika_malta": 4,
+    "cukrus": 1,
+    "zalumynai": 5,
+    "bulves": 450
+   },
+   "other": [
+    "žiupsnelis aitriųjų paprikų miltelių"
+   ],
+   "steps": [
+    "Aliejuje 5 min. pakepinkite svogūną.",
+    "Sudėkite česnaką, pomidorus, pomidorų padažą, papriką, cukrų ir druską; troškinkite 10 min.",
+    "Bulves supjaustykite kubeliais, apšlakstykite aliejumi.",
+    "Kepkite 200 °C orkaitėje 40–50 min., kol apskrus.",
+    "Užpilkite padažu ir pabarstykite petražolėmis."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/bvg8sn1763298713.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/bvg8sn1763298713.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53172"
+   },
+   "source": "https://www.themealdb.com/meal/53172"
+  },
+  {
+   "id": "mdb_52872",
+   "name": "Ispaniškas bulvių omletas (tortilja)",
+   "meals": [
+    "pusryciai",
+    "pietus",
+    "vakariene"
+   ],
+   "time": 50,
+   "kcal": 630,
+   "protein": 22,
+   "servings": 3,
+   "ing": {
+    "svogunai": 50,
+    "aliejus": 23.3,
+    "sviestas": 8.3,
+    "bulves": 133.3,
+    "cesnakai": 10,
+    "kiausiniai": 2.7,
+    "zalumynai": 8,
+    "batonas": 10
+   },
+   "other": [
+    "pomidorai patiekimui"
+   ],
+   "steps": [
+    "Ant silpnos ugnies aliejuje su sviestu ~15 min. lėtai kepinkite svogūną.",
+    "Sudėkite plonais griežinėliais pjaustytas bulves, uždenkite ir kepkite 15–20 min.",
+    "Įspauskite česnaką ir užpilkite išplaktais kiaušiniais.",
+    "Uždengę kepkite ~20 min., kol kraštai paruduos.",
+    "Apverskite ant lėkštės ir pakepkite kitą pusę; patiekite šiltą ar šaltą."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/quuxsx1511476154.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/quuxsx1511476154.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52872"
+   },
+   "source": "https://www.themealdb.com/meal/52872"
+  },
+  {
+   "id": "mdb_52831",
+   "name": "Japoniška traški vištiena (karaage)",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 90,
+   "kcal": 660,
+   "protein": 36,
+   "servings": 3,
+   "ing": {
+    "vistienos_file": 150,
+    "cesnakai": 1.7,
+    "soju_padazas": 10,
+    "cukrus": 2.7,
+    "krakmolas": 64,
+    "aliejus": 26.7,
+    "citrinos": 0.3
+   },
+   "other": [
+    "šaukštas tarkuoto imbiero",
+    "šaukštas sakės (galima praleisti)"
+   ],
+   "steps": [
+    "Sumaišykite imbierą, česnaką, sojų padažą ir cukrų.",
+    "Sudėkite vištienos gabalėlius ir marinuokite šaldytuve bent 1 val.",
+    "Puode įkaitinkite aliejų (~180 °C).",
+    "Vištieną apvoliokite krakmole ir kepkite porcijomis, kol apskrus.",
+    "Nusausinkite ant popierinio rankšluosčio; patiekite su ryžiais ir citrina."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/tyywsw1505930373.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/tyywsw1505930373.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/52831"
+   },
+   "source": "https://www.themealdb.com/meal/52831"
+  },
+  {
+   "id": "mdb_53125",
+   "name": "Daniški jautienos kotletai su karamelizuotais svogūnais",
+   "meals": [
+    "pietus",
+    "vakariene"
+   ],
+   "time": 35,
+   "kcal": 530,
+   "protein": 27,
+   "servings": 3,
+   "ing": {
+    "svogunai": 100,
+    "sviestas": 12,
+    "malta_mesa": 151.3,
+    "druska": 1.3,
+    "pipirai": 1.3
+   },
+   "other": [
+    "žiupsnelis muskato"
+   ],
+   "steps": [
+    "Pusę svogūno sutarkuokite, likusį supjaustykite ir lėtai kepinkite svieste, kol karamelizuosis.",
+    "Faršą sumaišykite su tarkuotu svogūnu, druska, pipirais, krakmolu ir trupučiu vandens.",
+    "Suformuokite 6 kotletus.",
+    "Apkepkite svieste ant stiprios ugnies, tada dar 2–3 min. ant silpnos.",
+    "Patiekite su svogūnais, bulvėmis ir žirneliais."
+   ],
+   "image": {
+    "url": "https://www.themealdb.com/images/media/meals/0bpjb11763075817.jpg",
+    "thumb": "https://www.themealdb.com/images/media/meals/0bpjb11763075817.jpg/medium",
+    "credit": "TheMealDB",
+    "page": "https://www.themealdb.com/meal/53125"
+   },
+   "source": "https://www.themealdb.com/meal/53125"
+  }
+ ]
+}

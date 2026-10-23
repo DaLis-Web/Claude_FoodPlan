@@ -136,3 +136,18 @@ test('gėrimai įskaičiuojami į kiekvienos parduotuvės sumą', async () => {
   assert.equal(extraPrices(extras[0], ctx).lidl, 6 * ctx.priceOf('alus', 'lidl'));
   assert.equal(t.bestPair.assign['extra:a'] !== undefined, true);
 });
+
+test('įvairovė: tas pats pagrindinis baltymas ne daugiau kaip ~3 kartus per savaitę', async () => {
+  const { mainProtein, setExtraRecipes } = await import('../js/planner.js');
+  const fs = await import('node:fs/promises');
+  setExtraRecipes(JSON.parse(await fs.readFile(new URL('../data/extra-recipes.json', import.meta.url), 'utf8')).recipes);
+  const { ctx } = ctxWith({ settings: { leftovers: false } });
+  const plan = generatePlan(ctx, { weekStart: WEEK, seed: 11, runs: 60 });
+  const counts = {};
+  plan.days.forEach((day) => ['pietus', 'vakariene'].forEach((s) => {
+    const mp = mainProtein(ctx.recipes[day[s].recipeId]);
+    if (mp) counts[mp] = (counts[mp] || 0) + 1;
+  }));
+  assert.ok(Math.max(...Object.values(counts)) <= 4, JSON.stringify(counts));
+  setExtraRecipes([]);
+});

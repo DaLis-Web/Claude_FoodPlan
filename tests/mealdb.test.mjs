@@ -20,3 +20,14 @@ test('neapibrėžtas kiekis – žiupsnelis', () => {
   assert.equal(convertMeasure('To taste', INGREDIENTS.druska, 'druska'), 2);
   assert.equal(convertMeasure('Drizzle', INGREDIENTS.aliejus, 'aliejus'), 10);
 });
+
+test('papildomi receptai: produktai egzistuoja, lietuviški pavadinimai, žingsniai', async () => {
+  const fs = await import('node:fs/promises');
+  const { recipes } = JSON.parse(await fs.readFile(new URL('../data/extra-recipes.json', import.meta.url), 'utf8'));
+  assert.ok(recipes.length >= 30);
+  for (const r of recipes) {
+    for (const id of Object.keys(r.ing)) assert.ok(INGREDIENTS[id], `${r.id}: ${id}`);
+    assert.ok(r.name && r.steps.length >= 3 && r.time > 0, r.id);
+    assert.ok(r.kcal > 150 && r.kcal < 1000, `${r.id} kcal ${r.kcal}`);
+  }
+});

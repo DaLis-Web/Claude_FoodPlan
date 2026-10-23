@@ -299,10 +299,14 @@ export function evaluatePlan(plan, ctx, { weekStart, todayIso } = {}) {
       lastDay[e.recipeId] = d;
     }
   });
+  const mains = {};
   for (const [id, c] of Object.entries(counts)) {
     const isMain = ctx.recipes[id] && !ctx.recipes[id].meals.includes('pusryciai');
     if (c > 1) variety += (c - 1) * (isMain ? 6 : 1.5);
+    const mp = isMain && mainProtein(ctx.recipes[id]);
+    if (mp) mains[mp] = (mains[mp] || 0) + c;
   }
+  for (const c of Object.values(mains)) if (c > 2) variety += (c - 2) * 2.5;
 
   // Nauda už besibaigiančių produktų sunaudojimą.
   let rescued = 0;
@@ -393,6 +397,28 @@ function nutritionBonus(recipe, people) {
   return Math.max(-10, Math.min(15, (recipe.protein || 0) - 20)) * 0.04 * people;
 }
 
+// Pagrindinis baltymų šaltinis (daugiausiai naudojamas mėsos/žuvies produktas) – kad savaitėje nekartotųsi vien faršas.
+const mainCache = new WeakMap();
+export function mainProtein(recipe) {
+  if (mainCache.has(recipe)) return mainCache.get(recipe);
+  let best = null;
+  let max = 0;
+  for (const [id, q] of Object.entries(recipe.ing)) {
+    if (INGREDIENTS[id]?.cat === 'mesa' && q > max) {
+      max = q;
+      best = id;
+    }
+  }
+  mainCache.set(recipe, best);
+  return best;
+}
+
+function track(usage, recipe, d) {
+  usage[recipe.id] = { count: (usage[recipe.id]?.count || 0) + 1, last: d };
+  const mp = !recipe.meals.includes('pusryciai') && mainProtein(recipe);
+  if (mp) usage[`main:${mp}`] = { count: (usage[`main:${mp}`]?.count || 0) + 1, last: d };
+}
+
 function slotScore(recipe, d, servings, plan, needs, stock, expiring, ctx, usage) {
   let score = marginalCost(recipe, servings, needs, stock, ctx) * 0.6;
   const people = Math.max(1, ctx.settings.people || 1);
@@ -402,6 +428,9 @@ function slotScore(recipe, d, servings, plan, needs, stock, expiring, ctx, usage
     score += (isMain ? 4 : 1) * people * u.count;
     if (d - u.last <= 1) score += 3 * people;
   }
+  const mp = isMain && mainProtein(recipe);
+  const mainUsed = mp ? usage[`main:${mp}`]?.count || 0 : 0;
+  if (mainUsed >= 2) score += 1.5 * people * (mainUsed - 1);
   score -= nutritionBonus(recipe, people);
   if (ctx.favorites.has(recipe.id)) score -= 0.6 * people;
   for (const id of Object.keys(recipe.ing)) {
@@ -454,7 +483,7 @@ export function generatePlan(ctx, { existing, weekStart, todayIso, wishes = [], 
           addNeeds(needs, ctx.recipes[e.recipeId], entryServings(plan.days[d][s]));
         }
         if (e.recipeId && !e.skip) {
-          usage[e.recipeId] = { count: (usage[e.recipeId]?.count || 0) + 1, last: d };
+          if (ctx.recipes[e.recipeId]) track(usage, ctx.recipes[e.recipeId], d);
         }
       }
     });
@@ -494,7 +523,7 @@ export function generatePlan(ctx, { existing, weekStart, todayIso, wishes = [], 
         }
         plan.days[d][s] = { recipeId: pick.id, servings: people };
         addNeeds(needs, pick, people);
-        usage[pick.id] = { count: (usage[pick.id]?.count || 0) + 1, last: d };
+        track(usage, pick, d);
       }
     }
 
@@ -669,7 +698,7 @@ function placeWishes(plan, wishIds, ctx, slots, rng, needs, usage) {
     }
     plan.days[best][slot] = { recipeId: id, servings: people, wish: true };
     addNeeds(needs, r, people);
-    usage[id] = { count: (usage[id]?.count || 0) + 1, last: best };
+    track(usage, r, best);
     wishDays.push(best);
     already.add(id);
   }
