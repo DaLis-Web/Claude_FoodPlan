@@ -21,19 +21,20 @@ export const SOURCES = {
     name: 'IKI (LastMile)',
     mode: 'search',
     url: (q) => `https://lastmile.lt/chain/IKI/search?q=${encodeURIComponent(q)}`,
-    parse: parseGeneric,
+    parse: (t) => parseLastmile(t, /iki/i),
   },
   lidl: {
     name: 'Lidl',
     mode: 'search',
-    url: (q) => `https://www.lidl.lt/q/search?q=${encodeURIComponent(q)}`,
+    // Tą pačią API naudoja lidl.lt paieškos puslapis (searchApiVersion 2.1.0).
+    url: (q) => `https://www.lidl.lt/q/api/search?q=${encodeURIComponent(q)}&locale=lt_LT&assortment=LT&version=2.1.0`,
     parse: parseGeneric,
   },
   norfa: {
     name: 'Norfa akcijos',
     mode: 'catalog',
     url: () => 'https://www.norfa.lt/akcijos/',
-    parse: (t) => firstNonEmpty(parseGeneric(t), parseHtmlCards(t)),
+    parse: (t) => firstNonEmpty(parseNorfa(t), parseGeneric(t)),
   },
 };
 
@@ -393,5 +394,73 @@ export function describeJson(text, max = 12) {
     for (const k of keys) visit(node[k], `${path}.${k}`, depth + 1);
   };
   jsonBlocks(text).forEach((b, i) => visit(b, `#${i}`, 0));
+  return out;
+}
+
+// ---------- Norfa: akcijų puslapio kortelės ----------
+// <div class="c-product c-product--compact"> … <div class="c-product__price">1.39 €</div>
+// <div class="c-product__name">Pavadinimas, 1 kg</div> … Galioja 10.23-10.25 d.
+export function parseNorfa(html, now = new Date()) {
+  const out = [];
+  const parts = html.split(/class="c-product c-product--/).slice(1);
+  for (const part of parts) {
+    const card = part.slice(0, 4000);
+    const nameM = card.match(/class="c-product__name"[^>]*>([\s\S]*?)<\/div>/);
+    const prices = [...card.matchAll(/class="c-product__(?:price|old-price|price-old)[^"]*"[^>]*>([\s\S]*?)<\/div>/g)].map((m) => num(stripTags(m[1]))).filter((x) => x > 0);
+    if (!nameM || !prices.length) continue;
+    const price = Math.min(...prices);
+    const old = prices.length > 1 ? Math.max(...prices) : null;
+    const until = card.match(/Galioja\s+(?:\d{1,2}\.\d{1,2}\s*-\s*)?(\d{1,2})\.(\d{1,2})/);
+    let validUntil = null;
+    if (until) {
+      let y = now.getFullYear();
+      const mm = Number(until[1]);
+      if (mm < now.getMonth() + 1 - 6) y++; // metų sandūra
+      validUntil = `${y}-${String(mm).padStart(2, '0')}-${String(Number(until[2])).padStart(2, '0')}`;
+    }
+    out.push({ title: stripTags(nameM[1]), price, unitPrice: null, unit: null, oldPrice: old && old > price ? old : null, promo: true, validUntil, url: 'https://www.norfa.lt/akcijos/' });
+  }
+  return out;
+}
+
+// ---------- LastMile (IKI): Next.js dehydratedState ----------
+// props.pageProps.dehydratedState.queries[].state.data[] = { convertedPrice, convertedRegularPrice, chainSlug, product: {...} }
+export function parseLastmile(text, chainRe = /iki/i) {
+  const out = [];
+  const items = [];
+  const collect = (node, depth = 0) => {
+    if (!node || typeof node !== 'object' || depth > 30) return;
+    if (Array.isArray(node)) return node.forEach((x) => collect(x, depth + 1));
+    if (node.product && typeof node.product === 'object' && ('convertedPrice' in node || 'price' in node || 'prc' in node)) items.push(node);
+    for (const v of Object.values(node)) if (v && typeof v === 'object') collect(v, depth + 1);
+  };
+  for (const b of jsonBlocks(text)) collect(b);
+  const chains = new Set();
+  for (const it of items) {
+    const chain = `${it.chainSlug || ''} ${textFrom(it.chainName) || ''}`;
+    chains.add(it.chainSlug);
+    if (chainRe && !chainRe.test(chain)) continue;
+    const p = it.product;
+    const title = textFrom(p.name) || textFrom(p.title) || textFrom(p.fullName);
+    if (!title) continue;
+    const unit = normUnit(p.conversionMeasure || p.measure);
+    const unitPrice = priceFrom(it.convertedPrice);
+    const regular = priceFrom(it.convertedRegularPrice);
+    const price = priceFrom(it.price ?? it.prc ?? p.price ?? p.prc) ?? null;
+    out.push({
+      title: title.trim(),
+      price: price ?? unitPrice,
+      unitPrice: unitPrice ?? null,
+      unit: unitPrice ? unit : null,
+      oldPrice: null,
+      promo: !!(regular && unitPrice && regular > unitPrice + 0.001),
+      validUntil: null,
+      url: p.slug ? `https://lastmile.lt/product/${p.slug}` : null,
+    });
+    // Sena kaina perskaičiuojama tuo pačiu santykiu kaip vieneto kaina.
+    const last = out[out.length - 1];
+    if (last.promo && last.price) last.oldPrice = Math.round(last.price * (regular / unitPrice) * 100) / 100;
+  }
+  parseLastmile.lastChains = [...chains].filter(Boolean);
   return out;
 }

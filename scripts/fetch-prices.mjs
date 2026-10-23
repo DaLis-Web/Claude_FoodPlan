@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { INGREDIENTS } from '../js/data.js';
 import { SEARCH_TERMS } from './search-terms.mjs';
-import { SOURCES, pickBest, describeJson } from './sources.mjs';
+import { SOURCES, pickBest, describeJson, parseLastmile } from './sources.mjs';
 import { livePackPrice } from '../js/planner.js';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -52,6 +52,7 @@ function diagnose(storeId, html) {
   const hints = ['b_productList', 'data-gtm-eec-product', '__NEXT_DATA__', 'ld+json', 'gridbox', 'application/json'].filter((h) => html.includes(h));
   console.warn(`${storeId}: produktų neatpažinta (${html.length} B, title="${title.trim().slice(0, 80)}", žymės: ${hints.join(', ') || 'nėra'})`);
   for (const line of describeJson(html)) console.warn(`${storeId}: JSON ${line}`);
+  if (storeId === 'iki' && parseLastmile.lastChains?.length) console.warn(`iki: rasti tinklai: ${parseLastmile.lastChains.join(', ')}`);
   // Fragmentai aplink galimus produktų duomenis – pagal juos pritaikomas parseris.
   const flat = html.replace(/\s+/g, ' ');
   for (const marker of ['gridbox', '"price"', 'price', 'kaina', '€']) {

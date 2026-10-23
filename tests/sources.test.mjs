@@ -106,3 +106,31 @@ test('atmetami kainos požiūriu neįtikėtini atitikmenys', () => {
   const accept = (p) => { const pack = livePackPrice(ing, p); return pack >= ing.base / 3 && pack <= ing.base * 3; };
   assert.equal(pickBest(products, SEARCH_TERMS.lasisa, ing, accept).unitPrice, 18);
 });
+
+test('Norfa: akcijų kortelės (pagal tikrą struktūrą)', async () => {
+  const { parseNorfa } = await import('../scripts/sources.mjs');
+  const html = `<div class="c-discount-item-list"><div class="c-product c-product--compact"> <div class="c-product__media"> <img src="x.jpg" alt="Geltonieji greipfrutai POMELO, 1 kg "> </div> <div class="c-product__price-stamp"> <div class="c-product__price">1.39 €</div> </div> <div data-mh="product-name-1" class="c-product__name">Geltonieji greipfrutai POMELO (dyd. 120-170 mm), 1 kg </div> <div class="c-more-info"> <div class="c-more-info__content"> Apdorota Imazalil <br> Galioja 10.23-10.25 d. </div> </div> </div>
+  <div class="c-product c-product--compact"><div class="c-product__price">0.59 €</div><div class="c-product__name">Svogūnai, 1 kg</div> Galioja 10.23-10.29 d.</div></div>`;
+  const items = parseNorfa(html, new Date(2026, 9, 23));
+  assert.equal(items.length, 2);
+  assert.equal(items[0].price, 1.39);
+  assert.equal(items[0].validUntil, '2026-10-25');
+  assert.ok(items[1].promo);
+  assert.equal(pickBest(items, SEARCH_TERMS.svogunai, INGREDIENTS.svogunai).price, 0.59);
+});
+
+test('LastMile (IKI): tik IKI tinklo prekės, vieneto kaina ir akcija', async () => {
+  const { parseLastmile } = await import('../scripts/sources.mjs');
+  const data = { props: { pageProps: { dehydratedState: { queries: [{ state: { data: [
+    { id: 'A', convertedPrice: 12.46, convertedRegularPrice: 12.46, chainSlug: 'PROMO-CashandCarry', product: { name: { lt: 'Ledai PROMO 1 l' }, conversionMeasure: 'L' } },
+    { id: 'B', convertedPrice: 0.89, convertedRegularPrice: 1.19, chainSlug: 'IKI', price: 0.89, product: { name: { lt: 'Pienas IKI 2,5 %, 1 l' }, conversionMeasure: 'L' } },
+  ] } }] } } } };
+  const html = `<script id="__NEXT_DATA__" type="application/json">${JSON.stringify(data)}</script>`;
+  const items = parseLastmile(html);
+  assert.equal(items.length, 1);
+  assert.equal(items[0].title, 'Pienas IKI 2,5 %, 1 l');
+  assert.equal(items[0].unit, 'l');
+  assert.ok(items[0].promo);
+  assert.equal(items[0].oldPrice, 1.19);
+  assert.deepEqual(parseLastmile.lastChains, ['PROMO-CashandCarry', 'IKI']);
+});
