@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-23T20:21:29.584Z",
+ "updatedAt": "2026-10-23T20:23:38.448Z",
  "recipes": [
   {
    "id": "mdb_53288",
@@ -10,15 +10,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 560,
-   "protein": 16,
+   "kcal": 310,
+   "protein": 6,
    "ing": {
     "paprikos": 450,
     "aliejus": 15,
     "svogunai": 12,
     "cesnakai": 5,
-    "druska": 100,
-    "pipirai": 100,
+    "druska": 2,
+    "pipirai": 2,
     "pomidorai": 120
    },
    "other": [],
@@ -41,20 +41,20 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 530,
-   "protein": 31,
+   "kcal": 680,
+   "protein": 42,
    "ing": {
-    "malta_mesa": 151.3,
-    "cesnakai": 6.7,
-    "svogunai": 64,
-    "druska": 33.3,
-    "pipirai": 33.3,
-    "pomidorai": 120,
-    "zalumynai": 1.3
+    "malta_mesa": 227,
+    "cesnakai": 10,
+    "svogunai": 96,
+    "druska": 1,
+    "pipirai": 1,
+    "pomidorai": 180,
+    "zalumynai": 2
    },
    "other": [],
    "coverage": 100,
-   "servings": 3,
+   "servings": 2,
    "steps_en": [
     "Combine ground beef with 1/2 of the minced garlic and 1 tablespoon chopped onion in a large bowl. Mix with your hands until fully incorporated. Shape meat mixture into 1 1/2-inch oblong patties; you should have 12 to 14 meatballs.",
     "Heat a large skillet over medium-high heat. Brown patties in batches in the hot skillet until crispy on both sides and no longer pink in the center, about 10 minutes. Set meatballs aside in a rimmed serving dish.",
@@ -73,7 +73,7 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 610,
+   "kcal": 620,
    "protein": 51,
    "ing": {
     "jautiena": 166.7,
@@ -81,9 +81,9 @@
     "paprikos": 50,
     "cesnakai": 3.3,
     "paprika_malta": 1.3,
-    "druska": 0.1,
+    "druska": 0.7,
     "suris": 66.7,
-    "aliejus": 0.2
+    "aliejus": 0.7
    },
    "other": [
     "1 tsp cumin",
@@ -112,25 +112,25 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 590,
-   "protein": 33,
+   "kcal": 630,
+   "protein": 46,
    "ing": {
-    "jautiena": 150,
-    "pomidoru_padazas": 82.4,
-    "soju_padazas": 9,
-    "pipirai": 2.4,
+    "jautiena": 214.3,
+    "pomidoru_padazas": 117.7,
+    "soju_padazas": 8.6,
+    "pipirai": 0.7,
     "citrinos": 0.1,
-    "sviestas": 3.6,
-    "aliejus": 24,
-    "svogunai": 15,
-    "cesnakai": 2
+    "sviestas": 5.1,
+    "aliejus": 11.4,
+    "svogunai": 21.4,
+    "cesnakai": 2.9
    },
    "other": [
     "1 beef stock concentrate",
     "1 tbs white wine vinegar"
    ],
    "coverage": 100,
-   "servings": 10,
+   "servings": 7,
    "steps_en": [
     "0.\tCombine beef, crushed peppercorn, soy sauce, vinegar, dried bay leaves, lemon, and tomato sauce. Mix well. Marinate beef for at least 30 minutes.",
     "1.\tPut the marinated beef in a cooking pot along with remaining marinade. Add water. Let boil.",
@@ -193,7 +193,7 @@
    "protein": 48,
    "ing": {
     "jautiena": 227,
-    "druska": 0.1,
+    "druska": 0.3,
     "svogunai": 56.3,
     "cesnakai": 3.1,
     "morkos": 39,
@@ -281,8 +281,8 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 590,
-   "protein": 44,
+   "kcal": 560,
+   "protein": 41,
    "ing": {
     "cesnakai": 3,
     "svogunai": 30,
@@ -291,9 +291,9 @@
     "aliejus": 9,
     "citrinos": 0.2,
     "bulves": 46.8,
-    "soju_padazas": 48,
+    "soju_padazas": 12,
     "pipirai": 0.8,
-    "druska": 20
+    "druska": 0.4
    },
    "other": [],
    "coverage": 100,
@@ -318,10 +318,10 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 650,
+   "kcal": 610,
    "protein": 29,
    "ing": {
-    "aliejus": 25,
+    "aliejus": 20,
     "svogunai": 37.5,
     "cesnakai": 1.3,
     "sviestas": 3,
@@ -351,7 +351,7 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 660,
+   "kcal": 580,
    "protein": 49,
    "ing": {
     "jautiena": 160,
@@ -361,7 +361,7 @@
     "miltai": 14,
     "kiausiniai": 0.4,
     "pienas": 20,
-    "aliejus": 10
+    "aliejus": 1
    },
    "other": [],
    "coverage": 100,
@@ -386,18 +386,18 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 620,
-   "protein": 13,
+   "kcal": 410,
+   "protein": 8,
    "ing": {
-    "burokeliai": 225,
-    "aliejus": 30,
-    "bulves": 270,
-    "pupeles": 50,
-    "zalumynai": 5
+    "burokeliai": 150,
+    "aliejus": 20,
+    "bulves": 180,
+    "pupeles": 33.3,
+    "zalumynai": 0.7
    },
    "other": [],
    "coverage": 100,
-   "servings": 2,
+   "servings": 3,
    "steps_en": [
     "Chop the beetroot, add water and stock cube and cook for 15mins. Add the other ingredients and boil until soft. Finally add the beans and cook for 5mins. Serve in the soup pot."
    ],
@@ -413,7 +413,7 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 540,
+   "kcal": 550,
    "protein": 15,
    "ing": {
     "desreles": 60,
@@ -424,8 +424,8 @@
     "svogunai": 52.5,
     "sviestas": 18,
     "pienas": 30,
-    "pipirai": 0.2,
-    "druska": 0.2
+    "pipirai": 1,
+    "druska": 1
    },
    "other": [
     "1 cup beer",
@@ -455,11 +455,11 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 570,
+   "kcal": 560,
    "protein": 34,
    "ing": {
     "jautiena": 151.3,
-    "soju_padazas": 25,
+    "soju_padazas": 20,
     "citrinos": 0.3,
     "cesnakai": 5,
     "svogunai": 150,
@@ -499,8 +499,8 @@
     "svogunai": 7.5,
     "zalumynai": 3,
     "jautiena": 100,
-    "druska": 0.1,
-    "pipirai": 0.1,
+    "druska": 0.5,
+    "pipirai": 0.5,
     "kiausiniai": 0.5,
     "batonas": 12.5
    },
@@ -527,15 +527,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 620,
-   "protein": 35,
+   "kcal": 310,
+   "protein": 17,
    "ing": {
-    "pupeles": 400,
-    "svogunai": 195,
-    "paprikos": 300,
-    "cesnakai": 20,
-    "druska": 6,
-    "pipirai": 8
+    "pupeles": 200,
+    "svogunai": 97.5,
+    "paprikos": 150,
+    "cesnakai": 10,
+    "druska": 3,
+    "pipirai": 2.5
    },
    "other": [
     "1/3 cup celery",
@@ -543,7 +543,7 @@
     "1 tablespoon oregano"
    ],
    "coverage": 100,
-   "servings": 1,
+   "servings": 2,
    "steps_en": [
     "Add all the ingredients in the Instant pot, Lock the lid on and set the Instant Pot to High Pressure for 35 minutes. Once the beans are done cooking, let the pressure release naturally for 20 minutes before releasing the remaining pressure. Open and serve!",
     "Let the beans get cool completely before saving them in the fridge or freezer."
@@ -596,23 +596,23 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 700,
-   "protein": 17,
+   "kcal": 220,
+   "protein": 6,
    "ing": {
-    "sviestas": 18,
-    "svogunai": 97.5,
-    "kopustai": 600,
-    "morkos": 40,
-    "bulves": 234,
-    "pomidorai": 156,
-    "grietine": 50,
-    "zalumynai": 5
+    "sviestas": 7.2,
+    "svogunai": 39,
+    "kopustai": 240,
+    "morkos": 16,
+    "bulves": 93.6,
+    "pomidorai": 62.4,
+    "grietine": 0.4,
+    "zalumynai": 0.4
    },
    "other": [
     "1 celery"
    ],
    "coverage": 100,
-   "servings": 2,
+   "servings": 5,
    "steps_en": [
     "Add the butter to a large Dutch oven or other heavy-duty pot over medium heat. When the butter has melted, add the onion and sauté until translucent.",
     "Add the cabbage, carrot, and celery. Sauté until the vegetables begin to soften, stirring frequently, about 3 minutes.",
@@ -634,28 +634,28 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 660,
-   "protein": 33,
+   "kcal": 390,
+   "protein": 20,
    "ing": {
-    "aliejus": 10,
-    "malta_mesa": 151.3,
-    "svogunai": 35,
-    "morkos": 53.3,
-    "paprikos": 50,
-    "pomidoru_padazas": 4,
-    "cesnakai": 3.3,
-    "druska": 4,
-    "pipirai": 4,
-    "paprika_malta": 1.3,
-    "kopustai": 400,
-    "zalumynai": 8
+    "aliejus": 6,
+    "malta_mesa": 90.8,
+    "svogunai": 21,
+    "morkos": 32,
+    "paprikos": 30,
+    "pomidoru_padazas": 2.4,
+    "cesnakai": 2,
+    "druska": 2.4,
+    "pipirai": 1,
+    "paprika_malta": 0.8,
+    "kopustai": 240,
+    "zalumynai": 4.8
    },
    "other": [
     "1/4 tsp ground cumin",
     "1 tsp apple cider vinegar"
    ],
    "coverage": 100,
-   "servings": 3,
+   "servings": 5,
    "steps_en": [
     "Heat a large skillet or braiser over medium heat on the stovetop. Add the olive oil.",
     "A braiser with cooked ground beef",
@@ -721,12 +721,12 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 470,
+   "kcal": 480,
    "protein": 33,
    "ing": {
     "vistienos_file": 112,
-    "druska": 0.2,
-    "pipirai": 0.2,
+    "druska": 1,
+    "pipirai": 1,
     "zalumynai": 6,
     "ryziai": 96
    },
@@ -775,7 +775,7 @@
     "paprikos": 42.9,
     "cesnakai": 1.4,
     "suris": 27.4,
-    "zalumynai": 1.4
+    "zalumynai": 0.3
    },
    "other": [
     "1 packet fajita seasoning"
@@ -844,20 +844,20 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 660,
-   "protein": 55,
+   "kcal": 440,
+   "protein": 37,
    "ing": {
-    "aliejus": 7.5,
-    "grybai": 150,
-    "vistienos_slauneles": 260,
-    "pomidoru_padazas": 250,
-    "zalumynai": 5
+    "aliejus": 5,
+    "grybai": 100,
+    "vistienos_slauneles": 173.3,
+    "pomidoru_padazas": 166.7,
+    "zalumynai": 3.3
    },
    "other": [
     "100g black olives"
    ],
    "coverage": 100,
-   "servings": 2,
+   "servings": 3,
    "steps_en": [
     "Heat the oil in a large flameproof casserole dish and stir-fry the mushrooms until they start to soften. Add the chicken legs and cook briefly on each side to colour them a little.",
     "Pour in the passata, crumble in the stock cube and stir in the olives. Season with black pepper – you shouldn’t need salt. Cover and simmer for 40 mins until the chicken is tender. Sprinkle with parsley and serve with pasta and a salad, or mash and green veg, if you like."
@@ -874,25 +874,25 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 510,
-   "protein": 35,
+   "kcal": 640,
+   "protein": 48,
    "ing": {
-    "vistienos_file": 100,
-    "svogunai": 50,
-    "majonezas": 12,
-    "grietine": 16,
-    "garstycios": 4,
-    "sonine": 33.3,
-    "grybai": 83.3,
-    "zalumynai": 3.3,
-    "druska": 33.3,
-    "pipirai": 33.3
+    "vistienos_file": 150,
+    "svogunai": 75,
+    "majonezas": 18,
+    "grietine": 24,
+    "garstycios": 6,
+    "sonine": 50,
+    "grybai": 125,
+    "zalumynai": 5,
+    "druska": 1,
+    "pipirai": 1
    },
    "other": [
     "1 tablespoon apple cider vinegar"
    ],
    "coverage": 100,
-   "servings": 3,
+   "servings": 2,
    "steps_en": [
     "Place chicken breast in a saucepan and cover with water. Bring to a boil, add 1 tsp salt and simmer for approximately 15 minutes. Allow chicken to cool and then shred meat with two forks.",
     "Finely chop shallot/red onion.",
@@ -954,23 +954,23 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 550,
-   "protein": 39,
+   "kcal": 640,
+   "protein": 49,
    "ing": {
-    "jautiena": 100,
-    "duona": 17.5,
-    "salotos": 37.5,
-    "pomidorai": 30,
-    "kumpis": 25,
-    "mocarela": 25,
-    "sonine": 25,
+    "jautiena": 133.3,
+    "duona": 23.3,
+    "salotos": 50,
+    "pomidorai": 40,
+    "kumpis": 33.3,
+    "mocarela": 33.3,
+    "sonine": 33.3,
     "kiausiniai": 0.3,
-    "svogunai": 37.5,
-    "pipirai": 25
+    "svogunai": 50,
+    "pipirai": 1.7
    },
    "other": [],
    "coverage": 100,
-   "servings": 4,
+   "servings": 3,
    "steps_en": [
     "Crush the meat so that it is finite and we put it on a griddle to brown. Put the eggs, bacon and ham to fry.",
     "Cut the bread in half, put the beef brisket, the fried eggs, the bacon, the ham, the mozzarella, the tomato and the lettuce. Cover with the other half of the bread and serve."
@@ -993,7 +993,7 @@
     "cesnakai": 10,
     "paprika_malta": 2,
     "pipirai": 2,
-    "druska": 52,
+    "druska": 3,
     "aliejus": 15,
     "bulves": 454,
     "pomidoru_padazas": 6
@@ -1022,19 +1022,19 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 800,
-   "protein": 54,
+   "kcal": 400,
+   "protein": 27,
    "ing": {
-    "paprikos": 600,
-    "feta": 100,
-    "varske": 200,
-    "zalumynai": 24,
-    "druska": 4,
-    "citrinos": 1
+    "paprikos": 300,
+    "feta": 50,
+    "varske": 100,
+    "zalumynai": 12,
+    "druska": 2,
+    "citrinos": 0.5
    },
    "other": [],
    "coverage": 100,
-   "servings": 1,
+   "servings": 2,
    "steps_en": [
     "Cut the peppers lengthwise and remove the seeds.",
     "In a bowl combine 3.5 oz (100 grams) Feta cheese, 7 oz (200 grams) cottage cheese, 1 tbsp chopped chives (optional), 1 tbsp chopped parsley (optional), 1/4 tsp salt (more or less to taste) and 1 tbsp lemon juice.",
@@ -1066,7 +1066,7 @@
     "garstycios": 4.8,
     "grietinele": 48,
     "medus": 2.4,
-    "zalumynai": 2
+    "zalumynai": 0.4
    },
    "other": [],
    "coverage": 100,
@@ -1090,18 +1090,18 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 540,
-   "protein": 22,
+   "kcal": 360,
+   "protein": 14,
    "ing": {
-    "pupeles": 227,
-    "svogunai": 150,
-    "aliejus": 15,
-    "paprikos": 150,
-    "pomidoru_padazas": 96,
-    "morkos": 80,
-    "pipirai": 2,
-    "druska": 2,
-    "zalumynai": 5
+    "pupeles": 151.3,
+    "svogunai": 100,
+    "aliejus": 10,
+    "paprikos": 100,
+    "pomidoru_padazas": 64,
+    "morkos": 53.3,
+    "pipirai": 1.3,
+    "druska": 1.3,
+    "zalumynai": 0.7
    },
    "other": [
     "1 tsp dried mint",
@@ -1109,7 +1109,7 @@
     "1 tsp summer savoury"
    ],
    "coverage": 100,
-   "servings": 2,
+   "servings": 3,
    "steps_en": [
     "Place beans in a large pot and cover with cold water. Soak for at least 4 hours or overnight. Drain and rinse, before you use in the soup.",
     "Chop one of the onions and leave the other one whole. Chop carrots.",
@@ -1129,24 +1129,24 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 580,
-   "protein": 19,
+   "kcal": 630,
+   "protein": 21,
    "ing": {
-    "miltai": 55.6,
-    "sviestas": 22.2,
-    "druska": 11.6,
-    "malta_mesa": 55.6,
-    "svogunai": 33.3,
-    "kiausiniai": 0.4,
-    "paprika_malta": 0.4,
-    "pipirai": 11.1
+    "miltai": 62.5,
+    "sviestas": 25,
+    "druska": 0.8,
+    "malta_mesa": 62.5,
+    "svogunai": 37.5,
+    "kiausiniai": 0.5,
+    "paprika_malta": 0.5,
+    "pipirai": 0.3
    },
    "other": [
     "100g green olives",
     "1 teaspoon cumin"
    ],
    "coverage": 100,
-   "servings": 9,
+   "servings": 8,
    "steps_en": [
     "Make the Dough: Mix flour and salt in a large bowl. Add butter, using your fingers to blend into a crumbly texture. Gradually add water, mixing until a dough forms. Wrap and chill for 30 minutes.",
     "Prepare the Filling: Cook onions in a pan until translucent. Add ground beef, cooking until browned. Stir in spices, then remove from heat. Once cooled, mix in eggs and olives.",
@@ -1237,19 +1237,19 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 570,
-   "protein": 17,
+   "kcal": 620,
+   "protein": 19,
    "ing": {
-    "makaronai": 56.8,
-    "grietinele": 30,
-    "sviestas": 24,
-    "parmezanas": 24,
-    "zalumynai": 3,
-    "pipirai": 12.5
+    "makaronai": 64.9,
+    "grietinele": 34.3,
+    "sviestas": 27.4,
+    "parmezanas": 27.4,
+    "zalumynai": 3.4,
+    "pipirai": 0.3
    },
    "other": [],
    "coverage": 100,
-   "servings": 8,
+   "servings": 7,
    "steps_en": [
     "Cook pasta according to package instructions in a large pot of boiling water and salt. Add heavy cream and butter to a large skillet over medium heat until the cream bubbles and the butter melts. Whisk in parmesan and add seasoning (salt and black pepper). Let the sauce thicken slightly and then add the pasta and toss until coated in sauce. Garnish with parsley, and it's ready."
    ],
@@ -1265,17 +1265,17 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 540,
-   "protein": 36,
+   "kcal": 650,
+   "protein": 48,
    "ing": {
-    "menke": 150,
-    "bulves": 75,
-    "pipirai": 1,
-    "cesnakai": 3.8,
-    "miltai": 6,
-    "kiausiniai": 0.8,
-    "batonas": 18.8,
-    "aliejus": 25
+    "menke": 200,
+    "bulves": 100,
+    "pipirai": 1.3,
+    "cesnakai": 5,
+    "miltai": 8,
+    "kiausiniai": 1,
+    "batonas": 25,
+    "aliejus": 26.7
    },
    "other": [
     "1 chopped green chilli",
@@ -1284,7 +1284,7 @@
     "2 pieces ginger"
    ],
    "coverage": 100,
-   "servings": 4,
+   "servings": 3,
    "steps_en": [
     "Put the fish into a lidded pan and pour over enough water to cover. Bring to a simmer and gently poach for 10 minutes over a low heat with the lid on. Drain and flake the fish.",
     "Put the fish, potato, green chilli, coriander, cumin, black pepper, garlic and ginger in a large bowl. Season, add the rice flour, mix well and break in 1 egg. Stir the mixture and divide into 15, then form into small logs. Break the remaining eggs into a bowl and whisk lightly. Put the breadcrumbs into another bowl. Dip each fofo in the beaten egg followed by the breadcrumb mixture. Chill for 20 minutes.",
@@ -1336,24 +1336,24 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 580,
-   "protein": 21,
+   "kcal": 400,
+   "protein": 27,
    "ing": {
-    "vistienos_file": 42.5,
-    "morkos": 120,
-    "bulves": 112.5,
-    "svogunai": 18.8,
-    "mocarela": 36,
-    "grietine": 3,
-    "sviestas": 12.5,
-    "cukrus": 12.5,
-    "aliejus": 12.5,
-    "druska": 12.5,
-    "pipirai": 12.5
+    "vistienos_file": 56.7,
+    "morkos": 160,
+    "bulves": 150,
+    "svogunai": 25,
+    "mocarela": 48,
+    "grietine": 4,
+    "sviestas": 0.3,
+    "cukrus": 0.3,
+    "aliejus": 0.3,
+    "druska": 0.3,
+    "pipirai": 0.3
    },
    "other": [],
    "coverage": 100,
-   "servings": 8,
+   "servings": 6,
    "steps_en": [
     "Preheat oven to 425 degrees. Wash and dry all produce. Trim, peel, and cut carrots on a diagonal into ¼-inch-thick pieces. Dice potatoes into ½-inch pieces. Halve, peel, and thinly slice onion.",
     "Toss carrots on a baking sheet with a drizzle of oil, salt, and pepper. Roast until browned and tender, 15-20 minutes.",
@@ -1486,22 +1486,22 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 690,
-   "protein": 32,
+   "kcal": 350,
+   "protein": 16,
    "ing": {
-    "bulves": 266.7,
-    "sviestas": 16.7,
-    "cesnakai": 5,
-    "kopustai": 400,
-    "zalumynai": 26.7,
-    "grietinele": 33.3,
-    "garstycios": 8,
-    "kumpis": 60,
-    "kiausiniai": 1.3
+    "bulves": 133.3,
+    "sviestas": 8.3,
+    "cesnakai": 2.5,
+    "kopustai": 200,
+    "zalumynai": 13.3,
+    "grietinele": 16.7,
+    "garstycios": 4,
+    "kumpis": 30,
+    "kiausiniai": 0.7
    },
    "other": [],
    "coverage": 100,
-   "servings": 3,
+   "servings": 6,
    "steps_en": [
     "Peel and cut the potatoes into even, medium-sized chunks. Put in a large pan filled with cold salted water, bring to the boil and cook for 10-15 mins until a knife can be inserted into the potatoes easily.",
     "Meanwhile, melt the butter in a large sauté pan over a medium heat. Add the garlic, cabbage, spring onions and some seasoning. Stir occasionally until the cabbage is wilted but still retains a little bite, then set aside.",
@@ -1520,23 +1520,23 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 610,
-   "protein": 12,
+   "kcal": 500,
+   "protein": 10,
    "ing": {
-    "bulves": 90.8,
-    "morkos": 90.8,
-    "sparagines_pupeles": 38.4,
-    "zirneliai": 38.4,
-    "zalumynai": 4.8,
-    "pienas": 144,
-    "grietinele": 48,
-    "sviestas": 38.4,
-    "druska": 0.8,
-    "pipirai": 0.8
+    "bulves": 75.7,
+    "morkos": 75.7,
+    "sparagines_pupeles": 32,
+    "zirneliai": 32,
+    "zalumynai": 4,
+    "pienas": 120,
+    "grietinele": 40,
+    "sviestas": 32,
+    "druska": 0.7,
+    "pipirai": 0.7
    },
    "other": [],
    "coverage": 100,
-   "servings": 5,
+   "servings": 6,
    "steps_en": [
     "First, cook your vegetables. Bring a large pot of salted water to boil. Par-cook carrots and potatoes for five minutes until carrots and potatoes are fork tender, then blanch the peas and beans for about a minute in the same pot. Strain vegetables and set aside.",
     "In a heavy-bottomed pot or Dutch oven, melt butter over medium heat, add vegetables, and cook to warm through.",
@@ -1554,11 +1554,11 @@
    "meals": [
     "pusryciai"
    ],
-   "kcal": 650,
+   "kcal": 640,
    "protein": 19,
    "ing": {
     "miltai": 150,
-    "cukrus": 14.4,
+    "cukrus": 12,
     "kiausiniai": 0.4,
     "pienas": 48
    },
@@ -1591,22 +1591,22 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 630,
-   "protein": 36,
+   "kcal": 400,
+   "protein": 27,
    "ing": {
-    "bulves": 300,
-    "brokoliai": 116.7,
-    "cesnakai": 3.3,
-    "vistienos_file": 113.3,
-    "medus": 33.3,
-    "sviestas": 4,
-    "aliejus": 10
+    "bulves": 225,
+    "brokoliai": 87.5,
+    "cesnakai": 2.5,
+    "vistienos_file": 85,
+    "medus": 0.5,
+    "sviestas": 3,
+    "aliejus": 7.5
    },
    "other": [
     "balsamic vinegar"
    ],
    "coverage": 100,
-   "servings": 3,
+   "servings": 4,
    "steps_en": [
     "2 Servings",
     "1. Preheat oven to 425 degrees. Wash and dry all produce. Cut potatoes into 1/2-inch-thick wedges. Toss on one side of a baking sheet with a drizzle of oil, salt, and pepper. (For 4 servings, spread potatoes out across entire sheet.) Roast on top rack for 5 minutes (we'll add the broccoli then).",
@@ -1634,8 +1634,8 @@
     "duona": 41.7,
     "suris": 41.7,
     "kiausiniai": 0.3,
-    "druska": 0.1,
-    "zalumynai": 0.1,
+    "druska": 0.3,
+    "zalumynai": 0.3,
     "bulves": 90,
     "miltai": 16.7,
     "pienas": 41.7,
@@ -1664,26 +1664,26 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 560,
-   "protein": 26,
+   "kcal": 590,
+   "protein": 47,
    "ing": {
-    "vistienos_file": 97.1,
-    "miltai": 6.9,
-    "kiausiniai": 0.1,
-    "batonas": 14.3,
-    "aliejus": 37.1,
-    "svogunai": 42.9,
-    "cesnakai": 3.6,
-    "morkos": 22.9,
-    "kario": 2.3,
-    "medus": 1.1,
-    "soju_padazas": 2.9
+    "vistienos_file": 170,
+    "miltai": 12,
+    "kiausiniai": 0.3,
+    "batonas": 25,
+    "aliejus": 20,
+    "svogunai": 75,
+    "cesnakai": 6.3,
+    "morkos": 40,
+    "kario": 3.8,
+    "medus": 2,
+    "soju_padazas": 5
    },
    "other": [
     "1 teaspoon garam masala"
    ],
    "coverage": 100,
-   "servings": 7,
+   "servings": 4,
    "steps_en": [
     "Prep:15min  ›  Cook:30min  ›  Ready in:45min",
     "For the curry sauce: Heat oil in medium non-stick saucepan, add onion and garlic and cook until softened. Stir in carrots and cook over low heat for 10 to 12 minutes.",
@@ -1705,16 +1705,16 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 600,
-   "protein": 14,
+   "kcal": 650,
+   "protein": 18,
    "ing": {
-    "aliejus": 33.3,
-    "svogunai": 50,
-    "cesnakai": 3.3,
-    "paprika_malta": 1.3,
-    "pomidorai_konserv": 133.3,
-    "pupeles": 133.3,
-    "ryziai": 33.3
+    "aliejus": 40,
+    "svogunai": 75,
+    "cesnakai": 5,
+    "paprika_malta": 2,
+    "pomidorai_konserv": 200,
+    "pupeles": 200,
+    "ryziai": 1
    },
    "other": [
     "1 part ginger",
@@ -1723,7 +1723,7 @@
     "2 tsp garam masala"
    ],
    "coverage": 100,
-   "servings": 3,
+   "servings": 2,
    "steps_en": [
     "Heat the oil in a large frying pan over a low-medium heat. Add the onion and a pinch of salt and cook slowly, stirring occasionally, until softened and just starting to colour. Add the garlic, ginger and coriander stalks and cook for a further 2 mins, until fragrant.",
     "Add the spices to the pan and cook for another 1 min, by which point everything should smell aromatic. Tip in the chopped tomatoes and kidney beans in their water, then bring to the boil.",
@@ -1741,24 +1741,24 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 520,
-   "protein": 41,
+   "kcal": 310,
+   "protein": 24,
    "ing": {
-    "jautiena": 166.7,
-    "kopustai": 400,
-    "paprika_malta": 2.7,
-    "pomidoru_padazas": 4,
-    "paprikos": 100,
-    "svogunai": 50,
-    "druska": 0.1,
-    "pipirai": 0.1,
-    "aliejus": 3.3
+    "jautiena": 100,
+    "kopustai": 240,
+    "paprika_malta": 1.6,
+    "pomidoru_padazas": 2.4,
+    "paprikos": 60,
+    "svogunai": 30,
+    "druska": 0.4,
+    "pipirai": 0.4,
+    "aliejus": 2
    },
    "other": [
     "1/4 tsp chilli flakes"
    ],
    "coverage": 100,
-   "servings": 3,
+   "servings": 5,
    "steps_en": [
     "Cooking",
     "Add some olive oil to a saute pan or saucepan (one with a lid). One heated add in the onions, diced beef, red peppers and fry for 5 minutes stirring occasionally. The meat should be fully browned.",
@@ -1834,8 +1834,8 @@
     "aliejus": 22.5,
     "garstycios": 2,
     "zalumynai": 12,
-    "pipirai": 0.2,
-    "druska": 0.2
+    "pipirai": 1,
+    "druska": 1
    },
    "other": [
     "2 tablespoons white wine vinegar"
@@ -1861,16 +1861,16 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 640,
-   "protein": 50,
+   "kcal": 580,
+   "protein": 48,
    "ing": {
     "jautiena": 200,
     "kiausiniai": 0.5,
     "batonas": 50,
     "zalumynai": 6,
     "cesnakai": 2.5,
-    "druska": 25,
-    "pipirai": 25
+    "druska": 0.5,
+    "pipirai": 0.5
    },
    "other": [],
    "coverage": 100,
@@ -1896,14 +1896,14 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 440,
-   "protein": 8,
+   "kcal": 220,
+   "protein": 4,
    "ing": {
-    "morkos": 480,
-    "svogunai": 150,
-    "cesnakai": 20,
-    "aliejus": 15,
-    "citrinos": 1
+    "morkos": 240,
+    "svogunai": 75,
+    "cesnakai": 10,
+    "aliejus": 7.5,
+    "citrinos": 0.5
    },
    "other": [
     "1 tsp cumin",
@@ -1911,7 +1911,7 @@
     "1/4 tsp garam masala"
    ],
    "coverage": 100,
-   "servings": 1,
+   "servings": 2,
    "steps_en": [
     "Preheat oven to 180° C.",
     "Combine carrots, onion, garlic, cumin seeds, coriander seeds, salt and olive oil in a bowl and mix well. Transfer on a baking tray.",
@@ -1933,22 +1933,22 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 590,
-   "protein": 8,
+   "kcal": 560,
+   "protein": 12,
    "ing": {
-    "bulves": 55.6,
-    "sonine": 11.1,
-    "majonezas": 5.3,
-    "zalumynai": 2.7,
-    "duona": 31.1,
-    "svogunai": 33.3,
-    "miltai": 21.3,
-    "aliejus": 33.3,
-    "druska": 0
+    "bulves": 83.3,
+    "sonine": 16.7,
+    "majonezas": 8,
+    "zalumynai": 4,
+    "duona": 46.7,
+    "svogunai": 50,
+    "miltai": 32,
+    "aliejus": 13.3,
+    "druska": 0.3
    },
    "other": [],
    "coverage": 100,
-   "servings": 9,
+   "servings": 6,
    "steps_en": [
     "Scrub the potatoes clean and place in a small saucepan with water and 1 tablespoon of salt. Bring to a boil and simmer the potatoes for about 10 minutes. Turn off the heat and let the potatoes stand in the water for 5 minutes. Drain the potatoes and allow to cool slightly. Remember that potatoes come in various sizes, so the cooking time may vary – if they do not easily glide off of a fork when speared and lifted out of the water, they are not done yet.",
     "Fry bacon slices and transfer to a dish lined with paper towels.",
@@ -1978,7 +1978,7 @@
     "cesnakai": 10,
     "pomidorai": 360,
     "aliejus": 10,
-    "druska": 100
+    "druska": 2
    },
    "other": [],
    "coverage": 100,
@@ -2002,19 +2002,19 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 610,
-   "protein": 69,
+   "kcal": 370,
+   "protein": 42,
    "ing": {
-    "vistienos_file": 250,
-    "cesnakai": 1.7,
-    "paprika_malta": 0.7,
-    "aliejus": 5,
-    "svogunai": 25,
-    "morkos": 26.7,
-    "burokeliai": 25,
-    "kopustai": 800,
-    "majonezas": 4,
-    "jogurtas": 4
+    "vistienos_file": 150,
+    "cesnakai": 1,
+    "paprika_malta": 0.4,
+    "aliejus": 3,
+    "svogunai": 15,
+    "morkos": 16,
+    "burokeliai": 15,
+    "kopustai": 480,
+    "majonezas": 2.4,
+    "jogurtas": 2.4
    },
    "other": [
     "3 chopped red chilli",
@@ -2026,7 +2026,7 @@
     "1 tsp cumin seeds"
    ],
    "coverage": 100,
-   "servings": 6,
+   "servings": 10,
    "steps_en": [
     "Whizz together all of the marinade ingredients in a small food processor. Rub the marinade onto the chicken and leave for 1 hour at room temperature.",
     "Heat the oven to 190C/fan 170C/gas 5. Put the chicken in a roasting tray and cook for 1 hour 20 minutes. Rest under loose foil for 20 minutes. While the chicken is resting, mix together the slaw ingredients and season. Serve the chicken with slaw, fries and condiments."
@@ -2043,21 +2043,21 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 650,
-   "protein": 17,
+   "kcal": 610,
+   "protein": 21,
    "ing": {
-    "kiauliena": 72,
-    "paprika_malta": 0.8,
-    "citrinos": 0.6,
-    "aliejus": 20.2,
-    "majonezas": 20,
-    "bulves": 200
+    "kiauliena": 90,
+    "paprika_malta": 1,
+    "citrinos": 0.8,
+    "aliejus": 20,
+    "majonezas": 0.5,
+    "bulves": 250
    },
    "other": [
     "200ml white wine"
    ],
    "coverage": 100,
-   "servings": 5,
+   "servings": 4,
    "steps_en": [
     "Cut the tenderloins into 5 equal-size pieces leaving the tail ends a little longer. Take a clear plastic bag and slip one of the pieces in. Bash it into an escalope the size of a side-plate with a rolling pin and repeat with the remaining pieces.",
     "Put the wine, paprika, some salt and pepper and the juice of ½ a lemon in a bowl and add the pork. Leave to marinate for 20-30 minutes, while you get your barbecue to the stage where the coals are glowing but there are no flames.",
@@ -2212,7 +2212,7 @@
     "garstycios": 6,
     "cesnakai": 7.5,
     "pipirai": 2,
-    "druska": 50,
+    "druska": 1,
     "vistienos_file": 85
    },
    "other": [
@@ -2238,19 +2238,19 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 580,
-   "protein": 48,
+   "kcal": 520,
+   "protein": 43,
    "ing": {
-    "sviestas": 2.7,
-    "svogunai": 33.3,
-    "vistienos_file": 166.7,
-    "bulves": 444.4,
-    "druska": 2.7,
-    "pipirai": 1.3
+    "sviestas": 2.4,
+    "svogunai": 30,
+    "vistienos_file": 150,
+    "bulves": 400,
+    "druska": 1.5,
+    "pipirai": 0.5
    },
    "other": [],
    "coverage": 100,
-   "servings": 9,
+   "servings": 10,
    "steps_en": [
     "Preheat oven to 400 degrees F (200 degrees C). Grease a 10x14x2-inch baking pan.",
     "Heat margarine in a skillet over medium heat; stir in onion. Cook and stir until onion has softened and turned translucent, about 5 minutes. Reduce heat to low and continue to cook and stir until onion is very tender and dark brown, about 40 minutes more.",
@@ -2271,15 +2271,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 620,
-   "protein": 28,
+   "kcal": 560,
+   "protein": 26,
    "ing": {
     "malta_mesa": 113.5,
     "svogunai": 37.5,
     "kiausiniai": 0.8,
     "batonas": 7.5,
-    "druska": 25,
-    "pipirai": 25,
+    "druska": 0.5,
+    "pipirai": 0.5,
     "majonezas": 25
    },
    "other": [
@@ -2308,23 +2308,23 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 820,
-   "protein": 39,
+   "kcal": 570,
+   "protein": 46,
    "ing": {
-    "svogunai": 15,
-    "cesnakai": 1,
+    "svogunai": 18.8,
+    "cesnakai": 1.3,
     "citrinos": 0.1,
-    "cukrus": 2.4,
-    "soju_padazas": 27,
-    "druska": 0.4,
-    "aliejus": 48,
-    "jautiena": 181.6
+    "cukrus": 3,
+    "soju_padazas": 7.5,
+    "druska": 0.5,
+    "aliejus": 10,
+    "jautiena": 227
    },
    "other": [
     "1 tsp ground coriander"
    ],
    "coverage": 100,
-   "servings": 10,
+   "servings": 8,
    "steps_en": [
     "To make the marinade for the satee put in the container of an electric blender:",
     "1 large onion, coarsely chopped 2 cloves of garlic",
@@ -2355,23 +2355,23 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 500,
-   "protein": 25,
+   "kcal": 330,
+   "protein": 16,
    "ing": {
-    "aliejus": 7.5,
-    "svogunai": 150,
-    "cesnakai": 2.5,
-    "pomidorai": 400,
-    "cukrus": 6,
-    "kiausiniai": 2,
-    "feta": 50
+    "aliejus": 5,
+    "svogunai": 100,
+    "cesnakai": 1.7,
+    "pomidorai": 266.7,
+    "cukrus": 4,
+    "kiausiniai": 1.3,
+    "feta": 33.3
    },
    "other": [
     "1 finely chopped red chilli",
     "Chopped coriander"
    ],
    "coverage": 100,
-   "servings": 2,
+   "servings": 3,
    "steps_en": [
     "Heat the oil in a frying pan that has a lid, then soften the onions, chilli, garlic and coriander stalks for 5 mins until soft. Stir in the tomatoes and sugar, then bubble for 8-10 mins until thick. Can be frozen for 1 month.",
     "Using the back of a large spoon, make 4 dips in the sauce, then crack an egg into each one. Put a lid on the pan, then cook over a low heat for 6-8 mins, until the eggs are done to your liking. Scatter with the coriander leaves and serve with crusty bread."
@@ -2388,21 +2388,21 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 580,
-   "protein": 8,
+   "kcal": 490,
+   "protein": 13,
    "ing": {
-    "agurkai": 50,
-    "pomidorai": 115.2,
-    "svogunai": 30,
-    "paprikos": 30,
-    "druska": 0.8,
-    "aliejus": 48,
-    "feta": 38.4,
-    "zalumynai": 4.8
+    "agurkai": 83.3,
+    "pomidorai": 192,
+    "svogunai": 50,
+    "paprikos": 50,
+    "druska": 1.3,
+    "aliejus": 26.7,
+    "feta": 64,
+    "zalumynai": 8
    },
    "other": [],
    "coverage": 100,
-   "servings": 5,
+   "servings": 3,
    "steps_en": [
     "Combine vegetables in a bowl and sprinkle salt on top. Let it stand for 5 minutes. Add the oil. Top with feta and parsley. Serve."
    ],
@@ -2461,7 +2461,7 @@
     "cesnakai": 2.8,
     "citrinos": 0.1,
     "druska": 1.7,
-    "pipirai": 1.1,
+    "pipirai": 0.6,
     "aliejus": 5.6,
     "kiauliena": 222.2
    },
@@ -2554,14 +2554,14 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 550,
-   "protein": 48,
+   "kcal": 660,
+   "protein": 57,
    "ing": {
-    "cesnakai": 1.7,
+    "cesnakai": 2,
     "citrinos": 0.2,
-    "kario": 4,
-    "aliejus": 7.5,
-    "vistienos_slauneles": 260
+    "kario": 3,
+    "aliejus": 9,
+    "vistienos_slauneles": 312
    },
    "other": [
     "Pinch chilli flakes",
@@ -2571,7 +2571,7 @@
     "Bunch thyme"
    ],
    "coverage": 100,
-   "servings": 6,
+   "servings": 5,
    "steps_en": [
     "Make the marinade. Smash the garlic with a little salt using a pestle and mortar. Add the lemon zest and juice, the spice mix, chilli, oil and a good grinding of black pepper. Mix to a paste. This can be done in a mini food processor.",
     "Toss the chicken in the marinade and set aside while you light the barbecue. When the barbecue’s hot, lay the bunches of herbs on the grid and put the chicken, skin side up, on top. Close the lid, if your barbecue has one, and cook the chicken on the smouldering herbs for about 10 minutes until the meat starts to colour. Turn the chicken and continue to cook for a further 20-30 minutes, turning as necessary, until it is slightly charred from the burnt herbs and cooked through to the bone."
@@ -2588,22 +2588,22 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 620,
-   "protein": 33,
+   "kcal": 410,
+   "protein": 22,
    "ing": {
-    "aliejus": 7.5,
-    "svogunai": 75,
-    "kario": 4,
-    "pomidorai": 150,
-    "bulves": 250,
-    "kiausiniai": 4
+    "aliejus": 5,
+    "svogunai": 50,
+    "kario": 2.7,
+    "pomidorai": 100,
+    "bulves": 166.7,
+    "kiausiniai": 2.7
    },
    "other": [
     "1 red chilli",
     "Bunch coriander"
    ],
    "coverage": 100,
-   "servings": 2,
+   "servings": 3,
    "steps_en": [
     "Heat the oil in a large frying pan. Fry the onion and half the chilli for 5 mins until softened. Tip in the spices, fry for 1 min more, then add the cherry tomatoes, potatoes and coriander stalks to the pan. Season the eggs well, pour over the top of the veg and leave to cook gently for 8-10 mins until almost set.",
     "Heat the grill and flash the tortilla underneath for 1-2 mins until the top is set. Scatter the coriander leaves and remaining chilli over the top, slice into wedges and serve with a green salad."
@@ -2621,13 +2621,13 @@
     "vakariene"
    ],
    "kcal": 600,
-   "protein": 13,
+   "protein": 14,
    "ing": {
-    "makaronai": 64.9,
-    "aliejus": 34.3,
-    "cesnakai": 2.1,
-    "pomidorai_konserv": 14.3,
-    "parmezanas": 14.3
+    "makaronai": 113.5,
+    "aliejus": 20,
+    "cesnakai": 3.8,
+    "pomidorai_konserv": 25,
+    "parmezanas": 0.5
    },
    "other": [
     "1/2 teaspoon red chilli flakes",
@@ -2635,7 +2635,7 @@
     "6 leaves basil"
    ],
    "coverage": 100,
-   "servings": 7,
+   "servings": 4,
    "steps_en": [
     "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.",
     "In a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.",
@@ -2682,14 +2682,14 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 820,
+   "kcal": 680,
    "protein": 21,
    "ing": {
     "makaronai": 160,
     "pomidoru_padazas": 96.8,
-    "aliejus": 24,
-    "druska": 0.1,
-    "pipirai": 0.1
+    "aliejus": 8,
+    "druska": 0.2,
+    "pipirai": 0.2
    },
    "other": [
     "1 teaspoon cinnamon"
@@ -2713,14 +2713,14 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 630,
+   "kcal": 600,
    "protein": 49,
    "ing": {
     "citrinos": 0.3,
-    "paprika_malta": 2,
+    "paprika_malta": 1.9,
     "svogunai": 37.5,
     "vistienos_slauneles": 260,
-    "aliejus": 12.5,
+    "aliejus": 10,
     "jogurtas": 30,
     "cesnakai": 2.5
    },
@@ -2785,25 +2785,25 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 580,
-   "protein": 16,
+   "kcal": 640,
+   "protein": 22,
    "ing": {
-    "duona": 40,
-    "pienas": 40,
-    "kumpis": 20,
-    "kiausiniai": 0.6,
-    "svogunai": 60,
-    "sviestas": 40,
-    "zalumynai": 6.8,
-    "miltai": 4.8,
-    "druska": 20,
-    "pipirai": 20
+    "duona": 66.7,
+    "pienas": 66.7,
+    "kumpis": 33.3,
+    "kiausiniai": 1,
+    "svogunai": 100,
+    "sviestas": 34,
+    "zalumynai": 8.7,
+    "miltai": 8,
+    "druska": 0.7,
+    "pipirai": 0.7
    },
    "other": [
     "Pinch nutmeg"
    ],
    "coverage": 100,
-   "servings": 5,
+   "servings": 3,
    "steps_en": [
     "Finely chop the shallots, and dice the smoked ham or sausage into small cubes. Heat some butter or clarified butter in a pan and sweat the onions in it until translucent. Add the meat and the parsley and fry together briefly before removing from the heat.",
     "Place the bread in a bowl. Beat the milk with the eggs and season well with salt, pepper and nutmeg. Pour over the bread. Stir in the sausage and onion paste and mix in the flour. Mix together to form a relatively firm paste (adding more bread or flour if necessary) and season again according to taste. Smooth the surface of the dough out and leave to stand for approx. 30 minutes.",
@@ -2856,13 +2856,13 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 610,
+   "kcal": 560,
    "protein": 28,
    "ing": {
     "suris": 37.5,
     "kumpis": 50,
     "kiausiniai": 0.8,
-    "aliejus": 25,
+    "aliejus": 20,
     "pienas": 60,
     "miltai": 30,
     "druska": 1
@@ -2931,20 +2931,20 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 620,
-   "protein": 24,
+   "kcal": 250,
+   "protein": 10,
    "ing": {
-    "kopustai": 600,
-    "bulves": 180,
-    "sonine": 50,
-    "cesnakai": 5,
-    "zalumynai": 6,
-    "druska": 50,
-    "pipirai": 50
+    "kopustai": 300,
+    "bulves": 90,
+    "sonine": 25,
+    "cesnakai": 2.5,
+    "zalumynai": 3,
+    "druska": 0.5,
+    "pipirai": 0.5
    },
    "other": [],
    "coverage": 100,
-   "servings": 2,
+   "servings": 4,
    "steps_en": [
     "Bring salted water to boil in a large pot.",
     "Add in the cabbage and potatoes, cook until tender about 30-40 minutes",
@@ -3014,8 +3014,8 @@
     "batonas": 12,
     "garstycios": 9,
     "zalumynai": 3,
-    "druska": 0.1,
-    "pipirai": 0.1,
+    "druska": 0.5,
+    "pipirai": 0.5,
     "aliejus": 2.5,
     "sviestas": 3,
     "cukrus": 3
@@ -3064,7 +3064,7 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 640,
+   "kcal": 610,
    "protein": 24,
    "ing": {
     "malta_mesa": 83.3,
@@ -3079,7 +3079,7 @@
     "zalumynai": 2,
     "miltai": 32,
     "batonas": 32,
-    "aliejus": 16.7
+    "aliejus": 13.3
    },
    "other": [
     "1 teaspoon marjoram"
@@ -3165,15 +3165,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 600,
-   "protein": 40,
+   "kcal": 540,
+   "protein": 37,
    "ing": {
     "kiausiniai": 0.5,
     "svogunai": 75,
     "cesnakai": 2.5,
-    "druska": 26,
+    "druska": 1.5,
     "paprika_malta": 1,
-    "pipirai": 25,
+    "pipirai": 0.5,
     "malta_mesa": 113.5,
     "vistienos_file": 42.5,
     "kukuruzai": 75,
@@ -3393,28 +3393,28 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 590,
-   "protein": 16,
+   "kcal": 610,
+   "protein": 23,
    "ing": {
-    "bulves": 120,
-    "sviestas": 3,
-    "druska": 25,
-    "kiausiniai": 0.3,
-    "aliejus": 30,
-    "svogunai": 18.8,
-    "cesnakai": 0.6,
-    "pomidorai": 30,
-    "pomidoru_padazas": 1.5,
-    "malta_mesa": 56.8,
-    "zalumynai": 0.5,
-    "pipirai": 12.5
+    "bulves": 192,
+    "sviestas": 4.8,
+    "druska": 0.8,
+    "kiausiniai": 0.4,
+    "aliejus": 16,
+    "svogunai": 30,
+    "cesnakai": 1,
+    "pomidorai": 48,
+    "pomidoru_padazas": 2.4,
+    "malta_mesa": 90.8,
+    "zalumynai": 0.8,
+    "pipirai": 0.4
    },
    "other": [
     "2 tablespoons panquehue cheese",
     "1 pinch cayenne pepper"
    ],
    "coverage": 90,
-   "servings": 8,
+   "servings": 5,
    "steps_en": [
     "Place potatoes into a large pot and cover with salted water; bring to a boil. Reduce the heat to medium-low and simmer until tender, about 20 minutes.",
     "While the potatoes are cooking, heat oil in a large skillet over medium heat. Add onion; cook and stir until translucent, about 5 minutes, adding garlic for the last minute. Stir in diced tomatoes and tomato paste; cook until tomatoes soften and begin to lose their shape, 3 to 5 minutes.",
@@ -3479,17 +3479,17 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 620,
-   "protein": 37,
+   "kcal": 410,
+   "protein": 25,
    "ing": {
-    "svogunai": 75,
-    "cesnakai": 7.5,
-    "paprika_malta": 2,
-    "morkos": 120,
-    "paprikos": 150,
-    "pomidorai": 1,
-    "cukinija": 250,
-    "lesiai": 125
+    "svogunai": 50,
+    "cesnakai": 5,
+    "paprika_malta": 1.3,
+    "morkos": 80,
+    "paprikos": 100,
+    "pomidorai": 0.7,
+    "cukinija": 166.7,
+    "lesiai": 83.3
    },
    "other": [
     "1 rapeseed oil",
@@ -3499,7 +3499,7 @@
     "2 sprigs thyme"
    ],
    "coverage": 90,
-   "servings": 2,
+   "servings": 3,
    "steps_en": [
     "Heat the oil in a large, heavy-based pan. Add the onions and cook gently for 5 – 10 mins until softened.",
     "Add the garlic, spices, dried thyme, carrots, celery and peppers and cook for 5 minutes.",
@@ -3529,8 +3529,8 @@
     "grietinele": 180,
     "sviestas": 6,
     "kiausiniai": 0.5,
-    "pipirai": 0.2,
-    "druska": 0.2
+    "pipirai": 1,
+    "druska": 1
    },
    "other": [
     "2 leek",
@@ -3597,20 +3597,20 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 900,
+   "kcal": 580,
    "protein": 16,
    "ing": {
-    "jautiena": 45.4,
-    "svogunai": 15,
-    "pomidorai": 24,
-    "cesnakai": 2,
-    "pomidoru_padazas": 1.2,
-    "ryziai": 38.4,
-    "makaronai": 19.2,
-    "sviestas": 19.2,
-    "aliejus": 48,
-    "druska": 10,
-    "pipirai": 10
+    "jautiena": 50.4,
+    "svogunai": 16.7,
+    "pomidorai": 26.7,
+    "cesnakai": 2.2,
+    "pomidoru_padazas": 1.3,
+    "ryziai": 42.7,
+    "makaronai": 21.3,
+    "sviestas": 21.3,
+    "aliejus": 8.9,
+    "druska": 0.2,
+    "pipirai": 0.2
    },
    "other": [
     "1 pita bread",
@@ -3618,7 +3618,7 @@
     "3 tbs white wine vinegar"
    ],
    "coverage": 89,
-   "servings": 10,
+   "servings": 9,
    "steps_en": [
     "To prepare bread for bottom of dish: Take pita bread and rip into bite size pieces. In a frying pan, add about a 1/4 stick of butter, add bread pieces and fry until golden brown and crisp. Put these pieces in a glass baking dish, preferably a square sized dish. Set aside.",
     "Then add to same pan, a little more butter, salt, approximately 2 cloves of crushed fresh garlic, and a teaspoon or so of cumin stir around a bit until you can smell aroma, then add fried bread pieces to this mixture, stir to coat bread and put back into glass baking dish. Set aside.",
@@ -3735,25 +3735,25 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 610,
-   "protein": 21,
+   "kcal": 350,
+   "protein": 10,
    "ing": {
-    "bulves": 300,
-    "morkos": 320,
-    "cesnakai": 3.3,
-    "duona": 11.7,
-    "soju_padazas": 66.7,
-    "malta_mesa": 33.3,
-    "aliejus": 1.7,
-    "cukrus": 2.7,
-    "sviestas": 8
+    "bulves": 180,
+    "morkos": 192,
+    "cesnakai": 2,
+    "duona": 7,
+    "soju_padazas": 12,
+    "malta_mesa": 20,
+    "aliejus": 1,
+    "cukrus": 1.6,
+    "sviestas": 4.8
    },
    "other": [
     "1 scallions",
     "1 garlic powder"
    ],
    "coverage": 89,
-   "servings": 3,
+   "servings": 5,
    "steps_en": [
     "1. Preheat oven to 425 degrees. Wash and dry all produce. Dice potatoes into 1/2-inch pieces. Trim, peel, and cut carrots on a diagonal into 1/2-inch-thick pieces. Trim and thinly slice scallions, separating whites from greens; finely chop whites. Peel and finely chop garlic.",
     "2. In a medium bowl, soak bread with 2 TBSP water (4 TBSP for 4 servings); break up with your hands until pasty. Stir in beef, sriracha, scallion whites, half the garlic, salt (we used 3/4 tsp kosher salt; 11/2 tsp for 4), and pepper. Form into two 1-inch-tall loaves (four loaves for 4). Place on one side of a baking sheet. Toss carrots on empty side of same sheet with a drizzle of oil, salt, and pepper. (For 4, spread meatloaves out across whole sheet and add carrots to a second sheet.) Bake for 20 minutes (we'll glaze the meatloaves then).",
@@ -3854,19 +3854,19 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 540,
-   "protein": 38,
+   "kcal": 600,
+   "protein": 44,
    "ing": {
-    "vistienos_slauneles": 181.6,
-    "kario": 6,
-    "svogunai": 30,
-    "zalumynai": 6,
-    "paprikos": 30,
-    "cesnakai": 4,
-    "aliejus": 9,
-    "bulves": 46.8,
-    "druska": 20,
-    "pipirai": 20
+    "vistienos_slauneles": 227,
+    "kario": 3.8,
+    "svogunai": 37.5,
+    "zalumynai": 7.5,
+    "paprikos": 37.5,
+    "cesnakai": 5,
+    "aliejus": 11.3,
+    "bulves": 58.5,
+    "druska": 0.5,
+    "pipirai": 0.5
    },
    "other": [
     "1 tsp all-purpose seasoning",
@@ -3874,7 +3874,7 @@
     "3 sprigs thyme"
    ],
    "coverage": 88,
-   "servings": 5,
+   "servings": 4,
    "steps_en": [
     "Equipment",
     "Dutch Oven",
@@ -3898,12 +3898,12 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 690,
-   "protein": 50,
+   "kcal": 530,
+   "protein": 44,
    "ing": {
     "jautiena": 200,
-    "druska": 36,
-    "pipirai": 72,
+    "druska": 15,
+    "pipirai": 5,
     "cukrus": 12,
     "paprika_malta": 12,
     "cesnakai": 12,
@@ -3980,7 +3980,7 @@
     "cesnakai": 5,
     "pomidoru_padazas": 6,
     "paprika_malta": 4,
-    "cukrus": 0.2,
+    "cukrus": 1,
     "zalumynai": 5,
     "bulves": 450
    },
@@ -4006,18 +4006,18 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 630,
-   "protein": 28,
+   "kcal": 560,
+   "protein": 25,
    "ing": {
     "bulves": 192,
     "sviestas": 12,
     "pienas": 30,
     "malta_mesa": 112.5,
     "svogunai": 37.5,
-    "paprika_malta": 25,
-    "zalumynai": 2.5,
-    "druska": 0.2,
-    "pipirai": 0.2
+    "paprika_malta": 0.5,
+    "zalumynai": 0.5,
+    "druska": 0.5,
+    "pipirai": 0.5
    },
    "other": [
     "500ml creamed corn"
@@ -4044,23 +4044,23 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 670,
-   "protein": 16,
+   "kcal": 630,
+   "protein": 22,
    "ing": {
-    "svogunai": 37.5,
-    "aliejus": 40,
-    "sviestas": 6.3,
-    "bulves": 100,
-    "cesnakai": 7.5,
-    "kiausiniai": 2,
-    "zalumynai": 6,
-    "batonas": 7.5
+    "svogunai": 50,
+    "aliejus": 23.3,
+    "sviestas": 8.3,
+    "bulves": 133.3,
+    "cesnakai": 10,
+    "kiausiniai": 2.7,
+    "zalumynai": 8,
+    "batonas": 10
    },
    "other": [
     "4 vine tomatoes"
    ],
    "coverage": 88,
-   "servings": 4,
+   "servings": 3,
    "steps_en": [
     "Put a large non-stick frying pan on a low heat. Cook the onion slowly in the oil and butter until soft but not brown – this should take about 15 mins. Add the potatoes, cover the pan and cook for a further 15-20 mins, stirring occasionally to make sure they fry evenly.",
     "When the potatoes are soft and the onion is shiny, crush 2 garlic cloves and stir in, followed by the beaten eggs.",
@@ -4080,14 +4080,14 @@
     "vakariene"
    ],
    "kcal": 670,
-   "protein": 25,
+   "protein": 26,
    "ing": {
     "sviestas": 23.3,
     "aliejus": 10,
     "ryziai": 23.3,
     "cesnakai": 3.3,
-    "druska": 0.3,
-    "pipirai": 0.3,
+    "druska": 1.3,
+    "pipirai": 1.3,
     "miltai": 8,
     "jogurtas": 250,
     "kiausiniai": 2
@@ -4125,17 +4125,17 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 570,
-   "protein": 60,
+   "kcal": 470,
+   "protein": 50,
    "ing": {
-    "vistienos_file": 240,
-    "svogunai": 150,
-    "pomidorai": 48,
-    "cesnakai": 8,
-    "aliejus": 12,
-    "jogurtas": 38.4,
-    "grietinele": 36,
-    "druska": 20
+    "vistienos_file": 200,
+    "svogunai": 125,
+    "pomidorai": 40,
+    "cesnakai": 6.7,
+    "aliejus": 10,
+    "jogurtas": 32,
+    "grietinele": 30,
+    "druska": 0.3
    },
    "other": [
     "1 tbsp ginger paste",
@@ -4148,7 +4148,7 @@
     "1 tsp garam masala"
    ],
    "coverage": 86,
-   "servings": 5,
+   "servings": 6,
    "steps_en": [
     "Take a large pot or wok, big enough to cook all the chicken, and heat the oil in it. Once the oil is hot, add sliced onion and fry them until deep golden brown. Then take them out on a plate and set aside.",
     "To the same pot, add the chopped garlic and sauté for a minute. Then add the chopped tomatoes and cook until tomatoes turn soft. This would take about 5 minutes.",
@@ -4172,23 +4172,23 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 570,
-   "protein": 18,
+   "kcal": 660,
+   "protein": 36,
    "ing": {
-    "vistienos_file": 75,
-    "cesnakai": 0.8,
-    "soju_padazas": 5,
-    "cukrus": 1.3,
-    "krakmolas": 32,
-    "aliejus": 40,
-    "citrinos": 0.2
+    "vistienos_file": 150,
+    "cesnakai": 1.7,
+    "soju_padazas": 10,
+    "cukrus": 2.7,
+    "krakmolas": 64,
+    "aliejus": 26.7,
+    "citrinos": 0.3
    },
    "other": [
     "1 tablespoon ginger",
     "1 tablespoon sake"
    ],
    "coverage": 86,
-   "servings": 6,
+   "servings": 3,
    "steps_en": [
     "Add the ginger, garlic, soy sauce, sake and sugar to a bowl and whisk to combine. Add the chicken, then stir to coat evenly. Cover and refrigerate for at least 1 hour.",
     "Add 1 inch of vegetable oil to a heavy bottomed pot and heat until the oil reaches 360 degrees F. Line a wire rack with 2 sheets of paper towels and get your tongs out. Put the potato starch in a bowl",
@@ -4279,16 +4279,16 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 540,
-   "protein": 19,
+   "kcal": 360,
+   "protein": 13,
    "ing": {
-    "pupeles": 200,
-    "aliejus": 22.5,
-    "svogunai": 75,
-    "cesnakai": 5,
-    "pomidoru_padazas": 12,
-    "pomidorai": 400,
-    "cukrus": 6
+    "pupeles": 133.3,
+    "aliejus": 15,
+    "svogunai": 50,
+    "cesnakai": 3.3,
+    "pomidoru_padazas": 8,
+    "pomidorai": 266.7,
+    "cukrus": 4
    },
    "other": [
     "1 tbs dried oregano",
@@ -4296,7 +4296,7 @@
     "2 tbs chopped parsley"
    ],
    "coverage": 86,
-   "servings": 2,
+   "servings": 3,
    "steps_en": [
     "Soak the beans overnight in plenty of water. Drain, rinse, then place in a pan covered with water. Bring to the boil, reduce the heat, then simmer for approx 50 mins until slightly tender but not soft. Drain, then set aside.",
     "Heat oven to 180C/160C fan/gas 4. Heat the olive oil in a large frying pan, tip in the onion and garlic, then cook over a medium heat for 10 mins until softened but not browned. Add the tomato purée, cook for a further min, add remaining ingredients, then simmer for 2-3 mins. Season generously, then stir in the beans. Tip into a large ovenproof dish, then bake for approximately 1 hr, uncovered and without stirring, until the beans are tender. The beans will absorb all the fabulous flavours and the sauce will thicken. Allow to cool, then scatter with parsley and drizzle with a little more olive oil to serve."
@@ -4313,22 +4313,22 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 570,
-   "protein": 36,
+   "kcal": 480,
+   "protein": 31,
    "ing": {
-    "jautiena": 113.5,
-    "zirniai_skaldyti": 24,
-    "kopustai": 150,
-    "morkos": 60,
-    "bulves": 180,
-    "sviestas": 4.5,
-    "pipirai": 12.5
+    "jautiena": 100.9,
+    "zirniai_skaldyti": 21.3,
+    "kopustai": 133.3,
+    "morkos": 53.3,
+    "bulves": 160,
+    "sviestas": 4,
+    "pipirai": 0.2
    },
    "other": [
     "1 large turnips"
    ],
    "coverage": 86,
-   "servings": 8,
+   "servings": 9,
    "steps_en": [
     "The night before, break salt beef into big chunks and soak in water overnight, at least 8-10 hours. Put split peas into a bowl and cover with water to soak overnight.",
     "Drain the salt beef and place it into a large stockpot. Cover with fresh water, at least 6-7 litres. Place the split peas into a pease pudding canvas bag or triple layer of cheesecloth and tie, making sure to leave room for peas to expand inside the bag.",
@@ -4458,16 +4458,16 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 570,
-   "protein": 12,
+   "kcal": 230,
+   "protein": 5,
    "ing": {
-    "cukinija": 500,
-    "paprikos": 150,
-    "pomidorai": 312,
-    "aliejus": 37.5,
-    "svogunai": 75,
-    "cesnakai": 7.5,
-    "cukrus": 2
+    "cukinija": 200,
+    "paprikos": 60,
+    "pomidorai": 124.8,
+    "aliejus": 15,
+    "svogunai": 30,
+    "cesnakai": 3,
+    "cukrus": 0.8
    },
    "other": [
     "2 large aubergine",
@@ -4475,7 +4475,7 @@
     "1 tsp red wine vinegar"
    ],
    "coverage": 86,
-   "servings": 2,
+   "servings": 5,
    "steps_en": [
     "Cut the aubergines in half lengthways. Place them on the board, cut side down, slice in half lengthways again and then across into 1.5cm chunks. Cut off the courgettes ends, then across into 1.5cm slices. Peel the peppers from stalk to bottom. Hold upright, cut around the stalk, then cut into 3 pieces. Cut away any membrane, then chop into bite-size chunks.",
     "Score a small cross on the base of each tomato, then put them into a heatproof bowl. Pour boiling water over the tomatoes, leave for 20 secs, then remove. Pour the water away, replace the tomatoes and cover with cold water. Leave to cool, then peel the skin away. Quarter the tomatoes, scrape away the seeds with a spoon, then roughly chop the flesh.",
@@ -4494,16 +4494,16 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 530,
-   "protein": 40,
+   "kcal": 270,
+   "protein": 20,
    "ing": {
-    "vistienos_slauneles": 173.3,
-    "svogunai": 130,
-    "morkos": 133.3,
-    "kopustai": 400,
-    "zalumynai": 26.7,
-    "pipirai": 1.3,
-    "druska": 4
+    "vistienos_slauneles": 86.7,
+    "svogunai": 65,
+    "morkos": 66.7,
+    "kopustai": 200,
+    "zalumynai": 13.3,
+    "pipirai": 0.7,
+    "druska": 2
    },
    "other": [
     "1 chopped leek",
@@ -4512,7 +4512,7 @@
     "1tsp allspice"
    ],
    "coverage": 86,
-   "servings": 3,
+   "servings": 6,
    "steps_en": [
     "Add chicken to a large Dutch oven or stock pot",
     "Cover with water",
@@ -4578,11 +4578,11 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 650,
+   "kcal": 660,
    "protein": 21,
    "ing": {
     "zalumynai": 5,
-    "aliejus": 0.5,
+    "aliejus": 1,
     "cesnakai": 2.5,
     "feta": 37.5,
     "sviestas": 7.5,
@@ -4614,15 +4614,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 610,
-   "protein": 8,
+   "kcal": 460,
+   "protein": 6,
    "ing": {
-    "majonezas": 66.7,
+    "majonezas": 50,
     "citrinos": 0.3,
-    "garstycios": 8,
-    "kopustai": 400,
-    "morkos": 53.3,
-    "svogunai": 50
+    "garstycios": 6,
+    "kopustai": 300,
+    "morkos": 40,
+    "svogunai": 37.5
    },
    "other": [
     "2 tablespoons cider vinegar",
@@ -4631,7 +4631,7 @@
     "2 sliced celery"
    ],
    "coverage": 86,
-   "servings": 3,
+   "servings": 4,
    "steps_en": [
     "Whisk together mayonnaise, lemon zest and juice, vinegar, mustard and celery salt in a small bowl, then season generously.",
     "Add cabbage, carrots, onion and celery. Mix well and refrigerate. Can be made up to 1 day ahead."
@@ -4648,8 +4648,8 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 540,
-   "protein": 11,
+   "kcal": 190,
+   "protein": 5,
    "ing": {
     "aliejus": 10,
     "cesnakai": 10,
@@ -4657,7 +4657,7 @@
     "cukrus": 8,
     "sparagines_pupeles": 100,
     "zalumynai": 40,
-    "ryziai": 100
+    "ryziai": 2
    },
    "other": [
     "4cm finely chopped ginger",
@@ -4681,19 +4681,19 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 640,
-   "protein": 40,
+   "kcal": 400,
+   "protein": 25,
    "ing": {
-    "bulves": 300,
-    "sviestas": 12,
-    "grietinele": 15,
-    "kiausiniai": 0.4,
-    "svogunai": 210,
-    "morkos": 48,
-    "cesnakai": 1,
-    "pomidoru_padazas": 20,
-    "vistienos_file": 120,
-    "zalumynai": 4.8
+    "bulves": 187.5,
+    "sviestas": 7.5,
+    "grietinele": 9.4,
+    "kiausiniai": 0.3,
+    "svogunai": 131.3,
+    "morkos": 30,
+    "cesnakai": 0.6,
+    "pomidoru_padazas": 12.5,
+    "vistienos_file": 75,
+    "zalumynai": 3
    },
    "other": [
     "2 sticks celery",
@@ -4703,7 +4703,7 @@
     "50g gruyere cheese"
    ],
    "coverage": 85,
-   "servings": 5,
+   "servings": 8,
    "steps_en": [
     "For the topping, boil the potatoes in salted water until tender. Drain and push through a potato ricer, or mash thoroughly. Stir in the butter, cream and egg yolks. Season and set aside.",
     "For the filling, melt the butter in a large pan. Add the shallots, carrots and celery and gently fry until soft, then add the garlic. Pour in the wine and cook for 1 minute. Stir in the tomato purée, chopped tomatoes and stock and cook for 10–15 minutes, until thickened. Add the shredded chicken, olives and parsley. Season to taste with salt and pepper.",
@@ -4722,19 +4722,19 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 650,
-   "protein": 15,
+   "kcal": 320,
+   "protein": 8,
    "ing": {
-    "morkos": 34.7,
-    "svogunai": 50,
-    "cesnakai": 5,
-    "paprikos": 50,
-    "burokeliai": 100,
-    "bulves": 180,
-    "pomidoru_padazas": 12,
-    "kopustai": 400,
-    "zalumynai": 16,
-    "grietine": 100
+    "morkos": 17.3,
+    "svogunai": 25,
+    "cesnakai": 2.5,
+    "paprikos": 25,
+    "burokeliai": 50,
+    "bulves": 90,
+    "pomidoru_padazas": 6,
+    "kopustai": 200,
+    "zalumynai": 8,
+    "grietine": 50
    },
    "other": [
     "1kg pork back ribs",
@@ -4742,7 +4742,7 @@
     "2 chopped red chilli"
    ],
    "coverage": 85,
-   "servings": 3,
+   "servings": 6,
    "steps_en": [
     "Cut the meat into large pieces, put in your largest saucepan and cover with 5 litres water. Bring to the boil over a high heat, skimming away any foam that rises to the surface. Add the bay leaves. Season. Turn the heat down to a simmer and cook for 1 hr, or until the meat is soft and falls off the bone. Add the beans if using dried.",
     "Turn the heat up. Bring back to the boil, then reduce the heat and simmer for another 20 mins – the beans should still be slightly raw. Add the carrots, onions, garlic and pepper. Stir well, then add the chillies, if using. Cook for 15 mins more.",
@@ -4765,7 +4765,7 @@
    "ing": {
     "bulves": 142.9,
     "sviestas": 25,
-    "pienas": 81.3,
+    "pienas": 81.4,
     "suris": 7.1,
     "miltai": 10.7,
     "zalumynai": 3.4,
@@ -4872,15 +4872,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 540,
-   "protein": 57,
+   "kcal": 400,
+   "protein": 43,
    "ing": {
-    "aliejus": 10,
-    "svogunai": 100,
-    "pomidorai": 80,
-    "kario": 1.3,
-    "vistienos_file": 226.7,
-    "bulves": 156
+    "aliejus": 7.5,
+    "svogunai": 75,
+    "pomidorai": 60,
+    "kario": 1,
+    "vistienos_file": 170,
+    "bulves": 117
    },
    "other": [
     "1 tablespoon ginger garlic paste",
@@ -4891,7 +4891,7 @@
     "1/2 cup cilantro"
    ],
    "coverage": 83,
-   "servings": 3,
+   "servings": 4,
    "steps_en": [
     "Heat the olive oil in a large skillet over medium-high heat. Cook and stir the onions in the hot oil until translucent, about 5 minutes. Add the ginger-garlic paste and continue cooking another 5 minutes. Reduce heat to medium; stir the tomatoes into the mixture and cook until the tomatoes are pulpy, 5 to 10 minutes. Season with the cayenne pepper, curry powder, garam masala, turmeric, and cumin; cook and stir another 5 minutes.",
     "Add the chicken and potatoes to the mixture in the skillet; simmer, stirring occasionally, until the potatoes are tender and the chicken is no longer pink in the center, about 20 minutes. Sprinkle the cilantro over the mixture and continue simmering another 10 minutes. Serve hot."
@@ -4908,24 +4908,24 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 610,
-   "protein": 33,
+   "kcal": 640,
+   "protein": 36,
    "ing": {
-    "jautiena": 113.5,
-    "miltai": 24,
-    "batonas": 48,
+    "jautiena": 129.7,
+    "miltai": 27.4,
+    "batonas": 54.9,
     "kiausiniai": 0.4,
-    "druska": 12.5,
-    "pipirai": 12.5,
-    "zalumynai": 3,
-    "aliejus": 12.5
+    "druska": 0.3,
+    "pipirai": 0.3,
+    "zalumynai": 3.4,
+    "aliejus": 11.4
    },
    "other": [
     "1 cup alinos sauce",
     "1 tsp ground cumin"
    ],
    "coverage": 83,
-   "servings": 8,
+   "servings": 7,
    "steps_en": [
     "Place each piece of steak in between two large pieces of plastic and using a mallet, pound it until it is about ¼″ to ½″ thick. Place the pounded steak in a glass container, add the aliños sauce and let it rest for about 3 hours or overnight in the fridge.",
     "Add the flour, bread crumbs, spices and parsley to a plate or bowl.",
@@ -4953,7 +4953,7 @@
     "kiausiniai": 0.3,
     "druska": 1.3,
     "sonine": 66.7,
-    "zalumynai": 3.3
+    "zalumynai": 0.7
    },
    "other": [
     "250g bryndza cheese"
@@ -4983,16 +4983,16 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 840,
-   "protein": 21,
+   "kcal": 850,
+   "protein": 22,
    "ing": {
     "morkos": 400,
     "cesnakai": 20,
     "miltai": 12,
     "batonas": 192,
-    "zalumynai": 0.4,
-    "druska": 0.4,
-    "pipirai": 0.4,
+    "zalumynai": 2,
+    "druska": 2,
+    "pipirai": 2,
     "aliejus": 10
    },
    "other": [
@@ -5020,21 +5020,21 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 760,
-   "protein": 40,
+   "kcal": 380,
+   "protein": 20,
    "ing": {
-    "bulves": 500,
-    "kiausiniai": 4,
-    "sparagines_pupeles": 225,
-    "cesnakai": 5,
-    "zalumynai": 24
+    "bulves": 250,
+    "kiausiniai": 2,
+    "sparagines_pupeles": 112.5,
+    "cesnakai": 2.5,
+    "zalumynai": 12
    },
    "other": [
     "225g chorizo",
     "2 tbsp sherry vinegar"
    ],
    "coverage": 83,
-   "servings": 1,
+   "servings": 2,
    "steps_en": [
     "Cook the potatoes in a large pan of boiling salted water for 12 mins, adding the eggs after 6 mins, and the beans for the final 2 mins. Drain everything and cool the eggs under cold running water.",
     "Meanwhile fry chorizo slices for 1-2 mins, until beginning to crisp. Remove from the pan with a slotted spoon and set aside, leaving the oil from the chorizo in the pan. Add the garlic to the pan and cook gently for 1 min.",
@@ -5052,8 +5052,8 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 640,
-   "protein": 36,
+   "kcal": 580,
+   "protein": 34,
    "ing": {
     "kiauliena": 180,
     "aliejus": 7.5,
@@ -5061,8 +5061,8 @@
     "garstycios": 25,
     "pomidorai": 90,
     "svogunai": 75,
-    "druska": 25,
-    "pipirai": 25
+    "druska": 0.5,
+    "pipirai": 0.5
    },
    "other": [
     "1 tablespoon ground cumin",
@@ -5088,22 +5088,22 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 650,
-   "protein": 32,
+   "kcal": 730,
+   "protein": 39,
    "ing": {
-    "kiausiniai": 4,
-    "majonezas": 28,
-    "garstycios": 1.3,
-    "pipirai": 66.7,
-    "druska": 33.3,
-    "paprika_malta": 0.1,
-    "zalumynai": 3.3
+    "kiausiniai": 6,
+    "majonezas": 42,
+    "garstycios": 2,
+    "pipirai": 2,
+    "druska": 1,
+    "paprika_malta": 1,
+    "zalumynai": 1
    },
    "other": [
     "Topping codfish bulljaw"
    ],
    "coverage": 83,
-   "servings": 3,
+   "servings": 2,
    "steps_en": [
     "Bring eggs to a boil for 15 minutes. Let eggs sit in the water for another 5. Run under cold water",
     "let eggs further cool",
@@ -5129,19 +5129,19 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 870,
-   "protein": 20,
+   "kcal": 290,
+   "protein": 6,
    "ing": {
-    "aliejus": 22.5,
-    "sonine": 3,
-    "svogunai": 1260,
-    "vistienos_slauneles": 6,
-    "vistienos_file": 2,
-    "cesnakai": 15,
-    "pomidoru_padazas": 8,
-    "zalumynai": 10,
-    "miltai": 24,
-    "sviestas": 4
+    "aliejus": 7.5,
+    "sonine": 1,
+    "svogunai": 420,
+    "vistienos_slauneles": 2,
+    "vistienos_file": 0.7,
+    "cesnakai": 5,
+    "pomidoru_padazas": 2.7,
+    "zalumynai": 0.7,
+    "miltai": 8,
+    "sviestas": 1.3
    },
    "other": [
     "3 tbsp brandy",
@@ -5151,7 +5151,7 @@
     "250g chestnut mushroom"
    ],
    "coverage": 83,
-   "servings": 1,
+   "servings": 3,
    "steps_en": [
     "Heat 1 tbsp of the oil in a large, heavy-based saucepan or flameproof dish. Tip in the bacon and fry until crisp. Remove and drain on kitchen paper. Add the shallots to the pan and fry, stirring or shaking the pan often, for 5-8 mins until well browned all over. Remove and set aside with the bacon.",
     "Pat the chicken pieces dry with kitchen paper. Pour the remaining oil into the pan, then fry half the chicken pieces, turning regularly, for 5-8 mins until well browned. Remove, then repeat with the remaining chicken. Remove and set aside.",
@@ -5248,11 +5248,11 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 620,
+   "kcal": 570,
    "protein": 19,
    "ing": {
     "makaronai": 75,
-    "aliejus": 25,
+    "aliejus": 20,
     "svogunai": 37.5,
     "cesnakai": 2.5,
     "pomidoru_padazas": 25,
@@ -5315,23 +5315,23 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 530,
-   "protein": 16,
+   "kcal": 420,
+   "protein": 13,
    "ing": {
-    "bulves": 375,
-    "svogunai": 75,
-    "sviestas": 9,
-    "desreles": 30,
-    "pienas": 125,
-    "druska": 0.1,
-    "pipirai": 0.1
+    "bulves": 300,
+    "svogunai": 60,
+    "sviestas": 7.2,
+    "desreles": 24,
+    "pienas": 100,
+    "druska": 0.4,
+    "pipirai": 0.4
    },
    "other": [
     "750g kale",
     "Grated nutmeg"
    ],
    "coverage": 83,
-   "servings": 4,
+   "servings": 5,
    "steps_en": [
     "Wash and peel the potatoes and cut into similarly sized pieces for even cooking.",
     "In a large soup pot, boil the potatoes and the bay leaves in salted water for 20 minutes. Discard the bay leaves.",
@@ -5435,7 +5435,7 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 470,
+   "kcal": 480,
    "protein": 10,
    "ing": {
     "paprikos": 225,
@@ -5443,8 +5443,8 @@
     "cesnakai": 2.5,
     "paprika_malta": 2,
     "zalumynai": 2,
-    "druska": 0.2,
-    "pipirai": 0.2,
+    "druska": 1,
+    "pipirai": 1,
     "aliejus": 5
    },
    "other": [
@@ -5513,17 +5513,17 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 550,
-   "protein": 17,
+   "kcal": 680,
+   "protein": 43,
    "ing": {
-    "vistienos_file": 68,
-    "svogunai": 60,
-    "cesnakai": 1,
-    "pipirai": 0.1,
-    "druska": 0.1,
-    "cukrus": 2.4,
-    "pomidorai": 72,
-    "aliejus": 48
+    "vistienos_file": 170,
+    "svogunai": 150,
+    "cesnakai": 2.5,
+    "pipirai": 1,
+    "druska": 1,
+    "cukrus": 6,
+    "pomidorai": 180,
+    "aliejus": 40
    },
    "other": [
     "Pinch turmeric",
@@ -5532,7 +5532,7 @@
     "1 Can coconut milk"
    ],
    "coverage": 83,
-   "servings": 5,
+   "servings": 2,
    "steps_en": [
     "Cut the chicken up into bite size pieces. Peel and cut the onions, mince the garlic.",
     "Assemble the rest of the ingredients and you are ready to start cooking.",
@@ -5555,15 +5555,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 530,
-   "protein": 21,
+   "kcal": 650,
+   "protein": 28,
    "ing": {
-    "kiauliena": 113.5,
-    "cesnakai": 3.8,
-    "soju_padazas": 3.8,
-    "morkos": 60,
-    "zalumynai": 15,
-    "aliejus": 25
+    "kiauliena": 151.3,
+    "cesnakai": 5,
+    "soju_padazas": 5,
+    "morkos": 80,
+    "zalumynai": 20,
+    "aliejus": 26.7
    },
    "other": [
     "1 tsp ginger",
@@ -5572,7 +5572,7 @@
     "1 Packet wonton skin"
    ],
    "coverage": 83,
-   "servings": 4,
+   "servings": 3,
    "steps_en": [
     "Combine pork, garlic, ginger, soy sauce, sesame oil, and vegetables in a bowl.",
     "Separate wonton skins.",
@@ -5595,21 +5595,21 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 560,
-   "protein": 49,
+   "kcal": 590,
+   "protein": 54,
    "ing": {
-    "vistienos_file": 187.5,
-    "sviestas": 3.1,
-    "aliejus": 11.3,
-    "svogunai": 37.5,
-    "paprikos": 73.1,
-    "cesnakai": 3.8,
-    "ryziai": 37.5,
-    "pomidoru_padazas": 12.5,
+    "vistienos_file": 214.3,
+    "sviestas": 3.6,
+    "aliejus": 11.4,
+    "svogunai": 42.9,
+    "paprikos": 83.6,
+    "cesnakai": 4.3,
+    "ryziai": 42.9,
+    "pomidoru_padazas": 1.4,
     "paprika_malta": 0.3,
     "citrinos": 0.3,
-    "druska": 12.5,
-    "pipirai": 12.5
+    "druska": 0.3,
+    "pipirai": 0.3
    },
    "other": [
     "130g chorizo",
@@ -5619,7 +5619,7 @@
     "100g black olives"
    ],
    "coverage": 82,
-   "servings": 8,
+   "servings": 7,
    "steps_en": [
     "Preheat the oven to 180°C/Gas mark 4. Have the chicken joints ready to cook. Heat the butter and 3 tbsp olive oil in a flameproof casserole or large frying pan. Brown the chicken pieces in batches on both sides, seasoning them with salt and pepper as you go. Don't crowd the pan - fry the chicken in small batches, removing the pieces to kitchen paper as they are done.",
     "Add a little more olive oil to the casserole and fry the onions over a medium heat for 10 minutes, stirring frequently, until softened but not browned. Add the rest of the oil, then the peppers and cook for another 5 minutes.",
@@ -5638,7 +5638,7 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 1080,
+   "kcal": 1070,
    "protein": 80,
    "ing": {
     "pienas": 8,
@@ -5648,13 +5648,13 @@
     "druska": 1,
     "svogunai": 60,
     "jautiena": 160,
-    "cesnakai": 0.5,
+    "cesnakai": 0.2,
     "sonine": 20,
     "kumpis": 80,
     "mocarela": 100,
     "pomidorai": 48,
     "salotos": 15,
-    "garstycios": 10
+    "garstycios": 0.2
    },
    "other": [
     "1 tablespoon molasses",
@@ -5726,8 +5726,8 @@
     "kiausiniai": 0.5,
     "sparagines_pupeles": 75,
     "sviestas": 6.3,
-    "druska": 0.1,
-    "pipirai": 0.1
+    "druska": 0.5,
+    "pipirai": 0.5
    },
    "other": [
     "2 tbs rapeseed oil",
@@ -5770,9 +5770,9 @@
     "aliejus": 15,
     "sonine": 50,
     "cesnakai": 5,
-    "zalumynai": 10,
-    "druska": 0.4,
-    "pipirai": 0.4
+    "zalumynai": 2,
+    "druska": 2,
+    "pipirai": 2
    },
    "other": [
     "1 tbs maple syrup",
@@ -5834,11 +5834,11 @@
     "vakariene"
    ],
    "kcal": 290,
-   "protein": 21,
+   "protein": 22,
    "ing": {
     "druska": 4,
     "cukrus": 4,
-    "pipirai": 0.4,
+    "pipirai": 2,
     "zirneliai": 192,
     "grybai": 192,
     "zalumynai": 192
@@ -5907,13 +5907,13 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 680,
+   "kcal": 620,
    "protein": 7,
    "ing": {
     "miltai": 66.7,
     "cesnakai": 1.7,
     "majonezas": 20,
-    "aliejus": 33.3,
+    "aliejus": 26.7,
     "citrinos": 0.3
    },
    "other": [
@@ -5939,18 +5939,18 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 660,
-   "protein": 20,
+   "kcal": 170,
+   "protein": 5,
    "ing": {
-    "aliejus": 30,
-    "svogunai": 150,
-    "cesnakai": 10,
-    "pomidorai": 960,
-    "zalumynai": 10,
-    "paprika_malta": 0.4,
-    "citrinos": 1,
-    "jogurtas": 150,
-    "agurkai": 250
+    "aliejus": 7.5,
+    "svogunai": 37.5,
+    "cesnakai": 2.5,
+    "pomidorai": 240,
+    "zalumynai": 2.5,
+    "paprika_malta": 0.5,
+    "citrinos": 0.3,
+    "jogurtas": 37.5,
+    "agurkai": 62.5
    },
    "other": [
     "3 aubergine",
@@ -5959,7 +5959,7 @@
     "2 tbs chopped mint"
    ],
    "coverage": 80,
-   "servings": 1,
+   "servings": 4,
    "steps_en": [
     "Heat oven to 190C/170C fan/gas 5. Halve the aubergines lengthways and score the flesh side deeply, brush with a good layer of olive oil and put on a baking sheet. Roast for 20 mins or until the flesh is soft enough to scoop out.",
     "Fry the onion in a little oil until soft, add the garlic and cinnamon and fry for 1 min. Once the aubergines are cool enough to handle, scoop out the centres. Roughly chop the flesh and add it to the onions. Halve the tomatoes, scoop the seeds and juice into a sieve set over a bowl, then chop the flesh. Add the chopped tomatoes to the pan and cook everything for 10 mins until nice and soft. Add a little more oil if you need to. Stir in the parsley, leaving a little for scattering at the end.",
@@ -5979,15 +5979,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 760,
-   "protein": 10,
+   "kcal": 330,
+   "protein": 5,
    "ing": {
-    "svogunai": 750,
-    "aliejus": 10,
-    "cesnakai": 5,
-    "cukrus": 84,
-    "druska": 4,
-    "jogurtas": 48
+    "svogunai": 375,
+    "aliejus": 5,
+    "cesnakai": 2.5,
+    "cukrus": 30,
+    "druska": 2,
+    "jogurtas": 24
    },
    "other": [
     "1 medium squash",
@@ -5995,7 +5995,7 @@
     "1 tsp turmeric"
    ],
    "coverage": 80,
-   "servings": 1,
+   "servings": 2,
    "steps_en": [
     "Peel the squash and cut it into pieces 1cm wide. Deep fry it in oil until golden and set aside.",
     "Using the same pan and oil, deep fry the onions until golden. Remove the onions and grind with the garlic (if using garlic paste, mix it into the onions once ground).",
@@ -6049,22 +6049,22 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 590,
-   "protein": 9,
+   "kcal": 660,
+   "protein": 15,
    "ing": {
-    "ryziai": 36,
-    "makaronai": 48,
-    "avinzirniai": 12.5,
-    "svogunai": 24.4,
-    "druska": 12.5,
-    "aliejus": 30
+    "ryziai": 57.6,
+    "makaronai": 76.8,
+    "avinzirniai": 20,
+    "svogunai": 39,
+    "druska": 3,
+    "aliejus": 16
    },
    "other": [
     "1 1/2 cups brown lentils",
     "1/2 tsp coriander"
    ],
    "coverage": 80,
-   "servings": 8,
+   "servings": 5,
    "steps_en": [
     "Cook the lentils. Bring lentils and 4 cups of water to a boil in a medium pot or saucepan over high heat. Reduce the heat to low and cook until lentils are just tender (15-17 minutes). Drain from water and season with a little salt. (Note: when the lentils are ready, they should not be fully cooked. They should be only par-cooked and still have a bite to them as they need to finish cooking with the rice).",
     "Now, for the rice. Drain the rice from its soaking water. Combine the par-cooked lentils and the rice in the saucepan over medium-high heat with 1 tbsp cooking oil, salt, pepper, and coriander. Cook for 3 minutes, stirring regularly. Add warm water to cover the rice and lentil mixture by about 1 1/2 inches (you’ll probably use about 3 cups of water here). Bring to a boil; the water should reduce a bit. Now cover and cook until all the liquid has been absorbed and both the rice and lentils are well cooked through (about 20 minutes).  Keep covered and undisturbed for 5 minutes or so.",
@@ -6086,15 +6086,15 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 590,
-   "protein": 3,
+   "kcal": 460,
+   "protein": 6,
    "ing": {
-    "cesnakai": 2.5,
-    "zalumynai": 72,
-    "svogunai": 48,
-    "pipirai": 3,
-    "aliejus": 60,
-    "druska": 25
+    "cesnakai": 5,
+    "zalumynai": 144,
+    "svogunai": 96,
+    "pipirai": 2.5,
+    "aliejus": 40,
+    "druska": 1
    },
    "other": [
     "1 lamb leg",
@@ -6102,7 +6102,7 @@
     "1/4 cup mint"
    ],
    "coverage": 80,
-   "servings": 4,
+   "servings": 2,
    "steps_en": [
     "Place all of the above ingredients into your roaster pan at least two days before you want to eat.  Stir occasionally throughout the days to distribute marinade evenly. Bake at a 350-degree oven for 1 hour to 1 1/2 hours or until meat is not red when sliced.",
     "You can also make these on skewers if you wish to go through the process of spearing the meat with other veggies to grill. Freezes well."
@@ -6119,12 +6119,12 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 620,
-   "protein": 23,
+   "kcal": 600,
+   "protein": 20,
    "ing": {
     "batonas": 24,
     "vistienos_slauneles": 90.8,
-    "soju_padazas": 48,
+    "soju_padazas": 12,
     "medus": 4.8,
     "aliejus": 6,
     "morkos": 38.4,
@@ -6166,17 +6166,17 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 530,
-   "protein": 38,
+   "kcal": 300,
+   "protein": 20,
    "ing": {
-    "kiausiniai": 3.3,
-    "aliejus": 5,
-    "cukinija": 166.7,
-    "zalumynai": 26,
-    "paprikos": 200,
-    "cesnakai": 1.7,
-    "pienas": 30,
-    "parmezanas": 33.3
+    "kiausiniai": 2.5,
+    "aliejus": 3.8,
+    "cukinija": 125,
+    "zalumynai": 19.5,
+    "paprikos": 150,
+    "cesnakai": 1.3,
+    "pienas": 22.5,
+    "parmezanas": 0.5
    },
    "other": [
     "1 red chilli",
@@ -6185,7 +6185,7 @@
     "to serve rocket"
    ],
    "coverage": 80,
-   "servings": 3,
+   "servings": 4,
    "steps_en": [
     "Break the eggs into two bowls, five in each. Whisk lightly and season with salt and pepper. Heat the oil in a pan, add the courgettes and spring onions, then fry gently for about 10 mins until softened. Cool, then stir into one bowl of eggs with a little salt and pepper. Add the roasted peppers to the other bowl of eggs with the garlic, chilli, salt and pepper.",
     "Heat a little oil in a 20-23cm frying pan, preferably non-stick. Pour the eggs with courgette into a measuring jug, then pourabout one-third of the mixture into the pan, swirling it to cover the base of the pan. Cook until the egg is set and lightly browned underneath, then cover the pan with a plate and invert the omelette onto it. Slide it back into the pan to cook the other side. Repeat with the remaining mix to make two more omelettes, adding a little oil to the pan each time. Stack the omelettes onto a plate. Make three omelettes in the same way with the red pepper mixture, then stack them on a separate plate.",
@@ -6204,16 +6204,16 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 700,
-   "protein": 30,
+   "kcal": 520,
+   "protein": 22,
    "ing": {
-    "kopustai": 400,
-    "morkos": 26.7,
-    "malta_mesa": 133.3,
-    "cesnakai": 3.3,
-    "soju_padazas": 13.3,
-    "zalumynai": 16.7,
-    "aliejus": 25
+    "kopustai": 300,
+    "morkos": 20,
+    "malta_mesa": 100,
+    "cesnakai": 2.5,
+    "soju_padazas": 10,
+    "zalumynai": 12.5,
+    "aliejus": 18.8
    },
    "other": [
     "100g shiitake mushrooms",
@@ -6224,7 +6224,7 @@
     "1/2 tbs sesame seed"
    ],
    "coverage": 80,
-   "servings": 3,
+   "servings": 4,
    "steps_en": [
     "Tip the cabbage into a food processor and blitz until finely chopped. Season with ½ tsp salt, toss well and set aside for 15 mins. Tip into a clean tea towel and squeeze out as much water as you can. Tip into a bowl with the carrot, mushrooms, pork mince, garlic, ginger, soy sauce, sesame oil and spring onions. Season with black pepper. Scrunch everything together using your hands, mixing well until everything is combined.",
     "Soak the spring roll sheets for a couple of seconds in a shallow dish of warm water, then transfer to an oiled chopping board. Working with one sheet at a time, spoon 1 heaped tbsp of the filling into the middle, then fold the bottom up and over the filling. Fold down the top of the sheet, then the sides to fully encase and make a neat square. If the dumpling feels a little fragile, soak another sheet and wrap it again. Repeat with the remaining sheets and filling, transferring the dumplings to an oiled plate as you go.",
@@ -6243,20 +6243,20 @@
     "pusryciai"
    ],
    "kcal": 580,
-   "protein": 12,
+   "protein": 18,
    "ing": {
-    "miltai": 96,
-    "pienas": 80,
-    "druska": 0.7,
-    "cukrus": 16.7,
-    "sviestas": 16.7
+    "miltai": 144,
+    "pienas": 120,
+    "druska": 1,
+    "cukrus": 0.5,
+    "sviestas": 0.5
    },
    "other": [
     "2 cups full fat sour cream",
     "Sprinkling cinnamon"
    ],
    "coverage": 80,
-   "servings": 6,
+   "servings": 4,
    "steps_en": [
     "Cook the sour cream in a covered saucepan on medium heat for about 5 minutes.",
     "Turn down the heat and add half of the flour and stir well with a whisk. Once the flour is fully incorporated, let the mixture continue to cook, stirring occasionally, until fat starts to release. Use a spoon to gather as much of the fat as you can in a small bowl, saving for later. (Don't worry if you can't get any fat – in that case you can add butter later.)",
@@ -6275,14 +6275,14 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 520,
+   "kcal": 630,
    "protein": 1,
    "ing": {
-    "aliejus": 5,
-    "sviestas": 33.3,
-    "svogunai": 50,
-    "cukrus": 46.7,
-    "obuoliai": 50
+    "aliejus": 7.5,
+    "sviestas": 50,
+    "svogunai": 75,
+    "cukrus": 30,
+    "obuoliai": 75
    },
    "other": [
     "1/2 red cabbage",
@@ -6292,7 +6292,7 @@
     "8 kabanos sausages"
    ],
    "coverage": 80,
-   "servings": 3,
+   "servings": 2,
    "steps_en": [
     "Halve the cabbage, remove the tough stem and thinly slice. Place in a large pan with all the other ingredients apart from the sausages, then mix in 300ml water and some salt and pepper.",
     "Bring to a simmer, then reduce the heat, cover with a well-fitting lid and gently cook for 1½ hrs, stirring frequently. If too dry, you can add a little more water.",
@@ -6444,13 +6444,13 @@
     "pietus",
     "vakariene"
    ],
-   "kcal": 690,
+   "kcal": 600,
    "protein": 9,
    "ing": {
     "zalumynai": 126,
     "cesnakai": 10,
     "miltai": 50,
-    "aliejus": 50
+    "aliejus": 40
    },
    "other": [
     "3 cups broad beans",
