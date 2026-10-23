@@ -26,7 +26,7 @@ async function fetchText(url) {
       'Accept-Language': 'lt-LT,lt;q=0.9',
       Accept: 'text/html,application/xhtml+xml,application/json',
     },
-    signal: AbortSignal.timeout(20000),
+    signal: AbortSignal.timeout(12000),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.text();
@@ -46,9 +46,10 @@ async function main() {
   const ids = Object.keys(SEARCH_TERMS).filter((id) => INGREDIENTS[id]).slice(0, limit);
   let anyFresh = false;
 
-  for (const storeId of only) {
+  // Parduotuvės apklausiamos lygiagrečiai, kiekviena savo tempu.
+  await Promise.all(only.map(async (storeId) => {
     const src = SOURCES[storeId];
-    if (!src) continue;
+    if (!src) return;
     const rows = {};
     let errors = 0;
     if (src.mode === 'catalog') {
@@ -65,10 +66,25 @@ async function main() {
         console.warn(`${storeId}: klaida ${e.message}`);
       }
     } else {
-      for (const id of ids) {
+      for (const [i, id] of ids.entries()) {
+        // Jei pirmosios užklausos nepavyksta visos – svetainė nepasiekiama ar blokuoja, nelaukiame veltui.
+        if (i === 4 && errors === 4) {
+          console.warn(`${storeId}: pirmos 4 užklausos nepavyko – parduotuvė praleidžiama.`);
+          break;
+        }
         const term = SEARCH_TERMS[id];
         try {
-          const best = pickBest(src.parse(await fetchText(src.url(term.q))), term, INGREDIENTS[id]);
+          const html = await fetchText(src.url(term.q));
+          const products = src.parse(html);
+          if (!products.length && !rows.__diag) {
+            // Diagnostika: ką grąžino svetainė, kai produktų neatpažinome.
+            rows.__diag = true;
+            const title = (html.match(/<title[^>]*>([^<]*)/i) || [])[1] || '';
+            const hints = ['b_productList', 'data-gtm-eec-product', '__NEXT_DATA__', 'ld+json', 'gridbox', 'application/json'].filter((h) => html.includes(h));
+            console.warn(`${storeId}: produktų neatpažinta (${html.length} B, title="${title.trim().slice(0, 80)}", žymės: ${hints.join(', ') || 'nėra'})`);
+            console.warn(`${storeId}: pradžia: ${html.replace(/\s+/g, ' ').slice(0, 400)}`);
+          }
+          const best = pickBest(products, term, INGREDIENTS[id]);
           if (best) rows[id] = best;
           console.log(`${storeId} ${id}: ${best ? `${best.price} € ${best.promo ? '(akcija) ' : ''}– ${best.title}` : 'nerasta'}`);
         } catch (e) {
@@ -78,6 +94,7 @@ async function main() {
         await sleep(DELAY_MS);
       }
     }
+    delete rows.__diag;
     const found = Object.keys(rows).length;
     // Akcijų katalogui pakanka ir kelių atitikmenų; paieškai reikia bent 5, kad atmestume sugedusį parserį.
     const minFound = src.mode === 'catalog' ? 1 : Math.min(5, ids.length);
@@ -88,7 +105,7 @@ async function main() {
     } else {
       console.warn(`${storeId}: rasta tik ${found} produktų – paliekami ankstesni duomenys.`);
     }
-  }
+  }));
 
   if (!anyFresh) {
     console.error('Nepavyko gauti naujų kainų nė iš vienos parduotuvės. Failas nekeičiamas.');
