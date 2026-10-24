@@ -447,7 +447,6 @@ function recipeDetailHtml(r, servings, c) {
     r.custom ? '✍️ Mano' : '',
   ].filter(Boolean).map((t) => `<span class="chip">${t}</span>`).join('');
   return `
-    ${recipeHero(r)}
     <div class="chips">${tags}<span class="chip">⏱ ${r.time} min</span><span class="chip">${r.kcal} kcal</span><span class="chip">${r.protein || 0} g baltymų</span><span class="chip">~${eur(recipeServingCost(r, c))}/porc.</span></div>
     <h3>Ingredientai (${servings} porc.)</h3>
     <ul class="ing-list">${rows}</ul>
@@ -472,6 +471,7 @@ function openMeal(d, s) {
     const r = c.recipes[cur.recipeId];
     const total = (cur.servings || 0) + (cur.extra || 0);
     return `
+      ${recipeHero(r)}
       <h3 class="recipe-title">${esc(r.name)}</h3>
       ${cur.leftover ? '<p class="note">♻️ Likučiai iš vakarykštės vakarienės – nieko papildomai pirkti nereikia.</p>' : ''}
       ${cur.extra ? `<p class="note">Gaminkite dvigubai (${total} porc.) – pusė liks rytojaus pietums.</p>` : ''}
@@ -611,7 +611,7 @@ function viewList() {
       </div>`;
     }).join('')}
     <form class="inline-form" data-form="extra-catalog">
-      <select name="ingId" class="grow" aria-label="Prekė">${ingredientOptions('', { only: EXTRA_CATS })}</select>
+      <span class="grow">${ingredientPicker('ingId', '', { only: EXTRA_CATS, required: true, placeholder: 'Gėrimas ar užkandis…' })}</span>
       <input name="qty" type="number" min="1" step="1" value="1" class="w-70" aria-label="Kiekis">
       <button class="btn">Pridėti</button>
     </form>
@@ -731,6 +731,31 @@ async function findNearby() {
 
 // ----- Sandėliukas -----
 
+let dlSeq = 0;
+const ingLabel = (i) => `${i.name} (${i.unit === 'g' ? 'g' : i.unit === 'ml' ? 'ml' : 'vnt'})`;
+
+// Paieškos laukelis produktui (vietoj ilgo sąrašo): rašant filtruoja, veikia ir telefone.
+function ingredientPicker(name, selectedId = '', { only = null, exclude = [], required = false, attrs = '', placeholder = 'Ieškoti produkto…' } = {}) {
+  const id = 'dl' + (++dlSeq);
+  const list = Object.values(INGREDIENTS)
+    .filter((i) => (!only || only.includes(i.cat)) && !exclude.includes(i.cat))
+    .sort((a, b) => a.name.localeCompare(b.name, 'lt'));
+  const sel = selectedId ? INGREDIENTS[selectedId] : null;
+  return `<input list="${id}" name="${name}" class="ing-input" autocomplete="off" placeholder="${esc(placeholder)}" ${required ? 'required' : ''} value="${sel ? esc(ingLabel(sel)) : ''}" ${attrs}>
+    <datalist id="${id}">${list.map((i) => `<option value="${esc(ingLabel(i))}"></option>`).join('')}</datalist>`;
+}
+
+// Teksto (laukelio reikšmės) pavertimas produkto id.
+function idFromLabel(text) {
+  const t = String(text || '').trim().toLowerCase();
+  if (!t) return '';
+  for (const i of Object.values(INGREDIENTS)) if (ingLabel(i).toLowerCase() === t) return i.id;
+  for (const i of Object.values(INGREDIENTS)) if (i.name.toLowerCase() === t) return i.id;
+  const m = Object.values(INGREDIENTS).find((i) => i.name.toLowerCase().startsWith(t)) ||
+    Object.values(INGREDIENTS).find((i) => i.name.toLowerCase().includes(t));
+  return m ? m.id : '';
+}
+
 function ingredientOptions(selected = '', { only = null, exclude = [] } = {}) {
   return Object.entries(CATEGORIES)
     .filter(([k]) => (!only || only.includes(k)) && !exclude.includes(k))
@@ -770,7 +795,7 @@ function viewPantry() {
   <section class="card">
     <h2>Pridėti produktą</h2>
     <form class="grid-form" data-form="pantry">
-      <label>Produktas<select name="ingId" data-change="pantry-ing">${ingredientOptions()}</select></label>
+      <label>Produktas${ingredientPicker('ingId', '', { exclude: EXTRA_CATS, required: true, attrs: 'data-change="pantry-ing"' })}</label>
       <label>Kiekis (<span data-unit>${first.unit}</span>)<input name="qty" type="number" min="0" step="any" value="${first.pack}" required></label>
       <label>Tinka iki<input name="expiry" type="date" value="${addDays(t, first.shelf > 365 ? 365 : first.shelf)}"></label>
       <button class="btn primary">Pridėti</button>
@@ -972,15 +997,20 @@ function openRecipe(id) {
     const r = c.recipes[id];
     if (!r) return '<p>Receptas nerastas.</p>';
     return `
+      ${recipeHero(r)}
       <h3 class="recipe-title">${esc(r.name)}</h3>
-      <div class="stepper"><span>Porcijos:</span>
-        <button class="icon-btn" data-action="recipe-servings" data-delta="-1">−</button><b>${recipeServings}</b>
-        <button class="icon-btn" data-action="recipe-servings" data-delta="1">+</button></div>
-      <form class="inline-form" data-form="add-to-plan" data-id="${r.id}">
-        <select name="day" aria-label="Diena">${DAY_NAMES.map((n, i) => `<option value="${i}">${n}, ${fmtDate(addDays(viewWeek, i))}</option>`).join('')}</select>
-        <select name="slot" aria-label="Valgymas">${r.meals.map((m) => `<option value="${m}">${SLOT_LABELS[m]}</option>`).join('')}</select>
-        <button class="btn primary">Į planą</button>
-      </form>
+      <div class="recipe-controls">
+        <div class="stepper"><span>Porcijos:</span>
+          <button class="icon-btn" data-action="recipe-servings" data-delta="-1" aria-label="Mažiau">−</button><b>${recipeServings}</b>
+          <button class="icon-btn" data-action="recipe-servings" data-delta="1" aria-label="Daugiau">+</button></div>
+        <form class="add-plan" data-form="add-to-plan" data-id="${r.id}">
+          <div class="field-row">
+            <select name="day" aria-label="Diena">${DAY_NAMES.map((n, i) => `<option value="${i}">${n}, ${fmtDate(addDays(viewWeek, i))}</option>`).join('')}</select>
+            <select name="slot" aria-label="Valgymas">${r.meals.map((m) => `<option value="${m}">${SLOT_LABELS[m]}</option>`).join('')}</select>
+          </div>
+          <button class="btn primary">+ Į planą</button>
+        </form>
+      </div>
       ${recipeDetailHtml(r, recipeServings, c)}
       ${r.custom ? `<div class="toolbar"><button class="btn" data-action="edit-recipe" data-id="${r.id}">Redaguoti</button><button class="btn danger" data-action="delete-recipe" data-id="${r.id}">Ištrinti</button></div>` : ''}`;
   });
@@ -1013,7 +1043,7 @@ function recipeFormHtml(r, asWish = false) {
 }
 
 function ingRowHtml(id = '', q = '') {
-  return `<div class="ing-row"><select name="ing">${ingredientOptions(id, { exclude: EXTRA_CATS })}</select><input name="qty" type="number" min="0" step="any" value="${q}" placeholder="kiekis" aria-label="Kiekis"><button type="button" class="icon-btn small" data-action="remove-ing-row" aria-label="Pašalinti">✕</button></div>`;
+  return `<div class="ing-row">${ingredientPicker('ing', id, { exclude: EXTRA_CATS })}<input name="qty" type="number" min="0" step="any" value="${q}" placeholder="kiekis" aria-label="Kiekis"><button type="button" class="icon-btn small" data-action="remove-ing-row" aria-label="Pašalinti">✕</button></div>`;
 }
 
 // ----- Nustatymai -----
@@ -1059,7 +1089,7 @@ function viewSettings() {
   <section class="card">
     <h2>🏷️ Akcijos (${promos.length})</h2>
     <form class="grid-form" data-form="promo">
-      <label>Produktas<select name="ingId">${ingredientOptions()}</select></label>
+      <label>Produktas${ingredientPicker('ingId', '', { required: true })}</label>
       <label>Parduotuvė<select name="store">${STORES.map((s) => `<option value="${s.id}">${s.name}</option>`).join('')}</select></label>
       <label>Akcijos kaina už pakuotę €<input name="packPrice" type="number" min="0" step="0.01" required></label>
       <label>Galioja iki<input name="until" type="date" value="${addDays(today(), 6)}"></label>
@@ -1080,7 +1110,7 @@ function viewSettings() {
     <h2>Nemėgstami produktai</h2>
     <p class="small muted">Receptai su šiais produktais nebus siūlomi.</p>
     <div class="chips">${st.excluded.map((id) => `<button class="chip active" data-action="unexclude" data-id="${id}">${esc(INGREDIENTS[id]?.name || id)} ✕</button>`).join('') || '<span class="muted small">Nėra</span>'}</div>
-    <div class="inline-form"><select data-change="exclude"><option value="">+ Pridėti…</option>${ingredientOptions('', { exclude: EXTRA_CATS })}</select></div>
+    <div class="inline-form">${ingredientPicker('', '', { exclude: EXTRA_CATS, attrs: 'data-change="exclude"', placeholder: '+ Pridėti produktą…' })}</div>
   </section>
 
   <details class="card">
@@ -1294,9 +1324,7 @@ function openReceiptReview(parsed, rawText = '') {
               <input type="checkbox" data-change="receipt-row" data-i="${i}" data-f="include" ${it.include ? 'checked' : ''} aria-label="Įtraukti">
               <div class="ri-main">
                 <small class="muted">${esc(it.name)}</small>
-                <select data-change="receipt-row" data-i="${i}" data-f="ingId" aria-label="Produktas">
-                  <option value="">— kita prekė (tik išlaidose) —</option>${ingredientOptions(it.ingId || '')}
-                </select>
+${ingredientPicker('', it.ingId || '', { attrs: `data-change="receipt-row" data-i="${i}" data-f="ingId"`, placeholder: '— kita prekė —' })}
               </div>
               <label class="ri-qty">${it.ingId ? INGREDIENTS[it.ingId].unit : ''}<input type="number" min="0" step="any" value="${it.qty || ''}" data-change="receipt-row" data-i="${i}" data-f="qty" aria-label="Kiekis" ${it.ingId ? '' : 'disabled'}></label>
               <b class="ri-price">${eur(it.price)}</b>
@@ -1669,8 +1697,10 @@ const changes = {
     render();
   },
   exclude: (el) => {
-    if (!el.value) return;
-    state.settings.excluded = [...new Set([...state.settings.excluded, el.value])];
+    const id = idFromLabel(el.value);
+    el.value = '';
+    if (!id) return;
+    state.settings.excluded = [...new Set([...state.settings.excluded, id])];
     save();
     render();
   },
@@ -1682,7 +1712,8 @@ const changes = {
     save();
   },
   'pantry-ing': (el) => {
-    const ing = INGREDIENTS[el.value];
+    const ing = INGREDIENTS[idFromLabel(el.value)];
+    if (!ing) return;
     const form = el.form;
     $('[data-unit]', form).textContent = ing.unit;
     form.qty.value = ing.pack;
@@ -1721,7 +1752,7 @@ const changes = {
     if (f === 'include') it.include = el.checked;
     if (f === 'qty') it.qty = parseFloat(el.value) || 0;
     if (f === 'ingId') {
-      it.ingId = el.value || null;
+      it.ingId = idFromLabel(el.value) || null;
       it.include = !!it.ingId;
       it.qty = it.ingId ? INGREDIENTS[it.ingId].pack * (it.count || 1) : 0;
     }
@@ -1826,16 +1857,20 @@ const forms = {
   'extra-catalog': (f) => {
     const w = week();
     const qty = Math.max(1, parseInt(f.qty.value, 10) || 1);
-    const existing = w.extras.find((x) => x.ingId === f.ingId.value && !x.checked);
+    const ingId = idFromLabel(f.ingId.value);
+    if (!ingId) return toast('Pasirinkite prekę iš sąrašo');
+    const existing = w.extras.find((x) => x.ingId === ingId && !x.checked);
     if (existing) existing.qty += qty;
-    else w.extras.push({ id: uid(), ingId: f.ingId.value, qty, checked: false });
+    else w.extras.push({ id: uid(), ingId, qty, checked: false });
     save();
     render();
   },
   pantry: (f) => {
     const qty = parseFloat(f.qty.value);
     if (!(qty > 0)) return;
-    state.pantry.push({ id: uid(), ingId: f.ingId.value, qty, expiry: f.expiry.value || null });
+    const ingId = idFromLabel(f.ingId.value);
+    if (!ingId) return toast('Pasirinkite produktą iš sąrašo');
+    state.pantry.push({ id: uid(), ingId, qty, expiry: f.expiry.value || null });
     save();
     render();
     toast('Pridėta į šaldytuvą');
@@ -1847,7 +1882,8 @@ const forms = {
     render();
   },
   promo: (f) => {
-    const ingId = f.ingId.value;
+    const ingId = idFromLabel(f.ingId.value);
+    if (!ingId) return toast('Pasirinkite produktą iš sąrašo');
     const store = f.store.value;
     state.promos = state.promos.filter((p) => !(p.ingId === ingId && p.store === store));
     const oldPrice = ctx().infoOf(ingId, store).price;
@@ -1896,8 +1932,8 @@ const forms = {
     if (!meals.length) return toast('Pasirinkite bent vieną valgymą');
     const ing = {};
     for (const row of f.querySelectorAll('.ing-row')) {
-      const id = row.querySelector('select').value;
-      const q = parseFloat(row.querySelector('input').value);
+      const id = idFromLabel(row.querySelector('.ing-input').value);
+      const q = parseFloat(row.querySelector('input[name="qty"]').value);
       if (id && q > 0) ing[id] = (ing[id] || 0) + q;
     }
     if (!Object.keys(ing).length) return toast('Pridėkite bent vieną ingredientą');

@@ -400,16 +400,20 @@ export function marginalCost(recipe, servings, needs, stock, ctx) {
 }
 
 // Kiek (eurais) šaldytuve esančių produktų recepte būtų sunaudota – dar nepanaudotų kitų patiekalų.
+// Grąžina { value: panaudota €, total: visų perkamų produktų vertė €, fraction: kokią recepto dalį dengia turimi }.
 export function pantryUseValue(recipe, servings, needs, stock, ctx) {
   let value = 0;
+  let total = 0;
   for (const [id, qty] of Object.entries(recipe.ing)) {
     const ing = INGREDIENTS[id];
     if (!ing || (ing.staple && ctx.settings.assumeStaples)) continue;
+    const need = qty * servings;
+    total += (need / ing.pack) * ctx.minPrice[id];
     const free = Math.max(0, (stock[id] || 0) - (needs[id] || 0));
-    const used = Math.min(free, qty * servings);
+    const used = Math.min(free, need);
     if (used > 0) value += (used / ing.pack) * ctx.minPrice[id];
   }
-  return value;
+  return { value, total, fraction: total > 0 ? value / total : 0 };
 }
 
 function addNeeds(needs, recipe, servings) {
@@ -446,7 +450,11 @@ function track(usage, recipe, d) {
 function slotScore(recipe, d, servings, plan, needs, stock, expiring, ctx, usage, pantryFirst = false) {
   // „Iš to, ką turiu“: naujų pirkinių kaina sveria daugiau, o šaldytuvo produktų panaudojimas – skatinamas.
   let score = marginalCost(recipe, servings, needs, stock, ctx) * (pantryFirst ? 1.4 : 0.6);
-  score -= pantryUseValue(recipe, servings, needs, stock, ctx) * (pantryFirst ? 2 : 0.5);
+  const pu = pantryUseValue(recipe, servings, needs, stock, ctx);
+  score -= pu.value * (pantryFirst ? 2 : 0.5);
+  // Santykinis skatinimas: jei didelė recepto dalis jau yra šaldytuve, jis labai skatinamas
+  // net ir turint nedaug (pvz. vieną skardinę) – svarbu dalis, o ne absoliuti suma.
+  if (pantryFirst) score -= pu.fraction * Math.max(1, ctx.settings.people || 1) * 8;
   const people = Math.max(1, ctx.settings.people || 1);
   const isMain = !recipe.meals.includes('pusryciai');
   const u = usage[recipe.id];
