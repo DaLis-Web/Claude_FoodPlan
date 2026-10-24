@@ -1,0 +1,41 @@
+KOPIJA
+Verta.
+UAB "Lidl Lietuva" Į. k.: 111791015
+J. Basanavičiaus g. 121, Utena
+PVM mokėtojo kodas LT117910113
+Kvitas 223247/581                              #00223247
+1007511  Popierinis maišelis
+  0,20 x 2,000 €/vnt.                                0,40 A
+7608944  "Varniukų" alus 5,2%
+  1,99 x 2,000 €/vnt.                                3,98 F
+Idėta (Užstatas)
+0002000  Užstatas 0,10
+  0,10 x 2 €/vnt.                                    0,20 !
+0082233  Liet. igavais.agurk.                        0,49 A
+0027301  Vynas Mosel Riesling                        5,99 F
+6400848  Baltasis vynas"Tokaji Furmint"              5,99 F
+0034676  Baltas vynas                                5,99 F
+0082388  Vynuogin.pomidorai su šakel.                2,99 A
+7607790  Ilg.ryžiai maišeliuose                      1,15 A
+0185210  Tarkuotų sūrių mišinys                      2,39 A
+Lidl Plus nuolaida
+Nuolaida                                            -0,24 A
+0028211  Pranc. bat., ilgas
+  0,69 x 2,000 €/vnt.                                1,38 A
+0198175  Bulvių traškučiai FROMAGE                   2,19 A
+7611928  Sūdyta Atlantinių lašišų filė               2,89 A
+7612962  SANTA MARIA Česnakin.pipirai                2,59 A
+5520030  MLEKOVITA Pienas UHT, 3,2%                  0,55 A
+0080160  Citrinos
+  2,99 x 0,146 kg                                    0,44 A
+7612961  SANTA MARIA Mėsos prieskoniai               1,59 A
+0510511  (N) Kepsninės termometras                   8,99 A
+5509121  Vištienos krūtinėlė kepsniams               3,99 A
+0486125  (N) Meteorologinė stotelė                  17,99 A
+------------------------------------------------------------
+Tarpinė suma                                        71,93
+============================================================
+Nuolaida                                             0,24
+Mokėti                                              71,93
+Mokėta (Banko kortelė)                              71,93
+Data ir laikas     2026-07-04 15:55:25

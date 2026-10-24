@@ -91,3 +91,20 @@ test('Maxima programėlės PDF: istorija prieš čekį ignoruojama', async () =>
   assert.equal(r.items.find((i) => i.name.startsWith('Alus')).ingId, 'alus');
   assert.equal(r.items.length, 7);
 });
+
+test('Lidl programėlės čekis: prekių kodai, kiekio eilutės su kaina, Lidl Plus nuolaida, užstatas', async () => {
+  const fs = await import('node:fs/promises');
+  const r = parseReceipt(await fs.readFile(new URL('./fixtures/lidl-app.txt', import.meta.url), 'utf8'));
+  assert.equal(r.store, 'lidl');
+  assert.equal(r.date, '2026-07-04');
+  assert.equal(r.total, 71.93);
+  const by = Object.fromEntries(r.items.filter((i) => i.ingId).map((i) => [i.ingId, i]));
+  assert.equal(by.alus.count, 2);
+  assert.equal(by.alus.price, 3.98);
+  assert.equal(by.citrinos.price, 0.44);
+  assert.ok(by.agurkai && by.ryziai && by.pomidorai && by.pienas && by.vistienos_file);
+  assert.ok(!r.items.some((i) => /u[zž]stat/i.test(i.name)));
+  assert.ok(!r.items.some((i) => /^\d{6,8}/.test(i.name)), 'kodai pašalinti');
+  assert.equal(r.discount, 0.24);
+  assert.equal(r.items.length, 19);
+});

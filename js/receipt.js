@@ -100,7 +100,7 @@ export function parseReceipt(text) {
   // prekių ieškome tik nuo paskutinės čekio antraštės.
   let start = 0;
   lines.forEach((l, i) => {
-    if (/pvm mok[eė]tojo kodas|pvm kodas|kvitas baz[eė]je|^j0\b/i.test(l)) start = i + 1;
+    if (/pvm mok[eė]tojo kodas|pvm kodas|kvitas baz[eė]je|^j0\b|^kvitas\s+\d+\/\d+/i.test(l)) start = i + 1;
   });
   const body = lines.slice(start);
 
@@ -115,6 +115,21 @@ export function parseReceipt(text) {
     // Po prekių sąrašo – santraukos, PVM, mokėjimas.
     if (/^={4,}|suteiktos naudos|^kvito suma|^be pvm|^tarpin|^i[sš] viso\b/i.test(l)) {
       if (items.length) break;
+      buffer = [];
+      continue;
+    }
+    // Lidl: kiekio eilutė su kaina po pavadinimo („1,99 x 2,000 €/vnt.   3,98 F“, „2,99 x 0,146 kg   0,44 A“).
+    const lq = l.match(/^(\d+[.,]\d+)\s*[xX×*]\s*(\d+(?:[.,]\d+)?)\s*(€\/vnt\.?|eur\/vnt\.?|vnt\.?|kg|l)?\s+(-?\d+[.,]\d{2})\s*[A-Z!]?$/i);
+    if (lq) {
+      if (buffer.length) {
+        addItem(buffer.join(' '), num(lq[4]));
+        const it = skipped ? null : last();
+        if (it) {
+          const amount = num(lq[2]);
+          if (/kg|^l$/i.test(lq[3] || '')) it.weight = { amount, unit: lq[3].toLowerCase() };
+          else it.count = Math.max(1, Math.round(amount));
+        }
+      }
       buffer = [];
       continue;
     }
@@ -133,15 +148,16 @@ export function parseReceipt(text) {
     }
     // Nuolaidos eilutė; suma gali būti toje pačioje arba kitoje eilutėje.
     if (/nuolaida|nuolaid\./i.test(l)) {
-      const dm2 = l.match(/(-\d+[.,]\d{2})\s*[A-Z]?$/);
+      const dm2 = l.match(/(-\d+[.,]\d{2})\s*[A-Z!]?$/);
       if (dm2 && last()) {
         last().price = Math.round((last().price + num(dm2[1])) * 100) / 100;
         discount += -num(dm2[1]);
-      } else pendingDiscount = true;
+        pendingDiscount = false;
+      } else if (!dm2) pendingDiscount = true;
       buffer = [];
       continue;
     }
-    const onlyPrice = l.match(/^(-?\d+[.,]\d{2})\s*[A-Z]?$/);
+    const onlyPrice = l.match(/^(-?\d+[.,]\d{2})\s*[A-Z!]?$/);
     if (onlyPrice) {
       const price = num(onlyPrice[1]);
       if (price < 0 || pendingDiscount) {
@@ -157,7 +173,7 @@ export function parseReceipt(text) {
       }
       continue;
     }
-    const m = l.match(/^(.*?[A-Za-zĄČĘĖĮŠŲŪŽąčęėįšųūž].*?)\s+(-?\d+[.,]\d{2})\s*[A-Z]?$/);
+    const m = l.match(/^(.*?[A-Za-zĄČĘĖĮŠŲŪŽąčęėįšųūž].*?)\s+(-?\d+[.,]\d{2})\s*[A-Z!]?$/);
     if (m && !l.includes('#')) {
       const name = [...buffer, m[1]].join(' ').trim();
       buffer = [];
@@ -179,12 +195,13 @@ export function parseReceipt(text) {
   }
 
   function addItem(rawName, price) {
-    const name = rawName.replace(/\s+\d+[.,]?\d*\s*[xX×*]\s*\d+[.,]\d{2}$/, '').trim();
+    // Lidl prekės kodas pavadinimo pradžioje („7608944 "Varniukų" alus“), „(N)“ – ne maisto prekė.
+    const name = rawName.replace(/\s+\d+[.,]?\d*\s*[xX×*]\s*\d+[.,]\d{2}$/, '').replace(/(^|\s)\d{6,8}\s+/g, ' ').replace(/["„“]/g, '').trim();
     skipped = true;
     if (SKIP.test(name) || name.length < 3) return;
     const cm = rawName.match(/(\d+)\s*[xX×*]\s*\d+[.,]\d{2}$/) || rawName.match(/^(\d+)\s*[xX×*]\s/);
     // Depozitas už tarą – ne prekė (suma vis tiek įskaičiuota į čekio sumą).
-    if (/depozit/i.test(name)) return;
+    if (/depozit|u[zž]stat/i.test(name)) return;
     items.push({ name, price, count: cm ? Number(cm[1]) : 1 });
     skipped = false;
   }
