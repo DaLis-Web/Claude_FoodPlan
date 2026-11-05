@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-04T12:17:29.399Z",
+ "updatedAt": "2026-11-05T12:30:51.779Z",
  "stores": {
   "rimi": {
    "bulves": {
@@ -73,14 +73,14 @@
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/pomidorai/lietuviski-pomidorai-2-kl-kg/p/244594"
    },
    "agurkai": {
-    "title": "Lietuviški trumpavaisiai agurkai, kg",
-    "price": 2.79,
-    "unitPrice": 3.49,
+    "title": "Mar. agurkai KKF LEGENDINIAI, 660 g / 330 g",
+    "price": 2.49,
+    "unitPrice": 3.66,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/agurkai/lietuviski-trumpavaisiai-agurkai-kg/p/245039"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/konservuotas-maistas/konservuoti-agurkai/mar-agurkai-kkf-legendiniai-660-g-330-g/p/168512"
    },
    "paprikos": {
     "title": "Raud. saldžiosios paprikos (80+),1kl,1kg",
@@ -1288,80 +1288,100 @@
    }
   },
   "iki": {
-   "agurkai": {
-    "title": "Lietuviški ilgavaisiai agurkai, 1 vnt.",
-    "price": 0.89,
-    "unitPrice": 0.89,
-    "unit": "vnt",
-    "oldPrice": 1.19,
+   "morkos": {
+    "title": "Morkų - įvairių vaisių sulčių gėrimas CIDO KIDS PAW PATROL (30%), 200 ml",
+    "price": 2.4499999999999997,
+    "unitPrice": 2.4499999999999997,
+    "unit": "l",
+    "oldPrice": 3.25,
     "promo": true,
     "validUntil": null,
     "url": null
    },
-   "bananai": {
-    "title": "Bananai BON VIA",
-    "price": 1.29,
-    "unitPrice": 1.29,
+   "pomidorai": {
+    "title": "Gnocchi su pomidorais BONDUELLE, 550g",
+    "price": 5.4363636363636365,
+    "unitPrice": 5.4363636363636365,
     "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": null
-   },
-   "desreles": {
-    "title": "Bandelė LAZDELĖ SU DEŠRELE (atitirpinta), 120 g",
-    "price": 8.25,
-    "unitPrice": 8.25,
-    "unit": "kg",
-    "oldPrice": 10.75,
+    "oldPrice": 9.07,
     "promo": true,
     "validUntil": null,
     "url": null
    },
-   "silke": {
-    "title": "Skandinaviška silkių filė EDEGA, 260 g",
-    "price": 16.115384615384617,
-    "unitPrice": 16.115384615384617,
+   "salotos": {
+    "title": "Salotų mišinys IKI BABY LEAVES, 75 g",
+    "price": 18.53333333333333,
+    "unitPrice": 18.53333333333333,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
     "url": null
    },
-   "grietine": {
-    "title": "Grietinė DVARO, 40% rieb., 380 g",
-    "price": 9.868421052631579,
-    "unitPrice": 9.868421052631579,
+   "obuoliai": {
+    "title": "Lietuviški fasuoti obuoliai",
+    "price": 1.69,
+    "unitPrice": 1.69,
     "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": null
-   },
-   "sviestas": {
-    "title": "Sviestas ROKIŠKIO NAMINIS, 82% rieb., 180 g",
-    "price": 5.5,
-    "unitPrice": 5.5,
-    "unit": "kg",
-    "oldPrice": 14.94,
+    "oldPrice": 1.99,
     "promo": true,
     "validUntil": null,
     "url": null
    },
-   "duona": {
-    "title": "Naminė duona, 450 g",
-    "price": 3.0888888888888886,
-    "unitPrice": 3.0888888888888886,
+   "suris": {
+    "title": "Pjaustytas sūris GERMANTAS GOUDA, 45% rieb. s. m., 150 g",
+    "price": 15.933333333333335,
+    "unitPrice": 15.933333333333335,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
     "url": null
    },
-   "gaivusis": {
-    "title": "Gazuotas gėrimas SPRITE, 2 l",
-    "price": 1.595,
-    "unitPrice": 1.595,
+   "avizos": {
+    "title": "Ekologiški visų grūdo dalių avižiniai dribsniai AUGA, 500 g",
+    "price": 3.98,
+    "unitPrice": 3.98,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "grikiai": {
+    "title": "Grikių kruopos TYRAS, 4 x 125 g",
+    "price": 4.78,
+    "unitPrice": 4.78,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "miltai": {
+    "title": "Kvietiniai miltai EKSTRA KAUNO GRŪDAI, 405 D, 1,75 kg",
+    "price": 0.7485714285714286,
+    "unitPrice": 0.7485714285714286,
+    "unit": "kg",
+    "oldPrice": 1.25,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "pipirai": {
+    "title": "Pipirmėčių arbata BITUTĖ, 30 g",
+    "price": 63,
+    "unitPrice": 63,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "sultys": {
+    "title": "Obuolių sultys 100% iš koncentrato su vit.C CLEVER, 1 l",
+    "price": 0.99,
+    "unitPrice": 0.99,
     "unit": "l",
     "oldPrice": null,
     "promo": false,
@@ -1382,8 +1402,8 @@
    },
    "morkos": {
     "title": "Plautos morkos, 1 kg",
-    "price": 0.69,
-    "unitPrice": 0.69,
+    "price": 0.59,
+    "unitPrice": 0.59,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -1641,14 +1661,14 @@
     "url": "https://www.barbora.lt/produktai/mocarela-suryme-farm-milk-min-45-proc-rieb-200-g"
    },
    "parmezanas": {
-    "title": "Kietasis sūris QUATTROCENTO GRANAROLO, 42,5 % rieb. s. m., 150 g",
-    "price": 3.29,
-    "unitPrice": 21.93,
+    "title": "Kietasis sūris GRANA PADANO, 32 % rieb. s. m., 1 kg",
+    "price": 22.99,
+    "unitPrice": 22.99,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/kietasis-suris-quattrocento-granarolo-42-5-proc-rieb-s-m-150-g"
+    "url": "https://www.barbora.lt/produktai/kietasis-suris-grana-padano-32-proc-rieb-s-m-1-kg"
    },
    "feta": {
     "title": "Sūris salotoms GRIKIOS, 45 % rieb. s. m., 200 g",
@@ -1760,6 +1780,16 @@
     "validUntil": null,
     "url": "https://www.barbora.lt/produktai/astriosios-garstycios-extra-line-180-g"
    },
+   "sparagines_pupeles": {
+    "title": "Aštrios vištienos salotos su šparaginėmis pupelėmis, 300 g",
+    "price": 2.68,
+    "unitPrice": 8.93,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": "https://www.barbora.lt/produktai/astrios-vistienos-salotos-su-sparaginemis-pupelemis-300-g"
+   },
    "lasisa": {
     "title": "Lašišos filė WELL DONE savo sultyse, 170g",
     "price": 1.99,
@@ -1821,14 +1851,14 @@
     "url": "https://www.barbora.lt/produktai/grietines-ir-augaliniu-riebalu-misinys-30-proc-rieb-500-g"
    },
    "jogurtas": {
-    "title": "Valgom. natūralus graikiškas jogurtas FARM MILK, 10 % rieb., 400 g",
-    "price": 0.52,
-    "unitPrice": 1.3,
+    "title": "Valgomasis natūralus jogurtas FARM MILK, 3 % rieb., 400 g",
+    "price": 0.55,
+    "unitPrice": 1.38,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/naturalus-graikiskas-jogurtas-farm-milk-10-proc-rieb-400-g"
+    "url": "https://www.barbora.lt/produktai/naturalus-jogurtas-farm-milk-3-proc-rieb-400-g"
    },
    "suris": {
     "title": "Tilžės sūris FARM MILK, 45 % rieb. s. m., 250 g",
@@ -1841,14 +1871,14 @@
     "url": "https://www.barbora.lt/produktai/tilzes-suris-farm-milk-45-proc-rieb-s-m-250-g"
    },
    "sviestas": {
-    "title": "Sviestas FARM MILK, 82 % rieb., 180 g",
-    "price": 0.95,
-    "unitPrice": 5.28,
+    "title": "Sviestas SAULĖS PIEVOS, 82 % rieb., 200 g",
+    "price": 1.19,
+    "unitPrice": 5.95,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/sviestas-farm-milk-82-proc-rieb-180-g"
+    "url": "https://www.barbora.lt/produktai/sviestas-saules-pievos-82-proc-rieb-200-g"
    },
    "grietinele": {
     "title": "UAT grietinėlė FARM MILK, 10 % rieb., 500 ml",
@@ -1971,14 +2001,14 @@
     "url": "https://www.barbora.lt/produktai/konservuotos-raudonosios-pupeles-extra-line-400-g"
    },
    "avinzirniai": {
-    "title": "Konservuoti avinžirniai EXTRA LINE, 400 g",
-    "price": 0.79,
-    "unitPrice": 1.98,
+    "title": "Avinžirniai GRALLA, 400 g",
+    "price": 0.99,
+    "unitPrice": 2.48,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/konservuoti-avinzirniai-extra-line-400-g"
+    "url": "https://www.barbora.lt/produktai/avinzirniai-gralla-400-g"
    },
    "tunas": {
     "title": "Smulkinti tunai WIDE OCEAN savo sultyse, 185 g",
@@ -2061,14 +2091,14 @@
     "url": "https://www.barbora.lt/produktai/obeliu-saulegrazu-aliejus-900-ml"
    },
    "druska": {
-    "title": "Akmens druska EXTRA LINE, 1 kg",
-    "price": 0.35,
-    "unitPrice": 0.35,
+    "title": "Joduotoji druska EXTRA LINE, 1 kg",
+    "price": 0.43,
+    "unitPrice": 0.43,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/akmens-druska-extra-line-1-kg-1-kg"
+    "url": "https://www.barbora.lt/produktai/joduotoji-druska-extra-line-1-kg-1-kg"
    },
    "cukrus": {
     "title": "Cukrus EXTRA LINE, 1 kg",
@@ -2081,14 +2111,14 @@
     "url": "https://www.barbora.lt/produktai/cukrus-extra-line-1-kg-86004"
    },
    "pipirai": {
-    "title": "Malti kvapieji pipirai SAUDA, 100 g",
-    "price": 1.75,
-    "unitPrice": 17.5,
+    "title": "Malti juodieji pipirai SAUDA, 100 g",
+    "price": 1.89,
+    "unitPrice": 18.9,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/malti-kvapieji-pipirai-sauda-100-g"
+    "url": "https://www.barbora.lt/produktai/malti-juodieji-pipirai-sauda-100-g"
    },
    "paprika_malta": {
     "title": "Maltos saldžiosios paprikos WELL DONE, 60 g",
@@ -2111,14 +2141,14 @@
     "url": "https://www.barbora.lt/produktai/karis-well-done-20-g"
    },
    "alus": {
-    "title": "Alus UTENOS 5,0%, 500 ml",
-    "price": 0.89,
-    "unitPrice": 1.78,
+    "title": "Šviesusis alus AMBER CITY LAGER, 500 ml",
+    "price": 1.19,
+    "unitPrice": 2.38,
     "unit": "l",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/utenos-utenos-alus-5-0-proc-500-ml"
+    "url": "https://www.barbora.lt/produktai/sviesusis-alus-amber-city-lager-500-ml"
    },
    "alus_nealk": {
     "title": "Nealkoholinis alus CRONUS, 500 ml",
@@ -2201,14 +2231,14 @@
     "url": "https://www.barbora.lt/produktai/malta-kava-jacobs-selection-italiano-500-g"
    },
    "arbata": {
-    "title": "Juodoji arbata LIPTON YELLOW LABEL, 50 g",
-    "price": 1.69,
-    "unitPrice": 33.8,
+    "title": "Juodoji arbata WELL DONE, 35 g",
+    "price": 1.59,
+    "unitPrice": 45.43,
     "unit": "kg",
-    "oldPrice": 1.99,
-    "promo": true,
+    "oldPrice": null,
+    "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/juodoji-arbata-lipton-yellow-label-50-g"
+    "url": "https://www.barbora.lt/produktai/juodoji-arbata-well-done-35-g"
    },
    "traskuciai": {
     "title": "Bulvių traškučiai TAFFEL SAN DIEGO, 130 g",
@@ -2265,32 +2295,32 @@
  "sources": {
   "rimi": {
    "name": "Rimi e-parduotuvė",
-   "updatedAt": "2026-11-04T12:17:29.399Z",
+   "updatedAt": "2026-11-05T12:30:51.779Z",
    "found": 88,
    "errors": 0
   },
   "norfa": {
    "name": "Norfa akcijos",
-   "updatedAt": "2026-11-04T12:17:29.399Z",
+   "updatedAt": "2026-11-05T12:30:51.779Z",
    "found": 31,
    "errors": 0
   },
   "lidl": {
    "name": "Lidl",
-   "updatedAt": "2026-11-04T12:17:29.399Z",
+   "updatedAt": "2026-11-05T12:30:51.779Z",
    "found": 9,
    "errors": 0
   },
   "iki": {
    "name": "IKI (LastMile)",
-   "updatedAt": "2026-11-04T12:17:29.399Z",
-   "found": 8,
+   "updatedAt": "2026-11-05T12:30:51.779Z",
+   "found": 10,
    "errors": 0
   },
   "maxima": {
    "name": "Barbora (Maxima)",
-   "updatedAt": "2026-11-04T12:17:29.399Z",
-   "found": 89,
+   "updatedAt": "2026-11-05T12:30:51.779Z",
+   "found": 90,
    "errors": 0
   }
  }
