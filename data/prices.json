@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T11:10:06.598Z",
+ "updatedAt": "2026-11-08T11:22:06.996Z",
  "stores": {
   "rimi": {
    "bulves": {
@@ -73,14 +73,14 @@
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/pomidorai/lietuviski-pomidorai-2-kl-kg/p/244594"
    },
    "agurkai": {
-    "title": "Lietuviški trumpavaisiai agurkai, kg",
-    "price": 2.79,
-    "unitPrice": 3.49,
+    "title": "Mar. agurkai KKF LEGENDINIAI, 660 g / 330 g",
+    "price": 2.49,
+    "unitPrice": 3.66,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/agurkai/lietuviski-trumpavaisiai-agurkai-kg/p/245039"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/konservuotas-maistas/konservuoti-agurkai/mar-agurkai-kkf-legendiniai-660-g-330-g/p/168512"
    },
    "paprikos": {
     "title": "Baltosios paprikos, 1 kl., 1 kg",
@@ -513,14 +513,14 @@
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kruopos/ryziai/ilgagrudziai-ryziai-rimi-basic-800-g/p/804297"
    },
    "makaronai": {
-    "title": "Makaronai PASAKA, sraigteliai, 400 g",
-    "price": 0.65,
-    "unitPrice": 1.62,
+    "title": "Makaronai SPIRALI RIMI GREATLIFE, 500 g",
+    "price": 0.89,
+    "unitPrice": 1.78,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/makaronai/figuriniai-makaronai/makaronai-pasaka-sraigteliai-400-g/p/146791"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/makaronai/pilno-grudo-makaronai/makaronai-spirali-rimi-greatlife-500-g/p/806916"
    },
    "miltai": {
     "title": "Kvietiniai miltai RIMI SMART, 2 kg",
@@ -1338,63 +1338,163 @@
    }
   },
   "iki": {
-   "cesnakai": {
-    "title": "Lietuviški česnakai fasuoti, 250 g",
-    "price": 9.96,
-    "unitPrice": 9.96,
+   "morkos": {
+    "title": "Įvairių vaisių ir morkų gėrimas TYMBARK, 1 l",
+    "price": 2.09,
+    "unitPrice": 2.09,
+    "unit": "l",
+    "oldPrice": 2.79,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "agurkai": {
+    "title": "Raugintų agurkų sriuba KĖDAINIŲ, 480 g",
+    "price": 5.395833333333333,
+    "unitPrice": 5.395833333333333,
     "unit": "kg",
-    "oldPrice": 11.96,
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "kumpis": {
+    "title": "Kapotas kiaulienos kumpis BIOVELA, 240 g",
+    "price": 9.333333333333334,
+    "unitPrice": 9.333333333333334,
+    "unit": "kg",
+    "oldPrice": 12.46,
     "promo": true,
     "validUntil": null,
     "url": null
    },
    "sonine": {
-    "title": "Guanciale šoninė kubeliais BILLA PREMIUM,100 g",
-    "price": 29.900000000000002,
-    "unitPrice": 29.900000000000002,
+    "title": "Karštai rūkyta kiaulienos šoninė aukščiausia rūšis KLAIPĖDOS MAISTAS, 130 g",
+    "price": 15.307692307692307,
+    "unitPrice": 15.307692307692307,
+    "unit": "kg",
+    "oldPrice": 19.15,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "koldunai": {
+    "title": "Šaldyti Khinkali koldūnai su mėsa VIČI, 400 g",
+    "price": 6.424999999999999,
+    "unitPrice": 6.424999999999999,
+    "unit": "kg",
+    "oldPrice": 10.73,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "mocarela": {
+    "title": "Tarkuotas sūris ROKIŠKIO MOZZARELLA, 43% rieb. s.m., 200 g",
+    "price": 14.950000000000001,
+    "unitPrice": 14.950000000000001,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "pomidoru_padazas": {
+    "title": "Kiniškas pomidorų padažas DAUMANTŲ GURMANIŠKAS, 500 g",
+    "price": 5.78,
+    "unitPrice": 5.78,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "kefyras": {
+    "title": "Kefyro kokteilis su bananais ir braškėmis ŽEMAITIJOS, 0,4% rieb., 450 g",
+    "price": 2.6444444444444444,
+    "unitPrice": 2.6444444444444444,
+    "unit": "kg",
+    "oldPrice": 3.31,
+    "promo": true,
     "validUntil": null,
     "url": null
    },
    "varske": {
-    "title": "Varškės spurga, 70 g",
-    "price": 9.857142857142856,
-    "unitPrice": 9.857142857142856,
+    "title": "Grūdėta varškė 7%, 350 g",
+    "price": 5.771428571428572,
+    "unitPrice": 5.771428571428572,
+    "unit": "kg",
+    "oldPrice": 8.26,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "suris": {
+    "title": "Kietas sūris pjaustytas riekutėmis DŽIUGAS, brandintas iki 12 mėnesių, 40% rieb., 150 g",
+    "price": 19.933333333333337,
+    "unitPrice": 19.933333333333337,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
     "url": null
    },
-   "grietine": {
-    "title": "Grietinė ŽALIOJI KARVUTĖ, 20% rieb., 400 g",
-    "price": 6.475,
-    "unitPrice": 6.475,
+   "tunas": {
+    "title": "Tunas saulėgrąžų aliejuje CALVO, 240 g",
+    "price": 18.708333333333336,
+    "unitPrice": 18.708333333333336,
     "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
+    "oldPrice": 24.96,
+    "promo": true,
     "validUntil": null,
     "url": null
    },
-   "sviestas": {
-    "title": "Sviestas ROKIŠKIO, 82% rieb., 200 g",
-    "price": 13.95,
-    "unitPrice": 13.95,
-    "unit": "kg",
+   "alus": {
+    "title": "Alus STAROPRAMEN (5%), 500 ml",
+    "price": 3.18,
+    "unitPrice": 3.18,
+    "unit": "l",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
     "url": null
    },
    "alus_nealk": {
-    "title": "Alus VESTFYEN PILSNER (4,6%), 500 ml",
-    "price": 2.1,
-    "unitPrice": 2.1,
+    "title": "Šviesusis alus TAURAS TRADICINIS (6%), 1 l",
+    "price": 2.39,
+    "unitPrice": 2.39,
     "unit": "l",
     "oldPrice": null,
     "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "vanduo": {
+    "title": "Lengvai gazuotas vanduo su žalios citrinos aromatu AKVILĖ, 1,5 l",
+    "price": 0.5666666666666667,
+    "unitPrice": 0.5666666666666667,
+    "unit": "l",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "kava": {
+    "title": "Malta kava 100% arabika PUPA, 500 g",
+    "price": 14.98,
+    "unitPrice": 14.98,
+    "unit": "kg",
+    "oldPrice": 29.98,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "ledai": {
+    "title": "Vaniliniai valgomieji ledai KLASIKA, 1000 ml",
+    "price": 2.27,
+    "unitPrice": 2.27,
+    "unit": "l",
+    "oldPrice": 3.79,
+    "promo": true,
     "validUntil": null,
     "url": null
    }
@@ -1500,16 +1600,6 @@
     "validUntil": null,
     "url": "https://www.barbora.lt/produktai/brokoliu-salotos-su-ridikeliais-1-kg"
    },
-   "cukinija": {
-    "title": "Ekologiška žalioji cukinija, 300 g",
-    "price": 1.99,
-    "unitPrice": 6.63,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/ekologiska-zalioji-cukinija-300-g"
-   },
    "grybai": {
     "title": "Pievagrybiai, 1 kg",
     "price": 3.29,
@@ -1611,14 +1701,14 @@
     "url": "https://www.barbora.lt/produktai/virtos-desrainiu-desreles-pormet-i-r-650-g"
    },
    "kumpis": {
-    "title": "Karštai rūk. garuose virtas kiaulienos kumpis PORMET, I r., 100 g",
-    "price": 0.79,
-    "unitPrice": 7.9,
+    "title": "Virtas pjaustytas forminis kumpis WELL DONE, a. r., 200 g",
+    "price": 1.79,
+    "unitPrice": 8.95,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/karstai-ruk-garuose-virtas-kiaulienos-kumpis-pormet-i-r-100-g"
+    "url": "https://www.barbora.lt/produktai/virtas-pjaustytas-forminis-kumpis-well-done-a-r-200-g"
    },
    "sonine": {
     "title": "Karštai rūkyta kiaulienos šoninė PORMET, I r., 1 kg",
@@ -1891,14 +1981,14 @@
     "url": "https://www.barbora.lt/produktai/sviestas-saules-pievos-82-proc-rieb-200-g"
    },
    "grietinele": {
-    "title": "Grietinėlė FARM MILK, 10 % rieb., 200 ml",
-    "price": 0.85,
-    "unitPrice": 4.25,
+    "title": "UAT grietinėlė FARM MILK, 10 % rieb., 500 ml",
+    "price": 1.29,
+    "unitPrice": 2.58,
     "unit": "l",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/grietinele-farm-milk-10-proc-rieb-200-ml"
+    "url": "https://www.barbora.lt/produktai/uat-grietinele-farm-milk-10-proc-rieb-500-ml"
    },
    "avizos": {
     "title": "Visų grūdo dalių avižiniai dribsniai DOBELE, 500 g",
@@ -1921,14 +2011,14 @@
     "url": "https://www.barbora.lt/produktai/grikiai-extra-line-800-g-800-g"
    },
    "ryziai": {
-    "title": "Plikyti ryžiai EXTRA LINE, 800 g",
-    "price": 0.99,
-    "unitPrice": 1.24,
+    "title": "Balti neplikyti ryžiai EXTRA LINE, 800 g",
+    "price": 0.86,
+    "unitPrice": 1.08,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/plikyti-ryziai-extra-line-800-g"
+    "url": "https://www.barbora.lt/produktai/balti-neplikyti-ryziai-extra-line-800-g"
    },
    "makaronai": {
     "title": "Makaronai PASAKA (sraigteliai), 400 g",
@@ -2091,14 +2181,14 @@
     "url": "https://www.barbora.lt/produktai/saldytos-braskes-well-done-be-koteliu-400-g"
    },
    "aliejus": {
-    "title": "Saulėgrąžų aliejus WELL DONE, 1 l",
-    "price": 2.29,
-    "unitPrice": 2.29,
+    "title": "OBELIŲ saulėgrąžų aliejus, 900 ml",
+    "price": 1.99,
+    "unitPrice": 2.21,
     "unit": "l",
-    "oldPrice": null,
-    "promo": false,
+    "oldPrice": 2.39,
+    "promo": true,
     "validUntil": null,
-    "url": "https://www.barbora.lt/produktai/saulegrazu-aliejus-well-done-1-l"
+    "url": "https://www.barbora.lt/produktai/obeliu-saulegrazu-aliejus-900-ml"
    },
    "druska": {
     "title": "Joduotoji druska EXTRA LINE, 1 kg",
@@ -2305,32 +2395,32 @@
  "sources": {
   "rimi": {
    "name": "Rimi e-parduotuvė",
-   "updatedAt": "2026-11-07T11:10:06.598Z",
+   "updatedAt": "2026-11-08T11:22:06.996Z",
    "found": 88,
    "errors": 0
   },
   "norfa": {
    "name": "Norfa akcijos",
-   "updatedAt": "2026-11-07T11:10:06.598Z",
+   "updatedAt": "2026-11-08T11:22:06.996Z",
    "found": 33,
    "errors": 0
   },
   "lidl": {
    "name": "Lidl",
-   "updatedAt": "2026-11-07T11:10:06.598Z",
+   "updatedAt": "2026-11-08T11:22:06.996Z",
    "found": 12,
    "errors": 0
   },
   "iki": {
    "name": "IKI (LastMile)",
-   "updatedAt": "2026-11-07T11:10:06.598Z",
-   "found": 6,
+   "updatedAt": "2026-11-08T11:22:06.996Z",
+   "found": 16,
    "errors": 0
   },
   "maxima": {
    "name": "Barbora (Maxima)",
-   "updatedAt": "2026-11-07T11:10:06.598Z",
-   "found": 90,
+   "updatedAt": "2026-11-08T11:22:06.996Z",
+   "found": 89,
    "errors": 0
   }
  }
