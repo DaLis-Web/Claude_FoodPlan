@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-16T12:54:25.340Z",
+ "updatedAt": "2026-11-17T13:37:06.887Z",
  "stores": {
   "rimi": {
    "bulves": {
@@ -18,19 +18,9 @@
     "unitPrice": 0.69,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/morkos/plautos-morkos-kg/p/272768"
-   },
-   "svogunai": {
-    "title": "Svogūnai d.40-60mm, kg",
-    "price": 0.26,
-    "unitPrice": 0.45,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/svogunai-porai-ir-cesnakai/svogunai-d-40-60mm-kg/p/937069"
    },
    "cesnakai": {
     "title": "Česnakai, kg",
@@ -38,7 +28,7 @@
     "unitPrice": 3.49,
     "unit": "kg",
     "oldPrice": null,
-    "promo": true,
+    "promo": false,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/svogunai-porai-ir-cesnakai/cesnakai-kg/p/913651"
    },
@@ -48,14 +38,14 @@
     "unitPrice": 0.69,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/kopustai/lietuviski-sviezi-baltaguziai-kopustai-1-kg/p/244676"
    },
    "burokeliai": {
     "title": "Lietuviški burokėliai, 1 kg",
-    "price": 0.24,
-    "unitPrice": 0.45,
+    "price": 0.26,
+    "unitPrice": 0.49,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -78,27 +68,27 @@
     "unitPrice": 3.97,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/agurkai/ilgavaisis-agurkas-rimi-300g/p/815307"
    },
    "paprikos": {
-    "title": "Žaliosios paprikos (80+ mm), 1 kl., 1 kg",
-    "price": 1.46,
-    "unitPrice": 3.39,
+    "title": "Raud. saldžiosios paprikos (80+),1kl,1kg",
+    "price": 2.05,
+    "unitPrice": 3.99,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/paprikos/zaliosios-paprikos-80-mm-1-kl-1-kg/p/269169"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/paprikos/raud-saldziosios-paprikos-80-1kl-1kg/p/269167"
    },
    "brokoliai": {
     "title": "Brokolis RIMI, 350 g",
-    "price": 1.65,
-    "unitPrice": 4.71,
+    "price": 1.79,
+    "unitPrice": 5.11,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/kopustai/brokolis-rimi-350-g/p/978280"
    },
@@ -128,7 +118,7 @@
     "unitPrice": 9.9,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/salotos-ir-ju-misiniai/zaliosios-lapines-salotos-rimi-1vnt/p/815948"
    },
@@ -152,16 +142,6 @@
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/vaisiai-ir-uogos/obuoliai-/obuoliai-champion-1-kl-1-kg/p/269163"
    },
-   "bananai": {
-    "title": "Bananai Cavendish, 20+cm , 1kg",
-    "price": 1.29,
-    "unitPrice": 1.29,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/vaisiai-ir-uogos/bananai/bananai-cavendish-20-cm-1kg/p/270939"
-   },
    "vistienos_file": {
     "title": "Viščiukų krūtinėlių filė RIMI, 500 g",
     "price": 3.49,
@@ -171,16 +151,6 @@
     "promo": false,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/mesa-ir-zuvis-/sviezia-paukstiena/vistiena/visciuku-krutineliu-file-rimi-500-g/p/813427"
-   },
-   "vistienos_slauneles": {
-    "title": "Višč. šlaunelės su nug. dal. RIMI SMART, 500g",
-    "price": 2.09,
-    "unitPrice": 4.18,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/mesa-ir-zuvis-/sviezia-paukstiena/vistiena/visc-slauneles-su-nug-dal-rimi-smart-500g/p/816017"
    },
    "malta_mesa": {
     "title": "Kiaulienos faršas, atšaldyt. RIMI SMART, 350G",
@@ -204,21 +174,21 @@
    },
    "desreles": {
     "title": "Virtos dešrelės dešrainiams HOT DOG, 910 g",
-    "price": 3.79,
-    "unitPrice": 4.16,
+    "price": 2.65,
+    "unitPrice": 2.91,
     "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
+    "oldPrice": 3.79,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/mesa-ir-zuvis-/apdorotos-mesos-ir-paukstienos-gaminiai-/virtos-desreles/virtos-desreles-desrainiams-hot-dog-910-g/p/974536"
    },
    "kumpis": {
     "title": "Virt.kalakut. kumpis griež. BIOVELA, Ir., 90g",
-    "price": 1.49,
-    "unitPrice": 16.56,
+    "price": 1.99,
+    "unitPrice": 22.11,
     "unit": "kg",
-    "oldPrice": 1.99,
-    "promo": true,
+    "oldPrice": null,
+    "promo": false,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/mesa-ir-zuvis-/apdorotos-mesos-ir-paukstienos-gaminiai-/virti-ir-kepti-mesos-gaminiai/virt-kalakut-kumpis-griez-biovela-ir-90g/p/292391"
    },
@@ -238,7 +208,7 @@
     "unitPrice": 4.25,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/mesa-ir-zuvis-/apdorotos-zuvies-gaminiai/silkes-ir-ju-gaminiai-/atlant-silkiu-file-aliejuje-rimi-smart-1-kg/p/813531"
    },
@@ -248,7 +218,7 @@
     "unitPrice": 3.15,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/saldytas-maistas/saldyti-kulinarijos-ir-konditerijos-gaminiai/saldyti-koldunai-ir-virtiniai/sald-sibirietiski-koldunai-su-mesos-id-2kg/p/915930"
    },
@@ -258,7 +228,7 @@
     "unitPrice": 1.77,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/miltai-ir-miltu-misiniai/kiti-miltai-ir-krakmolas/bulviu-krakmolas-rimi-smart-400-g/p/817151"
    },
@@ -273,14 +243,14 @@
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/pieno-produktai-ir-kiausiniai/suris/fetos-ir-mocarelos-suriai/suris-rimi-mozzarella-45-rieb-125g/p/805802"
    },
    "feta": {
-    "title": "Sūris salotoms RIMI, 40% rieb., 200g",
-    "price": 1.25,
-    "unitPrice": 6.25,
+    "title": "Sūris salotoms  RIMI, 40 %, 500 g",
+    "price": 3.69,
+    "unitPrice": 7.38,
     "unit": "kg",
-    "oldPrice": 1.49,
-    "promo": true,
+    "oldPrice": null,
+    "promo": false,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/pieno-produktai-ir-kiausiniai/suris/fetos-ir-mocarelos-suriai/suris-salotoms-rimi-40-rieb-200g/p/808783"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/pieno-produktai-ir-kiausiniai/suris/fetos-ir-mocarelos-suriai/suris-salotoms-rimi-40-500-g/p/808773"
    },
    "lazanijos_lakstai": {
     "title": "Lazanijos lakštai SALLING, 500 g",
@@ -288,7 +258,7 @@
     "unitPrice": 3.98,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/makaronai/vamzdeliniai-ir-lazanijos-makaronai/lazanijos-lakstai-salling-500-g/p/816821"
    },
@@ -298,19 +268,19 @@
     "unitPrice": 0.74,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kruopos/ankstiniai/skaldyti-zirniai-rimi-smart-800-g/p/808414"
    },
    "mesainiu_bandeles": {
-    "title": "Mėsainių bandelės STREET FOOD, 160 g",
-    "price": 1.89,
-    "unitPrice": 11.81,
+    "title": "BRIOCHE mėsainių bandelė, 70 g",
+    "price": 0.75,
+    "unitPrice": 10.71,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/duonos-gaminiai-/duona/mesainiu-ir-porcijines-duoneles/mesainiu-bandeles-street-food-160-g/p/998805"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/duonos-gaminiai-/svieziai-kepti-duonos-gaminiai/nesaldzios-bandeles-ir-uzkandziai/brioche-mesainiu-bandele-70-g/p/4007003"
    },
    "pomidoru_padazas": {
     "title": "TRADICINIS pomidorų padažas, 480g",
@@ -318,7 +288,7 @@
     "unitPrice": 3.52,
     "unit": "kg",
     "oldPrice": null,
-    "promo": true,
+    "promo": false,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/padazai-garstycios-krienai/pomidoru-padazai-ir-pasta/tradicinis-pomidoru-padazas-480g/p/171232"
    },
@@ -328,17 +298,17 @@
     "unitPrice": 4.88,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/konservuotas-maistas/konservuoti-kukuruzai/saldus-kukuruzai-rimi-340g-285g/p/801105"
    },
    "spinatai": {
     "title": "Špinatai, 200 g",
-    "price": 1.69,
-    "unitPrice": 8.45,
+    "price": 1.35,
+    "unitPrice": 6.75,
     "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
+    "oldPrice": 1.69,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/darzoves-ir-grybai/salotos-ir-ju-misiniai/spinatai-200-g/p/909368"
    },
@@ -404,11 +374,11 @@
    },
    "kefyras": {
     "title": "Ekologiškas kefyras AUGA, 2,5 % rieb. 1 l",
-    "price": 1.89,
-    "unitPrice": 1.89,
+    "price": 1.49,
+    "unitPrice": 1.49,
     "unit": "l",
-    "oldPrice": null,
-    "promo": false,
+    "oldPrice": 1.89,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/pieno-produktai-ir-kiausiniai/kefyras-rugpienis-ir-pasukos/kefyras/ekologiskas-kefyras-auga-2-5-rieb-1-l/p/998154"
    },
@@ -433,14 +403,14 @@
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/pieno-produktai-ir-kiausiniai/varskes-produktai/grudeta-varske/grudeta-varske-su-grietinele-3-rimi-500g/p/804887"
    },
    "grietine": {
-    "title": "Grietinė RIMI SMART, 30 % rieb., 400 g",
-    "price": 1.5,
-    "unitPrice": 3.75,
+    "title": "ŽEMAITIJOS jogurtinė grietinė, 10 %, 400 g",
+    "price": 1.39,
+    "unitPrice": 3.47,
     "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
+    "oldPrice": 1.79,
+    "promo": true,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/pieno-produktai-ir-kiausiniai/grietine-ir-grietinele/grietine-/grietine-rimi-smart-30-rieb-400-g/p/814672"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/pieno-produktai-ir-kiausiniai/grietine-ir-grietinele/grietine-/zemaitijos-jogurtine-grietine-10-400-g/p/272612"
    },
    "jogurtas": {
     "title": "Graikiškas jogurtas be priedų RIMI, 400 g",
@@ -448,7 +418,7 @@
     "unitPrice": 1.3,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/pieno-produktai-ir-kiausiniai/jogurtai-ir-desertai/jogurtai-be-pagardu/graikiskas-jogurtas-be-priedu-rimi-400-g/p/808085"
    },
@@ -488,19 +458,19 @@
     "unitPrice": 0.9,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kruopos/dribsniai/aviziniai-dribsniai-rimi-smart-400-g/p/809236"
    },
    "grikiai": {
-    "title": "Grikių kruopos EKOFRISA, 800 g",
-    "price": 1.69,
-    "unitPrice": 2.11,
+    "title": "Garinti grikiai RIMI, 800 g",
+    "price": 1.79,
+    "unitPrice": 2.24,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kruopos/grikiai/grikiu-kruopos-ekofrisa-800-g/p/129516"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kruopos/grikiai/garinti-grikiai-rimi-800-g/p/816373"
    },
    "ryziai": {
     "title": "Ilgagrūdžiai ryžiai RIMI BASIC, 800 g",
@@ -508,7 +478,7 @@
     "unitPrice": 1.09,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kruopos/ryziai/ilgagrudziai-ryziai-rimi-basic-800-g/p/804297"
    },
@@ -518,7 +488,7 @@
     "unitPrice": 1.62,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/makaronai/figuriniai-makaronai/makaronai-pasaka-sraigteliai-400-g/p/146791"
    },
@@ -528,7 +498,7 @@
     "unitPrice": 0.45,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/miltai-ir-miltu-misiniai/kvietiniai-miltai/kvietiniai-miltai-rimi-smart-2-kg/p/809126"
    },
@@ -538,19 +508,19 @@
     "unitPrice": 3.37,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kruopos/ankstiniai/skaldyti-raudonieji-lesiai-rimi-400-g/p/816261"
    },
    "duona": {
-    "title": "Juoda AGOTOS duona, 800g",
-    "price": 1.79,
-    "unitPrice": 2.24,
+    "title": "Juoda duona BOČIŲ, 800 g",
+    "price": 0.94,
+    "unitPrice": 1.17,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/duonos-gaminiai-/duona/juoda-duona/juoda-agotos-duona-800g/p/253013"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/duonos-gaminiai-/duona/juoda-duona/juoda-duona-bociu-800-g/p/4005638"
    },
    "batonas": {
     "title": "Raikytas batonas RIMI SMART, 300 g",
@@ -592,23 +562,13 @@
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/konservuotas-maistas/konservuoti-avinzirniai-pupeles-ir-lesiai/raudonosios-pupeles-rimi-400-g-240-g/p/808449"
    },
-   "avinzirniai": {
-    "title": "Avinžirniai RIMI PLANET, 400 g",
-    "price": 1.19,
-    "unitPrice": 2.97,
-    "unit": "kg",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kruopos/ankstiniai/avinzirniai-rimi-planet-400-g/p/816604"
-   },
    "tunas": {
     "title": "Smulk. tunas savo sultyse RIMI SMART, 185 g",
     "price": 1.39,
     "unitPrice": 10.69,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/mesa-ir-zuvis-/apdorotos-zuvies-gaminiai/konservuota-zuvis-ir-juros-gerybes/smulk-tunas-savo-sultyse-rimi-smart-185-g/p/811479"
    },
@@ -618,7 +578,7 @@
     "unitPrice": 4.99,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/konservuotas-maistas/medus/ivairiu-augalu-ziedu-medus-rimi-smart-1kg/p/804962"
    },
@@ -638,7 +598,7 @@
     "unitPrice": 7.49,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/saldytas-maistas/saldyta-mesa-zuvis-ir-juru-gerybes/saldyta-zuvis/al-rud-menkiu-file-northland-msc-800-g/p/814567"
    },
@@ -668,7 +628,7 @@
     "unitPrice": 4.72,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/saldytas-maistas/saldytos-darzoves-vaisiai-ir-uogos/saldyti-vaisiai-ir-uogos/saldytos-braskes-rimi-400-g/p/811670"
    },
@@ -678,7 +638,7 @@
     "unitPrice": 1.45,
     "unit": "l",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/aliejus-ir-actas/saulegrazu-aliejus/saulegrazu-aliejus-rimi-smart-1-l/p/804284"
    },
@@ -728,7 +688,7 @@
     "unitPrice": 23.6,
     "unit": "kg",
     "oldPrice": null,
-    "promo": true,
+    "promo": false,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/prieskoniai/prieskoniai-ir-zoleles/kario-prieskoniai-rimi-25g/p/814493"
    },
@@ -742,20 +702,10 @@
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/alkoholiniai-ir-nealkoholiniai-gerimai/alus/kitu-saliu-alus-ir-alaus-kokteiliai/alus-paderborner-pilger-5-0-0-5-l/p/1375724"
    },
-   "alus_nealk": {
-    "title": "Nealkoholinis alus BEERVILLE, 0,5l",
-    "price": 0.49,
-    "unitPrice": 0.98,
-    "unit": "l",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/alkoholiniai-ir-nealkoholiniai-gerimai/nealkoholiniai-gerimai/nealkoholinis-alus/nealkoholinis-alus-beerville-0-5l/p/1371565"
-   },
    "sidras": {
     "title": "Nealk. obuolių sidras VOLFAS ENGELMAN, 0,5 l",
-    "price": 1.39,
-    "unitPrice": 2.78,
+    "price": 0.79,
+    "unitPrice": 1.58,
     "unit": "l",
     "oldPrice": null,
     "promo": false,
@@ -798,7 +748,7 @@
     "unitPrice": 1.46,
     "unit": "l",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/gerimai/gaivieji-gerimai/salta-ir-fermentuota-arbata/persiku-sk-juod-arbat-gerimas-fuze-tea-1-5l/p/1363227"
    },
@@ -808,19 +758,19 @@
     "unitPrice": 1.23,
     "unit": "l",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/gerimai/gaivieji-gerimai/gira/smetoniska-gira-1-5l/p/1359762"
    },
    "kava": {
-    "title": "Skrudinta malta kava JACOBS KRONUNG, 500 g",
-    "price": 7.59,
-    "unitPrice": 15.18,
+    "title": "Skrudinta malta kava RIMI, 500 g",
+    "price": 7.99,
+    "unitPrice": 15.98,
     "unit": "kg",
     "oldPrice": null,
-    "promo": true,
+    "promo": false,
     "validUntil": null,
-    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kava-ir-kakava/malta-kava/skrudinta-malta-kava-jacobs-kronung-500-g/p/100227"
+    "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/bakaleja/kava-ir-kakava/malta-kava/skrudinta-malta-kava-rimi-500-g/p/815716"
    },
    "arbata": {
     "title": "Juodoji arbata JUST A MINUTE, 20 x 1,4 g",
@@ -848,7 +798,7 @@
     "unitPrice": 5.5,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/saldumynai-ir-uzkandziai/saldumynai/sokolado-plyteles/juodasis-sokoladas-poesia-100g/p/802409"
    },
@@ -858,7 +808,7 @@
     "unitPrice": 4.06,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/saldumynai-ir-uzkandziai/sausainiai-ir-vafliai/sausainiai/sausainiai-gaidelis-klasika-160-g/p/196892"
    },
@@ -868,7 +818,7 @@
     "unitPrice": 7.95,
     "unit": "kg",
     "oldPrice": null,
-    "promo": true,
+    "promo": false,
     "validUntil": null,
     "url": "https://www.rimi.lt/e-parduotuve/lt/produktai/saldumynai-ir-uzkandziai/dziovinti-vaisiai-ir-riesutai/dziovinti-riesutai-pakuotese/zemes-riesutai-su-svogunais-jega-200g/p/152531"
    },
@@ -884,6 +834,16 @@
    }
   },
   "norfa": {
+   "svogunai": {
+    "title": "Raudonieji svogūnai, 1 kg",
+    "price": 0.69,
+    "unitPrice": 0.69,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": true,
+    "validUntil": "2026-11-22",
+    "url": "https://www.norfa.lt/akcijos/"
+   },
    "cesnakai": {
     "title": "Šaldyti makaronai su krevetėmis ir česnakais FAMILY FISH, 400 g",
     "price": 2.39,
@@ -1268,10 +1228,90 @@
    }
   },
   "iki": {
-   "suris": {
-    "title": "Brie sūris su riešutais PRESIDENT, 32 % rieb. s. m., 125 g",
-    "price": 20.72,
-    "unitPrice": 20.72,
+   "agurkai": {
+    "title": "Lietuviški ilgavaisiai agurkai, 1 vnt.",
+    "price": 0.99,
+    "unitPrice": 0.99,
+    "unit": "vnt",
+    "oldPrice": 1.29,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "desreles": {
+    "title": "Virtos MAŽYLIŲ dešrelės su joduota druska, a.r., 210 g",
+    "price": 9.952380952380953,
+    "unitPrice": 9.952380952380953,
+    "unit": "kg",
+    "oldPrice": 14.24,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "kumpis": {
+    "title": "Virtas pjaustytas jautienos kumpis, I r., 90 g",
+    "price": 18.555555555555557,
+    "unitPrice": 18.555555555555557,
+    "unit": "kg",
+    "oldPrice": 31,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "sonine": {
+    "title": "Vytintos kiaulienos šoninė griežinėliais Pancetta MARCA, 80 g",
+    "price": 19.875,
+    "unitPrice": 19.875,
+    "unit": "kg",
+    "oldPrice": 24.88,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "pomidoru_padazas": {
+    "title": "Pomidorų padažas be jokių E DAUMANTŲ, 500 g",
+    "price": 4.98,
+    "unitPrice": 4.98,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "jautiena": {
+    "title": "Virtas pjaustytas jautienos kumpis, I r., 90 g",
+    "price": 18.555555555555557,
+    "unitPrice": 18.555555555555557,
+    "unit": "kg",
+    "oldPrice": 31,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "majonezas": {
+    "title": "Majonezinis padažas WOWMAMA CHILLI, 440 g",
+    "price": 5.204545454545455,
+    "unitPrice": 5.204545454545455,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "varske": {
+    "title": "Varškė BITUTĖ, 9% rieb., 500 g",
+    "price": 7.58,
+    "unitPrice": 7.58,
+    "unit": "kg",
+    "oldPrice": null,
+    "promo": false,
+    "validUntil": null,
+    "url": null
+   },
+   "sviestas": {
+    "title": "Saldžios grietinėlės sviestas DVARO, 82% rieb., 200 g",
+    "price": 13.45,
+    "unitPrice": 13.45,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -1279,9 +1319,9 @@
     "url": null
    },
    "makaronai": {
-    "title": "Makaronai rageliai PASAKA, 400 g",
-    "price": 1.975,
-    "unitPrice": 1.975,
+    "title": "Makaronai BARILLA PICCOLINI MINI FARFALLE, 500 g",
+    "price": 3.98,
+    "unitPrice": 3.98,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -1289,39 +1329,39 @@
     "url": null
    },
    "duona": {
-    "title": "Juoda raikyta duona su saulėgrąžomis JORĖ, 280 g",
-    "price": 3.9642857142857144,
-    "unitPrice": 3.9642857142857144,
+    "title": "Juoda raikyta duona su saulėgrąžomis JORĖ, 580 g",
+    "price": 3.017241379310345,
+    "unitPrice": 3.017241379310345,
     "unit": "kg",
-    "oldPrice": 4.96,
+    "oldPrice": 3.78,
     "promo": true,
     "validUntil": null,
     "url": null
    },
-   "alus_nealk": {
-    "title": "Alus ESTRELLA DAMM BARCELONA (4,8%), 500 ml",
-    "price": 2.98,
-    "unitPrice": 2.98,
+   "pipirai": {
+    "title": "Grūsti juodieji pipirai SANTA MARIA, 18 g",
+    "price": 61.66666666666668,
+    "unitPrice": 61.66666666666668,
+    "unit": "kg",
+    "oldPrice": 88.33,
+    "promo": true,
+    "validUntil": null,
+    "url": null
+   },
+   "gaivusis": {
+    "title": "Alavijų gėrimas ALOE ORIGINAL, 1,5 l",
+    "price": 1.9266666666666667,
+    "unitPrice": 1.9266666666666667,
     "unit": "l",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
     "url": null
    },
-   "vanduo": {
-    "title": "Gazuotas natūralus mineralinis vanduo RASA LIGHT, 1,5 l",
-    "price": 0.5666666666666667,
-    "unitPrice": 0.5666666666666667,
-    "unit": "l",
-    "oldPrice": null,
-    "promo": false,
-    "validUntil": null,
-    "url": null
-   },
-   "sultys": {
-    "title": "Pomidorų sultys GRANINI, 1 l",
-    "price": 3.49,
-    "unitPrice": 3.49,
+   "gira": {
+    "title": "Gira SMETONIŠKA NEFILTRUOTA, 2 l",
+    "price": 1.295,
+    "unitPrice": 1.295,
     "unit": "l",
     "oldPrice": null,
     "promo": false,
@@ -1342,11 +1382,11 @@
    },
    "morkos": {
     "title": "Plautos morkos, 1 kg",
-    "price": 0.35,
-    "unitPrice": 0.35,
+    "price": 0.59,
+    "unitPrice": 0.59,
     "unit": "kg",
     "oldPrice": null,
-    "promo": true,
+    "promo": false,
     "validUntil": null,
     "url": "plautos-morkos-1-kg"
    },
@@ -1392,8 +1432,8 @@
    },
    "pomidorai": {
     "title": "Kon. lupti pomidorai EXTRA LINE, 400 g",
-    "price": 0.69,
-    "unitPrice": 1.73,
+    "price": 0.67,
+    "unitPrice": 1.68,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -1411,14 +1451,14 @@
     "url": "maj-padazas-mesainiams-su-mar-agurk-ruk-papr-35-proc-rieb-480-g"
    },
    "paprikos": {
-    "title": "Raudonos saldžiosios paprikos, 80-100 mm, 1 kg",
-    "price": 3.19,
-    "unitPrice": 3.19,
+    "title": "Žalios saldžiosios paprikos, 70-90 mm, 1 kg",
+    "price": 3.39,
+    "unitPrice": 3.39,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "raudonos-saldziosios-paprikos-80-100-mm-1-kg"
+    "url": "zalios-saldziosios-paprikos-70-90-mm-1-kg"
    },
    "brokoliai": {
     "title": "Brokolių salotos su ridikėliais, 1 kg",
@@ -1501,19 +1541,19 @@
     "url": "sv-visc-broil-file-be-vidines-file-uzauginta-be-antib-1-kg"
    },
    "vistienos_slauneles": {
-    "title": "Šviežios vištų šlaunelės WELL DONE, 500 g",
-    "price": 2.39,
-    "unitPrice": 4.78,
+    "title": "Šviežios broilerių, užaugintų be antibiotikų, šlaunelės, 500 g",
+    "price": 2.19,
+    "unitPrice": 4.38,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
-    "url": "sviezios-vistu-slauneles-well-done-500-g"
+    "url": "sviezios-broileriu-uzaugintu-be-antibiotiku-slauneles-500-g"
    },
    "malta_mesa": {
     "title": "Šviežias kiaulienos faršas, rieb. ne daugiau 20 %, 400 g",
-    "price": 0.95,
-    "unitPrice": 2.37,
+    "price": 1.19,
+    "unitPrice": 2.97,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -1532,8 +1572,8 @@
    },
    "desreles": {
     "title": "Virtos dešrainių dešrelės PORMET, I r., 650 g",
-    "price": 1.64,
-    "unitPrice": 2.52,
+    "price": 1.49,
+    "unitPrice": 2.29,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -1551,19 +1591,19 @@
     "url": "karstai-ruk-garuose-virtas-kiaulienos-kumpis-pormet-i-r-100-g"
    },
    "sonine": {
-    "title": "Karštai rūkyta BAJORŲ šoninės kapotinė, I r., 280 g",
-    "price": 1.59,
-    "unitPrice": 5.68,
+    "title": "Karštai rūkyta kiaulienos šoninė PORMET, I r., 1 kg",
+    "price": 5.99,
+    "unitPrice": 5.99,
     "unit": "kg",
     "oldPrice": null,
-    "promo": true,
+    "promo": false,
     "validUntil": null,
-    "url": "karstai-rukyta-bajoru-sonines-kapotine-i-r-280-g"
+    "url": "karstai-rukyta-kiaulienos-sonine-pormet-i-r-1-kg"
    },
    "silke": {
     "title": "Sūdyta silkės filė aliejuje WIDE OCEAN, 220 g",
-    "price": 0.99,
-    "unitPrice": 4.5,
+    "price": 0.95,
+    "unitPrice": 4.32,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -1641,14 +1681,14 @@
     "url": "skaldyti-zirniai-extra-line-800-g-67013"
    },
    "mesainiu_bandeles": {
-    "title": "MALŪNO mėsainių bandelės su sezamais, 320 g",
-    "price": 1.29,
-    "unitPrice": 4.03,
+    "title": "KLAIPĖDOS mėsainių bandelės su sezamų sėklomis, 180 g",
+    "price": 1.39,
+    "unitPrice": 7.72,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "maluno-mesainiu-bandeles-su-sezamais-320-g"
+    "url": "klaipedos-mesainiu-bandeles-su-sezamu-seklomis-180-g"
    },
    "picos_tesla": {
     "title": "Picos tešla su padažu WELL DONE, 600 g",
@@ -1762,8 +1802,8 @@
    },
    "kiausiniai": {
     "title": "Ant kraiko laikomų vištų kiaušiniai, 10 vnt.",
-    "price": 2.19,
-    "unitPrice": 0.219,
+    "price": 2.09,
+    "unitPrice": 0.209,
     "unit": "vnt",
     "oldPrice": null,
     "promo": false,
@@ -1801,14 +1841,14 @@
     "url": "naturalus-jogurtas-farm-milk-3-proc-rieb-400-g"
    },
    "suris": {
-    "title": "Gaudos sūris FARM MILK (riekelės), 45 % rieb. s. m., 500 g",
-    "price": 3.49,
-    "unitPrice": 6.98,
+    "title": "Gaudos sūris FARM MILK, 45 % rieb. s. m., 1 kg",
+    "price": 4.79,
+    "unitPrice": 4.79,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "gaudos-suris-farm-milk-riekeles-45-proc-rieb-s-m-500-g"
+    "url": "gaudos-suris-farm-milk-45-proc-rieb-s-m-1-kg"
    },
    "sviestas": {
     "title": "Sviestas FARM MILK, 82 % rieb., 180 g",
@@ -1831,19 +1871,19 @@
     "url": "uat-grietinele-farm-milk-10-proc-rieb-500-ml"
    },
    "avizos": {
-    "title": "Avižiniai dribsniai SKANĖJA, 400 g",
-    "price": 0.69,
-    "unitPrice": 1.73,
+    "title": "Avižiniai dribsniai GALINTA, 500 g",
+    "price": 0.75,
+    "unitPrice": 1.5,
     "unit": "kg",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
-    "url": "aviziniai-dribsniai-skaneja-400-g"
+    "url": "aviziniai-dribsniai-galinta-500-g"
    },
    "grikiai": {
     "title": "Grikiai EXTRA LINE, 800 g",
-    "price": 1.29,
-    "unitPrice": 1.61,
+    "price": 1.27,
+    "unitPrice": 1.59,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -1881,14 +1921,14 @@
     "url": "kvietiniai-miltai-812-d-2-kg"
    },
    "lesiai": {
-    "title": "Žalieji lęšiai GRALLA, 400 g",
-    "price": 0.99,
-    "unitPrice": 2.47,
+    "title": "Raudonieji lęšiai GALINTA, 500 g",
+    "price": 1.29,
+    "unitPrice": 2.58,
     "unit": "kg",
     "oldPrice": null,
-    "promo": true,
+    "promo": false,
     "validUntil": null,
-    "url": "zalieji-lesiai-gralla-400-g"
+    "url": "raudonieji-lesiai-galinta-500-g"
    },
    "duona": {
     "title": "Šviesi ruginė raikyta AGOTOS duona su saulėgrąžomis, 700 g",
@@ -1922,8 +1962,8 @@
    },
    "pomidorai_konserv": {
     "title": "Konservuoti smulkinti lupti pomidorai EXTRA LINE, 400 g",
-    "price": 0.69,
-    "unitPrice": 1.73,
+    "price": 0.64,
+    "unitPrice": 1.6,
     "unit": "kg",
     "oldPrice": null,
     "promo": false,
@@ -2081,14 +2121,14 @@
     "url": "karis-well-done-20-g"
    },
    "alus": {
-    "title": "Alus CRONUS PILSNER, 500 ml",
+    "title": "Alus TUBORG, 500 ml",
     "price": 0.99,
     "unitPrice": 1.98,
     "unit": "l",
     "oldPrice": null,
     "promo": false,
     "validUntil": null,
-    "url": "alus-cronus-pilsner-500-ml"
+    "url": "alus-tuborg-500-ml"
    },
    "alus_nealk": {
     "title": "Nealkoholinis alus CRONUS, 500 ml",
@@ -2096,7 +2136,7 @@
     "unitPrice": 0.98,
     "unit": "l",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "nealkoholinis-alus-cronus-500-ml"
    },
@@ -2131,12 +2171,12 @@
     "url": "naturalus-gazuotas-mineralinis-vanduo-norvil-1-5-l"
    },
    "sultys": {
-    "title": "Apels.sultys iš konc. WELL DONE, PET, 1 l",
+    "title": "Apelsinų sultys iš koncentrato WELL DONE, PET, 1 l",
     "price": 1.79,
     "unitPrice": 1.79,
     "unit": "l",
     "oldPrice": null,
-    "promo": false,
+    "promo": true,
     "validUntil": null,
     "url": "apels-sultys-is-konc-well-done-pet-1-l"
    },
@@ -2235,31 +2275,31 @@
  "sources": {
   "rimi": {
    "name": "Rimi e-parduotuvė",
-   "updatedAt": "2026-11-16T12:54:25.340Z",
-   "found": 88,
-   "errors": 0
+   "updatedAt": "2026-11-17T13:37:06.887Z",
+   "found": 83,
+   "errors": 6
   },
   "norfa": {
    "name": "Norfa akcijos",
-   "updatedAt": "2026-11-16T12:54:25.340Z",
-   "found": 28,
+   "updatedAt": "2026-11-17T13:37:06.887Z",
+   "found": 29,
    "errors": 0
   },
   "lidl": {
    "name": "Lidl",
-   "updatedAt": "2026-11-16T12:54:25.340Z",
+   "updatedAt": "2026-11-17T13:37:06.887Z",
    "found": 10,
    "errors": 0
   },
   "iki": {
    "name": "IKI (LastMile)",
-   "updatedAt": "2026-11-16T12:54:25.340Z",
-   "found": 6,
+   "updatedAt": "2026-11-17T13:37:06.887Z",
+   "found": 14,
    "errors": 0
   },
   "maxima": {
    "name": "Barbora (Maxima)",
-   "updatedAt": "2026-11-16T12:54:25.340Z",
+   "updatedAt": "2026-11-17T13:37:06.887Z",
    "found": 90,
    "errors": 0
   }
